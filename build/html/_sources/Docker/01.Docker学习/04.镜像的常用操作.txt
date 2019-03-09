@@ -1,0 +1,346 @@
+# 镜像的常用操作
+当运行容器时，使用的镜像如果在本地中不存在，
+docker 就会自动从 docker 镜像仓库中下载，默认是从 Docker Hub 公共镜像源下载。
+下面我们来学习：
+* 管理和使用本地 Docker 主机镜像
+* 创建镜像
+
+
+### 查看镜像
+```
+[root@hujianli-linux hujianli]# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+docker.io/mariadb   latest              54514d54a4a5        3 days ago          364 MB
+docker.io/httpd     latest              dabb52744997        12 days ago         178 MB
+docker.io/haproxy   latest              3c77ecac1ea8        2 weeks ago         69.5 MB
+docker.io/ubuntu    14.04               c32fae490809        4 weeks ago         188 MB
+docker.io/centos    latest              5182e96772bf        2 months ago        200 MB
+
+[root@hujianli-linux hujianli]# docker images ub*
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+docker.io/ubuntu    14.04               c32fae490809        4 weeks ago         188 MB
+
+#要想得到一个镜像更详细的信息，可以通过 inspect 命令
+[root@hujianli-linux hujianli]# docker inspect ubuntu:14.04
+```
+### 下载镜像
+```
+#Docker首先会在本机寻找该镜像，如果本机不存在，会继续去Docker Hub上面搜索符合条件的镜像并将其下载下来运行
+docker run -t -i ubuntu:14.04 /bin/bash
+[root@hujianli-linux hujianli]# docker run ubuntu echo "hello ubuntu"
+
+#通过 search 命令，可以在Docker Hub上搜索符合要求的镜像
+[root@hujianli-linux hujianli]# docker search wordpress
+INDEX       NAME                                                          DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+docker.io   docker.io/wordpress                                           The WordPress rich content management syst...   2539      [OK]
+docker.io   docker.io/bitnami/wordpress                                   Bitnami Docker Image for WordPress              88                   [OK]
+
+#通过 pull 命令来完成拉去的工作，而不用等到要运行的时候，这样可以节省运行时的等待时间
+[root@hujianli-linux hujianli]# docker pull wordpress
+```
+### 查找镜像
+我们可以从 Docker Hub 网站来搜索镜像，Docker Hub 网址为： https://hub.docker.com/
+
+我们也可以使用 docker search 命令来搜索镜像。
+比如我们需要一个httpd的镜像来作为我们的web服务。
+我们可以通过 docker search 命令搜索 httpd 来寻找适合我们的镜像。
+```
+runoob@runoob:~$  docker search httpd
+```
+如图所示：
+![Docker](../../_static/docker_search.png)
+
+- NAME:镜像仓库源的名称
+- DESCRIPTION:镜像的描述
+- OFFICIAL:是否docker官方发布
+
+### 拖取镜像
+
+我们决定使用上图中的httpd 官方版本的镜像，使用命令 docker pull 来下载镜像。
+```
+runoob@runoob:~$ docker pull httpd
+Using default tag: latest
+latest: Pulling from library/httpd
+8b87079b7a06: Pulling fs layer
+a3ed95caeb02: Download complete
+0d62ec9c6a76: Download complete
+a329d50397b9: Download complete
+ea7c1f032b5c: Waiting
+be44112b72c7: Waiting
+```
+下载完成后，我们就可以使用这个镜像了。
+
+    runoob@runoob:~$ docker run httpd
+
+
+
+### 删除镜像
+```
+#与移除容器的命令 rm 相比，删除镜像的命令多了一个i，i即image的意思
+docker rmi c20fd090cbb6	#如果删不掉说明后台有运行
+
+#查看后台停止的容器
+docker ps -a
+#删掉后台停止运行的容器
+docker rm b112b5a1c0aa
+#删掉镜像
+docker rmi c20fd090cbb6
+
+#如果本地有很多已经停止运行的容器，一个个删除很麻烦，此时可以通过下面的命令将这些容器一次性删除掉，这样就能减少无用容器对镜像的依赖
+docker rm $(docker ps -a -q)
+```
+
+### 更新镜像
+
+- 更新镜像之前，我们需要使用镜像来创建一个容器。
+```
+runoob@runoob:~$ docker run -t -i ubuntu:15.10 /bin/bash
+
+root@e218edb10161:/#
+在运行的容器内使用 apt-get update 命令进行更新。
+在完成操作之后，输入 exit命令来退出这个容器。
+
+
+此时ID为e218edb10161的容器，是按我们的需求更改的容器。我们可以通过命令 docker commit来提交容器副本。
+
+
+runoob@runoob:~$ docker commit -m="has update" -a="runoob" e218edb10161 runoob/ubuntu:v2
+sha256:70bf1840fd7c0d2d8ef0a42a817eb29f854c1af8f7c59fc03ac7bdee9545aff8
+
+各个参数说明：
+•	-m:提交的描述信息
+•	-a:指定镜像作者
+•	e218edb10161：容器ID
+•	runoob/ubuntu:v2:指定要创建的目标镜像名
+我们可以使用 docker images 命令来查看我们的新镜像 runoob/ubuntu:v2：
+
+runoob@runoob:~$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+runoob/ubuntu       v2                  70bf1840fd7c        15 seconds ago      158.5 MB
+ubuntu              14.04               90d5884b1ee0        5 days ago          188 MB
+php                 5.6                 f40e9e0f10c8        9 days ago          444.8 MB
+nginx               latest              6f8d099c3adc        12 days ago         182.7 MB
+mysql               5.6                 f2e8d6c772c0        3 weeks ago         324.6 MB
+httpd               latest              02ef73cf1bc0        3 weeks ago         194.4 MB
+ubuntu              15.10               4e3b13c8a266        4 weeks ago         136.3 MB
+hello-world         latest              690ed74de00f        6 months ago        960 B
+training/webapp     latest              6fae60ef3446        12 months ago       348.8 MB
+使用我们的新镜像 runoob/ubuntu 来启动一个容器
+
+runoob@runoob:~$ docker run -t -i runoob/ubuntu:v2 /bin/bash
+root@1a9fbdeb5da3:/#
+```
+
+
+### 使用commit创建本地镜像
+```
+[root@hujianli-linux hujianli]# docker commit -m="Test" --author="hujianli" 6d9de28c6476 hujianli/ubantu:14.11
+sha256:55dba216cae110dc1df7b89480a3a05c838f9b087f73c36f1a44eb728efb9d3d
+#6d9de28c6476为执行容器后的ID
+[root@hujianli-linux hujianli]# docker run -it ubuntu:14.04
+root@5432a36a2422:/# touch aaa.txt
+
+[root@hujianli-linux hujianli]# docker images
+REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
+hujianli/ubantu       14.11               55dba216cae1        5 seconds ago       84.1 MB
+
+[root@hujianli-linux hujianli]# docker run -it hujianli/ubantu:14.11
+```
+
+### 使用 Dockerfile 创建镜像
+```
+root@ubuntu:/home/docker/update2# cat Dockerfile
+# Version: 1.0.1
+FROM ubuntu:latest
+MAINTAINER xxh "xxh@qq.com"
+
+#设置root用户为后续命令的执行者
+USER root
+
+#执行操作
+RUN apt-get update
+RUN apt-get install -y nginx
+
+#使用&&拼接命令
+RUN touch test.txt && echo "abc" >> abc.txt
+
+#对外暴露端口
+EXPOSE 80 8080 1038
+
+#添加文件
+ADD abc.txt /opt/
+
+#添加文件夹
+#ADD .webapp /opt/webapp
+
+#添加网络文件
+ADD https://www.baidu.com/img/bd_logo1.png /opt/
+
+#设置环境变量
+ENV WEBAPP_PORT=9090
+
+#设置工作目录
+WORKDIR /opt/
+
+#设置启动命令
+ENTRYPOINT ["ls"]
+
+#设置启动参数
+CMD ["-a", "-l" ]
+
+#设置卷
+VOLUME ["/data", "/var/www"]
+
+#设置子镜像的触发操作
+ONBUILD ADD . /app/src
+ONBUILD RUN echo "on build excuted" >> onbuild.txt
+```
+
+### 设置镜像标签
+- __我们可以使用 docker tag 命令，为镜像添加一个新的标签。__
+
+```
+runoob@runoob:~$ docker tag 860c279d2fec runoob/centos:dev
+docker tag 镜像ID，这里是 860c279d2fec ,用户名称、镜像源名(repository name)和新的标签名(tag)。
+使用 docker images 命令可以看到，ID为860c279d2fec的镜像多一个标签。
+runoob@runoob:~$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+runoob/centos       6.7                 860c279d2fec        5 hours ago         190.6 MB
+runoob/centos       dev                 860c279d2fec        5 hours ago         190.6 MB
+runoob/ubuntu       v2                  70bf1840fd7c        22 hours ago        158.5 MB
+ubuntu              14.04               90d5884b1ee0        6 days ago          188 MB
+php                 5.6                 f40e9e0f10c8        10 days ago         444.8 MB
+nginx               latest              6f8d099c3adc        13 days ago         182.7 MB
+mysql               5.6                 f2e8d6c772c0        3 weeks ago         324.6 MB
+httpd               latest              02ef73cf1bc0        3 weeks ago         194.4 MB
+ubuntu              15.10               4e3b13c8a266        5 weeks ago         136.3 MB
+hello-world         latest              690ed74de00f        6 months ago        960 B
+centos              6.7                 d95b5ca17cc3        6 months ago        190.6 MB
+training/webapp     latest              6fae60ef3446        12 months ago       348.8 MB
+
+```
+
+### 创建注册服务器
+```
+#搭建自己的注册服务器。Docker Hub所使用的注册服务器本身是开源的，并且以镜像的形式分发在Docker Hub上。
+#注册服务器源码的地址是https://github.com/docker/docker-registry，Docker Hub上的镜像名是 registry 。
+docker pull registry
+#运行registry：
+[root@hujianli-linux hujianli]# docker run -p 5000:5000 -d -it registry
+
+[root@hujianli-linux hujianli]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS                    NAMES
+053cc00e6a5c        registry            "/entrypoint.sh /e..."   47 seconds ago      Up 46 seconds              0.0.0.0:5000->5000/tcp   romantic_hamilton
+5432a36a2422        ubuntu:14.04        "/bin/bash"              5 minutes ago       Exited (0) 5 minutes ago                            stupefied_blackwel
+
+[root@hujianli-linux hujianli]# docker commit 053cc00e6a5c 127.0.0.1:5000/my_image:v1
+sha256:e2f6dc3f2c53c83e7594a53576bd9f1eff0c9456f3987f44c68012a13bbcca4d
+
+[root@hujianli-linux hujianli]# docker images
+REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE
+127.0.0.1:5000/my_image   v1                  e2f6dc3f2c53        28 seconds ago      33.3 MB
+
+[root@hujianli-linux hujianli]# docker search my_image
+INDEX       NAME                               DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+docker.io   docker.io/bschonec/my_image                                                        0
+docker.io   docker.io/cjj0596/my_images        my_images                                       0
+
+```
+
+### 如何运行容器
+```
+
+#查看容器
+docker ps -a 或 docker container ls -a
+
+docker run ubuntu:14.04 pwd
+
+#让容器长期运行
+docker run ubuntu /bin/bash -c "while true; do sleep 1; done"
+
+#参数 -d 以后台方式启动容器
+root@ubuntu:/home/hujianli# docker run -d ubuntu /bin/bash -c "while true; do sleep 1; done"
+ec504671329b72a9ef52429f0756d0bbdfa47403b185013034a69d1c78561a4a
+
+```
+
+### 两种进入容器的方法
+```
+"""docker attach
+通过 docker attach 可以 attach 到容器启动命令的终端"""
+root@ubuntu:/home/hujianli# docker run -d ubuntu:14.04 /bin/bash -c "while true; do sleep 1; echo Hujianli fighting;done"
+863f73e06f8c27c25c046b6fe9dce2bd95bfb143db0f62de718cd696971114d1
+
+root@ubuntu:/home/hujianli# docker attach 863f73e06f8c27c25c046b6fe9dce2bd95bfb143db0f62de718cd696971114d1
+Hujianli fighting
+Hujianli fighting
+Hujianli fighting
+
+"""
+docker exec
+通过 docker exec 进入相同的容器：
+"""
+# -it 以交互模式打开 pseudo-TTY，执行 bash，其结果就是打开了一个 bash 终端。
+root@ubuntu:/home/hujianli# docker exec -it 679f93530a1f bash
+root@679f93530a1f:/# ps aux
+USER        PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root          1  0.0  0.3  18180  3008 pts/0    Ss+  07:49   0:00 /bin/bash
+root         20  0.0  0.3  18184  3296 pts/1    Ss   08:52   0:00 bash
+root         34  0.0  0.2  15580  2116 pts/1    R+   08:52   0:00 ps aux
+
+'''
+attach 与 exec 主要区别如下:
+
+attach 直接进入容器 启动命令 的终端，不会启动新的进程。
+
+exec 则是在容器中打开新的终端，并且可以启动新的进程。
+
+如果想直接在终端中查看启动命令的输出，用 attach；其他情况使用 exec。
+当然，如果只是为了查看启动命令的输出，可以使用 docker logs 命令
+
+root@ubuntu:/home/hujianli# docker logs -f 8d19896b857e
+Hujianli fighting
+Hujianli fighting
+Hujianli fighting
+
+'''
+
+```
+
+### 容器常见操作整理
+```
+#docker stop 命令本质上是向该进程发送一个 SIGTERM 信号。如果想快速停止容器，可使用 docker kill 命令
+stop/start/restart 容器
+
+#有时我们只是希望暂时让容器暂停工作一段时间，比如要对容器的文件系统打个快照，或者 dcoker host 需要使用 CPU，这时可以执行 docker pause。
+pause/unpause 容器
+
+#删除容器
+docker rm 删除
+
+#希望批量删除所有已经退出的容器，可以执行如下命令：
+docker rm -v $(docker ps -aq -f status=exited)
+
+#docker rm 是删除容器，而 docker rmi 是删除镜像
+
+① docker create 创建的容器处于 Created 状态。
+② docker start 将以后台方式启动容器。
+docker run 命令实际上是 docker create 和 docker start 的组合
+
+'''
+下面是容器的常用操作命令：
+
+create      创建容器
+run         运行容器
+pause       暂停容器
+unpause     取消暂停继续运行容器
+stop        发送 SIGTERM 停止容器
+kill        发送 SIGKILL 快速停止容器
+start       启动容器
+restart     重启容器
+attach      attach 到容器启动进程的终端
+exec        在容器中启动新进程，通常使用 "-it" 参数
+logs        显示容器启动进程的控制台输出，用 "-f" 持续打印
+rm          从磁盘中删除容器
+'''
+```

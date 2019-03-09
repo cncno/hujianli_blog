@@ -1,0 +1,301 @@
+# 部署磁盘阵列
+
+## 制作一个RAID 10磁盘阵列
+    （虚拟机添加4块硬盘）
+![虚拟机添加硬盘](../../_static/raid10-1.PNG)
+    
+    mdadm命令用于管理Linux系统中的软件RAID硬盘阵列，格式为“mdadm [模式] <RAID设备名称> [选项] [成员设备名称]”。
+
+```
+　mdadm命令的常用参数和作用 
+参数          作用 
+-a          检测设备名称 
+-n          指定设备数量 
+-l          指定RAID级别 
+-C          创建 
+-v          显示过程 
+-f          模拟设备损坏
+-r          移除设备 
+-Q          查看摘要信息 
+-D          查看详细信息 
+-S          停止RAID磁盘阵列
+```
+    使用mdadm命令创建RAID 10，名称为“/dev/md0”
+``` 
+[root@localhost ~]# lsblk 
+NAME            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda               8:0    0   40G  0 disk 
+├─sda1            8:1    0  600M  0 part /boot
+└─sda2            8:2    0 39.4G  0 part 
+  ├─centos-root 253:0    0 37.4G  0 lvm  /
+  └─centos-swap 253:1    0    2G  0 lvm  [SWAP]
+sdb               8:16   0   20G  0 disk 
+sdc               8:32   0   20G  0 disk 
+sdd               8:48   0   20G  0 disk 
+sde               8:64   0   20G  0 disk 
+sr0              11:0    1 1024M  0 rom  
+
+
+用mdadm中的参数了。
+其中，-C参数代表创建一个RAID阵列卡；
+-v参数显示创建的过程，同时在后面追加一个设备名称/dev/md0，
+这样/dev/md0就是创建后的RAID磁盘阵列的名称；
+-a yes参数代表自动创建设备文件；
+-n 4参数代表使用4块硬盘来部署这个RAID磁盘阵列；
+而-l 10参数则代表RAID 10方案；
+最后再加上4块硬盘设备的名称就搞定了。
+
+[root@localhost ~]# mdadm -Cv /dev/md0 -a yes -n 4 -l 10 /dev/sdb /dev/sdc /dev/sdd /dev/sde
+mdadm: layout defaults to n2
+mdadm: layout defaults to n2
+mdadm: chunk size defaults to 512K
+mdadm: partition table exists on /dev/sdb
+mdadm: partition table exists on /dev/sdb but will be lost or
+       meaningless after creating array
+mdadm: size set to 20954112K
+Continue creating array? 
+Continue creating array? (y/n) y
+mdadm: Defaulting to version 1.2 metadata
+mdadm: array /dev/md0 started.
+   
+把制作好的RAID磁盘阵列格式化为ext4格式。
+[root@localhost ~]# mkfs.ext4 /dev/md0
+mke2fs 1.42.9 (28-Dec-2013)
+文件系统标签=
+OS type: Linux
+块大小=4096 (log=2)
+分块大小=4096 (log=2)
+Stride=128 blocks, Stripe width=256 blocks
+2621440 inodes, 10477056 blocks
+523852 blocks (5.00%) reserved for the super user
+第一个数据块=0
+Maximum filesystem blocks=2157969408
+320 block groups
+32768 blocks per group, 32768 fragments per group
+8192 inodes per group
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+	4096000, 7962624
+
+Allocating group tables: 完成                            
+正在写入inode表: 完成                            
+Creating journal (32768 blocks): 完成
+Writing superblocks and filesystem accounting information: 完成 
+
+创建挂载点然后把硬盘设备进行挂载操作。挂载成功后可看到可用空间为40GB。
+[root@localhost ~]# mount /dev/md0 /mnt/
+[root@localhost ~]# lsblk 
+NAME            MAJ:MIN RM  SIZE RO TYPE   MOUNTPOINT
+sda               8:0    0   40G  0 disk   
+├─sda1            8:1    0  600M  0 part   /boot
+└─sda2            8:2    0 39.4G  0 part   
+  ├─centos-root 253:0    0 37.4G  0 lvm    /
+  └─centos-swap 253:1    0    2G  0 lvm    [SWAP]
+sdb               8:16   0   20G  0 disk   
+└─md0             9:0    0   40G  0 raid10 /mnt
+sdc               8:32   0   20G  0 disk   
+└─md0             9:0    0   40G  0 raid10 /mnt
+sdd               8:48   0   20G  0 disk   
+└─md0             9:0    0   40G  0 raid10 /mnt
+sde               8:64   0   20G  0 disk   
+└─md0             9:0    0   40G  0 raid10 /mnt
+sr0              11:0    1 1024M  0 rom
+
+查看/dev/md0磁盘阵列的详细信息，并把挂载信息写入到配置文件中，使其永久生效。
+
+[root@localhost ~]# mdadm -D /dev/md0 
+/dev/md0:
+           Version : 1.2
+     Creation Time : Sun Feb  3 20:01:35 2019
+        Raid Level : raid10
+        Array Size : 41908224 (39.97 GiB 42.91 GB)
+     Used Dev Size : 20954112 (19.98 GiB 21.46 GB)
+      Raid Devices : 4
+     Total Devices : 4
+       Persistence : Superblock is persistent
+
+       Update Time : Sun Feb  3 20:03:56 2019
+             State : clean 
+    Active Devices : 4
+   Working Devices : 4
+    Failed Devices : 0
+     Spare Devices : 0
+
+            Layout : near=2
+        Chunk Size : 512K
+
+Consistency Policy : resync
+
+              Name : localhost.localdomain:0  (local to host localhost.localdomain)
+              UUID : 0258c0d3:a97f1527:8e70e0f9:5153622a
+            Events : 19
+
+    Number   Major   Minor   RaidDevice State
+       0       8       16        0      active sync set-A   /dev/sdb
+       1       8       32        1      active sync set-B   /dev/sdc
+       2       8       48        2      active sync set-A   /dev/sdd
+       3       8       64        3      active sync set-B   /dev/sde
+
+查看/dev/md0磁盘阵列的详细信息，并把挂载信息写入到配置文件中，使其永久生效
+[root@localhost ~]# echo "/dev/md0 /RAID ext4 defaults 0 0" >> /etc/fstab
+[root@localhost ~]# cat /etc/fstab 
+
+#
+# /etc/fstab
+# Created by anaconda on Wed Jan 30 21:29:08 2019
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+/dev/mapper/centos-root /                       xfs     defaults        0 0
+UUID=9d17d78f-ff3c-48ea-a33e-2a177655588a /boot                   xfs     defaults        0 0
+/dev/mapper/centos-swap swap                    swap    defaults        0 0
+/dev/sdb2					swap    defaults   swap   0 0 
+/dev/md0 /RAID ext4 defaults 0 0
+
+
+删除md0：
+umount /dev/md0     #卸载md0设备
+1.  mdadm -S /dev/md0   #停止raid5进程
+2.  mdadm --misc --zero-superblock /dev/sdd
+     mdadm --misc --zero-superblock /dev/sdd
+     mdadm --misc --zero-superblock /dev/sdd
+3.  删除/etc/mdadm/mdadm.conf文件中添加的DEVICE行和ARRAY行。
+```
+
+## 磁盘阵列+备份盘 (RAID 5)
+    至少需要3块硬盘
+    
+```
+mdadm -Cv /dev/md0 -n 3 -l 5 -x 1 /dev/sdb /dev/sdc /dev/sdd /dev/sde
+mdadm: layout defaults to left-symmetric
+mdadm: layout defaults to left-symmetric
+mdadm: super1.x cannot open /dev/sdb: Device or resource busy
+mdadm: ddf: Cannot use /dev/sdb: Device or resource busy
+mdadm: Cannot use /dev/sdb: It is busy
+mdadm: cannot open /dev/sdb: Device or resource busy
+[root@localhost ~]# lsblk 
+NAME            MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT
+sda               8:0    0   40G  0 disk  
+├─sda1            8:1    0  600M  0 part  /boot
+└─sda2            8:2    0 39.4G  0 part  
+  ├─centos-root 253:0    0 37.4G  0 lvm   /
+  └─centos-swap 253:1    0    2G  0 lvm   [SWAP]
+sdb               8:16   0   20G  0 disk  
+└─md0             9:0    0   40G  0 raid5 
+sdc               8:32   0   20G  0 disk  
+└─md0             9:0    0   40G  0 raid5 
+sdd               8:48   0   20G  0 disk  
+└─md0             9:0    0   40G  0 raid5 
+sde               8:64   0   20G  0 disk  
+└─md0             9:0    0   40G  0 raid5 
+sr0              11:0    1 1024M  0 rom   
+[root@localhost ~]# mdadm -D /dev/md0
+/dev/md0:
+           Version : 1.2
+     Creation Time : Sun Feb  3 20:11:39 2019
+        Raid Level : raid5
+        Array Size : 41908224 (39.97 GiB 42.91 GB)
+     Used Dev Size : 20954112 (19.98 GiB 21.46 GB)
+      Raid Devices : 3
+     Total Devices : 4
+       Persistence : Superblock is persistent
+
+       Update Time : Sun Feb  3 20:12:28 2019
+             State : clean 
+    Active Devices : 3
+   Working Devices : 4
+    Failed Devices : 0
+     Spare Devices : 1
+
+            Layout : left-symmetric
+        Chunk Size : 512K
+
+Consistency Policy : resync
+
+              Name : localhost.localdomain:0  (local to host localhost.localdomain)
+              UUID : afeb536b:a181f5af:f574ed65:600f8092
+            Events : 18
+
+    Number   Major   Minor   RaidDevice State
+       0       8       16        0      active sync   /dev/sdb
+       1       8       32        1      active sync   /dev/sdc
+       4       8       48        2      active sync   /dev/sdd
+
+       3       8       64        -      spare   /dev/sde
+
+```
+```
+
+[root@localhost ~]# mkfs.ext4 /dev/md0
+mke2fs 1.42.9 (28-Dec-2013)
+文件系统标签=
+OS type: Linux
+块大小=4096 (log=2)
+分块大小=4096 (log=2)
+Stride=128 blocks, Stripe width=256 blocks
+2621440 inodes, 10477056 blocks
+523852 blocks (5.00%) reserved for the super user
+第一个数据块=0
+Maximum filesystem blocks=2157969408
+320 block groups
+32768 blocks per group, 32768 fragments per group
+8192 inodes per group
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+	4096000, 7962624
+
+Allocating group tables: 完成                            
+正在写入inode表: 完成                            
+Creating journal (32768 blocks): 完成
+Writing superblocks and filesystem accounting information: 完成
+```
+
+```
+我们再次把硬盘设备/dev/sdb移出磁盘阵列，然后迅速查看/dev/md0磁盘阵列的状态，
+就会发现备份盘已经被自动顶替上去并开始了数据同步。
+RAID中的这种备份盘技术非常实用，可以在保证RAID磁盘阵列数据安全性的基础上进一步提高数据可靠性，
+所以，如果公司不差钱的话还是再买上一块备份盘以防万一。
+
+[root@localhost ~]# echo "/dev/md0 /RAID ext4 defaults 0 0" >> /etc/fstab
+[root@localhost ~]# mkdir /RAID
+[root@localhost ~]# mount -a
+[root@localhost ~]# mdadm /dev/md0 -f /dev/sdb
+mdadm: set /dev/sdb faulty in /dev/md0
+[root@localhost ~]# mdadm -D /dev/md0 
+/dev/md0:
+           Version : 1.2
+     Creation Time : Sun Feb  3 20:11:39 2019
+        Raid Level : raid5
+        Array Size : 41908224 (39.97 GiB 42.91 GB)
+     Used Dev Size : 20954112 (19.98 GiB 21.46 GB)
+      Raid Devices : 3
+     Total Devices : 4
+       Persistence : Superblock is persistent
+
+       Update Time : Sun Feb  3 20:14:32 2019
+             State : active, degraded, recovering 
+    Active Devices : 2
+   Working Devices : 3
+    Failed Devices : 1
+     Spare Devices : 1
+
+            Layout : left-symmetric
+        Chunk Size : 512K
+
+Consistency Policy : resync
+
+    Rebuild Status : 0% complete
+
+              Name : localhost.localdomain:0  (local to host localhost.localdomain)
+              UUID : afeb536b:a181f5af:f574ed65:600f8092
+            Events : 22
+
+    Number   Major   Minor   RaidDevice State
+       3       8       64        0      spare rebuilding   /dev/sde
+       1       8       32        1      active sync   /dev/sdc
+       4       8       48        2      active sync   /dev/sdd
+
+       0       8       16        -      faulty   /dev/sdb
+
+```

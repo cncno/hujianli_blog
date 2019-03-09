@@ -1,0 +1,9 @@
+# LVS+keeplaived高可用集群
+
+
+
+## LVS+keepalived 主从高可用模式
+
+
+
+## LVS+keepalived 主主高可用模式

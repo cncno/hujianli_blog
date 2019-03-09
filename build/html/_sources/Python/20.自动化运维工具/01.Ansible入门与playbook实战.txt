@@ -1,0 +1,494 @@
+# Ansible入门与playbook实战
+- 参考文献
+
+[Ansible入门与playbook实战](https://yq.aliyun.com/articles/493215?spm=a2c4e.11153940.blogcont307685.17.4e655529C63dwk)
+## 关于Ansible
+```
+Ansible是⼀种批量、⾃动部署⼯具，不仅可以批量，还可以⾃动。它主要基于ssh进⾏通信，不要求客户端(被控
+制端)安装ansible
+```
+
+## 安装Ansible
+```
+安装⽅法有多种，可以下载源码后编译安装，可以从git上获取资源安装，也可以rpm包安装。rpm安装需要配置
+epel源。
+
+经测试，CentOS 6上安装ansible 2.3版本有可能会⾮常慢，需要将ansible执⾏的结果使⽤重定向或者-t选项保存
+到⽂件中，下次执⾏才会快。
+cat <<eof>>/etc/yum.repos.d/my.repo
+[epel]
+name=epel
+baseurl=http://mirrors.aliyun.com/epel/7Server/x86_64/
+enable=1
+gpgcheck=0
+eof
+```
+```
+yum list ansible
+yum install ansible
+
+[root@hujianli-linux ansible]# pwd
+/etc/ansible
+
+[root@hujianli-linux ansible]# ll
+-rw-r--r--. 1 root root 20269 10月  9 09:34 ansible.cfg
+-rw-r--r--. 1 root root  1016 10月  9 09:34 hosts
+drwxr-xr-x. 2 root root     6 10月  9 09:34 roles
+
+
+Ansible通过读取默认主机清单 /etc/ansible/hosts文件，修改主机与组配置后，可同时连接到多个被管理主机上
+执行任务，比如定义一个websrvs组，包含两台主机的IP地址。再定义一个dbsrvs组，包含一台主机的IP地址，内容如下：
+
+#生成SSH秘钥的连接
+[root@hujianli-linux ansible]# ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa):
+Created directory '/root/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:uCeRm5Pwn4FFMiST67fjSfSgKsijG6Z81i0hsPTIOM0 root@hujianli-linux
+The keys randomart image is:
++---[RSA 2048]----+
+|    o..          |
+|    .+           |
+|     .o .        |
+| o  .  *         |
+|+o=.. * S        |
+|o+Eo.*.@         |
+|+o  +.&.+        |
+|*+ + +oB o       |
+|=+=  .+.o        |
++----[SHA256]-----+
+
+'
+'
+[root@hujianli-linux ansible]# ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.1.108
+/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/root/.ssh/id_rsa.pub"
+The authenticity of host '192.168.1.108 (192.168.1.108)' can't be established.
+ECDSA key fingerprint is SHA256:x59MUt+6/V3qTtFlLreCBghCF/BWgqWucIE6JvcIPDI.
+ECDSA key fingerprint is MD5:8b:14:a4:27:bb:22:43:dc:f3:49:17:05:30:12:16:5a.
+Are you sure you want to continue connecting (yes/no)? yes
+/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+'
+
+[root@hujianli-linux ansible]# ansible-doc -s yum		#列出yum模块的描述信息和操作动作
+```
+
+## Ansible常用的核心模块
+## command模块
+    #"-m"指定模块名称，"-a"⽤于为模块指定各模块参数
+    #Ansible管理工具使用-m 选项来指定使用模块，默认使用command模块，即 -m选项省略时会运行此模块，用于在被管理主机上运行命令。
+
+	[root@hujianli-linux ansible]# ansible 192.168.1.108 -m command -a 'date'
+	192.168.1.108 | CHANGED | rc=0 >>
+	Tue Oct 16 22:55:21 CST 2018
+
+	#使用被管理中的主机分类运行
+	[root@hujianli-linux ansible]# ansible webservers -m command -a 'date'
+	 [WARNING]: No hosts matched, nothing to do
+
+	[root@hujianli-linux ansible]# ansible dbservers -m command -a 'date'
+	192.168.1.108 | CHANGED | rc=0 >>
+	Tue Oct 16 22:57:11 CST 2018
+
+	#所有主机清单中的主机上运行
+	[root@hujianli-linux ansible]# ansible all -m command -a 'date'
+	192.168.1.108 | CHANGED | rc=0 >>
+	Tue Oct 16 22:58:54 CST 2018
+
+	#若省略-m 选项，默认运行command模块
+	[root@hujianli-linux ansible]# ansible all -a 'tail -l /etc/passwd'
+	192.168.1.108 | CHANGED | rc=0 >>
+	colord:x:110:120:colord colour management daemon,,,:/var/lib/colord:/bin/false
+	kernoops:x:111:65534:Kernel Oops Tracking Daemon,,,:/:/bin/false
+	pulse:x:112:121:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+	rtkit:x:113:123:RealtimeKit,,,:/proc:/bin/false
+	saned:x:114:124::/home/saned:/bin/false
+	whoopsie:x:115:125::/nonexistent:/bin/false
+	speech-dispatcher:x:116:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/sh
+	hplip:x:117:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+	gdm:x:118:126:Gnome Display Manager:/var/lib/gdm:/bin/false
+	_mandos:x:119:127:Mandos password system,,,:/nonexistent:/bin/false
+
+## cron模块
+```
+#Ansible中的cron模块用于定义任务计划，其中有两种状态，(state):present表示添加(省略状态时默认使用),absent表示移除。
+[root@hujianli-linux ansible]# ansible-doc -s cron		#查看cron模块的描述信息和操作动作
+
+#添加计划任务
+[root@hujianli-linux ansible]# ansible dbservers -m cron -a 'minute="*/10" job="/bin/echo hello" name="test cron job"'
+192.168.1.108 | CHANGED => {
+    "changed": true,
+    "envs": [],
+    "jobs": [
+        "test cron job"
+    ]
+
+#查看crontab计划任务
+[root@hujianli-linux ansible]# ansible dbservers -a 'crontab -l'
+192.168.1.108 | CHANGED | rc=0 >>
+#Ansible: test cron job
+*/10 * * * * /bin/echo hello
+
+#移除计划任务
+[root@hujianli-linux ansible]# ansible dbservers -m cron -a 'minute="*/10" job="/bin/echo hello" name="test cron job" state=absent'
+192.168.1.108 | CHANGED => {
+    "changed": true,
+    "envs": [],
+    "jobs": []
+}
+[root@hujianli-linux ansible]# ansible dbservers -a 'crontab -l'
+192.168.1.108 | CHANGED | rc=0 >>
+```
+## user模块
+    #Ansible中的user模块用于创建新用户和更改、删除已存在的用户。其中name选项用来这么创建的用户名称。
+
+    #创建用户
+    [root@hujianli-linux ansible]# ansible dbservers -m user -a 'name="user1"'
+    192.168.1.108 | CHANGED => {
+        "changed": true,
+        "comment": "",
+        "create_home": true,
+        "group": 1001,
+        "home": "/home/user1",
+        "name": "user1",
+        "shell": "",
+        "state": "present",
+        "system": false,
+        "uid": 1001
+    }
+
+
+    #删除用户
+    [root@hujianli-linux ansible]# ansible dbservers -m user -a 'name="user1" state=absent'
+    192.168.1.108 | CHANGED => {
+        "changed": true,
+        "force": false,
+        "name": "user1",
+        "remove": false,
+        "state": "absent"
+## group模块
+    #Ansible中的group模块用于对用户组进行管理
+    [root@hujianli-linux ansible]# ansible-doc -s group
+    - name: Add or remove groups
+      group:
+          gid:                   # Optional `GID' to set for the group.
+          local:                 # Forces the use of "local" command alternatives on platforms that implement it. This is
+                                   useful in environments that use centralized authentification
+                                   when you want to manipulate the local groups. I.E. it uses
+                                   `lgroupadd` instead of `useradd`. This requires that these
+                                   commands exist on the targeted host, otherwise it will be a
+                                   fatal error.
+          name:                  # (required) Name of the group to manage.
+          state:                 # Whether the group should be present or not on the remote host.
+          system:                # If `yes', indicates that the group created is a system group.
+
+
+    #创建mysql组，将mysql用户添加到mysql组中
+    [root@hujianli-linux ansible]# ansible dbservers -m group -a 'name=mysql gid=306 system=yes'
+    192.168.1.108 | CHANGED => {
+        "changed": true,
+        "gid": 306,
+        "name": "mysql",
+        "state": "present",
+        "system": true
+    }
+
+    [root@hujianli-linux ansible]# ansible dbservers -m user -a 'name=mysql uid=306 system=yes group=mysql'
+    192.168.1.108 | CHANGED => {
+        "changed": true,
+        "comment": "",
+        "create_home": true,
+        "group": 306,
+        "home": "/home/mysql",
+        "name": "mysql",
+        "shell": "",
+        "state": "present",
+        "system": true,
+        "uid": 306
+## copy模块
+    #Ansible 中的copy模块用于实现文件复制和批量下发文件，src来定义本地源文件路径，使用dest定义被管理主机文件路径，使用content定义信息内容来生成目标文件
+    [root@hujianli-linux ~]# ansible-doc -s copy
+
+    #将本地文件/etc/fstab 复制到被管理主机上的/tmp/fstab.ansible,所有者为root,权限设置为640
+    [root@hujianli-linux ~]# ansible dbservers -m copy -a 'src=/etc/fstab dest=/tmp/fstab.ansible owner=root mode=640'
+    192.168.1.108 | CHANGED => {
+        "changed": true,
+        "checksum": "6ea5fcea77203808f0d0730031d451943e996019",
+        "dest": "/tmp/fstab.ansible",
+        "gid": 0,
+        "group": "root",
+        "md5sum": "f70bf8e0a64d009086f260d9f69b92c5",
+        "mode": "0640",
+        "owner": "root",
+        "size": 505,
+        "src": "/root/.ansible/tmp/ansible-tmp-1539713434.89-247644697537523/source",
+        "state": "file",
+        "uid": 0
+    }
+
+    root@ubuntu:/tmp# ll /tmp/fstab.ansible
+    -rw-r----- 1 root root 505 Oct 17 02:10 /tmp/fstab.ansible
+
+    #将“Hello Ansible Hi Ansible”写入管理主机的/tmp/test.ansible文件中
+    [root@hujianli-linux ~]# ansible dbservers -m copy -a 'content="Hello Ansible Hi Ansible" dest=/tmp/test.ansible'
+    192.168.1.108 | CHANGED => {
+        "changed": true,
+        "checksum": "92978fdc1fb9252b5a52a8083eb49d577322d9af",
+        "dest": "/tmp/test.ansible",
+        "gid": 0,
+        "group": "root",
+        "md5sum": "0ba13acd0115be8c69a3b4babc2fb97a",
+        "mode": "0644",
+        "owner": "root",
+        "size": 24,
+        "src": "/root/.ansible/tmp/ansible-tmp-1539713669.94-33419111660693/source",
+        "state": "file",
+        "uid": 0
+
+## file模块
+    #Ansible中使用file模块来设置文件属性，path指定文件路径，sec指定源文件路径，使用name或dest来替换创建文件的符号链接
+    [root@hujianli-linux ~]# ansible-doc -s file
+
+    #设置管理主机文件/tmp/fstab.ansible 所属住为mysql，所属组为mysql，权限为644
+    [root@hujianli-linux ~]# ansible dbservers -m file -a "owner=mysql group=mysql mode=644 path=/tmp/fstab.ansible"
+    192.168.1.108 | CHANGED => {
+        "changed": true,
+        "gid": 306,
+        "group": "mysql",
+        "mode": "0644",
+        "owner": "mysql",
+        "path": "/tmp/fstab.ansible",
+        "size": 505,
+        "state": "file",
+        "uid": 306
+    }
+
+    root@ubuntu:/tmp# ll /tmp/fstab.ansible
+    -rw-r--r-- 1 mysql mysql 505 Oct 17 02:10 /tmp/fstab.ansible
+
+    #设置文件/tmp/fstab.link 为文件/tmp/fstab.ansible的链接文件
+    [root@hujianli-linux ~]# ansible dbservers -m file -a 'path=/tmp/fstab.link src=/tmp/fstab.ansible state=link'
+    192.168.1.108 | CHANGED => {
+        "changed": true,
+        "dest": "/tmp/fstab.link",
+        "gid": 0,
+        "group": "root",
+        "mode": "0777",
+        "owner": "root",
+        "size": 18,
+        "src": "/tmp/fstab.ansible",
+        "state": "link",
+        "uid": 0
+    }
+
+    root@ubuntu:/tmp# ll /tmp/
+    lrwxrwxrwx  1 root    root      18 Oct 17 02:23 fstab.link -> /tmp/fstab.ansible
+
+## ping模块
+    #在 Ansible中使用ping模块来检测指定主机的连通性
+    [root@hujianli-linux ~]# ansible all -m ping
+    192.168.1.108 | SUCCESS => {
+        "changed": false,
+        "ping": "pong"
+
+
+
+
+## service模块
+    [root@hujianli-linux ~]# ansible-doc -s service	#查看service模块的描述
+
+    #在 Ansible中使用service模块来控制管理服务器的运行状态，enable表示是否开机自启动， 值为true或者false，使用name来定义服务名称
+    使用state指定服务状态，取值为started、stoped、restarted
+
+    #查看httpd服务的状态
+    [root@hujianli-linux ~]# ansible dbservers -a 'service httpd status'
+    192.168.1.108 | CHANGED | rc=0 >>
+     * htppd is running
+
+    [root@hujianli-linux ~]# ansible dbservers -a 'chkconfig httpd status'	#查看http服务开机启动状态
+    [root@hujianli-linux ~]# ansible dbservers -m service -a 'enable=ture name=httpd state=started'	#设置httpd服务为开机自启动
+
+
+
+## shell 模块
+
+    [root@hujianli-linux ~]# ansible-doc -s shell
+    #创建用户后，无交互式给用户设置密码
+    [root@hujianli-linux ~]# ansible dbservers -m user -a 'name=user1'
+    192.168.1.108 | CHANGED => {
+        "changed": true,
+        "comment": "",
+        "create_home": true,
+        "group": 1001,
+        "home": "/home/user1",
+        "name": "user1",
+        "shell": "",
+        "state": "present",
+        "stderr": "useradd: warning: the home directory already exists.\nNot copying any file from skel directory into it.\n",
+        "stderr_lines": [
+            "useradd: warning: the home directory already exists.",
+            "Not copying any file from skel directory into it."
+        ],
+        "system": false,
+        "uid": 1001
+
+
+    [root@hujianli-linux ~]# ansible dbservers -m shell -a 'echo "123.com"|passwd user1 --stdin'
+
+
+
+## scripts模块
+    [root@hujianli-linux ~]# ansible-doc -s script
+    #创建一个本地脚本，复制到被管理主机上运行
+    [root@hujianli-linux ~]# ansible dbservers -m script -a 'test.sh'
+    192.168.1.108 | CHANGED => {
+        "changed": true,
+        "rc": 0,
+        "stderr": "Shared connection to 192.168.1.108 closed.\r\n",
+        "stderr_lines": [
+            "Shared connection to 192.168.1.108 closed."
+        ],
+        "stdout": "",
+        "stdout_lines": []
+    }
+    root@ubuntu:/tmp# cat /tmp/script.ansible
+    hello ansible from script
+
+
+
+## yum模块
+    #Ansible中的yum模块负责在被管理的主机数安装与卸载软件包，前提是在每个节点配置自己的YUM仓库，name指定要安装的软件包
+    #带上软件包的版本号，state指定安装软件包的状态，present、latest用来表示安装，absent表示卸载
+    [root@hujianli-linux ~]# ansible-doc -s yum
+
+    #安装zsh软件包
+    ansible dbservers -m yum -a 'name=zsh'
+
+    #卸载zsh软件包
+    ansible dbservers -m yum -a 'name=zsh,state=absent'
+
+
+## setup模块
+    在 Ansible中使用setup模块收集、查看被管理主机的facts，每个被管理主机在接收并允许管理命令之前，都会将自己的
+    相关信息（操作系统版本、IP地址等）发送给控制主机
+    [root@hujianli-linux ~]# ansible-doc -s setup
+
+    [root@hujianli-linux ~]# ansible dbservers -m setup | grep "ansible_python_version"
+
+## ansible配合YAML使用
+
+    1、playbook的核心元素
+    hosts : playbook配置文件作用的主机
+    tasks: 任务列表
+    variables: 变量
+    templates:包含模板语法的文本文件
+    handlers :由特定条件触发的任务
+    roles :用于层次性、结构化地组织playbook。roles 能够根据层次型结构自动装载变量文件、tasks以及handlers等
+
+
+    2、playbook运行方式
+    ansible-playbook --check 只检测可能会发生的改变,但不真执行操作
+    ansible-playbook --list-hosts 列出运行任务的主机
+    ansible-playbook --syntax-check playbook.yaml 语法检测
+    ansible-playbook -t TAGS_NAME playbook.yaml 只执行TAGS_NAME任务
+    ansible-playbook playbook.yaml 运行
+
+
+    #inventory（主机清单），主机清单中将被管理主机进行分组命名
+    #默认主机清单为/etc/ansible/hosts,例如：
+
+    [dbservers]
+    db1.example.org
+    db2.example.org:2222
+
+    #如果主机名遵循类似的命名规则，则可以使用列表的方式标示各个主机
+    [webservers]
+    www[01:05].example.org
+
+    [dbservers]
+    db-[a:f].example.org
+
+    #如果不配置SSH秘钥认证，可以这样对管理主机进行认证
+    vim /etc/ansible/hosts
+    [wbservers]
+    192.168.1.110 ansible_ssh_user=root ansible_ssh_pass=123.com
+
+    #基础配置yml，关闭iptables、关闭selinux、
+
+    root@ubuntu:/etc/ansible# cat test.yml
+    ---
+    - hosts: dbservers
+      user: root
+      tasks:
+      - name: no selinux
+        action: command /usr/sbin/setenforce 0
+
+      - name: no iptables
+        action: service name=iptables state=stopped
+
+      - name: made up task just to show variables work here
+        action: command /bin/echo release is
+
+
+
+    #安装部署httpd服务-version1
+    [root@hujianli-linux ansible]# cat httpd01.yml
+    ---
+    - hosts: dbservers
+      remote_user: root
+      tasks:
+      - name: install httpd
+        yum: name=httpd state=present
+      - name: install configure file
+        copy: src=httpd.conf dest=/etc/httpd/conf/
+      - name: start httpd service
+        service: name=httpd state=started
+
+    #测试playbook
+    ansible-playbook --check httpd01.yml
+
+    #运行playbook
+    ansible-playbook httpd01.yml
+
+
+    #ubuntu中安装nginx
+    [root@hujianli-linux ansible]# cat install_nginx.yml
+    ---
+    - hosts: dbservers
+      tasks:
+        - name: Installs nginx web server
+          apt: pkg=nginx state=installed update_cache=true
+          notify:
+            - start nginx
+
+      handlers:
+        - name: start nginx
+          service: name=nginx state=started
+
+    #执行批量安装nginx
+    ansible-playbook install_nginx.yml
+
+
+    #通过playbook安装管理redis服务
+    root@ubuntu:/etc/ansible# cat redis_first.yml
+    - hosts: all
+      remote_user: root
+      tasks:
+      - name: install redis
+        yum: name=redis state=latest
+
+      - name: start redis
+        service: name=redis state=started
+
+
+
+## Roles介绍
+    #层次化，结构化地组织Playbook，使用角色（roles），可以根据层次结构自动装载变量文件，tasks以及handlers等
+    #roles就是将变量、文件、任务、模块及处理器设置于单独的目录中，便捷地使用它们
+
+    mkdir -p ansible_playbooks/roles/{websrvs,dbsrvs}/{tasks,files,templates,meta,handlers,vars}

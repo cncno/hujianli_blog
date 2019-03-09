@@ -1,0 +1,60 @@
+# While循环
+while循环不同于for循环，while循环是只要条件满足，那么就会一直运行代码块，否则就运行else代码块，语法如下：
+```
+while <条件>:
+	<代码块>
+else:
+	<如果条件不成立执行这里的代码块>
+
+```
+
+#### 代码示例
+```
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+
+
+'''
+while 条件表达式：
+    循环体
+    不满足条件表达式时，自动跳出循环
+'''
+
+number = 500           #定义范围
+start_nu = 0            #计数器
+
+while start_nu <= number:
+    if start_nu%3 == 2 and start_nu%5 == 3 and start_nu%7 == 2:
+        print("答曰 这个数值是:{}".format(start_nu))
+    start_nu +=1
+print("循环结束！！")
+
+```
+
+#### 打印99乘法表
+```
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+falg = 9
+num = 0
+while num < falg:
+    num +=1
+    for i in range(1,num+1):
+        print(num,"*",i,"=",num*i,end=" ")
+    print(" ")
+```
+### 遍历输出列表
+#### 代码示例
+```
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+alst = [1,2,3,4,5]
+total = len(alst)
+
+i = 0
+while i < total:
+    print("{} 的平方是{}".format(alst[i], alst[i]*alst[i]))
+    i = i +1
+else:
+    print("循环结束 ！！")
+```

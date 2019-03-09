@@ -1,0 +1,73 @@
+# 爬取酷狗TOP500的数据
+__网页访问URL地址：__
+https://www.kugou.com/yy/rank/home/2-8888.html?from=rank
+
+__通过观察URL翻页是通过更换home/后面的数字__
+
+https://www.kugou.com/yy/rank/home/1xxx
+https://www.kugou.com/yy/rank/home/2xxx
+
+## 代码示例
+```
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+from bs4 import BeautifulSoup
+import requests
+import time             #导入相应的库文件
+
+
+headers = {
+"User-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 "
+              "(KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36"
+
+}
+
+
+def get_info(url):
+    wb_data = requests.get(url,headers=headers)
+    soup = BeautifulSoup(wb_data.text, 'lxml')
+    ranks = soup.select('span.pc_temp_num')
+    titles = soup.select('div.pc_temp_songlist > ul > li > a')
+    times = soup.select('span.pc_temp_tips_r > span')
+    for rank,title,time in zip(ranks,titles,times):
+        data = {
+            "rank": rank.get_text().strip(),
+            "singer":title.get_text().split('-')[0],
+            "song":"".join(title.get_text().split('-')[1:]),
+            "time":time.get_text().strip(),
+        }
+        print(data)
+
+if __name__ == '__main__':
+    urls = ['https://www.kugou.com/yy/rank/home/{}-8888.html?from=rank'.format((str(i))) for i in range(1,24)]      #构造多页url
+
+    for url in urls:
+        get_info(url)   #循环调用get_info()函数
+    time.sleep(1)       #休眠时间1秒
+
+
+```
+
+### 输出结果
+```
+{'rank': '1', 'singer': '展展与罗罗 ', 'time': '5:38', 'song': ' 沙漠骆驼'}
+{'rank': '2', 'singer': '花姐 ', 'time': '3:10', 'song': ' 夜之光'}
+{'rank': '3', 'singer': '张紫豪 ', 'time': '4:00', 'song': ' 可不可以'}
+{'rank': '4', 'singer': 'G.E.M.邓紫棋 ', 'time': '3:55', 'song': ' 光年之外'}
+{'rank': '5', 'singer': '李荣浩 ', 'time': '4:39', 'song': ' 年少有为'}
+{'rank': '6', 'singer': '何野 ', 'time': '4:00', 'song': ' 天亮以前说再见'}
+{'rank': '7', 'singer': '贺一航 ', 'time': '4:49', 'song': ' 请先说你好'}
+{'rank': '8', 'singer': '王大毛 ', 'time': '4:05', 'song': ' 去年夏天'}
+{'rank': '9', 'singer': '马良、孙茜茹 ', 'time': '3:56', 'song': ' 往后余生'}
+{'rank': '10', 'singer': '火箭少女101 ', 'time': '3:52', 'song': ' 卡路里'}
+{'rank': '11', 'singer': '周笔畅 ', 'time': '3:30', 'song': ' 最美的期待'}
+{'rank': '12', 'singer': '221小伙伴 ', 'time': '3:36', 'song': ' 遥远的你 (正式版)'}
+{'rank': '13', 'singer': '李袁杰 ', 'time': '3:40', 'song': ' 醉千年'}
+{'rank': '14', 'singer': 'G.G(张思源 ) ', 'time': '3:16', 'song': ' 给陌生的你听'}
+{'rank': '15', 'singer': '于果 ', 'time': '3:37', 'song': ' 侧脸'}
+{'rank': '16', 'singer': '于文文 ', 'time': '4:42', 'song': ' 体面'}
+{'rank': '17', 'singer': '胡夏、郁可唯 ', 'time': '4:36', 'song': ' 知否知否'}
+{'rank': '18', 'singer': 'Ayo97、阿涵 ', 'time': '3:57', 'song': ' 感谢你曾来过'}
+................
+
+```

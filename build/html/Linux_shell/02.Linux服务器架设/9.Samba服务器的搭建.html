@@ -1,0 +1,2059 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.9. Samba服务器搭建 &mdash; Cloud_Linux_Road 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="next" title="2.10. rsync数据同步" href="10.rsync数据同步.html" />
+    <link rel="prev" title="2.8. 远程登录Linux系统" href="8.远程登录Linux系统.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cloud_Linux_Road
+          
+
+          
+            
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../aliyun/index.html">阿里云ACP学习</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../aliyun/ECS/index.html">1. ECS知识点</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../aliyun/ECS/01.aliyun安装命令行工具.html">1.1. Linux 安装和使用 aliyuncli（python版）</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ECS/01.aliyun安装命令行工具.html#id1">1.1.1. 安装须知</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ECS/01.aliyun安装命令行工具.html#id4">1.1.2. 安装命令行工具</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../aliyun/ECS/02.安全组实践一.html">1.2. 安全组实践一</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ECS/02.安全组实践一.html#id2">1.2.1. 安全组作用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ECS/02.安全组实践一.html#id3">1.2.2. 最重要的规则：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ECS/02.安全组实践一.html#id4">1.2.3. 设置安全组的入网规则</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../aliyun/ECS/03.Linux远程连接ESC实例.html">1.3. Linux远程连接ESC实例</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ECS/03.Linux远程连接ESC实例.html#id1">1.3.1. 操作步骤</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../aliyun/ECS/04.迁云工具和P2V.html">1.4. 迁云工具和P2V</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ECS/04.迁云工具和P2V.html#id1">1.4.1. 适合的操作系统</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ECS/04.迁云工具和P2V.html#linux">1.4.2. Linux服务器注意事项</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../aliyun/ali_ACP_test/index.html">2. ACP考试整理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../aliyun/ali_ACP_test/01.ECS_考点.html">2.1. 云服务器 ECS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ali_ACP_test/01.ECS_考点.html#id1">2.1.1. 考点整理</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../aliyun/ali_ACP_test/02.OSS_考点.html">2.2. 对象存储OSS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ali_ACP_test/02.OSS_考点.html#id1">2.2.1. 考点整理</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../aliyun/ali_ACP_test/03.SLB_考点.html">2.3. SLB负载均衡学习</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ali_ACP_test/03.SLB_考点.html#id1">2.3.1. 考点整理</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../aliyun/ali_ACP_test/04.VPC_考点.html">2.4. VPC（专有网络）</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ali_ACP_test/04.VPC_考点.html#id1">2.4.1. 考点整理</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../aliyun/ali_ACP_test/05.弹性伸缩-Auto_Scaling.html">2.5. 弹性伸缩-Auto_Scaling</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ali_ACP_test/05.弹性伸缩-Auto_Scaling.html#id1">2.5.1. 考点整理</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../aliyun/ali_ACP_test/06.CDN_内容分发.html">2.6. CDN内容分发服务</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ali_ACP_test/06.CDN_内容分发.html#id1">2.6.1. 考点整理</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../aliyun/ali_ACP_test/07.云盾云安全.html">2.7. 云盾云安全</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ali_ACP_test/07.云盾云安全.html#id2">2.7.1. 考点整理</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../aliyun/ali_ACP_test/08.云计算小知识.html">2.8. 云计算通用知识</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../aliyun/ali_ACP_test/08.云计算小知识.html#id2">2.8.1. 考点整理</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../aliyun/ali_ACP_test/09.RDS云关系型数据库.html">2.9. RDS云关系型数据库</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Linux_shell</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../01.常用较多命名查询/index.html">1. 常用较多命名查询</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/01.find.html">1.1. find查找</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/01.find.html#id1">1.1.1. 功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/01.find.html#id2">1.1.2. 格式：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/01.find.html#id3">1.1.3. 常用选项：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/01.find.html#id4">1.1.4. 示例：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/02.正则表达式.html">1.2. 正则表达式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/03.lsof.html">1.3. lsof</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/03.lsof.html#id1">1.3.1. 功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/03.lsof.html#id2">1.3.2. 常用选项：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/03.lsof.html#id3">1.3.3. 示例：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/04.xargs.html">1.4. xargs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/04.xargs.html#id1">1.4.1. 功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/04.xargs.html#id2">1.4.2. 常用选项：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/04.xargs.html#id3">1.4.3. 示例：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/05.scp.html">1.5. scp</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/05.scp.html#id1">1.5.1. 功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/05.scp.html#id2">1.5.2. 常用选项：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/06.wget.html">1.6. wget</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/06.wget.html#id1">1.6.1. 功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/06.wget.html#id2">1.6.2. 常用选项：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/06.wget.html#id3">1.6.3. 示例：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/07.curl.html">1.7. curl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/07.curl.html#id1">1.7.1. 功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/07.curl.html#id2">1.7.2. 常用选项：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/07.curl.html#id3">1.7.3. 示例：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/08.cut.html">1.8. cut</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/08.cut.html#id1">1.8.1. 功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/08.cut.html#id2">1.8.2. 常用选项：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/08.cut.html#id3">1.8.3. 示例：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/09.ss.html">1.9. ss</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/09.ss.html#id1">1.9.1. 功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/09.ss.html#id2">1.9.2. 常用选项：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/09.ss.html#id3">1.9.3. 示例：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/10.date.html">1.10. date</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/10.date.html#id1">1.10.1. 功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/10.date.html#id2">1.10.2. 常用选项：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/10.date.html#id3">1.10.3. 示例：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/11.nestat.html">1.11. netstat</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/11.nestat.html#id1">1.11.1. 功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/11.nestat.html#id2">1.11.2. 常用选项:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/11.nestat.html#id3">1.11.3. 示例：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/12.eval.html">1.12. eval</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/12.eval.html#id1">1.12.1. 功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/12.eval.html#id2">1.12.2. 示例：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/13.ssh.html">1.13. ssh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/13.ssh.html#id1">1.13.1. 功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/13.ssh.html#id2">1.13.2. 常用选项：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/13.ssh.html#id3">1.13.3. 示例：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/14.nohup.html">1.14. nohup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/14.nohup.html#id1">1.14.1. 功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/14.nohup.html#id2">1.14.2. 示例：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/15.grep.html">1.15. grep</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/15.grep.html#id1">1.15.1. 参数说明</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/15.grep.html#grepif">1.15.2. grep用于if判断</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/16.route.html">1.16. route路由和网关设置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/16.route.html#id1">1.16.1. 添加网关</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/16.route.html#id2">1.16.2. 删除</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/16.route.html#id3">1.16.3. 查看当前路由表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/16.route.html#id4">1.16.4. 示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/17.exec.html">1.17. exec</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/17.exec.html#exec-find">1.17.1. exec+find联合使用示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/18.运算符.html">1.18. let运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/19.read.html">1.19. read</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/19.read.html#readn">1.19.1. 过read从键盘输入中读取到变量N的值</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/20.wc命令.html">1.20. wc命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/40.Linux初始化系统安全设置.html">1.21. Linux初始化系统安全设置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/40.Linux初始化系统安全设置.html#ping">1.21.1. 1.禁止系统响应任何从外部/内部来的ping请求</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/40.Linux初始化系统安全设置.html#shell">1.21.2. 2.限制Shell记录的历史命令条数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/40.Linux初始化系统安全设置.html#id1">1.21.3. 3.删除系统默认的不必要用户和组</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/40.Linux初始化系统安全设置.html#selinux">1.21.4. 4.关闭SELinux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.常用较多命名查询/40.Linux初始化系统安全设置.html#tcp-wrappers">1.21.5. 5.设定tcp_wrappers防火墙</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/41.使用tar命令进行本地备份scripts.html">1.22. 使用tar命令进行本地备份scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2. Linux服务器架设</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="1.RAID与LVM磁盘阵列技术.html">2.1. RAID与LVM磁盘阵列</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="1.RAID与LVM磁盘阵列技术.html#raid">2.1.1. RAID 技术</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="2.NFS共享服务器搭建.html">2.2. NFS共享服务器搭建</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="2.NFS共享服务器搭建.html#nfs-centos7-6">2.2.1. 安装NFS服务（Centos7.6）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="2.NFS共享服务器搭建.html#id1">2.2.2. nfs搭建 方式二</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.Vsftpd服务器搭建.html">2.3. vsftpd服务安装配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.Vsftpd服务器搭建.html#id1">2.3.1. 匿名用户登录配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.Vsftpd服务器搭建.html#id2">2.3.2. 系统用户登录配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.Vsftpd服务器搭建.html#id3">2.3.3. Vsftpd虚拟用户实战</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="4.挂载硬盘mount命令.html">2.4. 挂载硬盘和分区</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="4.挂载硬盘mount命令.html#mount">2.4.1. mount命令</a></li>
+<li class="toctree-l4"><a class="reference internal" href="4.挂载硬盘mount命令.html#fdisk">2.4.2. fdisk命令</a></li>
+<li class="toctree-l4"><a class="reference internal" href="4.挂载硬盘mount命令.html#id2">2.4.3. 添加交换分区</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="5.部署磁盘阵列.html">2.5. 部署磁盘阵列</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="5.部署磁盘阵列.html#raid-10">2.5.1. 制作一个RAID 10磁盘阵列</a></li>
+<li class="toctree-l4"><a class="reference internal" href="5.部署磁盘阵列.html#raid-5">2.5.2. 磁盘阵列+备份盘 (RAID 5)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="6.Apache服务搭建.html">2.6. Apache服务源码搭建</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="6.Apache服务搭建.html#id1">2.6.1. Apache 的特点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="6.Apache服务搭建.html#id2">2.6.2. Apache 源码安装编译配置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="7.使用iSCSI服务部署网络存储.html">2.7. 使用iSCSI服务部署网络存储</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="7.使用iSCSI服务部署网络存储.html#raid">2.7.1. 创建RAID磁盘阵列</a></li>
+<li class="toctree-l4"><a class="reference internal" href="7.使用iSCSI服务部署网络存储.html#iscsi-target-initiator">2.7.2. iSCSI技术在工作形式上分为服务端（target）与客户端（initiator）。</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="8.远程登录Linux系统.html">2.8. 远程登录Linux系统</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="8.远程登录Linux系统.html#id1">2.8.1. 1.使用密钥认证登录</a></li>
+<li class="toctree-l4"><a class="reference internal" href="8.远程登录Linux系统.html#id3">2.8.2. 2.两台Linux之间互访</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.9. Samba服务器搭建</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">2.9.1. Samba的概念和功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2.9.2. Samba的安装与配置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="10.rsync数据同步.html">2.10. rsync数据同步</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="10.rsync数据同步.html#abrsync">2.10.1. A系统、B系统安装rsync安装包</a></li>
+<li class="toctree-l4"><a class="reference internal" href="10.rsync数据同步.html#arsync">2.10.2. A系统rsync服务器端配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="10.rsync数据同步.html#brsync">2.10.3. B系统rsync客户端</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="12.Tomcat服务搭建配置.html">2.11. Tomcat服务搭建配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id1">2.11.1. 安装tomcat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id2">2.11.2. 安装Tomcat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id6">2.11.3. 配置tomcat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="12.Tomcat服务搭建配置.html#jpress">2.11.4. 部署开源站点（jpress）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id9">2.11.5. Tomcat多实例配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id10">2.11.6. Tomcat反向代理集群</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../03.玩转shell脚本编程/index.html">3. 玩转shell脚本编程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/01.基础知识.html">3.1. 一、基础知识</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/01.基础知识.html#shell">3.1.1. 一、Shell简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/01.基础知识.html#id2">3.1.2. 二、Shell分类</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/01.基础知识.html#id3">3.1.3. 三、第一个Shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/01.基础知识.html#id4">3.1.4. 四、执行Shell的三种方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/01.基础知识.html#id6">3.1.5. 五、Shell变量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/01.基础知识.html#id11">3.1.6. 六、引号</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/01.基础知识.html#id12">3.1.7. 七、注释</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/02.字符串与数组.html">3.2. 二、字符串与数组</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/02.字符串与数组.html#id2">3.2.1. 一、字符串常用操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/02.字符串与数组.html#id8">3.2.2. 二、数组</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/02.字符串与数组.html#id11">3.2.3. 三、字符显示颜色</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/03.运算符.html">3.3. 三、运算符</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/03.运算符.html#shell">3.3.1. 一、Shell表达式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/03.运算符.html#id2">3.3.2. 1.1 整数比较符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/03.运算符.html#id3">3.3.3. 1.2 算术运算符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/03.运算符.html#id4">3.3.4. 1.3 布尔运算符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/03.运算符.html#id5">3.3.5. 1.4 逻辑运算符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/03.运算符.html#id7">3.3.6. 1.5 文件测试运算符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/03.运算符.html#id8">3.3.7. 1.6 字符串测试</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/04.流程控制.html">3.4. 四、流程控制</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/04.流程控制.html#if">3.4.1. 一、if语句</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/04.流程控制.html#for">3.4.2. 二、for循环</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/04.流程控制.html#while">3.4.3. 三、while语句</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/04.流程控制.html#break-continue">3.4.4. 四、break 和 continue 语句</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/04.流程控制.html#case">3.4.5. 五、case语句</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/04.流程控制.html#select">3.4.6. 六、select语句</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/05.函数.html">3.5. 五、函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/05.函数.html#id2">3.5.1. 一、概念</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/05.函数.html#id3">3.5.2. 二、格式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/05.函数.html#id4">3.5.3. 三、函数参数</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/06.正则表达式.html">3.6. 六、正则表达式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/06.正则表达式.html#id2">3.6.1. 一、基本正则表达式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/07.三剑客之grep.html">3.7. 七、三剑客之grep</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/07.三剑客之grep.html#id1">3.7.1. 概念</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/07.三剑客之grep.html#id2">3.7.2. 语法格式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/07.三剑客之grep.html#id5">3.7.3. 使用举例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/08.三剑客之sed.html">3.8. 八、三剑客之sed</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/08.三剑客之sed.html#id1">3.8.1. 概念：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/08.三剑客之sed.html#id2">3.8.2. 适用场景</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/08.三剑客之sed.html#id3">3.8.3. 语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/08.三剑客之sed.html#id4">3.8.4. 使用举例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/08.三剑客之sed.html#keepalive">3.8.5. 修改keepalive配置剔除后端服务器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/09.三剑客-awk.html">3.9. 九、三剑客之awk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/09.三剑客-awk.html#id1">3.9.1. 概念</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/09.三剑客-awk.html#id2">3.9.2. awk输出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/09.三剑客-awk.html#id3">3.9.3. awk变量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/09.三剑客-awk.html#id4">3.9.4. 操作符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/09.三剑客-awk.html#pattern">3.9.5. Pattern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/09.三剑客-awk.html#action">3.9.6. 常用action</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/09.三剑客-awk.html#array">3.9.7. array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/09.三剑客-awk.html#id6">3.9.8. 函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/09.三剑客-awk.html#id7">3.9.9. awk判断</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/09.三剑客-awk.html#id8">3.9.10. awk循环</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/09.三剑客-awk.html#id9">3.9.11. awk练习题</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html">3.10. 十、shell杂项</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html#id1">3.10.1. 一、输入输出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html#id2">3.10.2. 二、命令</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html#id3">3.10.3. 三、实战</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/11.xagrs使用.html">3.11. xagrs使用</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/11.xagrs使用.html#xargs">3.11.1. xargs功能：从标准输入执行命令</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/11.xagrs使用.html#id1">3.11.2. 常用选项：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html">3.12. 收集的一些shell脚本</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#id1">3.12.1. 备份数据库脚本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#id2">3.12.2. 监控网站状态脚本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#id3">3.12.3. 进程控制示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#lnmp">3.12.4. lnmp一键安装示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#id4">3.12.5. 服务器初始化脚本示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#id5">3.12.6. 服务启动脚本示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#mysql">3.12.7. 监控mysql数据库示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#tar-var-log">3.12.8. 每周五使用tar命令备份/var/log下的所有日志文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#id6">3.12.9. 一些常用的函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#id7">3.12.10. 检查监控内存、硬盘</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#id8">3.12.11. 猜随机数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#ip">3.12.12. 检查网段内存活的主机IP信息</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#id9">3.12.13. 进度条</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#nginx">3.12.14. nginx启动脚本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#test">3.12.15. 3种test的写法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#case-color">3.12.16. case+color用法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#io">3.12.17. 监控磁盘IO脚本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/12.收集的一些shell脚本.html#color-print">3.12.18. color_print例子</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/13.自动安装zabbix服务器脚本.html">3.13. 自动化安装zabbix服务器shell脚本</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/13.自动安装zabbix服务器脚本.html#install-zabbix-sh">3.13.1. install_zabbix.sh</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/14.自动化安装cacti脚本.html">3.14. 自动化安装cacti服务器脚本</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/14.自动化安装cacti脚本.html#install-cacti-sh">3.14.1. install_cacti.sh</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/15.自动安装MongoDB脚本.html">3.15. 自动化安装MongoDB脚本</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/15.自动安装MongoDB脚本.html#install-mongodb-sh">3.15.1. install_mongodb.sh</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/16.备份MongoDB脚本.html">3.16. 备份MongoDB脚本</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/16.备份MongoDB脚本.html#backup-mongodb-sh">3.16.1. backup_mongodb.sh</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/17.自动安装memcached脚本.html">3.17. 自动安装memcached脚本</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/17.自动安装memcached脚本.html#install-memcached-sh">3.17.1. install_memcached.sh</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/18.system检测脚本.html">3.18. 系统各项内容检测脚本</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/18.system检测脚本.html#check-system-sh">3.18.1. check_system.sh</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/index.html">4. 玩转数据库(mysql、Redis)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/01.Redis数据库.html">4.1. Redis的使用</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/01.Redis数据库.html#id1">4.1.1. 概念</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/01.Redis数据库.html#id2">4.1.2. 使用场景</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/01.Redis数据库.html#reidsmemcached">4.1.3. reids和memcached的比较</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/01.Redis数据库.html#id3">4.1.4. 安装与启动</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/01.Redis数据库.html#id4">4.1.5. redis的操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/01.Redis数据库.html#id7">4.1.6. 集合操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/01.Redis数据库.html#id11">4.1.7. 设置redis的连接密码</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/01.Redis数据库.html#pythonredis">4.1.8. python操作redis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../05.Nginx学习/index.html">5. Nginx学习</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../06.LAMP、LNMP学习/index.html">6. LNMP、LAMP学习</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../06.LAMP、LNMP学习/01.LAMP部署.html">6.1. LAMP+WordPress环境</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../06.LAMP、LNMP学习/01.LAMP部署.html#lamp">6.1.1. 更多LAMP部署参考</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../06.LAMP、LNMP学习/01.LAMP部署.html#lampwordpress">6.1.2. LAMP与WordPress概述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../06.LAMP、LNMP学习/01.LAMP部署.html#mariadb-mysql">6.1.3. 安装并配置MariaDB（MySQL）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../06.LAMP、LNMP学习/01.LAMP部署.html#php">6.1.4. 3.安装并配置PHP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../06.LAMP、LNMP学习/01.LAMP部署.html#phpmyadmin">6.1.5. 4.安装phpMyAdmin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../06.LAMP、LNMP学习/01.LAMP部署.html#wordpress">6.1.6. 5.部署WordPress程序</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../06.LAMP、LNMP学习/01.LAMP部署.html#id1">6.1.7. 测试LAMP环境安装的正确性</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../07.Zabbix监控企业实战/index.html">7. Zabbix监控企业实战</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../08.Linux构建高可用架构/index.html">8. 构建Linux高可用架构</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../08.Linux构建高可用架构/01.LVS负载均衡学习.html">8.1. LVS基于四层的负载均衡学习</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/01.LVS负载均衡学习.html#nat-virtualserver-via-network-address-translation-vs-nat">8.1.1. NAT模式-网络地址转换   Virtualserver via Network address translation(VS/NAT)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/01.LVS负载均衡学习.html#tun-ip-virtual-server-via-ip-tunneling-vs-tun">8.1.2. TUN模式-IP隧道模式          Virtual Server via IP Tunneling(VS/TUN)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/01.LVS负载均衡学习.html#dr-virtual-server-via-direct-routing-vs-dr">8.1.3. DR模式-直接路由模式          Virtual Server via Direct Routing(VS/DR)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/01.LVS负载均衡学习.html#id1">8.1.4. 三种负载均衡方式简单比较</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/01.LVS负载均衡学习.html#id2">8.1.5. LVS负载均衡调度算法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/01.LVS负载均衡学习.html#natlvs">8.1.6. NAT模式LVS搭建</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../08.Linux构建高可用架构/02.Nginx+keepalived 双机热备_主从.html">8.2. 企业级Nginx+keepalived 集群实战</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/02.Nginx+keepalived 双机热备_主从.html#keepalived">8.2.1. keepalived高可用简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/02.Nginx+keepalived 双机热备_主从.html#nginx-keepalivedweb">8.2.2. Nginx+keepalived高性能web网络架构实战拓扑</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/02.Nginx+keepalived 双机热备_主从.html#id1">8.2.3. 1、原理及环境</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../08.Linux构建高可用架构/03.Nginx+keepalived双主架构.html">8.3. Nginx+keepalived双主架构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/03.Nginx+keepalived双主架构.html#id1">8.3.1. 双主模式拓扑图</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/03.Nginx+keepalived双主架构.html#id2">8.3.2. 环境说明</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/03.Nginx+keepalived双主架构.html#nginx-keepalived1-master">8.3.3. nginx_keepalived1_master</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/03.Nginx+keepalived双主架构.html#nginx-keepalived2-backup">8.3.4. nginx_keepalived2_backup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../08.Linux构建高可用架构/04.Redis+keepalived高可用集群实战.html">8.4. Redis+keepalived高可用集群实战</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/04.Redis+keepalived高可用集群实战.html#redis">8.4.1. Redis特点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/04.Redis+keepalived高可用集群实战.html#id1">8.4.2. Redis 优势</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/04.Redis+keepalived高可用集群实战.html#id2">8.4.3. 环境介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/04.Redis+keepalived高可用集群实战.html#id3">8.4.4. Redis的安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/04.Redis+keepalived高可用集群实战.html#id4">8.4.5. Redis主从的配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/04.Redis+keepalived高可用集群实战.html#id5">8.4.6. redis启动脚本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/04.Redis+keepalived高可用集群实战.html#id6">8.4.7. 查看redis主从状态</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/04.Redis+keepalived高可用集群实战.html#keepalived">8.4.8. KeepAlived配置实现双机热备</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../08.Linux构建高可用架构/05.NFS+keepalived实现高可用共享.html">8.5. nfs+ keepalived高可用集群</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/05.NFS+keepalived实现高可用共享.html#nfs">8.5.1. 安装nfs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/05.NFS+keepalived实现高可用共享.html#nfskeepalived">8.5.2. NFS主备分别安装keepalived服务</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/05.NFS+keepalived实现高可用共享.html#keepalivd">8.5.3. keepalivd主配置文件详细内容</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/05.NFS+keepalived实现高可用共享.html#id1">8.5.4. keepalivd备配置文件详细内容</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/05.NFS+keepalived实现高可用共享.html#check-nfs">8.5.5. check_nfs检测脚本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/05.NFS+keepalived实现高可用共享.html#vipnfs">8.5.6. 在备112机器上挂载VIP的nfs目录</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/05.NFS+keepalived实现高可用共享.html#id2">8.5.7. 在主111机器上挂载VIP的nfs目录</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../08.Linux构建高可用架构/06.MySQL 主从高可用架构.html">8.6. MySQL 主从高可用架构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/06.MySQL 主从高可用架构.html#id1">8.6.1. MySQL 数据库主从复制原理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/06.MySQL 主从高可用架构.html#id2">8.6.2. MySQL复制的常用架构</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/06.MySQL 主从高可用架构.html#id3">8.6.3. MySQL 数据库主从配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/06.MySQL 主从高可用架构.html#id4">8.6.4. 主和从服务器都安装 mysql 相关软件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/06.MySQL 主从高可用架构.html#id5">8.6.5. 配置主从</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/06.MySQL 主从高可用架构.html#id6">8.6.6. 测试主从同步</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../08.Linux构建高可用架构/07.MySQL主主同步高可用架构.html">8.7. MySQL主主同步高可用架构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/07.MySQL主主同步高可用架构.html#id1">8.7.1. MySQL主主互备模式架构图</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/07.MySQL主主同步高可用架构.html#id2">8.7.2. MySQL 数据库主主配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/07.MySQL主主同步高可用架构.html#a">8.7.3. 主A数据库</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/07.MySQL主主同步高可用架构.html#b">8.7.4. 主B数据库</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/07.MySQL主主同步高可用架构.html#id3">8.7.5. Mysql同步引入话题</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../08.Linux构建高可用架构/08.MySQL双主+keepalived高可用集群.html">8.8. Mysql双主+keepalived集群架构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/08.MySQL双主+keepalived高可用集群.html#keepalived">8.8.1. keepalived主机配置：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/08.MySQL双主+keepalived高可用集群.html#id1">8.8.2. keepalived备机配置:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/08.MySQL双主+keepalived高可用集群.html#id2">8.8.3. 主备机监控脚本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/08.MySQL双主+keepalived高可用集群.html#vipmysql">8.8.4. 检测VIP连接mysql是否成功</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../08.Linux构建高可用架构/09.Haproxy+keepalived主从-主主高可用架构.html">8.9. Haproxy+keepalived主从-主主高可用架构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/09.Haproxy+keepalived主从-主主高可用架构.html#haproxy">8.9.1. Haproxy介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/09.Haproxy+keepalived主从-主主高可用架构.html#haproxylvs">8.9.2. Haproxy与LVS的异同</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/09.Haproxy+keepalived主从-主主高可用架构.html#id1">8.9.3. 快速安装HAProxy集群软件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/09.Haproxy+keepalived主从-主主高可用架构.html#id2">8.9.4. Haproxy 主备机器配置文件详细如下</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/09.Haproxy+keepalived主从-主主高可用架构.html#id3">8.9.5. 配置haproxy记录日志</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/09.Haproxy+keepalived主从-主主高可用架构.html#id4">8.9.6. Haproxy+keepalived主从</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/09.Haproxy+keepalived主从-主主高可用架构.html#id7">8.9.7. Haproxy+keepalived主主</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../08.Linux构建高可用架构/10.LVS+Keepalived主从_主主高可用集群.html">8.10. LVS+keeplaived高可用集群</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/10.LVS+Keepalived主从_主主高可用集群.html#lvs-keepalived">8.10.1. LVS+keepalived 主从高可用模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../08.Linux构建高可用架构/10.LVS+Keepalived主从_主主高可用集群.html#id1">8.10.2. LVS+keepalived 主主高可用模式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../08.Linux构建高可用架构/11.MySQL读、写分离解决方案.html">8.11. MySQL读、写分离解决方案</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../09.Zabbix 3.0 从入门到精通/index.html">9. Zabbix3.0入门到精通</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../KVM_Study/index.html">KVM_Study</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docker/index.html">Docker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Docker/01.Docker学习/index.html">1. Docker学习</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Docker/01.Docker学习/01.Docker是什么.html">1.1. Docker是什么？</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/01.Docker是什么.html#id1">1.1.1. docker的应用场景</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Docker/01.Docker学习/02.docker的安装.html">1.2. docker的架构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Docker/01.Docker学习/02.docker的安装.html#id1">1.3. Docker 安装</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/02.docker的安装.html#ubuntu-docker">1.3.1. Ubuntu Docker 安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/02.docker的安装.html#centos-docker">1.3.2. CentOS Docker 安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/02.docker的安装.html#windows-docker">1.3.3. Windows Docker 安装</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Docker/01.Docker学习/03.容器的基本操作.html">1.4. 容器的基本操作</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/03.容器的基本操作.html#id2">1.4.1. 创建容器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/03.容器的基本操作.html#id3">1.4.2. 创建一个交互式的容器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/03.容器的基本操作.html#id4">1.4.3. 启动容器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/03.容器的基本操作.html#id5">1.4.4. 终止容器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/03.容器的基本操作.html#id6">1.4.5. 容器内信息获取和命令执行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/03.容器的基本操作.html#id7">1.4.6. 查看容器日志</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/03.容器的基本操作.html#id8">1.4.7. 查看容器进程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/03.容器的基本操作.html#id9">1.4.8. 查看容器信息</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/03.容器的基本操作.html#id10">1.4.9. 查询容器的运行状态</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/03.容器的基本操作.html#ip">1.4.10. 查询容器的IP地址</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/03.容器的基本操作.html#id11">1.4.11. 容器中镜像的使用</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Docker/01.Docker学习/04.镜像的常用操作.html">1.5. 镜像的常用操作</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/04.镜像的常用操作.html#id2">1.5.1. 查看镜像</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/04.镜像的常用操作.html#id3">1.5.2. 下载镜像</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/04.镜像的常用操作.html#id4">1.5.3. 查找镜像</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/04.镜像的常用操作.html#id5">1.5.4. 拖取镜像</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/04.镜像的常用操作.html#id6">1.5.5. 删除镜像</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/04.镜像的常用操作.html#id7">1.5.6. 更新镜像</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/04.镜像的常用操作.html#commit">1.5.7. 使用commit创建本地镜像</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/04.镜像的常用操作.html#dockerfile">1.5.8. 使用 Dockerfile 创建镜像</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/04.镜像的常用操作.html#id8">1.5.9. 设置镜像标签</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/04.镜像的常用操作.html#id9">1.5.10. 创建注册服务器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/04.镜像的常用操作.html#id10">1.5.11. 如何运行容器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/04.镜像的常用操作.html#id11">1.5.12. 两种进入容器的方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/04.镜像的常用操作.html#id12">1.5.13. 容器常见操作整理</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Docker/01.Docker学习/05.Dokcer网络.html">1.6. Docker 网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/05.Dokcer网络.html#id1">1.6.1. Docker网络</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/05.Dokcer网络.html#id2">1.6.2. 自定义容器网络</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/05.Dokcer网络.html#id3">1.6.3. 容器之间的连通性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/05.Dokcer网络.html#docker-dns-server">1.6.4. Docker DNS Server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/05.Dokcer网络.html#id4">1.6.5. 暴露网络端口</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Docker/01.Docker学习/05.Dokcer网络.html#id5">1.6.6. 容器访问外网</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docker/02.Docker经典示例/index.html">2. Docker经典示例</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Cloud/index.html">Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Cloud/01.华为云学习/index.html">1. 华为云学习</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Cloud/01.华为云学习/01.华为云FusionCloud6.3.1实施.html">1.1. 华为云FusionCloud6.3.1实施部署</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Cloud/01.华为云学习/01.华为云FusionCloud6.3.1实施.html#id1">1.1.1. 设备信息</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Cloud/01.华为云学习/01.华为云FusionCloud6.3.1实施.html#id2">1.1.2. 网络拓扑图：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Cloud/02.openstack学习/index.html">2. openstack学习</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Network_route_switch/index.html">Network_route_switch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/index.html">1. 华为设备数通玩转</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html">1.1. HCNA基础知识</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#console">1.1.1. Console口登录密码丢失后如何恢复</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#bootrom">1.1.2. BootROM密码丢失后如何恢复</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#id4">1.1.3. 清空配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#id5">1.1.4. 通过Console口首次登录设备</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#telnet">1.1.5. Telnet登录密码丢失后如何恢复</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#id8">1.1.6. 配置Telnet类型的本地用户</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#id9">1.1.7. 备份配置文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#id10">1.1.8. 恢复配置文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#stelnet-ssh">1.1.9. 配置通过STelnet登录设备(ssh连接交换机)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#acl">1.1.10. 使用基本ACL规则限制用户登录</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#vrp">1.1.11. VRP（通用路由平台）操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#ip">1.1.12. 熟悉常用的IP相关命令</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#id11">1.1.13. 交换机基础配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#mac">1.1.14. 常见的MAC地址操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#id12">1.1.15. 接口配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#id13">1.1.16. 一键清除接口下的配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#id14">1.1.17. 链路聚合操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#vlan">1.1.18. vlan学习</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#dhcp">1.1.19. 常见的DHCP操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#id15">1.1.20. 利用三层交换机实现vlan间路由</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#stp">1.1.21. STP生成树学习</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#eth-trunk">1.1.22. Eth-trunk 链路聚合</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html#id17">1.1.23. 静态路由</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/02.HCNA实验举例.html">1.2. HCNA实验</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/02.HCNA实验举例.html#id1">1.2.1. 1.1 以太网接口和配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/02.HCNA实验举例.html#vlan">1.2.2. 1.2 VLAN配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/02.HCNA实验举例.html#gvrp">1.2.3. 1.3 GVRP配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/02.HCNA实验举例.html#id9">1.2.4. 1.4 VLAN间路由</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/02.HCNA实验举例.html#ip-acl">1.2.5. 1.5 IP安全配置(ACL)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/03.华为路由器、交换机常用命令.html">1.3. 华为设备常用命令</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/03.华为路由器、交换机常用命令.html#id2">1.3.1. 华为路由器交换机配置命令：路由器命令</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/03.华为路由器、交换机常用命令.html#id3">1.3.2. 华为路由器交换机配置命令：静态路由：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/03.华为路由器、交换机常用命令.html#id4">1.3.3. 华为路由器交换机配置命令：动态路由：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/03.华为路由器、交换机常用命令.html#id5">1.3.4. 华为路由器交换机配置命令：标准访问列表命令格式如下：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/03.华为路由器、交换机常用命令.html#id6">1.3.5. 华为路由器交换机配置命令：扩展访问控制列表配置命令</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/03.华为路由器、交换机常用命令.html#id7">1.3.6. 华为路由器交换机配置命令：扩展访问控制列表操作符的含义</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/03.华为路由器、交换机常用命令.html#id8">1.3.7. 华为路由器交换机配置命令：扩展访问控制列表举例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/03.华为路由器、交换机常用命令.html#id9">1.3.8. 查看交换机日志</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Network_route_switch/01.华为设备数通玩转/04.小型园区组网场景.html">1.4. 小型园区组网场景</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Network_route_switch/02.华为USG防火墙玩转/index.html">2. 华为USG防火墙玩转</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Network_route_switch/02.华为USG防火墙玩转/01.华为防火墙玩转.html">2.1. 华为防火墙玩转</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/02.华为USG防火墙玩转/01.华为防火墙玩转.html#usg">2.1.1. USG防火墙学习</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/02.华为USG防火墙玩转/01.华为防火墙玩转.html#id2">2.1.2. 防火墙的工作模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/02.华为USG防火墙玩转/01.华为防火墙玩转.html#id6">2.1.3. 防火墙的基本功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/02.华为USG防火墙玩转/01.华为防火墙玩转.html#id11">2.1.4. 负载均衡</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/02.华为USG防火墙玩转/01.华为防火墙玩转.html#id13">2.1.5. 虚拟防火墙</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/02.华为USG防火墙玩转/01.华为防火墙玩转.html#usgnat">2.1.6. USG防火墙NAT业务</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/02.华为USG防火墙玩转/01.华为防火墙玩转.html#id20">2.1.7. 实验</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/02.华为USG防火墙玩转/01.华为防火墙玩转.html#id22">2.1.8. 部署场景</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Network_route_switch/03.思科设备数通复习/index.html">3. 思科设备数通复习</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Network_route_switch/03.思科设备数通复习/01.常用基本命令.html">3.1. Cisco交换机路由器常用命令</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/03.思科设备数通复习/01.常用基本命令.html#id1">3.1.1. 交换机</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/03.思科设备数通复习/01.常用基本命令.html#id4">3.1.2. 路由器</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Network_route_switch/04.H3C数通玩转/index.html">4. H3C设备数通</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Network_route_switch/04.H3C数通玩转/1.H3C设备升级版本补丁.html">4.1. H3C设备升级版本补丁</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/04.H3C数通玩转/1.H3C设备升级版本补丁.html#ftp">4.1.1. 配置交换机为FTP服务器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/04.H3C数通玩转/1.H3C设备升级版本补丁.html#pc">4.1.2. PC作为客户端进行上传</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/04.H3C数通玩转/1.H3C设备升级版本补丁.html#boot">4.1.3. 指定下次boot文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/04.H3C数通玩转/1.H3C设备升级版本补丁.html#s5130ei">4.1.4. 升级S5130EI</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Network_route_switch/04.H3C数通玩转/2.交换机配置堆叠.html">4.2. 交换机配置堆叠</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/04.H3C数通玩转/2.交换机配置堆叠.html#sw1">4.2.1. 千兆SW1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/04.H3C数通玩转/2.交换机配置堆叠.html#sw2">4.2.2. 千兆SW2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Network_route_switch/04.H3C数通玩转/3.配置H3C交换机SSH.html">4.3. 配置H3C交换机 ssh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Network_route_switch/04.H3C数通玩转/3.配置H3C交换机SSH.html#id1">4.3.1. 脚本</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Network_route_switch/04.H3C数通玩转/4.配置eth-trunk.html">4.4. 配置eth-trunk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Network_route_switch/04.H3C数通玩转/5.H3C 40G1分4 10G接口.html">4.5. 40G一分4接口的合并和拆分</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../VMware_study/index.html">VMware_study</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../VMware_study/01.VMware学习/index.html">1. VMware虚拟化学习</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../other/index.html">Other</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../other/01.Git入门到熟练/index.html">1. Git入门到熟练</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../other/02.构建自己的写书博客/index.html">2. 构建写书博客</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../other/02.构建自己的写书博客/1.Python利用sphinx构建个人博客.html">2.1. Python利用sphinx构建个人博客</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../other/02.构建自己的写书博客/1.Python利用sphinx构建个人博客.html#id1">2.1.1. 一、基础概念</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../other/02.构建自己的写书博客/1.Python利用sphinx构建个人博客.html#id2">2.1.2. 二、流程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../other/02.构建自己的写书博客/1.Python利用sphinx构建个人博客.html#id3">2.1.3. 三、实施部署</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../other/02.构建自己的写书博客/1.Python利用sphinx构建个人博客.html#githubread-the-docs">2.1.4. 3.11 关联github和read the docs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Python/index.html">Python自动化运维</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/01.Python数据类型/index.html">1. Python数据类型</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/01.Python数据类型/01.字符编码处理.html">1.1. 字符编码处理</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/01.字符编码处理.html#id2">1.1.1. 入门</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/01.字符编码处理.html#id3">1.1.2. 指定字符编码</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/01.字符编码处理.html#id4">1.1.3. 记忆方法参考下图：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/01.Python数据类型/02.代码注释.html">1.2. 代码注释</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/02.代码注释.html#id2">1.2.1. 单行注释</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/02.代码注释.html#id3">1.2.2. 多行注释</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/01.Python数据类型/03.字符串数据类型.html">1.3. 字符串数据类型</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/03.字符串数据类型.html#id2">1.3.1. 字符串内建方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/03.字符串数据类型.html#id3">1.3.2. 字符串格式化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/03.字符串数据类型.html#id5">1.3.3. 字符串的修改和替换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/03.字符串数据类型.html#id7">1.3.4. 字符串格式化输出</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/01.Python数据类型/04.列表数据类型.html">1.4. 列表 List</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/04.列表数据类型.html#id1">1.4.1. 列表类型内建函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/04.列表数据类型.html#id4">1.4.2. 列表的高级特性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/04.列表数据类型.html#id6">1.4.3. 列表的查找、排序、反转</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/01.Python数据类型/05.元祖数据类型.html">1.5. 元祖 Tuple</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/05.元祖数据类型.html#id1">1.5.1. 元祖和列表类似，区别不可变</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/05.元祖数据类型.html#id3">1.5.2. 元祖</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/05.元祖数据类型.html#id4">1.5.3. 列表</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/01.Python数据类型/06.字典数据结构.html">1.6. 字典  Dict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/06.字典数据结构.html#id1">1.6.1. 字典的内置方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/06.字典数据结构.html#id3">1.6.2. 添加/修改/删除字典元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/06.字典数据结构.html#id5">1.6.3. 字典推导式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/01.Python数据类型/07.集合数据类型.html">1.7. 集合 Set()</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/07.集合数据类型.html#id1">1.7.1. 可以用于去重复数据</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/07.集合数据类型.html#id2">1.7.2. 集合的方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/07.集合数据类型.html#id3">1.7.3. 交集、并集、差集、对称差集</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/07.集合数据类型.html#id6">1.7.4. 集合的修改和删除</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/07.集合数据类型.html#id8">1.7.5. 列表、元祖、字典、集合的区别</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/01.Python数据类型/08.数据类型转换.html">1.8. Python数据类型转换</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/08.数据类型转换.html#id1">1.8.1. 整数、浮点数、字符串之间的转换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/08.数据类型转换.html#id3">1.8.2. 字符串转列表 /列表转字符串</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/08.数据类型转换.html#id6">1.8.3. 列表转元祖/元祖转列表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/08.数据类型转换.html#id7">1.8.4. 字典格式字符串&#8212;&gt; 字典</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/01.Python数据类型/09.关于深浅拷贝.html">1.9. 深浅拷贝</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/09.关于深浅拷贝.html#id2">1.9.1. 这么记忆</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/09.关于深浅拷贝.html#id3">1.9.2. 举例说明：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/01.Python数据类型/10.列表实现堆和队列.html">1.10. 列表实现堆和队列</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/10.列表实现堆和队列.html#id2">1.10.1. 堆栈是指最先进入堆栈的元素最后才输出  &#8212; &#8220;后进先出&#8220;的顺序。</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/10.列表实现堆和队列.html#id3">1.10.2. 队列是指最先进入队列的元素最先输出&#8212; &#8220;先进先出&#8220;的顺序</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/01.Python数据类型/11.内置常量与逻辑运算符、比较运算符.html">1.11. 内置常量与逻辑运算符、比较运算符</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/11.内置常量与逻辑运算符、比较运算符.html#id2">1.11.1. 内置常量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/11.内置常量与逻辑运算符、比较运算符.html#or">1.11.2. or运算符的操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/11.内置常量与逻辑运算符、比较运算符.html#and">1.11.3. and运算操作符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/11.内置常量与逻辑运算符、比较运算符.html#python">1.11.4. python中的比较运算符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/11.内置常量与逻辑运算符、比较运算符.html#is-is-not">1.11.5. is 和 is not</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/11.内置常量与逻辑运算符、比较运算符.html#in-not-in">1.11.6. in 和not in</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/02.流程控制语句/index.html">2. Python中流程控制语句</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/02.流程控制语句/01.选择语句.html">2.1. 选择语句</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/02.流程控制语句/01.选择语句.html#python">2.1.1. Python代码执行过程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/02.流程控制语句/01.选择语句.html#id2">2.1.2. 条件判断</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/02.流程控制语句/01.选择语句.html#id5">2.1.3. 三元运算符</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/02.流程控制语句/02.for循环语句.html">2.2. for循环语句</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/02.流程控制语句/02.for循环语句.html#id1">2.2.1. 说明</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/02.流程控制语句/02.for循环语句.html#id5">2.2.2. 嵌套循环</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/02.流程控制语句/03.while循环.html">2.3. While循环</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/02.流程控制语句/03.while循环.html#id1">2.3.1. 代码示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/02.流程控制语句/03.while循环.html#id2">2.3.2. 打印99乘法表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/02.流程控制语句/03.while循环.html#id3">2.3.3. 遍历输出列表</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/02.流程控制语句/04.switch语句的替代方案.html">2.4. switch语句替代方案</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/02.流程控制语句/04.switch语句的替代方案.html#id1">2.4.1. 代码示例1：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/02.流程控制语句/04.switch语句的替代方案.html#id2">2.4.2. 类来实现switch 调度方法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/02.流程控制语句/05.实现一个简单购物车的代码.html">2.5. 实现一个简单的购物车代码</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/02.流程控制语句/05.实现一个简单购物车的代码.html#id2">2.5.1. 需求分析</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/02.流程控制语句/06.手写一个三级菜单.html">2.6. 手写一个三级菜单</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/02.流程控制语句/06.手写一个三级菜单.html#id2">2.6.1. 需求分析</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/03.函数/index.html">3. Python函数</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/03.函数/01.定义一个函数.html">3.1. 定义1个函数，形参3个</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/03.函数/02.位置参数.html">3.2. 函数中的位置参数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/02.位置参数.html#id2">3.2.1. 根据形参的位置，依次将3个参数传入</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/03.函数/03.定义关键字参数.html">3.3. 关键字参数，实参=xxx，实参和形参一一对应</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/03.函数/04.默认值参数.html">3.4. 默认值参数，位于所有形参的最后</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/04.默认值参数.html#id2">3.4.1. 代码示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/03.函数/05.可变参数.html">3.5. 可变参数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/05.可变参数.html#id2">3.5.1. 代码示例1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/05.可变参数.html#id3">3.5.2. 代码示例2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/05.可变参数.html#id4">3.5.3. 代码示例3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/05.可变参数.html#id5">3.5.4. 代码示例4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/05.可变参数.html#id6">3.5.5. 位置参数和可变参数一起使用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/05.可变参数.html#id8">3.5.6. 接受任意参数的函数</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/03.函数/06.函数的解包.html">3.6. 参数的解包</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/06.函数的解包.html#id2">3.6.1. 演示一个小例子</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/03.函数/07.函数调用时参数传递方法.html">3.7. 函数调用时，参数传递的方法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/07.函数调用时参数传递方法.html#id2">3.7.1. 代码示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/03.函数/08.函数的返回值.html">3.8. 函数的返回值</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/08.函数的返回值.html#id2">3.8.1. 代码示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/03.函数/09.变量的作用域.html">3.9. 变量的作用域</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/09.变量的作用域.html#id2">3.9.1. 代码示例1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/09.变量的作用域.html#id3">3.9.2. 代码示例2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/03.函数/10.匿名函数的用法.html">3.10. 匿名函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/10.匿名函数的用法.html#id2">3.10.1. 代码示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/03.函数/11.匹配字符的函数.html">3.11. 简单的函数示例</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/11.匹配字符的函数.html#id2">3.11.1. 代码示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/03.函数/12.列表作为默认参数的陷阱.html">3.12. 列表作为默认参数时的陷阱</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/12.列表作为默认参数的陷阱.html#id2">3.12.1. 代码示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/03.函数/13.一个求值的函数例子.html">3.13. 一个求值的函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/03.函数/13.一个求值的函数例子.html#id2">3.13.1. 代码示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/04.内建函数/index.html">4. Python内建函数</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html">4.1. Python内建函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#map">4.1.1. map()函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#filter">4.1.2. filter()函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#reduce">4.1.3. reduce()函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#id1">4.1.4. 匿名函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#evalexeccompile">4.1.5. eval、exec、compile函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#reversed">4.1.6. reversed()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#sorted">4.1.7. sorted()函数正向排列:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#zip-s-t">4.1.8. zip(s,t)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#cmp-x-y">4.1.9. cmp(x,y)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#round-x-n">4.1.10. round(x[,n])</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#dir-sys">4.1.11. dir(sys)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#abs">4.1.12. abs()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#id2">4.1.13. round(x[,n])</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#isinstance-object-int">4.1.14. isinstance(object,int)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/05.推导式/index.html">5. 推导式学习</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/05.推导式/01.列表推导式.html">5.1. 列表推导式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/05.推导式/01.列表推导式.html#id2">5.1.1. 代码示例1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/05.推导式/01.列表推导式.html#id3">5.1.2. 代码示例2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/05.推导式/02.字典推导式.html">5.2. 字典推导式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/05.推导式/02.字典推导式.html#id2">5.2.1. 代码示例1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/05.推导式/02.字典推导式.html#id3">5.2.2. 代码示例2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/05.推导式/03.推导式进阶.html">5.3. 推导式进阶</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/05.推导式/03.推导式进阶.html#id2">5.3.1. 代码示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/05.推导式/04.集合推导式.html">5.4. 集合推导式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/05.推导式/04.集合推导式.html#id2">5.4.1. 代码示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/05.推导式/05.生成器推导式.html">5.5. 生成器推导式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/05.推导式/05.生成器推导式.html#id2">5.5.1. 代码示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/index.html">6. 生成器、迭代器、装饰器</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/01.迭代器.html">6.1. 迭代器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/01.迭代器.html#id2">6.1.1. 代码示例1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/01.迭代器.html#id3">6.1.2. 代码示例2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/01.迭代器.html#id4">6.1.3. 代码示例3</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/02.itertools模块中常用的工具函数.html">6.2. 导入 itertools模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/02.itertools模块中常用的工具函数.html#itertools-count">6.2.1. itertools.count() 设置步长</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/02.itertools模块中常用的工具函数.html#itertools-cycle-a-b">6.2.2. itertools.cycle([&#8216;a&#8216;,&#8216;b&#8216;])</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/02.itertools模块中常用的工具函数.html#itertools-repeat-hu-10">6.2.3. itertools.repeat(&#8220;hu&#8220;,10)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/02.itertools模块中常用的工具函数.html#itertools-chain-1-3-2-3">6.2.4. itertools.chain([1,3],[2,3])</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/02.itertools模块中常用的工具函数.html#itertools-compress-1-2-3-4-1-true-3">6.2.5. itertools.compress([1,2,3,4],[1,[],True,3])</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/02.itertools模块中常用的工具函数.html#itertools-dropwhile-lambda-x-x-6-8-9-1-2-8-9">6.2.6. itertools.dropwhile(lambda x:x&gt;6,[8,9,1,2,8,9]))</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/02.itertools模块中常用的工具函数.html#itertools-takewhile-lambda-x-x-10-18-19-1-21-8-9">6.2.7. itertools.takewhile(lambda x:x&gt;10,[18,19,1,21,8,9])</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/02.itertools模块中常用的工具函数.html#id1">6.2.8. itertools其他工具函数用法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/03.生成器.html">6.3. 生成器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/03.生成器.html#id2">6.3.1. 快速定义一个生成器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/03.生成器.html#id6">6.3.2. 生成器和协程</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/04.装饰器.html">6.4. 装饰器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/04.装饰器.html#id2">6.4.1. 一个普通的装饰器函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/04.装饰器.html#id3">6.4.2. 带参数的装饰器 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/04.装饰器.html#id4">6.4.3. 带参数的装饰器 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/04.装饰器.html#id5">6.4.4. 带参数的装饰器 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/04.装饰器.html#id6">6.4.5. 定义装饰类的装饰器 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/06.迭代器_生成器_装饰器/04.装饰器.html#id8">6.4.6. 类装饰器 2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/index.html">7. 面对对象设计_OOP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/01.什么是面对对象设计.html">7.1. 什么是面对对象设计</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/01.什么是面对对象设计.html#id2">7.1.1. 万物皆对象</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/01.什么是面对对象设计.html#id3">7.1.2. 创建第一个类</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/02.类的方法.html">7.2. 类的方法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/02.类的方法.html#id2">7.2.1. 定义方法、并进行实例化</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/03.类中的__init__方法.html">7.3. 类中的__init__方法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/03.类中的__init__方法.html#id1">7.3.1. __init__方法又称构造方法，</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/04.实例属性是什么？.html">7.4. 实例属性是什么?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/04.实例属性是什么？.html#id2">7.4.1. 代码示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.html">7.5. 一个基础有方法和属性的类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.html#id2">7.5.1. 方法和属性</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/06.类中可调用自己方法和外部函数.html">7.6. 类中调用自身方法和函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/06.类中可调用自己方法和外部函数.html#id2">7.6.1. 类中调用自身</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/07.类属性和实例属性.html">7.7. 类属性和实例属性</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/07.类属性和实例属性.html#id2">7.7.1. 用代码来理解</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/08.类方法、实例方法、静态方法.html">7.8. 类方法、静态方法、实例方法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/08.类方法、实例方法、静态方法.html#id2">7.8.1. 用代码来理解</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.html">7.9. property装饰器，将方法转为属性,动态属性</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.html#id1">7.9.1. 访问方式和之前略有区别,用属性的方式访问</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.html#id5">7.9.2. 使用property函数调用私有属性</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/10.方法的重写.html">7.10. 方法的重写</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/10.方法的重写.html#id2">7.10.1. 用代码来理解</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/10.方法的重写.html#super">7.10.2. 使用super()函数进行修改重写父类的方法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/11.类的继承.html">7.11. 类的继承</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/11.类的继承.html#id2">7.11.1. 类继承的顺序</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/11.类的继承.html#id4">7.11.2. 类的多重继承，同时继承多个类的顺序</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/12.方法的动态特性.html">7.12. 方法的动态特性</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/12.方法的动态特性.html#id2">7.12.1. 可以将外部函数 动态的添加到类中</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.html">7.13. 为属性添加限制，访问限制</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.html#id2">7.13.1. 私有属性设置说明</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.html#id5">7.13.2. 私有属性的保护和设置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/14.类的高级特性.html">7.14. 类的高级特性</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/14.类的高级特性.html#super">7.14.1. super函数的执行顺序</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/14.类的高级特性.html#id2">7.14.2. 对象的 自省 功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/14.类的高级特性.html#id3">7.14.3. 类中实例属性的查找顺序</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/14.类的高级特性.html#isinstance">7.14.4. isinstance()的用法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/14.类的高级特性.html#id4">7.14.5. 抽象基类</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/14.类的高级特性.html#id7">7.14.6. 元类</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/14.类的高级特性.html#type">7.14.7. 通过type来创建类</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/14.类的高级特性.html#id8">7.14.8. 通过传入的字符串动态的创建不同的类</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html">7.15. 一些魔法方法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#call">7.15.1. __call__方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#doc">7.15.2. __doc__方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#getitem">7.15.3. __getitem__方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#init-new">7.15.4. __init__方法和__new__方法的区别</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#slots">7.15.5. __slots__限制实例的变量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#str-repr">7.15.6. __str__和__repr__的使用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#del">7.15.7. 构造方法和__del__析构方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#id2">7.15.8. 运算符重载</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#id3">7.15.9. 其他一些魔法方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#getattr-getattribute">7.15.10. __getattr__和__getattribute__的区别</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#getattr">7.15.11. __getattr__方法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/16.类的反射，设置、删除、检测.html">7.16. 类的检测、判断、设置、删除、获取</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/16.类的反射，设置、删除、检测.html#id2">7.16.1. 用代码来理解</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/17.类属性描述符.html">7.17. 类属性描述符</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/17.类属性描述符.html#id2">7.17.1. 用代码来理解</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/18.多态-鸭子类型.html">7.18. 多态-鸭子类型</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/18.多态-鸭子类型.html#id2">7.18.1. 用代码来理解</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/19.一个简单的类示例.html">7.19. 一个简单的类的例子</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/19.一个简单的类示例.html#id2">7.19.1. 用代码来理解</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/20.人开枪射击子弹_OOP.html">7.20. 人开枪射击子弹_OOP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/20.人开枪射击子弹_OOP.html#id1">7.20.1. 分析</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/08.1异常处理/index.html">8. 异常处理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/08.1异常处理/1.异常处理.html">8.1. 异常处理</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.1异常处理/1.异常处理.html#id2">8.1.1. 举例1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.1异常处理/1.异常处理.html#id3">8.1.2. 举例2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/08.1异常处理/2.断言操作（抛出异常）.html">8.2. 断言操作（抛出异常）</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.1异常处理/2.断言操作（抛出异常）.html#id2">8.2.1. 举例1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.1异常处理/2.断言操作（抛出异常）.html#id3">8.2.2. 举例2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/08.1异常处理/3.自定义异常类.html">8.3. 自定义异常类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.1异常处理/3.自定义异常类.html#id2">8.3.1. 举例1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/08.Python文件操作/index.html">9. Python文件操作</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/08.Python文件操作/01.open()函数介绍.html">9.1. Open()函数介绍</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/01.open()函数介绍.html#id1">9.1.1. 语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/01.open()函数介绍.html#id2">9.1.2. 打开文件的模式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/08.Python文件操作/02.读写文件.html">9.2. 读写文件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/02.读写文件.html#id2">9.2.1. 再次理解文件打开的模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/02.读写文件.html#python">9.2.2. Python文件读取方式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/02.读写文件.html#id5">9.2.3. 追加日志</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/02.读写文件.html#rb">9.2.4. 二进制读取“rb”</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/02.读写文件.html#id8">9.2.5. 逐行读取文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/02.读写文件.html#while">9.2.6. 读取大文件时，建议采用while循环来逐行进行读取</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/02.读写文件.html#id11">9.2.7. Python文件写入方式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/02.读写文件.html#wb">9.2.8. 二进制写“wb”</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/02.读写文件.html#id15">9.2.9. Python文件操作所提供的方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/02.读写文件.html#id16">9.2.10. 文件随机读写</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/08.Python文件操作/03.使用with语句读写文件.html">9.3. 使用with语句读写文件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/03.使用with语句读写文件.html#id1">9.3.1. with语句介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/03.使用with语句读写文件.html#id2">9.3.2. with 工作原理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/03.使用with语句读写文件.html#id6">9.3.3. 同时打开多个文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/03.使用with语句读写文件.html#id8">9.3.4. 同时开启2个文件修改后改名</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/03.使用with语句读写文件.html#id10">9.3.5. 上下文管理器介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/03.使用with语句读写文件.html#open">9.3.6. 定义一个类似open函数的上下文管理器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/03.使用with语句读写文件.html#id13">9.3.7. 总结</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/08.Python文件操作/04.高级文件操作.html">9.4. 高级文件操作</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/04.高级文件操作.html#id2">9.4.1. 文件属性信息转换 函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/04.高级文件操作.html#id4">9.4.2. 重命名文件</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/08.Python文件操作/05.目录操作.html">9.5. 目录操作</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/05.目录操作.html#osos-path">9.5.1. 初探os和os.path模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/05.目录操作.html#id2">9.5.2. 创建目录</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/05.目录操作.html#id4">9.5.3. 删除目录</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/05.目录操作.html#id6">9.5.4. 遍历目录</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/08.Python文件操作/06.目录迭代的两种方式.html">9.6. 目录迭代的两种方式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/06.目录迭代的两种方式.html#id2">9.6.1. 方式一</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/06.目录迭代的两种方式.html#id3">9.6.2. 方式二</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/06.目录迭代的两种方式.html#id4">9.6.3. 遍历文件下的所有目录</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/08.Python文件操作/07.批量文件重命名.html">9.7. 批量文件重命名</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/07.批量文件重命名.html#id2">9.7.1. 代码示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/08.Python文件操作/08.读取文件向xls中写入姓名和考号.html">9.8. 读取文件向xls中写入姓名和考号</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/08.读取文件向xls中写入姓名和考号.html#id1">9.8.1. 先读取出内容,在写入xls中</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/08.Python文件操作/09.获取当前的路径.html">9.9. 获取当前的路径</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/08.Python文件操作/10.StringIO和BytesIO用法.html">9.10. StringIO</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/10.StringIO和BytesIO用法.html#id1">9.10.1. 代码示例 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/10.StringIO和BytesIO用法.html#id2">9.10.2. 像读文件一样的使用StringIO</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/08.Python文件操作/10.StringIO和BytesIO用法.html#bytesio">9.11. BytesIO</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/10.StringIO和BytesIO用法.html#id4">9.11.1. 代码示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/08.Python文件操作/10.StringIO和BytesIO用法.html#id5">9.11.2. 像读文件一样的使用BytesIO</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/09.正则表达式/index.html">10. Re正则表达式</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/09.正则表达式/01.正则表达式.html">10.1. 正则表达式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/09.正则表达式/01.正则表达式.html#id2">10.1.1. 正则表达式语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/09.正则表达式/01.正则表达式.html#id11">10.1.2. 正则表达式匹配模式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/09.正则表达式/02.匹配字符串示例.html">10.2. 匹配字符串示例</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/09.正则表达式/02.匹配字符串示例.html#re-match-pattern-string-flags">10.2.1. re.match(pattern，string，[flags])    #从字符串的第一个开始匹配</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/09.正则表达式/02.匹配字符串示例.html#re-search-pattern-string-flags">10.2.2. re.search(pattern，string，[flags])  #搜索整个字符串</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/09.正则表达式/02.匹配字符串示例.html#re-findll-pattern-string-flags">10.2.3. re.findll(pattern，string，[flags])   #在字符串中查找所有符合正则表达式的字符串，并返回字符串的列表</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/09.正则表达式/03.替换字符串示例.html">10.3. 替换字符串示例</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/09.正则表达式/03.替换字符串示例.html#re-sub-pattern-repl-string-count-flags">10.3.1. re.sub(pattern,repl,string,count,[flags])</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/09.正则表达式/04.分割字符串示例.html">10.4. 分割字符串示例</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/09.正则表达式/04.分割字符串示例.html#re-split-pattern-string-maxsplit-0-flags">10.4.1. re.split(pattern,string[,maxsplit=0],[flags])</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/09.正则表达式/05.初始化正则.html">10.5. 初始化正则表达式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/09.正则表达式/05.初始化正则.html#re-compile-pattern-flags">10.5.1. re.compile(pattern[,flags])</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/09.正则表达式/05.初始化正则.html#id5">10.5.2. 匹配对象与索引的使用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/09.正则表达式/05.初始化正则.html#id7">10.5.3. 匹配对象与组的使用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/09.正则表达式/05.初始化正则.html#id9">10.5.4. 零宽断言</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/09.正则表达式/06.正则表达式举例.html">10.6. 正则表达式举例</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/09.正则表达式/06.正则表达式举例.html#id2">10.6.1. 代码示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/10.Python中的包和模块/index.html">11. Python中包和模块</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/10.Python中的包和模块/01.模块与包.html">11.1. 模块与包</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/10.Python中的包和模块/01.模块与包.html#id2">11.1.1. 使用模块有什么好处？</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/10.Python中的包和模块/01.模块与包.html#python-package">11.1.2. 为了避免模块名冲突，Python又引入了按目录来组织模块的方法，称为包（Package）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/10.Python中的包和模块/01.模块与包.html#id3">11.1.3. 包名通常为全部小写，避免使用下划线。</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/10.Python中的包和模块/01.模块与包.html#id4">11.1.4. 记忆方法参考下图：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/10.Python中的包和模块/02.包的讲解.html">11.2. 包的讲解</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/10.Python中的包和模块/02.包的讲解.html#id2">11.2.1. 模块搜索路径</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/10.Python中的包和模块/02.包的讲解.html#windossys-path">11.2.2. 像设置windos环境变量一样的设置sys.path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/10.Python中的包和模块/02.包的讲解.html#id3">11.2.3. 模块的搜索顺序是这样的：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/10.Python中的包和模块/02.包的讲解.html#package">11.2.4. 包（Package）：</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/10.Python中的包和模块/03.python中 __main__正确理解.html">11.3. if <strong>name</strong> == &#8216;<strong>main</strong>&#8216;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/10.Python中的包和模块/03.python中 __main__正确理解.html#python">11.3.1. 一个python的文件有两种使用的方法：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/10.Python中的包和模块/03.python中 __main__正确理解.html#id1">11.3.2. 运行原理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/11.Python网络编程/index.html">12. Python 网络编程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/11.Python网络编程/01.python网络编程基础.html">12.1. TCP/IP协议</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/01.python网络编程基础.html#osi">12.1.1. OSI七层网络模型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/01.python网络编程基础.html#ositcp-ip">12.1.2. OSI七层模型和TCP/IP四层模型 对应的网络协议</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/01.python网络编程基础.html#id1">12.1.3. TCP/IP协议中，其各层之间的通信机制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/01.python网络编程基础.html#socket">12.1.4. 什么是socket套接字？</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/11.Python网络编程/02.socket编程.html">12.2. socket编程</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/02.socket编程.html#pythonsocket">12.2.1. Python中的socket通信逻辑如下图所示（图片来自网络）：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/02.socket编程.html#id1">12.2.2. 具体的参数定义：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/02.socket编程.html#socket-socket">12.2.3. socket.socket()方法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/11.Python网络编程/02.socket编程.html#id2">12.3. 注意事项：</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/02.socket编程.html#id3">12.3.1. socket编程思路：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/02.socket编程.html#id4">12.3.2. 客户端:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/02.socket编程.html#tcp">12.3.3. TCP编程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/02.socket编程.html#id11">12.3.4. socket模块创建多线程服务器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/02.socket编程.html#udp">12.3.5. UDP编程</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/11.Python网络编程/03.socketserver编程.html">12.4. socketserver编程</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/03.socketserver编程.html#threadingtcpserver">12.4.1. 使用ThreadingTCPServer的要点:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/03.socketserver编程.html#id1">12.4.2. ThreadingTCPServer 示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/03.socketserver编程.html#id5">12.4.3. 服务器端的代码，核心要点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/11.Python网络编程/04.python收发邮件学习.html">12.5. Python发送邮件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/04.python收发邮件学习.html#test">12.5.1. 发送一个简单的test邮件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/04.python收发邮件学习.html#id2">12.5.2. 完整的发送邮件代码</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/04.python收发邮件学习.html#html">12.5.3. 发送HTML的邮件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/04.python收发邮件学习.html#id7">12.5.4. 发送带附件的邮件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/04.python收发邮件学习.html#smtp">12.5.5. 加密SMTP邮件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.Python网络编程/04.python收发邮件学习.html#pop3">12.5.6. POP3下载查阅邮件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/12.Python操作数据库/index.html">13. Python对数据库的操作</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/12.Python操作数据库/01.Python操作mysql数据库.html">13.1. python操作mysql数据库</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/01.Python操作mysql数据库.html#id1">13.1.1. python连接mysql数据库</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/01.Python操作mysql数据库.html#python">13.1.2. python创建数据库表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/01.Python操作mysql数据库.html#id5">13.1.3. 数据库插入语句</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/01.Python操作mysql数据库.html#id7">13.1.4. 数据库更新操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/01.Python操作mysql数据库.html#id9">13.1.5. 数据库删除操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/01.Python操作mysql数据库.html#id11">13.1.6. 数据库查询操作</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/12.Python操作数据库/02.Python操作SQLite数据库.html">13.2. Python 操作SQLite数据库</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/02.Python操作SQLite数据库.html#id1">13.2.1. 连接数据库</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/02.Python操作SQLite数据库.html#id2">13.2.2. 创建表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/02.Python操作SQLite数据库.html#insert">13.2.3. INSERT 操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/02.Python操作SQLite数据库.html#select">13.2.4. SELECT 操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/02.Python操作SQLite数据库.html#update">13.2.5. UPDATE 操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/02.Python操作SQLite数据库.html#delete">13.2.6. DELETE 操作</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/12.Python操作数据库/03.Python封装mysql数据库.html">13.3. python操作mysql数据库封装类和方法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/03.Python封装mysql数据库.html#id1">13.3.1. 封装类方法 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/03.Python封装mysql数据库.html#id2">13.3.2. 封装类方法 2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/12.Python操作数据库/04.mysql介绍和安装.html">13.4. Mysql介绍和安装</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/04.mysql介绍和安装.html#id1">13.4.1. 数据库简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/04.mysql介绍和安装.html#linuxmysql">13.4.2. Linux安装mysql方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/04.mysql介绍和安装.html#windowsmysql">13.4.3. windows安装mysql方法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/12.Python操作数据库/05.数据库操作.html">13.5. 数据库操作</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/05.数据库操作.html#id2">13.5.1. 1.显示</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/05.数据库操作.html#id3">13.5.2. 2.创建</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/05.数据库操作.html#id4">13.5.3. 3.删除</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/05.数据库操作.html#id5">13.5.4. 4.使用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/05.数据库操作.html#id6">13.5.5. 5.用户管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/05.数据库操作.html#id7">13.5.6. 6.用户授权</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/05.数据库操作.html#id8">13.5.7. 7.忘记密码</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/05.数据库操作.html#mysql">13.5.8. 8.Mysql数据类型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/05.数据库操作.html#id12">13.5.9. 9.mysql存储引擎</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/12.Python操作数据库/06.数据库增删改查.html">13.6. 数据库之增删改查</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/06.数据库增删改查.html#id2">13.6.1. 创建表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/06.数据库增删改查.html#id3">13.6.2. 删除表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/06.数据库增删改查.html#id4">13.6.3. 修改表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/12.Python操作数据库/06.数据库增删改查.html#id5">13.6.4. 表内容操作</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/13.Python标准库/index.html">14. Python 标准库学习</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/01.csv模块文件读写.html">14.1. csv模块文件读写</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/01.csv模块文件读写.html#csv-csv">14.1.1. 写入CSV数据，可以使用csv模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/01.csv模块文件读写.html#id1">14.1.2. 读取csv文件数据</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/02.json、pickle、shelve模块.html">14.2. Json和Pickle序列化</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/02.json、pickle、shelve模块.html#json">14.2.1. Json</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/02.json、pickle、shelve模块.html#json-dumps">14.2.2. json.dumps()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/02.json、pickle、shelve模块.html#json-loads">14.2.3. json.loads()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/02.json、pickle、shelve模块.html#json-dump">14.2.4. json.dump() 先序列化，再写入文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/02.json、pickle、shelve模块.html#json-load">14.2.5. json.load() 读取文件反序列化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/02.json、pickle、shelve模块.html#id1">14.2.6. json读写文件示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/02.json、pickle、shelve模块.html#pickle-python">14.2.7. Pickle(只能用于python中)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/02.json、pickle、shelve模块.html#shelve">14.2.8. shelve模块</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/03.shutil模块.html">14.3. shutil模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/03.shutil模块.html#id1">14.3.1. 常用的方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/03.shutil模块.html#id2">14.3.2. 文件和目录操作</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/04.time、datetime模块.html">14.4. time、datetime模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/04.time、datetime模块.html#time">14.4.1. time模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/04.time、datetime模块.html#datetime">14.4.2. datetime模块</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/05.randome模块.html">14.5. randome模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/05.randome模块.html#id1">14.5.1. 随机验证码</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/06.os(系统模块).html">14.6. os 模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/06.os(系统模块).html#id1">14.6.1. 文件处理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/06.os(系统模块).html#id2">14.6.2. 目录/文件夹</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/06.os(系统模块).html#id3">14.6.3. 访问/权限</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/06.os(系统模块).html#id4">14.6.4. 文件描述符操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/06.os(系统模块).html#id5">14.6.5. 设备号</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/06.os(系统模块).html#os-path">14.6.6. os.path模块</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/07.sys(系统操作模块).html">14.7. sys系统操作模块</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/08.configparser模块.html">14.8. configparser模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/08.configparser模块.html#id1">14.8.1. 配置文件示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/08.configparser模块.html#python">14.8.2. 用python生成这样的一个配置文档</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/08.configparser模块.html#id2">14.8.3. 读取</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/08.configparser模块.html#id3">14.8.4. 增删改查</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/08.configparser模块.html#id4">14.8.5. 修改后的配置文件</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/09.hashlib模块.html">14.9. hashlib算法库模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/09.hashlib模块.html#md5">14.9.1. md5加密</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/09.hashlib模块.html#sha1">14.9.2. sha1加密</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/09.hashlib模块.html#sha256">14.9.3. sha256加密</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/09.hashlib模块.html#sha384">14.9.4. sha384加密</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/09.hashlib模块.html#sha512">14.9.5. sha512加密</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/09.hashlib模块.html#hmac">14.9.6. hmac加密</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/09.hashlib模块.html#id1">14.9.7. 获取文件的MD5</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/10.re模块.html">14.10. re模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/10.re模块.html#id1">14.10.1. 常用的正则</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/10.re模块.html#id2">14.10.2. re的方法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/11.logging模块.html">14.11. logging模块</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/12.zipfile、tarfile模块学习.html">14.12. zipfile、tarfile模块学习</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/12.zipfile、tarfile模块学习.html#zipfile">14.12.1. zipfile模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/12.zipfile、tarfile模块学习.html#tarfile">14.12.2. tarfile模块</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/13.subprocess模块.html">14.13. subprocess模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/13.subprocess模块.html#call">14.13.1. call()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/13.subprocess模块.html#check-call">14.13.2. check_call()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/13.subprocess模块.html#check-output">14.13.3. check_output()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/13.subprocess模块.html#subprocess-popen">14.13.4. subprocess.Popen()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/13.subprocess模块.html#id1">14.13.5. subprocess.Popen()实例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/14.collections模块.html">14.14. collections模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/14.collections模块.html#namedtuple">14.14.1. namedtuple</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/14.collections模块.html#deque">14.14.2. deque</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/14.collections模块.html#chainmap">14.14.3. ChainMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/14.collections模块.html#counter">14.14.4. Counter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/14.collections模块.html#ordereddict">14.14.5. OrderedDict</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/14.collections模块.html#defaultdict">14.14.6. defaultdict</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/15.Redis模块.html">14.15. Python标准库系列之Redis模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/15.Redis模块.html#id1">14.15.1. 入门及使用</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/14.Python三方库/index.html">15. Python 三方库学习</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/14.Python三方库/01.psutil模块.html">15.1. psutil模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/01.psutil模块.html#id1">15.1.1. 安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/01.psutil模块.html#cpu">15.1.2. CPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/01.psutil模块.html#id2">15.1.3. 内存</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/01.psutil模块.html#id3">15.1.4. 磁盘</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/01.psutil模块.html#id4">15.1.5. 网络</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/01.psutil模块.html#id5">15.1.6. 其他信息</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/01.psutil模块.html#id6">15.1.7. 系统进程管理方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/01.psutil模块.html#id7">15.1.8. 更多参考</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/14.Python三方库/02.paramiko（ssh秘钥执行命令).html">15.2. paramiko模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/02.paramiko（ssh秘钥执行命令).html#id1">15.2.1. 安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/02.paramiko（ssh秘钥执行命令).html#id2">15.2.2. paramiko实例(账号密码登录执行命令)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/02.paramiko（ssh秘钥执行命令).html#id3">15.2.3. 代码示例2:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/02.paramiko（ssh秘钥执行命令).html#id4">15.2.4. 代码示例2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/02.paramiko（ssh秘钥执行命令).html#id5">15.2.5. paramiko实例(传送文件)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/02.paramiko（ssh秘钥执行命令).html#id6">15.2.6. paramiko实例(密钥执行命令)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/02.paramiko（ssh秘钥执行命令).html#ssh-pool">15.2.7. ssh并发(Pool控制最大并发)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/02.paramiko（ssh秘钥执行命令).html#ssh">15.2.8. ssh并发(取文件状态并发送邮件)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/14.Python三方库/03.IPy模块.html">15.3. IPy模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/03.IPy模块.html#iv4ipv6">15.3.1. 区分Iv4和IPv6</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/14.Python三方库/03.IPy模块.html#id1">15.3.2. 列出网段内的主机数</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/20.自动化运维工具/index.html">16. 自动化运维工具</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html">16.1. Ansible入门与playbook实战</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#ansible">16.1.1. 关于Ansible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#id1">16.1.2. 安装Ansible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#id2">16.1.3. Ansible常用的核心模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#command">16.1.4. command模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#cron">16.1.5. cron模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#user">16.1.6. user模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#group">16.1.7. group模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#copy">16.1.8. copy模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#file">16.1.9. file模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#ping">16.1.10. ping模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#service">16.1.11. service模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#shell">16.1.12. shell 模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#scripts">16.1.13. scripts模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#yum">16.1.14. yum模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#setup">16.1.15. setup模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#ansibleyaml">16.1.16. ansible配合YAML使用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/01.Ansible入门与playbook实战.html#roles">16.1.17. Roles介绍</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html">16.2. Saltstack安装使用入门（自己总结）</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#id1">16.2.1. 安装部署篇：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#saltstacksaltstack">16.2.2. 快速入门SaltStack快速入门SaltStack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#centos67-yum">16.2.3. 默认以CentOS6、7为例，采用yum安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#epel">16.2.4. 安装EPEL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#id2">16.2.5. 修改主机名和域名解析</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#id3">16.2.6. 服务器端安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#centos-6-7">16.2.7. centos 6/7 启动/重启/停止命令</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#id4">16.2.8. Saltstack防火墙配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#minion">16.2.9. 客户端minion程序安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#id5">16.2.10. 查看自动认证状况</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#id6">16.2.11. 使用基础</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#salt-master">16.2.12. salt-master上常用的命令：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#id7">16.2.13. 所有主机查看系统</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#id8">16.2.14. 查看所有节点名称</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#salt">16.2.15. 查询所有主机salt的版本号是多少？</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#id9">16.2.16. 远程执行模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#id15">16.2.17. 用户管理模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#cron">16.2.18. cron模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#cp">16.2.19. cp模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#dnsutil">16.2.20. dnsutil模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#file">16.2.21. file模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#iptables">16.2.22. iptables模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#netwrok">16.2.23. netwrok模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#pkg">16.2.24. pkg包管理模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#service">16.2.25. Service服务模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#grains">16.2.26. 被控端主机定制grains数据</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#id18">16.2.27. 通过配置文件安装程序</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#httpd">16.2.28. 批量安装httpd服务</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#id19">16.2.29. 批量安装常用命令</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#dns">16.2.30. 批量设置所有主机的DNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#sysctl-conf">16.2.31. 批量设置所有主机的sysctl.conf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/20.自动化运维工具/02.Saltstack安装使用入门.html#id20">16.2.32. 编写自己的模块代码</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/21.Django学习/index.html">17. Django学习</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/22.Python进阶学习/index.html">18. Python进阶学习</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/22.Python进阶学习/01.数据结构和算法.html">18.1. 数据结构和算法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/22.Python进阶学习/01.数据结构和算法.html#id2">18.1.1. 解包和打包</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/22.Python进阶学习/01.数据结构和算法.html#id3">18.1.2. 命名切片</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/22.Python进阶学习/02.字符串和文本.html">18.2. 字符串和文本</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/22.Python进阶学习/02.字符串和文本.html#id2">18.2.1. 多个界定符来分割字符串</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/22.Python进阶学习/02.字符串和文本.html#id3">18.2.2. 检查字符串开头或结尾</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/22.Python进阶学习/02.字符串和文本.html#shell">18.2.3. 使用shell的通配符来匹配字符串</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/22.Python进阶学习/02.字符串和文本.html#id5">18.2.4. 贪婪匹配和非贪婪匹配</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/22.Python进阶学习/02.字符串和文本.html#id6">18.2.5. 字符串对齐</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/22.Python进阶学习/02.字符串和文本.html#id7">18.2.6. 拼接字符串的方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/22.Python进阶学习/02.字符串和文本.html#id11">18.2.7. 字符串中插入变量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/22.Python进阶学习/02.字符串和文本.html#id12">18.2.8. 指定列宽格式化显示字符串</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/22.Python进阶学习/03.迭代器与生成器.html">18.3. 迭代器与生成器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/22.Python进阶学习/03.迭代器与生成器.html#id2">18.3.1. 手动遍历迭代器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/22.Python进阶学习/03.迭代器与生成器.html#id3">18.3.2. 反向迭代</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/22.Python进阶学习/03.迭代器与生成器.html#id4">18.3.3. 同时迭代多个序列</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/22.Python进阶学习/04.上下文管理器.html">18.4. 上下文管理器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/22.Python进阶学习/05.解压多个可迭代对象进行赋值.html">18.5. *号的妙用</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/23.Python网络爬虫/index.html">19. Python网络爬虫</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/23.Python网络爬虫/01.基础语法复习.html">19.1. 基础语法复习</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/01.基础语法复习.html#id2">19.1.1. 变量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/01.基础语法复习.html#id3">19.1.2. 字符串的加法 和 乘法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/01.基础语法复习.html#id4">19.1.3. 字符串的切片和索引</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/01.基础语法复习.html#id5">19.1.4. 字符串方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/01.基础语法复习.html#id6">19.1.5. 函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/01.基础语法复习.html#id7">19.1.6. 判断语句</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/01.基础语法复习.html#id8">19.1.7. 循环语句</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/01.基础语法复习.html#python">19.1.8. Python数据结构</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/01.基础语法复习.html#id12">19.1.9. 文件操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/01.基础语法复习.html#id15">19.1.10. 面对对象</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/23.Python网络爬虫/02.爬虫原理和网页结构.html">19.2. 爬虫原理</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/02.爬虫原理和网页结构.html#id2">19.2.1. 两种爬虫流程</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/23.Python网络爬虫/03.我的第一个爬虫程序.html">19.3. 我的第一个爬虫程序</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/03.我的第一个爬虫程序.html#requests">19.3.1. requests 库</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/03.我的第一个爬虫程序.html#beautifulsoup">19.3.2. BeautifulSoup 库</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/23.Python网络爬虫/04.正则表达式.html">19.4. 正则表达式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/04.正则表达式.html#id2">19.4.1. 一般字符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/04.正则表达式.html#id3">19.4.2. 预定义字符集</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/04.正则表达式.html#id4">19.4.3. 数量词</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/04.正则表达式.html#id5">19.4.4. 边界匹配</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/04.正则表达式.html#id6">19.4.5. 贪婪匹配和非贪婪匹配</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/23.Python网络爬虫/05.re模块的常用方法.html">19.5. re模块的常用方法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/05.re模块的常用方法.html#re-match">19.5.1. re.match()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/05.re模块的常用方法.html#re-sub">19.5.2. re.sub()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/05.re模块的常用方法.html#re-findall">19.5.3. re.findall()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/05.re模块的常用方法.html#id4">19.5.4. re模块装饰符</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/23.Python网络爬虫/06.三种爬虫模式性能对比.html">19.6. 3种爬虫模式性能对比</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/06.三种爬虫模式性能对比.html#id2">19.6.1. 输出结果</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/06.三种爬虫模式性能对比.html#id3">19.6.2. 总结</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/23.Python网络爬虫/案例：爬取小说.html">19.7. 案例：爬取小说</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/案例：爬取小说.html#id2">19.7.1. 代码示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/23.Python网络爬虫/案例：爬取糗事百科内容.html">19.8. 爬取糗事百科内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/23.Python网络爬虫/案例：爬取豆瓣TOP250的书籍.html">19.9. 爬取豆瓣TOP250的书籍列表</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/案例：爬取豆瓣TOP250的书籍.html#id1">19.9.1. 思路</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/23.Python网络爬虫/案例：爬取起点中文网数据存到excel中.html">19.10. 爬取数据存到excel中</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/案例：爬取起点中文网数据存到excel中.html#id1">19.10.1. 思路</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/23.Python网络爬虫/案例：爬取酷狗TOP500的数据.html">19.11. 爬取酷狗TOP500的数据</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/案例：爬取酷狗TOP500的数据.html#id1">19.11.1. 代码示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cloud_Linux_Road</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Linux_shell</a> &raquo;</li>
+        
+          <li><a href="index.html">2. Linux服务器架设</a> &raquo;</li>
+        
+      <li>2.9. Samba服务器搭建</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Linux_shell/02.Linux服务器架设/9.Samba服务器的搭建.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="samba">
+<h1>2.9. Samba服务器搭建<a class="headerlink" href="#samba" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>2.9.1. Samba的概念和功能<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Samba 是一个能让 Linux 系统应用 Microsoft 网络通信协议的软件。而 SMB 是 Server Message Block的缩写，即服务器消息块 ，SMB主要作为Microsoft的网络通信协议。后来Samba将SMB通信协议应用到了Linux系统上，就形成了现在的Samba软件。后来微软又把 SMB 改名为 CIFS（Common Internet File System，公共Internet文件系统），并且加入了许多新的功能，于是，Samba具有了更强大的功能。
+Samba 最大的功能就是可以用于 Linux 与 Windows 系统直接的文件共享和打印共享。Samba既可以用于Windows与Linux之间的文件共享，也可以用于Linux与Linux之间的资源共享。由于NFS（网络文件系统）可以很好地完成Linux与Linux之间的数据共享，因而Samba较多地用在了Linux与Windows之间的数据共享上面。
+SMB是基于客户机/服务器模型的协议，因而，一台Samba服务器既可以充当文件共享服务器，也可以充当一个Samba的客户端。例如，对于一台在Linux下已经架设好的Samba服务器，Windows客户端就可以通过SMB协议共享Samba服务器上的资源文件，同时，Samba服务器也可以访问网络中其他Windows系统或者Linux系统共享出来的文件。
+Samba在Windows下使用的是NetBIOS协议，如果要使用Linux下共享的文件，请确认Windows系统下是否安装了NetBIOS协议。
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>2.9.2. Samba的安装与配置<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>这里的系统环境如下所示。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>操作系统：CentOS Linux release 7.1.1503
+Samba服务器IP地址：192.168.0.100
+Samba版本：samba-4.1.12-23.el7_1.x86_64
+</pre></div>
+</div>
+<div class="section" id="id3">
+<h3>1.安装Samba<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>几乎所有的Linux发行版本中都默认自带了Samba软件包，登录系统，检查是否安装了Samba软件，执行如下操作。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>[root@localhost ～]# rpm -q samba
+samba-4.1.12-23.el7_1.x86_64
+</pre></div>
+</div>
+<p>如果有显示，表示系统已经安装了Samba，如果没有任何显示，请从系统光盘中找到对应的Samba软件包，然后进行安装。
+Samba的安装很简单，安装过程如下。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>[root@localhost ～]# yum -y install samba samba-client samba-common
+</pre></div>
+</div>
+<p>Samba服务器安装完毕，会生成配置文件目录/etc/samba和其他一些Samba可执行命令工具，</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>/etc/samba/smb.conf 是 Samba 的核心配置文件，
+/usr/lib/systemd/system/smb.service 是Samba的启动/关闭文件。
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>2.Samba服务的组成与使用<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Samba的运行有两个服务组成，一个是SMB，另一个是NMB。
+SMB是Samba的核心启动服务，只有SMB服务启动，才能实现文件的共享。
+而NMB服务是负责解析用的，类似于DNS实现的功能，NMB可以把Linux系统共享的工作组名称与其IP对应起来，如果NMB服务没有启动，就只能通过IP来访问共享文件。
+</pre></div>
+</div>
+<p>例如，如果某台Samba服务器的IP地址为192.168.0.100，对应的工作组名称为ixdba，那么在Windows的IE浏览器地址栏中输入下面两条指令都可以访问共享文件。</p>
+<p>其实这就是在Windows下查看Linux Samba服务器共享文件的方法。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>\\<span class="mf">192.168</span><span class="o">.</span><span class="mf">0.100</span>\<span class="n">共享目录名称</span>
+\\<span class="n">ixdba</span>\<span class="n">共享目录名称</span>
+</pre></div>
+</div>
+<p>可以通过systemctl start/stop/restart smb来启动、关闭、重启SMB服务。启动SMB服务的操作如下所示。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>[root@localhost  system]#  systemctl  start  smb
+[root@localhost  system]#  ps  -ef|grep  smbd
+root     5315     1  0 15:44 ?       00:00:00 /usr/sbin/smbd
+root     5316  5315  0 15:44 ?       00:00:00 /usr/sbin/smbd
+root     5382  3037  0 15:50 pts/0   00:00:00 grep --color=auto smbd
+</pre></div>
+</div>
+<p>从启动的输出中，可以看出，SMB服务包含一个父进程和一个子进程。</p>
+<p>接下来详细讲述smb.conf文件的属性配置。</p>
+</div>
+<div class="section" id="smb-conf">
+<h3>3.核心配置文件smb.conf<a class="headerlink" href="#smb-conf" title="Permalink to this headline">¶</a></h3>
+<p>默认的 smb.conf 有很多个选项和内容，比较繁琐，这里从简单讲起，先备份自己的smb.conf文件，然后重新建立一个smb.conf，添加如下内容。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>    [global]
+    workgroup  =  IXDBA.NET
+    netbios  name  =  ixdba
+    server  string  =  My  Linux  Samba  Server
+    log file = /var/log/samba/%m.log
+    security  =  user
+    map  to  guest  =Bad  User
+     [Linuxdata]
+            path = /ixdba/Linuxdata
+            writeable  =  yes
+            browseable  =  yes
+            guest  ok  =  yes
+上面每行的解释如下。
+[global]表示以下内容为全局配置，为必选项。
+workgroup 用来定义工作组，也就是 Windows 中的工作组概念，这里设置为IXDBA.NET。
+netbios name用来定义Windows中显示出来的计算机名称。
+server string用来定义Samba服务器的说明信息，可以随便指定。
+log file用来定义Samba用户的日志文件，
+%m代表客户端主机名，Samba服务器会在指定的目录中为每个登录主机建立不同的日志文件。
+security用来定义数据共享的方式。此选项有多个可选值，常用的有user、share、server和domain，user表示需要密码验证后才能共享数据，share表示可以直接共享数据，无须输入密码。在Samba 4中share和server两个选项已经被禁用，如果要实现无密码登录，需要添加“security=user”和“map to guest =Bad User”两个选项。
+
+[Linuxdata]用来设定在Windows中显示出来的共享目录的名称。
+path用来指定共享的目录，为必选项。
+writeable用来设置是否可写，yes表示可写，no表示不可写。
+browseable用来定义是否可以在Windows工作组下看到共享文件夹，如果需要隐藏共享文件夹，选择no即可。
+guest ok用来定义匿名用户是否可以登录，如果security设置为user，此选项默认值为no。
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>4.建立共享目录<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span>上面设置了共享目录为/ixdba/Linuxdata，下面就需要建立/ixdba/Linuxdata目录。
+    [root@localhost ～]# mkdir -p /ixdba/Linuxdata
+    [root@localhost ～]# chown -R nobody:nobody /ixdba/Linuxdata
+因为要设置匿名用户可以下载或上传共享文件，所以要给/ixdba/Linuxdata 目录授予nobody权限。
+    [root@localhost Linuxdata]# cp /root/install.log* /ixdba/Linuxdata
+上面的指令把一些测试文件复制到共享目录中。
+</pre></div>
+</div>
+</div>
+<div class="section" id="smb">
+<h3>5.重启SMB服务<a class="headerlink" href="#smb" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span>执行如下命令重启SMB服务。
+    [root@localhost  samba]#  systemctl  restart  smb.service
+    [root@localhost  samba]#  ps  -ef|grep  smb
+    root     7290     1  0 17:49 ?       00:00:00 /usr/sbin/smbd
+    root     7291  7290  0 17:49 ?       00:00:00 /usr/sbin/smbd
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>6.访问Samba服务器的共享文件<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>（1）在Windows下访问Samba服务器的共享文件</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>在浏览器地址栏或者运行框中输入以下地址：
+    \\192.168.60.231  或者 \\ixdba
+就看到打开共享目录了，这里的ixdba是smb.conf中netbios name选项定义的名
+</pre></div>
+</div>
+<p><img alt="../../_images/smb1.png" src="../../_images/smb1.png" /></p>
+<p>（2）在Linux下访问Samba服务器的共享文件</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>在Linux作为客户端时，要查看其他Linux Samba服务器共享的文件，应该如何操作呢？这就要用到smbclient这个工具。系统默认自带了这个命令。
+smbclient常见用法介绍如下。
+1）查看Samba服务器的共享资料。
+
+ smbclient  –L  //Samba服务器的IP地址  -U  Samba用户名
+“-L”即为list的含义，“-U”是user的意思。要建立一个Samba用户，需要通过Samba提供的命令pdbedit来实现。pdbedit用法如下。
+    pdbedit –a 用户名
+</pre></div>
+</div>
+<p>需要注意的是，要建立的Samba用户必须先是系统用户。例如，要建立一个名为admin的Samba用户，操作如下。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>    <span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span>  <span class="n">samba</span><span class="p">]</span><span class="c1">#  useradd  admin</span>
+    <span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span>  <span class="n">samba</span><span class="p">]</span><span class="c1">#  pdbedit  –a  admin</span>
+    <span class="n">new</span>  <span class="n">password</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>如果Samba服务器无密码即可访问，可以省略“-U Samba用户名”。
+例如：当Samba需要密码才能登录时，查看共享方法如下。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>    [root@web ～]# smbclient  -L //192.168.60.231/Linuxdata –U admin
+    Password:  在这里输入admin的密码
+</pre></div>
+</div>
+<p>当Samba无密码即可访问时，执行如下命令。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>    [root@web ～]# smbclient  -L //192.168.60.231/Linuxdata
+    Password: 直接按Enter键即可
+</pre></div>
+</div>
+<p>2）登录Samba服务器。
+如果需要在Linux客户端登录Samba服务器，用法如下。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>    smbclient  //Samba服务器的IP地址  -U  Samba用户名
+
+    请看下面执行的操作。
+    [root@web samba]# smbclient  //192.168.60.231/Linuxdata
+    Password:
+    Enter  admin&#39;s  password:
+    Domain=[IXDBA.NET]  OS=[Unix]  Server=[Samba  4.1.12].
+    smb:  \&gt;  ls
+    smb: \&gt; ?          #在这里输入&quot;?&quot;即可查看在smb命令行可用的所有命令
+</pre></div>
+</div>
+</div>
+<div class="section" id="sambalinux">
+<h3>7将Samba服务器共享的目录挂载到一个Linux客户端，操作过程如下所示。<a class="headerlink" href="#sambalinux" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@web</span> <span class="o">/</span><span class="p">]</span><span class="c1"># yum install cifs-utils cifs-utils-devel</span>
+
+<span class="p">[</span><span class="n">root</span><span class="nd">@web</span> <span class="o">/</span><span class="p">]</span><span class="c1"># mount -t cifs  -o username=admin,password=****** \</span>
+<span class="o">&gt;//</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">60.231</span><span class="o">/</span><span class="n">Linuxdata</span>  <span class="o">/</span><span class="n">samba</span>
+<span class="n">Password</span><span class="p">:</span>
+
+<span class="p">[</span><span class="n">root</span><span class="nd">@web</span> <span class="o">/</span><span class="p">]</span><span class="c1"># df -Th|grep /samba</span>
+<span class="o">//</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">60.231</span><span class="o">/</span><span class="n">Linuxdata</span> <span class="n">cifs</span>     <span class="mf">8.5</span><span class="n">G</span>  <span class="mf">5.0</span><span class="n">G</span>  <span class="mf">3.5</span><span class="n">G</span>  <span class="mi">60</span><span class="o">%</span> <span class="o">/</span><span class="n">samba</span>
+
+<span class="p">[</span><span class="n">root</span><span class="nd">@web</span> <span class="o">/</span><span class="p">]</span><span class="c1"># uname -a</span>
+<span class="n">Linux</span> <span class="n">localhost</span><span class="o">.</span><span class="n">localdomain</span> <span class="mf">3.10</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mf">229.</span><span class="n">el7</span><span class="o">.</span><span class="n">x86_64</span> <span class="c1">#1 SMP Fri Mar 6 11:36:42 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux</span>
+</pre></div>
+</div>
+<p>这里的操作系统环境为 CentOS 7.1 版本。在 CentOS 5.x 以前的版本中，
+还存在一个smbmount命令，是专门用于挂载Samba共享数据用的，此命令从CentOS 5开始被取消。
+例如，下面是在CentOS 4.x版本中的操作过程。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>[root@localhost ～]# uname -a
+Linux localhost 2.6.9-22.ELsmp #1 SMP Mon Sep 19 18:32:14 EDT 2005 i686 i686 i386 GNU/Linux
+[root@localhost ～]# smbmount  //192.168.60.231/Linuxdata /samba
+Password:
+[root@localhost ～]# df -Th|grep /samba
+//192.168.60.231/Linuxdata smbfs     8.5G  5.0G  3.5G  60% /samba
+</pre></div>
+</div>
+<p>由此可见，Samba共享文件系统格式在CentOS 5.x以前版本称为smbfs，而从CentOS 5开始变为CIFS。</p>
+</div>
+<div class="section" id="id7">
+<h3>8.授权登录samba服务器<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>面介绍了Samba服务器匿名共享数据的设置方法。而在很多时候，
+对共享的数据是需要进行权限控制的，也就是说，用户在访问Samba服务器时需要输入用户名和密码。下面就介绍如何配置有权限控制的Samba服务器。</p>
+<p>（1）添加系统级用户</p>
+<p>这里首先添加 ixdba1、ixdba2 两个系统级用户，
+并分别指定工作目录为/ixdba/ixdba1 和/ixdba/ixdba2，操作如下。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>[root@localhost /]# useradd -d /ixdba/ixdba1 ixdba1
+[root@localhost /]# useradd -d /ixdba/ixdba2  -s  /sbin/nologin  ixdba2
+[root@localhost /]# cp -r /root/* /ixdba/ixdba1
+[root@localhost /]# cd /ixdba
+[root@localhost  ixdba]#  ll
+
+其中，useradd 是创建系统用户的命令，
+参数“-d”指定 ixdba1 用户的工作目录，而 ixdba1就是创建用户的名称，
+“-s”指定用户使用的默认shell，/sbin/nologin表示ixdba2是个虚拟用户，
+也就是ixdba2不能通过shell登录系统。
+
+
+这些概念在下面章节有详细的讲述，这里不再介绍。
+每当创建一个用户时，Linux系统都会在/etc/passwd文件中添加一行对应的用户名信息，
+这里仅仅用到的是/etc/passwd文件中的用户名信息，
+因此，不必对两个用户设置登录系统的密码。
+</pre></div>
+</div>
+<p>（2）创建Samba登录用户
+这里需要注意的是：系统用户是 Linux 上面对应的用户，
+而 Samba 用户是客户端连接Samba 服务器时需要使用的用户。
+创建 Samba 用户使用的命令有 pdbedit 和 smbpasswd。smbpasswd 的原理是通过读取/etc/passwd 文件中存在的用户名，
+进而设置密码的，因此，对于系统用户，可以设置密码，也可以不设置密码。
+如果设置密码，可以和对应的Samba用户密码相同，也可以不同。
+下面分别为ixdba1和ixdba2设置Samba服务器的登录密码，操作如下。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>    <span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span>  <span class="n">samba</span><span class="p">]</span><span class="c1">#  smbpasswd   -a  ixdba1</span>
+    <span class="n">New</span>  <span class="n">SMB</span>  <span class="n">password</span><span class="p">:</span>
+    <span class="n">Retype</span>  <span class="n">new</span>  <span class="n">SMB</span>  <span class="n">password</span><span class="p">:</span>
+    <span class="n">Added</span>  <span class="n">user</span>  <span class="n">ixdba1</span><span class="o">.</span>
+    <span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span>  <span class="n">samba</span><span class="p">]</span><span class="c1">#  smbpasswd   -a  ixdba2</span>
+    <span class="n">New</span>  <span class="n">SMB</span>  <span class="n">password</span><span class="p">:</span>
+    <span class="n">Retype</span>  <span class="n">new</span>  <span class="n">SMB</span>  <span class="n">password</span><span class="p">:</span>
+    <span class="n">Added</span>  <span class="n">user</span>  <span class="n">ixdba2</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>这样设置完毕，就可以用ixdba1和ixdba2在客户端登录Samba服务器了。</p>
+<p>（3）配置smb.conf文件
+Samba配置的核心文件是smb.conf，设置好的配置文件如下。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="k">global</span><span class="p">]</span>
+   <span class="n">workgroup</span>  <span class="o">=</span>  <span class="n">IXDBA</span><span class="o">.</span><span class="n">NET</span>
+   <span class="n">netbios</span>  <span class="n">name</span>  <span class="o">=</span>  <span class="n">ixdba</span>
+   <span class="n">server</span>  <span class="n">string</span>  <span class="o">=</span>  <span class="n">My</span>  <span class="n">Linux</span>  <span class="n">Samba</span>  <span class="n">Server</span>
+   <span class="n">log</span> <span class="n">file</span> <span class="o">=</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">samba</span><span class="o">/%</span><span class="n">m</span><span class="o">.</span><span class="n">log</span>
+   <span class="nb">max</span>  <span class="n">log</span>  <span class="n">size</span>  <span class="o">=</span>  <span class="mi">50</span>
+
+   <span class="n">security</span>  <span class="o">=</span>  <span class="n">user</span>
+   <span class="n">encrypt</span>  <span class="n">passwords</span>  <span class="o">=</span>  <span class="n">yes</span>
+   <span class="n">smb</span> <span class="n">passwd</span> <span class="n">file</span> <span class="o">=</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">samba</span><span class="o">/</span><span class="n">smbpasswd</span>
+   <span class="n">socket</span> <span class="n">options</span> <span class="o">=</span> <span class="n">TCP_NODELAY</span> <span class="n">SO_RCVBUF</span><span class="o">=</span><span class="mi">8192</span> <span class="n">SO_SNDBUF</span><span class="o">=</span><span class="mi">8192</span>
+   <span class="c1">#interfaces = 192.168.1.254/24 192.168.2.254/24</span>
+   <span class="n">os</span>  <span class="n">level</span>  <span class="o">=</span>  <span class="mi">33</span>
+<span class="p">[</span><span class="n">ixdba1</span><span class="p">]</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">ixdba</span><span class="o">/</span><span class="n">ixdba1</span>
+    <span class="n">comment</span>  <span class="o">=</span>  <span class="n">This</span>  <span class="ow">is</span>  <span class="n">ixdba1</span>
+    <span class="n">valid</span>  <span class="n">users</span>  <span class="o">=</span>  <span class="n">ixdba1</span>
+    <span class="n">writeable</span>  <span class="o">=</span>  <span class="n">yes</span>
+    <span class="n">browseable</span>  <span class="o">=</span>  <span class="n">yes</span>
+<span class="p">[</span><span class="n">ixdba2</span><span class="p">]</span>
+     <span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">ixdba</span><span class="o">/</span><span class="n">ixdba2</span>
+     <span class="n">comment</span>  <span class="o">=</span>  <span class="n">This</span>  <span class="ow">is</span>  <span class="n">ixdba2</span>
+     <span class="n">valid</span>  <span class="n">users</span>  <span class="o">=</span>  <span class="n">ixdba2</span>
+     <span class="n">create</span>  <span class="n">mask</span>  <span class="o">=</span>   <span class="mi">664</span>
+     <span class="n">directory</span>  <span class="n">mask</span>  <span class="o">=</span>  <span class="mi">775</span>
+     <span class="n">writeable</span>  <span class="o">=</span>  <span class="n">yes</span>
+     <span class="n">browseable</span>  <span class="o">=</span>  <span class="n">yes</span>  
+</pre></div>
+</div>
+<p>这段配置与上面那个例子基本相同，只是增加了一些权限控制的东西。
+新增的各个选项的含义如下所示。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>max log size用来定义日志文件的大小，设置为0代表不做限制，默认单位是KB。
+encrypt passwords 用来设定用户密码是否加密，yes 表示需要加密，否则，不加密。由于现在的Windows系统都以加密形式发送 SMB/CIFS 密码，因此这里选择yes。
+smb passwd file用来指定Samba的密码文件。
+socket options用来设定Samba服务器和客户端之间会话的Socket选项值，此项的设置可以优化数据传输速度。
+os level用来设定Samba服务器的OS level，OS level的值为0～255，winNT的OS level为33，Windows 95/98的OS level是1，Samba服务器的OS level值至少要大于33。
+comment是对共享目录的说明文件，自己可以定义说明信息。
+valid users用来定义可以访问该Samba服务器的用户。
+create mask用来定义客户端用户创建文件的默认权限，664表示对用户来可读写，对用户组可读写，对其他用户仅仅有只读权限。
+directory mask用来定义客户端用户创建目录的默认权限，755表示对用户可读写并且可执行，对用户组和其他用户可读、可执行。
+</pre></div>
+</div>
+<p>（4）测试Samba服务器
+特别注意，在Samba服务器处于运行状态时，最好使Selinux处于关闭状态，不然，需要进行很多权限的设定。</p>
+<p>所有设置完成后，重新启动SMB服务。然后在Windows客户端进行授权登录。在IE浏览器地址栏中输入\192.168.1.100，然后按Enter键</p>
+<p>如果需要对ixdba1用户下的文件或者目录进行权限控制，
+只须在Linux服务器上对相应的文件或者目录进行权限设置即可。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>最后，有一个小技巧，在Windows下通过“\\IP地址”的方式访问其他文件资源时，一般第一次需要输入密码，以后就无须输入密码即可直接登录了，那么如果要切换到其他Samba用户怎么办呢？可以在Windows下执行如下指令。
+首先通过“开始”→“运行”，在“运行”界面中，输入“cmd”，打开命令窗口，在命令窗口中，输入“net use”命令查看现有的连接，然后执行“net use \\Samba服务器IP地址或者netbios名称\ipc$ /del”，删除Samba服务器已经建立的连接。或者执行“net use * /del”将现在所有的连接全部删除。最后，再次执行“\\IP地址”时，就可以切换用户了。
+到此为止，Samba服务器的搭建已经介绍完毕。
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="10.rsync数据同步.html" class="btn btn-neutral float-right" title="2.10. rsync数据同步" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="8.远程登录Linux系统.html" class="btn btn-neutral float-left" title="2.8. 远程登录Linux系统" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, hujianli
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-89592236-4', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

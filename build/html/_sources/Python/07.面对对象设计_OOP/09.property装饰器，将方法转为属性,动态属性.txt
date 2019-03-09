@@ -1,0 +1,104 @@
+# property装饰器，将方法转为属性,动态属性
+
+### 访问方式和之前略有区别,用属性的方式访问
+#### 代码示例 1
+```
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+class TVShow:       #电视节目类
+    def __init__(self, show):
+        self.__show = show
+
+    @property               #属性装饰器，是把类中的方法当做属性来访问
+    def show(self):
+        '''
+        定义方法
+        :return:私有属性
+        '''
+        return self.__show
+
+tvshow = TVShow("正在播放《战狼2》")  #创建类的实例
+print("默认输出: ", tvshow.show)     #获取属性值
+```
+
+#### 用代码来理解 2
+```
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+class Rect:
+    def __init__(self,weight,height):
+        self.__weight = weight
+        self.__height = height
+
+    @property                       #将方法转为属性
+    def area(self):
+        return self.__weight*self.__height
+
+    @area.setter                    #设置属性的值
+    def set_area(self, value):
+        if isinstance(value,int):
+            self.__weight += value
+        else:
+            raise ValueError
+
+    @area.deleter
+    def delete_are(self):
+        print("删除属性.......")
+
+hu = Rect(10,20)
+print(hu.area)
+
+#不能进行重新赋值，会报错
+hu.set_area = 100
+print(hu.area)
+del hu.delete_are
+
+```
+#### 代码示例 3
+```
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+from datetime import datetime,date
+
+class User:
+    def __init__(self,name,birthday):
+        self.name = name
+        self.birthday = birthday
+        self._age = 0
+
+    @property
+    def age(self):
+        return datetime.now().year - self.birthday.year
+
+    @age.setter
+    def age(self,value):
+        self._age = value
+
+if __name__ == '__main__':
+    user = User("derek",date(year=1994,month=11,day=11))
+    user.age = 23
+    print(user._age)   # 23,setter设置的
+    print(user.age)    # 24 ,动态计算出来的
+
+```
+
+### 使用property函数调用私有属性
+```python
+#!/usr/bin/env python
+# coding=utf-8
+
+__metaclass__ = type
+
+class ProtectMe:
+    def __init__(self):
+        self.me = "qiwsir"
+        self.__name = "kivi"
+
+    @property
+    def name(self):
+        return self.__name
+
+if __name__ == "__main__":
+    p = ProtectMe()
+    print p.name
+```

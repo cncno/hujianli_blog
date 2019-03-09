@@ -1,0 +1,354 @@
+# Docker 网络
+## Docker网络
+```
+root@ubuntu:/home/hujianli# docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+c88cbafa3598        bridge              bridge              local
+45dd57f64f88        host                host                local
+4150084aadc4        none                null                local
+
+
+'''none 网络
+故名思议，none 网络就是什么都没有的网络。挂在这个网络下的容器除了 lo，没有其他任何网卡。
+容器创建时，可以通过 --network=none 指定使用 none 网络。'''
+root@ubuntu:/home/hujianli# docker run -it --network=none busybox
+/ # ifconfig
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+'''
+封闭意味着隔离，一些对安全性要求高并且不需要联网的应用可以使用 none 网络
+'''
+
+'''
+host 网络
+连接到 host 网络的容器共享 Docker host 的网络栈，容器的网络配置与 host 完全一样。
+可以通过 --network=host 指定使用 host 网络。
+
+
+直接使用 Docker host 的网络最大的好处就是性能，如果容器对网络传输效率有较高要求，
+则可以选择 host 网络。当然不便之处就是牺牲一些灵活性，比如要考虑端口冲突问题，
+Docker host 上已经使用的端口就不能再用了。
+'''
+
+root@ubuntu:/home/hujianli# docker run -it --network=host busybox
+/ # ip l
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast qlen 1000
+    link/ether 00:0c:29:d4:ac:c8 brd ff:ff:ff:ff:ff:ff
+3: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue qlen 1000
+    link/ether 56:84:7a:fe:97:99 brd ff:ff:ff:ff:ff:ff
+35: vethaa45d91@if34: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue master docker0
+    link/ether 96:b3:21:78:76:22 brd ff:ff:ff:ff:ff:ff
+41: vethbb75180@if40: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue master docker0
+    link/ether 62:ee:6b:fc:3b:a9 brd ff:ff:ff:ff:ff:ff
+43: vetha05bc05@if42: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue master docker0
+    link/ether be:83:51:7c:f8:f9 brd ff:ff:ff:ff:ff:ff
+53: veth8e3bad9@if52: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue master docker0
+    link/ether 36:2b:1a:f8:83:06 brd ff:ff:ff:ff:ff:ff
+
+
+
+'''Docker 安装时会创建一个 命名为 docker0 的 linux bridge。
+如果不指定--network，创建的容器默认都会挂到 docker0 上。'''
+
+docker network inspect bridge	#看一下 bridge 网络的配置信息
+ "Config": [
+
+                    "Subnet": "172.17.0.0/16",
+                    "Gateway": "172.17.42.1"
+
+
+其中的网关就是docker0的ip地址
+
+
+```
+
+## 自定义容器网络
+
+* Docker 提供三种 user-defined 网络驱动：bridge, overlay 和 macvlan。overlay 和 macvlan 用于创建跨主机的网络
+
+
+
+```
+root@ubuntu:/home/hujianli# docker network create --driver bridge my_set
+c968810342a1a6cb77286dda67c463d82a058ee24ceb9469cdd2d624691cee70
+
+root@ubuntu:/home/hujianli# docker network inspect my_set
+[
+
+        "Name": "my_set",
+        "Id": "c968810342a1a6cb77286dda67c463d82a058ee24ceb9469cdd2d624691cee70",
+        "Created": "2018-10-09T17:46:01.156006337+08:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM":
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+
+#这里 172.18.0.0/16 是 Docker 自动分配的 IP 网段。
+
+#只需在创建网段时指定 --subnet 和 --gateway 参数就可以指定IP网段
+root@ubuntu:/home/hujianli# docker network create --driver bridge --subnet 172.22.16.0/24 --gateway 172.22.16.1 my_set2
+b1c2123a1de3f3d2427d0eb4820634a3cd0746842b5309897bf292d329f1884f
+root@ubuntu:/home/hujianli# docker network inspect my_set2
+
+
+        "Name": "my_set2",
+        "Id": "b1c2123a1de3f3d2427d0eb4820634a3cd0746842b5309897bf292d329f1884f",
+        "Created": "2018-10-09T17:48:19.885083469+08:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM":
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+
+                    "Subnet": "172.22.16.0/24",
+                    "Gateway": "172.22.16.1"
+
+
+
+
+#容器要使用新的网络，需要在启动时通过 --network 指定：
+root@ubuntu:/home/hujianli# docker run -it --network=my_set2 busybox
+/ # ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+66: eth0@if67: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue
+    link/ether 02:42:ac:16:10:02 brd ff:ff:ff:ff:ff:ff
+    inet 172.22.16.2/24 brd 172.22.16.255 scope global eth0
+
+
+
+
+
+
+
+
+#为容器指定一个静态 IP
+root@ubuntu:/home/hujianli# docker run -it --network=my_set2 --ip 172.22.16.8 busybox
+/ # ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+68: eth0@if69: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue
+    link/ether 02:42:ac:16:10:08 brd ff:ff:ff:ff:ff:ff
+    inet 172.22.16.8/24 brd 172.22.16.255 scope global eth0
+       valid_lft forever preferred_lft forever
+
+#运行镜像时指定IP并放置到后台执行
+docker run -d -it --network=my_set2 --ip 172.22.16.8 busybox
+
+#只有使用 --subnet 创建的网络才能指定静态 IP
+}
+```
+
+
+## 容器之间的连通性
+```
+#ip r 查看host上的路由表
+root@ubuntu:/home/hujianli# ip r
+default via 192.168.1.1 dev eth0
+172.17.0.0/16 dev docker0  proto kernel  scope link  src 172.17.42.1
+172.18.0.0/16 dev br-c968810342a1  proto kernel  scope link  src 172.18.0.1
+172.19.0.0/16 dev br-82088f0eb3c8  proto kernel  scope link  src 172.19.0.1
+172.22.16.0/24 dev br-b1c2123a1de3  proto kernel  scope link  src 172.22.16.1
+192.168.1.0/24 dev eth0  proto kernel  scope link  src 192.168.1.105
+
+iptables-save
+-A DOCKER-ISOLATION-STAGE-2 -o docker0 -j DROP
+-A DOCKER-ISOLATION-STAGE-2 -o br-c968810342a1 -j DROP
+-A DOCKER-ISOLATION-STAGE-2 -o br-b1c2123a1de3 -j DROP
+#iptables DROP 掉了网桥 docker0 与 br-5d863e9f78b6 之间双向的流量。
+
+#为 httpd 容器添加一块 net_my2 的网卡。这个可以通过docker network connect 命令实现。
+root@ubuntu:/home/hujianli# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+2b49495b2cfa        busybox             "sh"                9 minutes ago       Up 9 minutes                            heuristic_bell
+679f93530a1f        ubuntu:14.04        "/bin/bash"         7 hours ago         Up 12 minutes                           upbeat_clarke
+
+root@ubuntu:/home/hujianli# docker network connect my_set2 679f93530a1f
+
+root@ubuntu:/home/hujianli# docker exec -it 679f93530a1f bash
+root@679f93530a1f:/# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+17: eth0@if18: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
+    link/ether 02:42:ac:11:00:01 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+23: eth1@if24: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
+    link/ether 02:42:ac:16:10:02 brd ff:ff:ff:ff:ff:ff
+    inet 172.22.16.2/24 brd 172.22.16.255 scope global eth1
+       valid_lft forever preferred_lft forever
+
+
+root@679f93530a1f:/# ping 172.22.16.8
+PING 172.22.16.8 (172.22.16.8) 56(84) bytes of data.
+64 bytes from 172.22.16.8: icmp_seq=1 ttl=64 time=0.158 ms
+
+#有2块网卡后两边都能通信
+root@49c3fd25868a:/opt/webapp# ping 172.17.0.1
+PING 172.17.0.1 (172.17.0.1) 56(84) bytes of data.
+
+##########joined 容器###########
+joined 容器是另一种实现容器间通信的方式。
+
+#先创建一个 httpd 容器，名字为 web1。
+docker run -d -it -p 80:80 --name=web1 httpd
+
+root@ubuntu:/home/hujianli# docker run -it --network=container:web1 busybox
+/ # ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+47: eth0@if48: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue
+    link/ether 02:42:ac:11:00:03 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.3/16 brd 172.17.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+/ # wget 127.0.0.1
+Connecting to 127.0.0.1 (127.0.0.1:80)
+index.html           100% |*****************************
+
+
+root@ubuntu:/home/hujianli# docker exec -it web1 bash
+root@526a20a8fbcd:/usr/local/apache2# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+47: eth0@if48: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
+    link/ether 02:42:ac:11:00:03 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.3/16 brd 172.17.255.255 scope global eth0
+
+
+'''joined 容器非常适合以下场景：
+
+不同容器中的程序希望通过 loopback 高效快速地通信，比如 web server 与 app server。
+
+希望监控其他容器的网络流量，比如运行在独立容器中的网络监控程序'''
+
+```
+
+## Docker DNS Server
+
+* Docker 1.10 版本开始，docker daemon 实现了一个内嵌的 DNS server，使容器可以直接通过“容器名”通信。
+方法很简单，只要在启动时用 --name 为容器命名就可以了。
+```
+root@ubuntu:/home/hujianli# docker run -it --network=my_set2 --name=app1 busybox
+root@ubuntu:/home/hujianli# docker run -it --network=my_set2 --name=app2 busybox
+/ # ping app1
+PING app1 (172.22.16.3): 56 data bytes
+64 bytes from 172.22.16.3: seq=0 ttl=64 time=0.081 ms
+
+
+```
+
+## 暴露网络端口
+```
+docker search training/webapp
+
+-p, --publish list	#发布容器端口到主机
+-P, --publish-all	#发布容器的所有EXPOSE的端口到宿主机随机端口
+
+#将容器的5000端口映射到宿主机的80
+docker run -d -p 80:5000 training/webapp python app.py
+
+#将镜像httpd的80端口映射的宿主机的8080上
+root@ubuntu:/home/hujianli# docker run -d -p 8080:80 httpd
+3dce4aed18701970029a1016d230f4a38ccec76ca7362ea1e0835426d1a71d3d
+root@ubuntu:/home/hujianli# docker ps -a
+CONTAINER ID        IMAGE                   COMMAND              CREATED             STATUS                      PORTS                       NAMES
+3dce4aed1870        httpd                   "httpd-foreground"   3 seconds ago       Up 2 seconds                0.0.0.0:8080->80/tcp        boring_sinoussi
+
+#通过 docker ps 或者 docker port 查看到 host 映射的端口
+root@ubuntu:/home/hujianli# docker port 3dce4aed1870
+80/tcp -> 0.0.0.0:8080
+
+#ip:hostPort:containerPort ：指定IP地址的指定端口和容器的指定开放端口映射
+#ip::containerPort ：指定IP的随机端口映射到容器的指定端口
+#将容器的5000端口映射到宿主机的回环地址的随机端口
+docker run -d -p 127.0.0.1::5000 training/webapp python app.py
+#每一个映射的端口，host 都会启动一个 docker-proxy 进程来处理访问容器的流量
+
+#多个映射4000端口和80端口映射，5000端口和5000端口映射
+root@ubuntu:/home/hujianli# docker run -d -p 5000:5000 -p 4000:80 training/webapp python app.py
+49c3fd25868aff1c9811c46128b9849ca940b499a72a59680cba135b7c6f8404
+root@ubuntu:/home/hujianli# docker ps -a
+CONTAINER ID        IMAGE                   COMMAND              CREATED             STATUS                      PORTS                                          NAMES
+49c3fd25868a        training/webapp         "python app.py"      3 seconds ago       Up 2 seconds                0.0.0.0:5000->5000/tcp, 0.0.0.0:4000->80/tcp   hungry_wescoff
+
+```
+
+## 容器访问外网
+```
+#查看iptables信息
+"""
+-A POSTROUTING -s 172.17.0.0/16 ! -o docker0 -j MASQUERADE
+其含义是：如果网桥 docker0 收到来自 172.17.0.0/16 网段的外出包，把它交给 MASQUERADE 处理。
+而 MASQUERADE 的处理方式是将包的源地址替换成 host 的地址发送出去，即做了一次网络地址转换（NAT）"""
+
+root@ubuntu:/home/hujianli# iptables -t nat -S
+-P PREROUTING ACCEPT
+-P INPUT ACCEPT
+-P OUTPUT ACCEPT
+-P POSTROUTING ACCEPT
+-N DOCKER
+-A PREROUTING -m addrtype --dst-type LOCAL -j DOCKER
+-A OUTPUT ! -d 127.0.0.0/8 -m addrtype --dst-type LOCAL -j DOCKER
+-A POSTROUTING -s 172.17.0.0/16 ! -o docker0 -j MASQUERADE
+-A POSTROUTING -s 172.17.0.2/32 -d 172.17.0.2/32 -p tcp -m tcp --dport 5000 -j MASQUERADE
+-A POSTROUTING -s 172.17.0.3/32 -d 172.17.0.3/32 -p tcp -m tcp --dport 80 -j MASQUERADE
+-A POSTROUTING -s 172.17.0.1/32 -d 172.17.0.1/32 -p tcp -m tcp --dport 5000 -j MASQUERADE
+-A POSTROUTING -s 172.17.0.1/32 -d 172.17.0.1/32 -p tcp -m tcp --dport 80 -j MASQUERADE
+-A DOCKER -i docker0 -j RETURN
+-A DOCKER ! -i docker0 -p tcp -m tcp --dport 80 -j DNAT --to-destination 172.17.0.2:5000
+-A DOCKER ! -i docker0 -p tcp -m tcp --dport 8080 -j DNAT --to-destination 172.17.0.3:80
+-A DOCKER ! -i docker0 -p tcp -m tcp --dport 5000 -j DNAT --to-destination 172.17.0.1:5000
+-A DOCKER ! -i docker0 -p tcp -m tcp --dport 4000 -j DNAT --to-destination 172.17.0.1:80
+
+
+root@ubuntu:/home/hujianli# ip r
+default via 192.168.20.254 dev eth0
+172.17.0.0/16 dev docker0  proto kernel  scope link  src 172.17.42.1
+192.168.20.0/24 dev eth0  proto kernel  scope link  src 192.168.20.197
+
+
+默认路由通过 eth0 发出去，所以我们要同时监控 ech0 和 docker0 上的 icmp（ping）数据包。
+
+#当容器ping 8.8.8.8时，tcpdump 输出如下：
+root@ubuntu:/home/hujianli# tcpdump -i docker0 -n icmp
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on docker0, link-type EN10MB (Ethernet), capture size 65535 bytes
+14:27:57.430914 IP 172.17.0.4 > 8.8.8.8: ICMP echo request, id 15, seq 1, length 64
+14:27:58.430966 IP 172.17.0.4 > 8.8.8.8: ICMP echo request, id 15, seq 2, length 64
+14:27:58.498648 IP 8.8.8.8 > 172.17.0.4: ICMP echo reply, id 15, seq 2, length 64
+14:27:59.433694 IP 172.17.0.4 > 8.8.8.8: ICMP echo request, id 15, seq 3, length 64
+
+
+ubuntu容器 发送 ping 包：172.17.0.2 > 8.8.8.8。
+docker0 收到包，发现是发送到外网的，交给 NAT 处理。
+NAT 将源地址换成 eth0 的 IP：172.17.0.4 > 8.8.8.8。
+
+ping 包从 eth0 发送出去，到达 8.8.8.8。
+通过 NAT，docker 实现了容器对外网的访问
+```

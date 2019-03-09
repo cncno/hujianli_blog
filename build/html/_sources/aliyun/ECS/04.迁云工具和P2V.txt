@@ -1,0 +1,112 @@
+# 迁云工具和P2V
+
+###  适合的操作系统
+
+Windows
+
+```
+Windows Server 2003
+Windows Server 2008
+Windows Server 2012
+Windows Server 2016
+
+```
+
+Linux
+```
+Amazon Linux 2014 及更高版本
+CentOS 5/6/7
+Debian 7/8/9
+Gentoo 13.0
+OpenSUSE 13.1
+Oracle Linux 5/6/7
+Red Hat 5/6/7
+SUSE 11.4/12.1/12.2
+Ubuntu 10/12/14/16/17
+
+```
+* 迁云工具是免费工具，不收取额外的费用。但是，在迁云过程中会涉及少量资源计费：
+
+* 迁云过程中，会创建快照以生成自定义镜像，该快照会按照实际占用容量收取少部分费用
+* 迁云时，系统默认在您的阿里云账号下创建一个默认名为 INSTANCE_FOR_GOTOALIYUN 的 ECS 实例做中转站。该中转实例付费类型为按量付费，您需要确保账号余额大于等于 100 元.
+
+--------
+#### 注意事项
+* 确保系统本地时间和实际时间一致，否则会报IllegalTimestamp 异常。
+待迁云的源服务器必须能够通过以下公网地址以及通信端口访问相应云服务：
+
+1. 就近访问云服务器 ECS： https://ecs.aliyuncs.com:443，有关其他 ECS 服务接入地址，请参阅 接入地址。
+
+2. 专有网络 VPC：http://vpc.aliyuncs.com:443。
+
+3. 安全凭证 STS：https://sts.aliyuncs.com:443。
+
+4. 中转实例：https://xxx.xx.xxx.xx:8080 和 https://xxx.xx.xxx.xx:8073 ，其中 xxx.xx.xxx.xx 为实例公网 IP 地址。
+
+5. 迁云工具暂不支持迁移增量数据。建议在迁云前先暂停如数据库或容器服务之类的应用，或者先过滤相关数据目录，迁云完成后再同步数据。
+
+6. 迁云工具会在您的云账号下创建一台临时中转实例，将源服务器系统数据传输到中转实例。为避免迁云失败，请勿停止、重启或者释放中转实例。迁云完成后，该中转实例会自动释放.
+
+7. 如果您使用的是 RAM 子账号，请确保您已被授权云服务器 ECS AliyunECSFullAccess 权限和专有网络 VPC AliyunVPCFullAccess 权限。更多详情，请参阅 RAM 文档 授权策略管理。
+
+
+如果您的源服务器中挂载了共享存储设备，迁云时可以做如下处理：
+默认行为：
+* Windows 服务器：迁云工具默认将挂载在 C 盘驱动中的共享存储部分的数据合并为系统盘数据并上传。
+
+* Linux 服务器：迁云工具默认将共享存储部分的数据合并为系统盘数据并上传。
+
+自定义行为：
+
+* 您可以设置共享存储的挂载路径（src_path）为一个数据盘，将共享存储当作单独的数据盘迁移上云。
+
+* 或者，您可以过滤共享存储的数据，过滤后共享存储不会被迁移上云。
+
+## Linux服务器注意事项
+当您的源服务器为 Linux 系统时，会有以下额外要求：
+* 源服务器必须已经安装了 Rsync 库：
+
+* CentOS：运行 yum install rsync –y。
+
+* Ubuntu：运行 apt-get install rsync –y。
+
+* Debian：运行 apt-get install rsync –y。
+
+其他发行版：参考发行版官网安装相关的文档。
+
+* 确保源服务器已关闭 SELinux。您可以运行 setenforce 0 临时关闭 SELinux。同时，建议您在 /etc/selinux/config 中，设置 SELINUX=disabled，禁用 SELinux。
+
+* 确保源服务器已 安装 Virtio（KVM）驱动。
+
+* 对于 CentOS 5、Red Hat 5 和 Debian 7 等系统，需要 安装 1.9 以上版本的系统引导程序 GRUB 。
+
+### 前提条件
+
+    步骤 1：下载并安装迁云工具
+    步骤 2：编辑 user_config.json 文件
+    步骤 3：过滤无需迁云的目录
+    步骤 4：（可选）编辑 client_data 文件
+    步骤 5：运行迁云工具
+
+* Windows 服务器：
+  ```
+  右击 go2aliyun_client.exe，选择 以管理员身份运行。GUI 版本程序操作指南请参阅 迁云工具 Windows GUI 版本介绍。
+  ```
+* Linux 服务器：
+
+  ```
+  以 root 用户身份运行迁云工具。
+  运行 chmod +x ./go2aliyun_client。
+  运行 ./go2aliyun_client。
+  ```
+
+####  迁云结果
+
+当提示 Goto Aliyun Finished! 时，前往 ECS管理控制台 镜像详情页查看结果。您的源服务器中的操作系统、应用程序以及应用数据等以自定义镜像的形式出现在相应地域的 ECS 控制台上。
+
+当提示 Goto Aliyun Not Finished! 时，检查同一目录下 Logs 文件夹下的日志文件 排查故障。修复问题后，重新运行迁云工具，迁云工具会从上一次执行的进度中继续迁云。
+
+
+
+
+

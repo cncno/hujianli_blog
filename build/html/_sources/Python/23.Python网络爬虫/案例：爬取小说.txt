@@ -1,0 +1,43 @@
+# 案例：爬取小说
+
+__手动浏览网页，观察格式如下__:
+```
+http://www.doupoxs.com/doupocangqiong/2.html
+http://www.doupoxs.com/doupocangqiong/5.html
+http://www.doupoxs.com/doupocangqiong/6.html
+```
+
+        http://www.doupoxs.com/doupocangqiong/1.html
+会报错如图：
+![re模块](../../_static/repacong.png)
+
+## 代码示例
+```
+import requests
+import re
+import time
+
+headers = {
+"User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36"
+
+}
+
+f = open("D:\GitHub\爬虫学习\\3.第一个爬虫程序\doupo.txt",'a+')
+
+def get_info(url):
+    res = requests.get(url,headers=headers)
+    if res.status_code == 200:                          #判断请求码是否为200
+        contents = re.findall('<p>(.*?)</p>', res.content.decode('utf-8'), re.S)
+        for content in contents:
+            f.write(content + "\n")
+    else:
+        pass
+if __name__ == '__main__':              #程序主入口
+    urls = ['http://www.doupoxs.com/doupocangqiong/{}.html'.format(str(i)) for i in range(2,500)]        #构造多页url
+    # print(urls)
+    for url in urls:
+        get_info(url)               #循环调用get_info()函数
+        time.sleep(1)
+
+f.close()                       #关闭txt文件
+```

@@ -1,0 +1,29 @@
+# 列表实现堆和队列
+
+## 堆栈是指最先进入堆栈的元素最后才输出  --- "后进先出"的顺序。
+```python
+
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+__author__ = '18793'
+
+#堆栈的实现
+list = ["apple", "grape", "grape"]
+list.append("orange")
+print(list)
+print("弹出的元素: ",list.pop())
+print(list)
+```   
+
+
+
+## 队列是指最先进入队列的元素最先输出--- "先进先出"的顺序
+    append()、pop()  可以模拟这两个数据结构
+```python
+#队列的实现
+list = ["apple", "grape", "grape"]
+list.append("orange")
+print(list)
+print("弹出的元素: ",list.pop(0))
+print(list)
+```

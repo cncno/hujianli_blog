@@ -1,0 +1,183 @@
+# 数据库操作
+
+## 1.显示
+    
+    mysql> show databases;
+    +--------------------+
+    | Database           |
+    +--------------------+
+    | information_schema |
+    | mysql              |
+    | performance_schema |
+    | sys                |
+    +--------------------+
+    4 rows in set (0.00 sec)
+    
+      默认数据库：
+    
+    　　 mysql - 用户权限相关数据
+    　　 test - 用于用户测试数据
+    　　 information_schema - MySQL本身架构相关数据
+    
+## 2.创建
+**create database 数据库名称 default charset utf8 collate utf8_general_ci;**
+
+    mysql> create database derek default charset utf8 collate utf8_general_ci;
+    Query OK, 1 row affected, 2 warnings (0.01 sec)
+    
+    mysql> show databases;
+    +--------------------+
+    | Database           |
+    +--------------------+
+    | derek              |
+    | information_schema |
+    | mysql              |
+    | performance_schema |
+    | sys                |
+    +--------------------+
+    5 rows in set (0.00 sec)
+    
+## 3.删除
+    
+    mysql> drop database derek;
+    Query OK, 0 rows affected (0.07 sec)
+
+    mysql> show databases;
+    +--------------------+
+    | Database           |
+    +--------------------+
+    | information_schema |
+    | mysql              |
+    | performance_schema |
+    | sys                |
+    +--------------------+
+    4 rows in set (0.00 sec)
+    
+## 4.使用
+    　　use derek;                  进入数据库
+    　　show tables;                查看表
+    　　select database();          查看当前使用的数据库
+    
+## 5.用户管理
+    mysql> use mysql;       #进入mysql数据库
+    mysql> select host,user from user;      ##查看目前的用户
+    +-----------+------------------+
+    | host      | user             |
+    +-----------+------------------+
+    | localhost | mysql.infoschema |
+    | localhost | mysql.session    |
+    | localhost | mysql.sys        |
+    | localhost | root             |
+    +-----------+------------------+
+    4 rows in set (0.00 sec)
+    
+    创建用户
+    create user '用户名'@'IP地址' identified by '密码';
+    实例：create user 'zx'@'%' identified by '111';
+    账户名zx，ip地址任意（可以在任意ip下访问），密码‘’111‘’可以使用该用户
+    
+    删除用户
+        drop user '用户名'@'IP地址';
+    修改用户
+        rename user '用户名'@'IP地址' to '新用户名'@'IP地址';
+    修改密码
+        set password for '用户名'@'IP地址' = Password('新密码')
+        
+        
+## 6.用户授权
+
+    查看权限：   show grants for '用户'@'IP地址'                               
+    授权：     grant 权限 on 数据库.表 to '用户'@'IP地址'         
+    取消权限：   revoke 权限 on 数据库.表 from '用户'@'IP地址'
+    flush privileges   将数据读取到内存中，从而立即生效
+    
+
+```
+show grants for 'zx'@'%';
+grant select on *.* to 'zx'@'%';
+grant all privileges on *.* to 'zx'@'%';
+revoke select on *.* from 'zx'@'%';
+revoke all privileges on *.* from 'zx'@'%';
+```
+
+```
+权限说明
+all privileges  除grant外的所有权限
+select          仅查权限
+select,insert   查和插入权限
+usage           无访问权限
+alter           使用alter table
+alter routine   使用alter procedure和drop procedure
+create          使用create table
+create routine  使用create procedure
+create temporary tables 使用create temporary tables
+create user     使用create user,drop user,rename user和revoke all privileges
+create view     使用create view
+delete          使用delete
+drop            使用drop table
+execute         使用call和存储过程
+file            使用select into outfile 和 load data infile
+grant option    使用grant 和 revoke
+index           使用index
+insert          使用insert
+lock tables     使用lock table
+process         使用show full processlist
+select          使用select
+show databases  使用show databases
+show view       使用show view
+update          使用update
+reload          使用flush
+shutdown        使用mysqladmin shutdown(关闭MySQL)
+super           使用change master,kill,logs,purge,master和set global,还允许                    mysqladmin调试登陆
+replication client      服务器位置的访问
+replication slave       由复制从属使用
+flush privileges　　　    　将数据读取到内存中,从而立即生效
+
+```
+
+## 7.忘记密码
+```mysql
+# 启动免授权服务端
+mysqld --skip-grant-tables
+# 客户端
+mysql -u root -p
+# 修改用户名密码
+update mysql.user set authentication_string=password('666') where user='root';
+flush privileges;
+```
+
+## 8.Mysql数据类型
+**MySQL支持多种类型，大致可以分为三类：数值、日期/时间和字符串(字符)类型。**
+### 1.数值
+![数值](../../_static/mysql-data.png)
+### 2.日期和时间类型
+![日期和时间类型](../../_static/mysql-data-time.png)
+### 3.字符串类型
+![字符串类型](../../_static/string.png)
+
+## 9.mysql存储引擎
+
+    创建新表时如果不指定存储引擎 , 那么系统就会使用默认存储引擎 , MySQL 5.5 之前的默认存储引擎是MyISAM , 5.5 之后改为了InnoDB
+    
+    查看当前数据库支持的存储引擎类型；
+    SHOW ENGINES;
+
+![存储引擎](../../_static/mysql-yingqing.png)
+
+### 1.MyISAM 和 InnoDB的适用场景
+
+    MyISAM适合：
+    (1)做很多count 的计算；
+    (2)插入不频繁，查询非常频繁；
+    (3)没有事务。
+    
+    InnoDB适合：
+    (1)可靠性要求比较高，或者要求事务；
+    (2)表更新和查询都相当的频繁，并且表锁定的机会比较大的情况。
+    
+### MyISAM 和 InnoDB的区别
+    1)MyISAM类型不支持事务处理等高级处理，而InnoDB类型支持
+    2)myisam表不支持外键
+    3)在执行数据库写入的操作（insert,update,delete）的时候，myisam表会锁表，而innodb表会锁行
+    4)当你的数据库有大量的写入、更新操作而查询比较少或者数据完整性要求比较高的时候就选择innodb表。当你的数据库主要以查询为主，相比较而言更新和写 入比较少，并且业务方面数据完整性要求不那么严格，就选择mysiam表。因为mysiam表的查询操作效率和速度都比innodb要快
+    

@@ -1,0 +1,423 @@
+.. contents::
+   :depth: 3
+..
+
+Linux 安装和使用 aliyuncli（python版）
+======================================
+
+安装须知
+--------
+
+命令行工具 CLI 是基于 Python 编写的，运行 CLI 需要 Python 运行环境。pip
+是基于 Python 开发的应用安装升级工具，通过 pip
+您能够方便地安装、升级和删除 Python 程序包。因此，我们建议您使用 pip
+工具安装命令行工具 CLI。
+
+在线安装命令行工具和 SDK
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. 安装python2.7.x # 若已安装跳过此步
+
+2. 安装pip # 若已安装跳过此步
+
+   .. code:: bash
+
+      python pip-install.py
+      sudo pip install -U pip
+
+在线安装 SDK
+~~~~~~~~~~~~
+
+命令行工具需要与阿里云各产品的 SDK
+协同工作。为方便用户使用，在线安装命令行工具时，与阿里云 SDK
+的安装进行了分离。您可以自由选择所需产品的 SDK，不必下载所有的阿里云
+SDK。
+
+.. code:: bash
+
+   sudo pip install aliyun-python-sdk-rds
+
+系统显示如下类似信息，则表明安装成功。
+
+::
+
+   Successfully installed aliyun-python-sdk-core-2.0.35 aliyun-python-sdk-rds-2.0.3
+
+离线安装命令行工具和 SDK
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Linux/UNIX & Mac
+OS：\ `点击下载 <https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/cn/aliyun-command-line-interface/0.1.37/assets/cli.tar.gz?spm=a2c4g.11186623.2.12.3c8915a8CZrTlR&file=cli.tar.gz>`__
+
+命令行工具云市场下载地址：
+
+http://market.aliyun.com/products/53690006/cmgj000314.html?spm=5176.900004.4.2.Fbz81W
+
+安装命令行工具
+--------------
+
+**前提条件：**
+
+已安装 Python。若没有安装，请在已连网设备上下载 Python 2.7.x
+版本的安装包，Python 官网的地址为
+`https://www.python.org/downloads/。 <https://www.python.org/downloads/%E3%80%82>`__
+
+**安装步骤：**
+
+1. 在命令行窗口找到压缩软件包 cli.tar.gz。
+
+2. 在命令行窗口中执行如下命令，安装命令行工具。
+
+   ::
+
+       $ tar –zxvf cli.tar.gz $ cd cli $ sudo sh install.sh
+
+   系统显示如下类似信息，则表明安装成功。
+
+   .. code:: bash
+
+       New aliyuncli version has been installed successfully!
+
+启用命令自动补全功能
+~~~~~~~~~~~~~~~~~~~~
+
+在 Linux/UNIX 和 Mac OS 环境下，命令行工具 CLI
+包含一项命令提示和自动补全的功能，让您可以使用 Tab
+键完成部分键入的命令并且可以产生命令的联想提示。此功能不是自动安装的，需要您手动配置。
+
+配置命令行工具自动补全功能需要以下两个信息：
+
+-  您所使用的 Shell 类型。
+-  命令行工具自动补全脚本 aliyun_completer 脚本的位置。
+
+识别 Shell 类型
+^^^^^^^^^^^^^^^
+
+如果您不确定所使用的 Shell
+类型，可以使用以下命令之一进行识别。命令行工具目前支持 bash 和 zsh
+的自动补全。
+
+**方法一：显示 Shell 安装目录**
+
+在命令行窗口执行如下命令，显示 Shell 的安装目录。这通常会与所使用的
+Shell 匹配，除非您在登录后启动了不同的 Shell。
+
+::
+
+   echo $SHELL
+
+**方法二：显示当前用户运行的进程**
+
+在命令行窗口执行如下命令，显示当前用户运行的进程，Shell 是其中之一。
+
+::
+
+   ps
+
+确定 aliyun_completer 的存放路径
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+在命令行窗口中执行如下命令，找到 aliyun_completer 的存放路径。
+
+::
+
+   which aliyun_completer
+
+.. _启用命令自动补全功能-1:
+
+启用命令自动补全功能
+^^^^^^^^^^^^^^^^^^^^
+
+**Shell 类型 — bash**
+
+1. 在命令行窗口执行如下命令，使用 complete
+   指令启用命令行工具的命令自动补全功能。Complete 指令是 bash
+   自动补全的指令，通过将指定的补全脚本编译到可执行文件中，实现对应的可执行文件在按下
+   Tab 时出现提示和自动补全的功能。
+
+   ::
+
+       complete -C '<aliyun_completer的存放路径，如/usr/local/bin/aliyun_completer>' aliyuncli
+
+2. 执行如下命令，检查命令自动补全功能是否成功启用。
+
+   ::
+
+       complete
+
+   系统显示如下类似信息，则说明命令自动补全功能已成功启用。
+
+   ::
+
+       complete -C <aliyun_completer的存放路径，如/usr/local/bin/aliyun_completer > aliyuncli
+
+3. 为保证每次启动 bash 时自动补全功能都有效，您需要将自动补全的命令写入
+   Shell 的配置文件中。请执行如下命令，将步骤 1 中的命令追加到
+   .bash_profile 中。
+
+   ::
+
+       vim ~/.bash_profile 将complete -C '<aliyun_completer的存放路径，如/usr/local/bin/aliyun_completer>' aliyuncli 添加在文件最后即可。
+
+**Shell 类型 — zsh**
+
+在命令行窗口执行如下命令，使用 aliyun_zsh_complete.sh
+去启用命令行工具的命令自动补全功能。
+
+::
+
+   source /usr/local/bin/aliyun_zsh_complete.sh
+
+配置aliyuncli
+~~~~~~~~~~~~~
+
+创建 access key
+^^^^^^^^^^^^^^^
+
+1. 登录阿里云管理控制台官网 https://home.console.aliyun.com/\ 。
+
+2. 点击 **AccessKeys**\ 。
+
+   注意：若出现如下提示框，请点击\ **继续使用 Accesskey**\ 。
+
+3. 点击\ **创建 Access Key**\ ，然后再点击\ **同意并创建**\ 。
+
+4. 输入短信校验码，点击\ **确定**\ 。Access Key 创建成功。
+
+在 Linux/UNIX 和 Mac OS 环境下，执行如下命令：
+
+.. code:: bash
+
+   $ sudo aliyuncli configureAliyun 
+   Access Key ID [************jkf]: <Enter>
+   Aliyun Access Key Secret [***************Okl]: <Enter>
+   Default Region Id [cn-qingdao]: cn-hangzhou
+   Default output format [table]: <Enter>
+
+升级命令行工具
+^^^^^^^^^^^^^^
+
+在命令行窗口中执行如下命令，升级现有的命令行工具。
+
+-  在 Windows 环境下，执行如下命令：
+
+   ::
+
+      pip install --upgrade aliyuncli
+
+-  在 Linux/UNIX 和 Mac OS 环境下，执行如下命令：
+
+   ::
+
+      $ sudo pip install --upgrade aliyuncli
+
+如果出现 “already up-to-date” 的提示信息则说明已经是最新版本，无须升级。
+
+使用示例
+~~~~~~~~
+
+.. code:: bash
+
+   # 创建ecs实例
+   aliyuncli ecs RunInstances \
+   --InstanceType ecs.t5-lc1m2.small \
+   --RegionId cn-beijing \
+   --SystemDiskSize 20 \
+   --VSwitchId vsw-2ze6ry64jm9n4gj05m74z \
+   --HostName niulx-vm1 \
+   --InstanceName niulx-vm1 \
+   --InstanceChargeType PostPaid \
+   --InternetMaxBandwidthIn 5 \
+   --InternetMaxBandwidthOut 5 \
+   --InternetChargeType PayByTraffic \
+   --ImageId m-2ze8sqg1omzghb7e2k2o \
+   --SecurityGroupId sg-2zef922lx535ffbtdszr
+
+::
+
+   [image-20181102161116692](xxx/xxx/typora-user-images/image-20181102161116692.png)
+
+.. code:: bash
+
+    aliyuncli ecs DescribeInstanceStatus --output  table # 查询ecs状态
+   ----------------------------------------------------------------------------------
+   |                             DescribeInstanceStatus                             |
+   +------------+-----------+----------------------------------------+--------------+
+   | PageNumber | PageSize  |               RequestId                | TotalCount   |
+   +------------+-----------+----------------------------------------+--------------+
+   |  1         |  10       |  8A55BE0A-7941-4A89-8CA3-91A863CA4A02  |  1           |
+   +------------+-----------+----------------------------------------+--------------+
+   ||                               InstanceStatuses                               ||
+   |+------------------------------------------------------------------------------+|
+   |||                               InstanceStatus                               |||
+   ||+-----------------------------------------------------+----------------------+||
+   |||                     InstanceId                      |       Status         |||
+   ||+-----------------------------------------------------+----------------------+||
+   |||  i-2ze9951st9pepw6os7k9                             |  Stopped             |||
+   ||+-----------------------------------------------------+----------------------+||
+   # 查询Region
+   aliyuncli ecs DescribeRegions
+   {
+       "Regions": {
+           "Region": [
+               {
+                   "RegionEndpoint": "ecs.aliyuncs.com",
+                   "RegionId": "cn-qingdao",
+                   "LocalName": "\u534e\u5317 1"
+               },
+               {
+                   "RegionEndpoint": "ecs.aliyuncs.com",
+                   "RegionId": "cn-beijing",
+                   "LocalName": "\u534e\u5317 2"
+               },
+               {
+                   "RegionEndpoint": "ecs.cn-zhangjiakou.aliyuncs.com",
+                   "RegionId": "cn-zhangjiakou",
+                   "LocalName": "\u534e\u5317 3"
+               },
+               {
+                   "RegionEndpoint": "ecs.cn-huhehaote.aliyuncs.com",
+                   "RegionId": "cn-huhehaote",
+                   "LocalName": "\u534e\u5317 5"
+               },
+               {
+                   "RegionEndpoint": "ecs.aliyuncs.com",
+                   "RegionId": "cn-hangzhou",
+                   "LocalName": "\u534e\u4e1c 1"
+               },
+               {
+                   "RegionEndpoint": "ecs.aliyuncs.com",
+                   "RegionId": "cn-shanghai",
+                   "LocalName": "\u534e\u4e1c 2"
+               },
+               {
+                   "RegionEndpoint": "ecs.aliyuncs.com",
+                   "RegionId": "cn-shenzhen",
+                   "LocalName": "\u534e\u5357 1"
+               },
+               {
+                   "RegionEndpoint": "ecs.aliyuncs.com",
+                   "RegionId": "cn-hongkong",
+                   "LocalName": "\u9999\u6e2f"
+               },
+               {
+                   "RegionEndpoint": "ecs.ap-northeast-1.aliyuncs.com",
+                   "RegionId": "ap-northeast-1",
+                   "LocalName": "\u4e9a\u592a\u4e1c\u5317 1 (\u4e1c\u4eac)"
+               },
+               {
+                   "RegionEndpoint": "ecs.aliyuncs.com",
+                   "RegionId": "ap-southeast-1",
+                   "LocalName": "\u4e9a\u592a\u4e1c\u5357 1 (\u65b0\u52a0\u5761)"
+               },
+               {
+                   "RegionEndpoint": "ecs.ap-southeast-2.aliyuncs.com",
+                   "RegionId": "ap-southeast-2",
+                   "LocalName": "\u4e9a\u592a\u4e1c\u5357 2 (\u6089\u5c3c)"
+               },
+               {
+                   "RegionEndpoint": "ecs.ap-southeast-3.aliyuncs.com",
+                   "RegionId": "ap-southeast-3",
+                   "LocalName": "\u4e9a\u592a\u4e1c\u5357 3 (\u5409\u9686\u5761)"
+               },
+               {
+                   "RegionEndpoint": "ecs.ap-southeast-5.aliyuncs.com",
+                   "RegionId": "ap-southeast-5",
+                   "LocalName": "\u4e9a\u592a\u4e1c\u5357 5 (\u96c5\u52a0\u8fbe)"
+               },
+               {
+                   "RegionEndpoint": "ecs.ap-south-1.aliyuncs.com",
+                   "RegionId": "ap-south-1",
+                   "LocalName": "\u4e9a\u592a\u5357\u90e8 1 (\u5b5f\u4e70)"
+               },
+               {
+                   "RegionEndpoint": "ecs.aliyuncs.com",
+                   "RegionId": "us-east-1",
+                   "LocalName": "\u7f8e\u56fd\u4e1c\u90e8 1 (\u5f17\u5409\u5c3c\u4e9a)"
+               },
+               {
+                   "RegionEndpoint": "ecs.aliyuncs.com",
+                   "RegionId": "us-west-1",
+                   "LocalName": "\u7f8e\u56fd\u897f\u90e8 1 (\u7845\u8c37)"
+               },
+               {
+                   "RegionEndpoint": "ecs.eu-west-1.aliyuncs.com",
+                   "RegionId": "eu-west-1",
+                   "LocalName": "\u82f1\u56fd (\u4f26\u6566)"
+               },
+               {
+                   "RegionEndpoint": "ecs.me-east-1.aliyuncs.com",
+                   "RegionId": "me-east-1",
+                   "LocalName": "\u4e2d\u4e1c\u4e1c\u90e8 1 (\u8fea\u62dc)"
+               },
+               {
+                   "RegionEndpoint": "ecs.eu-central-1.aliyuncs.com",
+                   "RegionId": "eu-central-1",
+                   "LocalName": "\u6b27\u6d32\u4e2d\u90e8 1 (\u6cd5\u5170\u514b\u798f)"
+               }
+           ]
+       },
+       "RequestId": "F5E8BF2B-698D-4CBA-813D-F5A8FA82DB61"
+   }
+
+阿里云各产品对应的 Python SDK 如下所示。
+
++------------------------+--------------------------------+
+| 产品                   | Python SDK                     |
++========================+================================+
+| 账号登录               | aliyun-python-sdk-aas          |
++------------------------+--------------------------------+
+| 云解析 DNS             | aliyun-python-sdk-alidns       |
++------------------------+--------------------------------+
+| 批量计算               | aliyun-python-sdk-batchcompute |
++------------------------+--------------------------------+
+| 备案                   | aliyun-python-sdk-bsn          |
++------------------------+--------------------------------+
+| CDN                    | aliyun-python-sdk-cdn          |
++------------------------+--------------------------------+
+| 数据风控               | aliyun-python-sdk-cf           |
++------------------------+--------------------------------+
+| 云监控                 | aliyun-python-sdk-cms          |
++------------------------+--------------------------------+
+| 容器服务               | aliyun-python-sdk-cs           |
++------------------------+--------------------------------+
+| 域名                   | aliyun-python-sdk-domain       |
++------------------------+--------------------------------+
+| 分布式关系型数据库服务 | aliyun-python-sdk-drds         |
++------------------------+--------------------------------+
+| 云服务器 ECS           | aliyun-python-sdk-ecs          |
++------------------------+--------------------------------+
+| 弹性伸缩               | aliyun-python-sdk-ess          |
++------------------------+--------------------------------+
+| 功能测试               | aliyun-python-sdk-ft           |
++------------------------+--------------------------------+
+| 阿里绿网               | aliyun-python-sdk-green        |
++------------------------+--------------------------------+
+| 高性能计算             | aliyun-python-sdk-hpc          |
++------------------------+--------------------------------+
+| HTTPDNS                | aliyun-python-sdk-httpdns      |
++------------------------+--------------------------------+
+| 物联网套件             | aliyun-python-sdk-iot          |
++------------------------+--------------------------------+
+| 密钥管理服务           | aliyun-python-sdk-kms          |
++------------------------+--------------------------------+
+| 媒体转码               | aliyun-python-sdk-mts          |
++------------------------+--------------------------------+
+| 云数据库 Memcache 版   | aliyun-python-sdk-ocs          |
++------------------------+--------------------------------+
+| 云推送                 | aliyun-python-sdk-push         |
++------------------------+--------------------------------+
+| 访问控制               | aliyun-python-sdk-ram          |
++------------------------+--------------------------------+
+| 云数据库 RDS 版        | aliyun-python-sdk-rds          |
++------------------------+--------------------------------+
+| 资源编排               | aliyun-python-sdk-ros          |
++------------------------+--------------------------------+
+| 负载均衡               | aliyun-python-sdk-slb          |
++------------------------+--------------------------------+
+| 专有网络 VPC           | aliyun-python-sdk-vpc          |
++------------------------+--------------------------------+
+| 阿里云 STS             | aliyun-python-sdk-sts          |
++------------------------+--------------------------------+
+| 云盾                   | aliyun-python-sdk-yundun       |
++------------------------+--------------------------------+

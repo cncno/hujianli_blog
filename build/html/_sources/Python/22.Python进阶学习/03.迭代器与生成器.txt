@@ -1,0 +1,77 @@
+# 迭代器与生成器
+## 手动遍历迭代器
+- 代替for循环的方案
+```
+class manual_iter():
+    with open("test.txt") as f:
+        while True:
+            line = next(f, None)
+            if line is None:
+                break
+            print(line, end=" ")
+```
+## 反向迭代
+```
+class Countdown:
+    def __init__(self, start):
+        self.start = start
+
+    # Forward iterator
+    def __iter__(self):
+        n = self.start
+        while n > 0:
+            yield n
+            n -= 1
+
+    # Reverse iterator
+    def __reversed__(self):
+        n = 1
+        while n <= self.start:
+            yield n
+            n += 1
+
+for rr in reversed(Countdown(30)):
+    print(rr)
+
+for rr in Countdown(20):
+    print(rr)
+```
+
+## 同时迭代多个序列
+```
+xpts = [1, 5, 4, 2, 10, 7]
+ypts = [101, 78, 37, 15, 62, 99]
+for x,y in zip(xpts,ypts):
+    print(x,y)
+
+
+a = [1, 2, 3]
+b = ['w', 'x', 'y', 'z']
+for x in zip(a,b):
+    print(x)
+
+
+from itertools import zip_longest
+
+In [6]: for i in zip_longest(a,b):
+   ...:     print(i)
+   ...:
+(1, 'w')
+(2, 'x')
+(3, 'y')
+(None, 'z')
+
+In [7]: for i in zip_longest(a, b, fillvalue=0):
+   ...:     print(i)
+   ...:
+(1, 'w')
+(2, 'x')
+(3, 'y')
+(0, 'z')
+
+headers = ['name', 'shares', 'price']
+values = ['ACME', 100, 490.1]
+
+s = dict(zip(headers,values))
+print(s)
+```

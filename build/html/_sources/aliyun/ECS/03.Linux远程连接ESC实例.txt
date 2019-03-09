@@ -1,0 +1,32 @@
+# Linux远程连接ESC实例
+### 操作步骤
+
+首先添加安全组规则：
+```
+VPC	不需要配置	入方向	允许	SSH(22)	22/22	地址段访问	0.0.0.0/0	1
+
+```
+
+方式一
+```
+
+找到您所下载的.pem私钥文件在本地机上的存储路径，如 /root/xxx.pem。
+说明 在 创建 SSH 密钥对 时下载.pem私钥文件。 xxx.pem 即为您的私钥文件。
+运行命令修改私钥文件的属性：chmod 400 [.pem私钥文件在本地机上的存储路径]。
+例如， chmod 400 /root/xxx.pem。
+运行命令连接至实例：ssh -i [.pem私钥文件在本地机上的存储路径] root@[公网IP地址]。例如， ssh -i /root/xxx.pem root@10.10.10.100。
+```
+方式二
+```
+您也可以通过SSH配置来简化连接命令。
+
+进入根目录下的ssh目录，按照如下方式修改config文件。
+Host ecs    // 输入ECS实例的名称
+HostName 192.*.*.*   // 输入ECS实例的公网IP地址
+Port 22   // 输入端口号，默认为22
+User root   // 输入登录账号
+IdentityFile ~/.ssh/ecs.pem // 输入.pem私钥文件在本机的地址
+保存config文件。
+重启ssh。
+运行命令连接至实例：ssh [ECS名称]。例如，ssh ecs。
+```
