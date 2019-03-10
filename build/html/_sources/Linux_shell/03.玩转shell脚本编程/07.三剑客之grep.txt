@@ -10,14 +10,17 @@ grep [OPTION]... PATTERN [FILE]
 
 ###  选项
 
-* -i：忽略大小写
-* -c:统计匹配到字符串的次数
-* -n:顺便输出行号
-* -v:反向选择，显示没有匹配到的内容
-* -o：只显示匹配到的串
-* -A:显示匹配到的字符后面的n行
-* -B:显示匹配到的字符前面的n行
-* -C:显示前后各n行
+    grep --help
+    
+    [options]主要参数：
+    -c：只输出匹配行的计数。
+    -i：不区分大小写。
+    -h：查询多文件时不显示文件名。
+    -l：查询多文件时只输出包含匹配字符的文件名。
+    -n：显示匹配行及 行号。
+    -s：不显示不存在或无匹配文本的错误信息。
+    -v：显示不包含匹配文本的所有行。
+    --color=auto ：可以将找到的关键词部分加上颜色的显示。
 
 #### 模式
 
@@ -68,6 +71,43 @@ $:    root$ 行尾
 ```
 dmesg |grep -n eth0
 grep -E '/.{2,3}' /etc/passwd
+
+$ grep ‘test’ d*
+显示所有以d开头的文件中包含 test的行。
+
+$ grep ‘test’ aa bb cc
+显示在aa，bb，cc文件中匹配test的行。
+
+$ grep ‘[a-z]\{5\}’ aa
+显示所有包含每个字符串至少有5个连续小写字符的字符串的行。
+
+$ grep ‘w\(es\)t.*\1′ aa
+如果west被匹配，则es就被存储到内存中，并标记为1，然后搜索任意个字符(.*)，
+这些字符后面紧跟着 另外一个es(\1)，找到就显示该行。
+如果用egrep或grep -E，就不用”\”号进行转义，直接写成’w(es)t.*\1′就可以了。
+
+
+grep -i pattern files ：不区分大小写地搜索。默认情况区分大小写，
+grep -l pattern files ：只列出匹配的文件名，
+grep -L pattern files ：列出不匹配的文件名，
+grep -w pattern files ：只匹配整个单词，而不是字符串的一部分(如匹配’magic’，而不是’magical’)，
+grep -C number pattern files ：匹配的上下文分别显示[number]行，
+grep pattern1 | pattern2 files ：显示匹配 pattern1 或 pattern2 的行，
+例如：grep "abc\|xyz" testfile    表示过滤包含abc或xyz的行
+grep pattern1 files | grep pattern2 ：显示既匹配 pattern1 又匹配 pattern2 的行。
+
+grep -n pattern files  即可显示行号信息
+
+grep -c pattern files  即可查找总行数
+
+
+显示/proc/meminfo文件中以大小写s开头的行；
+# grep "^[sS]" /proc/meminfo
+# grep -i "^s" /proc/meminfo
+
+
+取出默认shell为非bash的用户；
+# grep -v "bash$" /etc/passwd | cut -d: -f1
 ```
 
 取掉空行

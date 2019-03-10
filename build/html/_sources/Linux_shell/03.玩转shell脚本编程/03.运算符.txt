@@ -14,6 +14,19 @@ let 算术式 					 #let r=8+16
 let    let # 运算      let x=16/4    let x=5**5
 
 
+算术代换：$(())
+用于算术计算，$(())中的Shell变量取值将转换成整数，同样含义的$[]等价例如：
+
+itcast$ VAR=45
+itcast$ echo $(($VAR+3))
+$(())中只能用+-*/和()运算符，并且只能做整数运算。
+
+$[base#n],其中base表示进制,n按照base进制解释，后面再有运算数，按十进制解释。
+
+echo $[2#10+11]
+echo $[8#10+11]
+echo $[10#10+11]
+
 expr
 
     expr 14 % 9                    # 整数运算
@@ -145,12 +158,25 @@ C=`expr $A + $B`
 ||           逻辑的 OR	           [[ $a -lt 100 \|\| $b -gt 100 ]] 返回 true
 ```
 
+## Shell 中的中括号用法总结
+http://www.runoob.com/w3cnote/shell-summary-brackets.html
+
 ### 举例说明
 ```
 #!/usr/bin/env bash
 
 # && 和 || 多用于 [[ ]]结构
 # -a  和 -o 多用于 []结构
+
+#例如
+str1="Not empty"
+str2=""
+if [[ -n $str1 ]] && [[ -z $str2 ]];
+then
+  echo str1 is nonempty and str2 is empty string.
+fi
+
+
 
 test $(id -u) -eq 0 && echo "You?are?root" || echo "You?are?NOT?root"
 #&&
@@ -224,12 +250,29 @@ fi
 -x  file        检测文件是否可执行，如果是，则返回 true。    |   [ -x $file ] 返回 true。
 -s  file        检测文件是否为空（文件大小是否大于0），不为空返回 true。     |   [ -s $file ] 返回 true。
 -e  file        检测文件（包括目录）是否存在，如果是，则返回 true。   |  [ -e $file ] 返回 true。
+
+
+[ -d DIR ]              如果DIR存在并且是一个目录则为真
+[ -f FILE ]             如果FILE存在且是一个普通文件则为真
+[ -z STRING ]           如果STRING的长度为零则为真
+[ -n STRING ]           如果STRING的长度非零则为真
+[ STRING1 = STRING2 ]   如果两个字符串相同则为真
+[ STRING1 != STRING2 ]  如果字符串不相同则为真
+[ ARG1 OP ARG2 ]        ARG1和ARG2应该是整数或者取值为整数的变量，OP是-eq（等于）-ne（不等于）-lt（小于）-le（小于等于）-gt（大于）-ge（大于等于）之中的一个
+
+
 ```
 
 
 ## 1.6 字符串测试
 ```
 假定变量 a 为 "abc"，变量 b 为 "efg"：
+
+在进行字符串比较时，最好使用双中括号 [[ ]]. 因为单中括号可能会导致一些错误，因此最好避开它们。
+
+检查两个字符串是否相同：
+
+[[ $str1 = $str2 ]]
 
 运算符 	               说明 	                                 举例
 

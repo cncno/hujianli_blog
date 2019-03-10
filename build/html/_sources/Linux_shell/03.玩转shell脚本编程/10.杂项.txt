@@ -1,13 +1,16 @@
 # 十、shell杂项
 
 ## 一、输入输出
-
+```
 * 输入输出
 文件描述符 | 描述 | 映射关系
 ---|---|---
 0 | 标准输入 | /dev/stdin -> /proc/self/fd/0
 1 | 标准输出 | /dev/stdout -> /proc/self/fd/1
 2 | 标准错误 | /dev/stderr -> /proc/self/fd/2
+
+```
+
 
 * 重定向
 
@@ -18,6 +21,19 @@
 <<:	符号右边输出追加左边输入
 & :	重定向绑定符号
 ```
+
+* /dev/null 文件 
+```
+如果希望执行某个命令，但又不希望在屏幕上显示输出结果，那么可以将输出重定向到 /dev/null：
+
+$ command > /dev/null
+/dev/null 是一个特殊的文件，写入到它的内容都会被丢弃；如果尝试从该文件读取内容，那么什么也读不到。但是 /dev/null 文件非常有用，将命令的输出重定向到它，会起到"禁止输出"的效果。
+
+如果希望屏蔽 stdout 和 stderr，可以这样写：
+
+$ command > /dev/null 2>&1
+```
+
 * exec 3文件输出例子
 ```
 #!/bin/sh
@@ -198,7 +214,62 @@ cat <<-"EOF"
 4) 选择4是查看所有info
 5) exit
 EOF
+
+
+将 Here Document 用在脚本中，例如：
+
+#!/bin/bash
+# author:
+# url:www.runoob.com
+
+cat << EOF
+欢迎来到
+小健的博客
+www.xiaojian.com
+EOF
+
 ```
+
+
+```
+一般情况下，每个 Unix/Linux 命令运行时都会打开三个文件：
+
+标准输入文件(stdin)：stdin的文件描述符为0，Unix程序默认从stdin读取数据。
+标准输出文件(stdout)：stdout 的文件描述符为1，Unix程序默认向stdout输出数据。
+标准错误文件(stderr)：stderr的文件描述符为2，Unix程序会向stderr流中写入错误信息。
+默认情况下，command > file 将 stdout 重定向到 file，command < file 将stdin 重定向到 file。
+
+cmd > file             把标准输出重定向到新文件中
+cmd >> file            追加
+cmd > file 2>&1        标准出错也重定向到1所指向的file里
+cmd >> file 2>&1
+cmd < file1 > file2    输入输出都定向到文件里
+cmd < &fd              把文件描述符fd作为标准输入
+cmd > &fd              把文件描述符fd作为标准输出
+cmd < &-               关闭标准输入
+
+如果希望 stderr 重定向到 file，可以这样写：
+
+$ command 2 > file
+如果希望 stderr 追加到 file 文件末尾，可以这样写：
+
+$ command 2 >> file
+2 表示标准错误文件(stderr)。
+
+如果希望将 stdout 和 stderr 合并后重定向到 file，可以这样写：
+
+$ command > file 2>&1
+
+或者
+
+$ command >> file 2>&1
+如果希望对 stdin 和 stdout 都重定向，可以这样写：
+
+$ command < file1 >file2
+command 命令将 stdin 重定向到 file1，将 stdout 重定向到 file2。
+
+```
+
 
 
 eg:
@@ -415,18 +486,55 @@ lr-x------ 1 root root 64 Nov 22 13:05 4 -> /home/hujianli.log
 
 
 ## 二、命令
-* tac:倒序打印文件
-* rev反向打印每一行
-* cut:字符切割，常用选项-d 分割，-f输出第几段
-* tr:替换或删除字符
-* seq:打印序列化数字
-* sort:排序
-    -t:制定分隔符
-    -k:制定field
-    -r:倒序排序
-    -u:去重行
-* uniq:去重 -c 打印出现次数、-u ：打印不重复的行
-* date:显示系统时间
+### tac:倒序打印文件
+### rev反向打印每一行
+### cut
+
+
+
+    This is a test line.
+    -d字符：指定分隔符
+    -f#: 指定要显示字段
+        单个数字：一个字段
+        逗号分隔的多个数字：指定多个离散字段
+        -：连续字段，如3-5；
+### tr:替换或删除字符
+
+
+    tr: 转换字符或删除字符
+        tr '集合1' '集合2'
+        tr -d '字符集合'
+
+### seq:打印序列化数字
+
+### wc
+
+
+    wc [option] [file]...
+        -l: 统计行数
+        -c: 统计字节数
+        -w；统计单词数
+        
+### sort
+
+
+    按字符进行比较
+    sort [option] file...
+        -f: 忽略字符大小写；
+        -n: 比较数值大小；
+        -t: 指定分隔符
+        -k: 指定分隔后进行比较字段
+        -u: 重复的行，只显示一次；
+### uniq
+
+
+
+    移除重复的行
+    -c：显示每行重复的次数
+    -d：仅显示重复过的行
+    -u: 仅显示不曾重复的行
+    
+### date:显示系统时间
 
 ```
 时间加减：
@@ -442,12 +550,22 @@ lr-x------ 1 root root 64 Nov 22 13:05 4 -> /home/hujianli.log
 显示后一天日期：date -d tomorrow +%F
 ```
 
-* screen
+### tee
+    tee命令把结果输出到标准输出，另一个副本输出到相应文件。
+    
+    df -k | awk '{print $1}' | grep -v "文件系统" | tee a.txt
+    
+    tee -a a.txt表示追加操作。
+    df -k | awk '{print $1}' | grep -v "文件系统" | tee -a a.txt
+
+### screen
     * screen -ls
     * screen -r
     * screen -wipe
 
-脚本编写注意事项
+
+
+### 脚本编写注意事项
 
 ```
 1）开头加解释器：#!/bin/bash
@@ -464,8 +582,59 @@ lr-x------ 1 root root 64 Nov 22 13:05 4 -> /home/hujianli.log
 ```
 
 
-## 三、实战
+### Shell脚本的调试方法
+Shell提供了一些用于调试脚本的选项，如下所示：
 
+    -n 读一遍脚本中的命令但不执行，用于检查脚本中的语法错误
+    
+    -v 一边执行脚本，一边将执行过的脚本命令打印到标准错误输出
+    
+    -x 提供跟踪执行信息，将执行的每一条命令和结果依次打印出来
+
+使用这些选项有三种方法，一是在命令行提供参数
+
+    $ sh -x ./script.sh
+二是在脚本开头提供参数
+
+    #! /bin/sh -x
+第三种方法是在脚本中用set命令启用或禁用参数
+
+    #! /bin/sh
+    if [ -z "$1" ]; then
+      set -x
+      echo "ERROR: Insufficient Args."
+      exit 1
+      set +x
+    fi
+set -x和set +x分别表示启用和禁用-x参数，
+
+这样可以只对脚本中的某一段进行跟踪调试。
+
+[Linux常用命令工具箱](https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/index.html)
+
+
+
+## 自动化
+### 开机自启动脚本
+
+    如果要添加为开机启动执行的脚本文件，可先将脚本复制或者软连接到/etc/init.d/目录下，然后用：
+    
+        update-rc.d xxx defaults NN命令(NN为启动顺序)，
+    将脚本添加到初始化执行的队列中去。
+    
+    注意如果脚本需要用到网络，则NN需设置一个比较大的数字，如99。
+    
+    1) 将你的启动脚本复制到 /etc/init.d目录下,以下假设你的脚本文件名为 test。
+    
+    2) 设置脚本文件的权限
+    
+        $ sudo chmod 755 /etc/init.d/test
+    3) 执行如下命令将脚本放到启动脚本中去：
+    
+        $ cd /etc/init.d
+        $ sudo update-rc.d test defaults 95
+        
+## 三、实战
 更多示例可参考：[shell 脚本示例](https://github.com/redhatxl/scripts)
 
 #### 3.1 文件扫描校验

@@ -118,3 +118,7 @@ grep -v -E '^#|^$' /etc/ssh/sshd_config
 
 
 ```
+[Bash正则表达式详细查询手册](https://www.jb51.net/tools/shell_regex.html)
+
+
+

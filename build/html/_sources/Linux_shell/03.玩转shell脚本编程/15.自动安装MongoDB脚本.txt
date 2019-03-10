@@ -1,4 +1,4 @@
-# 自动化安装MongoDB脚本
+# 自动化安装MongoDB
 
 ## install_mongodb.sh     
 ```bash
