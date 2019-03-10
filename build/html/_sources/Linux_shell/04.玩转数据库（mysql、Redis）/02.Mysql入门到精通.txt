@@ -1,0 +1,227 @@
+# mysql入门到精通
+
+## SQL包含以下4个部分
+	 (1)数据定义语言(DDL):DROP、CREATE、ALTER等语句
+	 (2)数据操作语言(DML):INSERT(插入)、UPDATE(修改)、DELETE(删除)语句
+	 (3)数据查询语言(DQL):SELECT语句
+	 (4)数据控制语言(DCL):GRANT、REVOKE、COMMIT、ROLLBACK等语句		
+
+## 数据库基础操作
+ 
+###  windows 上启动关闭命令
+	--启动mysql命令
+	net start MYSQL 
+	
+	--关闭mysql命令
+	net stop MYSQL 
+	 
+	--需要将mysql-8.0.13\bin\目录加入到环境变量中
+
+	#my.cnf 配置文件
+	[mysqld]
+	# 设置3306端口
+	port=3306
+	# 设置mysql的安装目录
+	basedir=D:\mysql\mysql-8.0.13-winx64
+	# 设置mysql数据库的数据的存放目录
+	datadir=D:\mysql\mysql-8.0.13-winx64\Data
+	# 允许最大连接数
+	max_connections=200
+	# 允许连接失败的次数。
+	max_connect_errors=10
+	# 服务端使用的字符集默认为UTF8
+	character-set-server=utf8
+	# 创建新表时将使用的默认存储引擎
+	default-storage-engine=INNODB
+	# 默认使用“mysql_native_password”插件认证
+	#mysql_native_password
+	default_authentication_plugin=mysql_native_password
+	[mysql]
+	# 设置mysql客户端默认字符集
+	default-character-set=utf8
+	[client]
+	# 设置mysql客户端连接服务端时默认使用的端口
+	port=3306
+	default-character-set=utf8
+
+	[WindowsMySQLServer]
+
+	Server=D:\mysql\mysql-8.0.13-winx64\bin\mysqld.exe
+
+
+
+	#查看mysql的编码格式
+	C:\Windows\system32>mysql -uroot -padmin#123
+
+	mysql> status
+	--------------
+	mysql  Ver 8.0.13 for Win64 on x86_64 (MySQL Community Server - GPL)
+
+	Connection id:          8
+	Current database:
+	Current user:           root@localhost
+	SSL:                    Cipher in use is DHE-RSA-AES128-GCM-SHA256
+	Using delimiter:        ;
+	Server version:         8.0.13 MySQL Community Server - GPL
+	Protocol version:       10
+	Connection:             localhost via TCP/IP
+	Server characterset:    utf8
+	Db     characterset:    utf8
+	Client characterset:    utf8
+	Conn.  characterset:    utf8
+	TCP port:               3306
+	Uptime:                 3 min 14 sec
+	
+### mysql常用的图形管理工具
+    ----
+    1.MYSQL Workbench
+    2.phpMyAdmin
+    3.NAvicat   --Natvicat下载地址：链接：https://pan.baidu.com/s/1qXNggPY 密码：kq76
+    4.MySQLDumper
+    5.SQLyog
+
+
+### 基础操作
+
+    #查看当前时间
+	select now();
+
+	#查看mysql版本
+	C:\Windows\system32>mysql -V
+	mysql  Ver 8.0.13 for Win64 on x86_64 (MySQL Community Server - GPL)
+	select version();
+
+
+	#查看当前用户
+	mysql>select user();
+	+----------------+
+	| user()         |
+	+----------------+
+	| root@localhost |
+	+----------------+
+	1 row in set (0.00 sec)
+
+
+	#--连接mysql数据库
+	mysql -h localhost -u root -p 密码
+	mysql -h127.0.0.1 -uroot -padmin#123
+
+	#修改命令提示符信息
+	C:\Windows\system32>mysql -uroot -padmin#123 --prompt hu_mysql
+	hu_mysql>
+
+	#修改回原来的mysql>提示符
+	hu_mysqlprompt mysql>
+	PROMPT set to 'mysql>'
+	mysql>
+
+
+	#开启mysql操作日志保存
+	mysql> \T D:\mysql.txt
+	Logging to file 'D:\mysql.txt'
+
+
+	#查看上一步命令的警告信息
+	mysql> show warnings;
+	Empty set (0.00 sec)
+	
+	#查看帮助手册
+	help CREATE DATABASE
+	或者
+	
+	mysql> \h CREATE DATABASE
+    Name: 'CREATE DATABASE'
+    Description:
+    Syntax:
+    CREATE {DATABASE | SCHEMA} [IF NOT EXISTS] db_name
+        [create_specification] ...
+    
+    create_specification:
+        [DEFAULT] CHARACTER SET [=] charset_name
+      | [DEFAULT] COLLATE [=] collation_name
+    
+    CREATE DATABASE creates a database with the given name. To use this
+    statement, you need the CREATE privilege for the database. CREATE
+    SCHEMA is a synonym for CREATE DATABASE.
+    
+    URL: http://dev.mysql.com/doc/refman/8.0/en/create-database.html
+
+    mysql> \h TINYINT
+    Name: 'TINYINT'
+    Description:
+    TINYINT[(M)] [UNSIGNED] [ZEROFILL]
+    
+    A very small integer. The signed range is -128 to 127. The unsigned
+    range is 0 to 255.
+    
+    URL: http://dev.mysql.com/doc/refman/8.0/en/numeric-type-overview.html
+### Linux下修改mysql的root密码
+
+	/usr/bin/mysqladmin -u root -p password '123456' 
+	
+## 数据库操作命令
+
+### 1.创建数据库
+	create database hujianli default charset=utf8;
+
+	mysql> create database IF NOT EXISTS hujianli2;
+	Query OK, 1 row affected (0.07 sec)
+
+
+	#查看所有的数据库信息
+	mysql> show databases;
+	或者
+	mysql> show schemas;
+
+
+
+	#查看数据库的创建语句和编码方式信息
+	mysql> show create database hujianli2;
+	+-----------+--------------------------------------------------------------------+
+	| Database  | Create Database                                                    |
+	+-----------+--------------------------------------------------------------------+
+	| hujianli2 | CREATE DATABASE `hujianli2` /*!40100 DEFAULT CHARACTER SET utf8 */ |
+	+-----------+--------------------------------------------------------------------+
+	1 row in set (0.00 sec)
+
+	#查看数据库字符集
+	show variables like '%char%';
+
+	#修改指定数据库的编码方式
+	mysql> alter database hujianli2 default character set utf8;
+	Query OK, 1 row affected, 1 warning (0.07 sec)
+
+	#打开指定的数据库或者切换数据库
+	mysql> use hujianli2
+	Database changed
+
+	#查看当前选择的数据库
+	select database(); --查看当前使用的数据库
+
+
+
+
+
+### 2.删除数据库
+	drop database hujianli;
+	drop database IF EXISTS hujianli_db2;
+
+
+	#清空表内容
+	delete from test01;
+
+
+### 3.mysql忘记密码后，跳过密码进入数据库
+	/usr/bin/mysqld_safe --user=mysql --skip-grant-tables &
+
+	#修改mysql的root密码
+		#第一种方式:
+		　　mysql > set password for username@host = password( 'your_password');
+		#第二种方法
+		　　mysql > update user set password = password('your_password') where user = 'root';
+		　　mysql > flush peivileges;
+		#第三种方式:
+		[root@yinzhengjie ~]#mysqladmin -u UserName -h Host password 'new_password' -p
+		[root@yinzhengjie ~]#mysqladmin -u UserName -h Host -p flush-privileges
+
+## 数据库表操作
