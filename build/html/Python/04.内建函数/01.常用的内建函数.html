@@ -594,7 +594,16 @@
 <li class="toctree-l3"><a class="reference internal" href="../../Linux_shell/08.Linux构建高可用架构/11.MySQL读、写分离解决方案.html">8.11. MySQL读、写分离解决方案</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Linux_shell/09.Zabbix 3.0 从入门到精通/index.html">9. Zabbix3.0入门到精通</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../Linux_shell/09.Zabbix 3.0 从入门到精通/index.html">9. Zabbix3.0入门到精通</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Linux_shell/09.Zabbix 3.0 从入门到精通/01.zabbix监控介绍.html">9.1. zabbix监控简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Linux_shell/09.Zabbix 3.0 从入门到精通/01.zabbix监控介绍.html#linux">9.1.1. 常见的Linux监控命令</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Linux_shell/09.Zabbix 3.0 从入门到精通/01.zabbix监控介绍.html#id1">9.1.2. 监控工具总览</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Linux_shell/09.Zabbix 3.0 从入门到精通/02.安装zabbix.html">9.2. 安装zabbix</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Linux_shell/09.Zabbix 3.0 从入门到精通/02.安装zabbix.html#id1">9.2.1. 安装方式选择</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -828,6 +837,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../01.Python数据类型/06.字典数据结构.html#id1">1.6.1. 字典的内置方法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../01.Python数据类型/06.字典数据结构.html#id3">1.6.2. 添加/修改/删除字典元素</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../01.Python数据类型/06.字典数据结构.html#id5">1.6.3. 字典推导式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01.Python数据类型/06.字典数据结构.html#id6">1.6.4. 字典的重访嵌套</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../01.Python数据类型/07.集合数据类型.html">1.7. 集合 Set()</a><ul>
@@ -1409,7 +1419,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../13.Python标准库/06.os(系统模块).html#os-path">14.6.6. os.path模块</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../13.Python标准库/07.sys(系统操作模块).html">14.7. sys系统操作模块</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../13.Python标准库/07.sys(系统操作模块).html">14.7. sys系统操作模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../13.Python标准库/07.sys(系统操作模块).html#id1">14.7.1. 举例</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../13.Python标准库/08.configparser模块.html">14.8. configparser模块</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../13.Python标准库/08.configparser模块.html#id1">14.8.1. 配置文件示例</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../13.Python标准库/08.configparser模块.html#python">14.8.2. 用python生成这样的一个配置文档</a></li>
@@ -1767,7 +1780,13 @@
 <span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>     <span class="c1"># 函数结果是False  3被filter抛弃</span>
 <span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>     <span class="c1"># 函数结果是True   5被加入filter最后的列表结果</span>
 <span class="nb">filter</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">))</span>
-<span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span>
+<span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">),</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)))</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1789,6 +1808,13 @@
     <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
 <span class="n">reduce</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>              <span class="c1"># 结果55  是1到10的和  x的值是上一次函数返回的结果，y是列表中循环的值</span>
 <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>    <span class="c1"># 等同上面两条  lambda来创建匿名函数[ lambda x,y:x+y ] ,后面跟可迭代的对</span>
+
+
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">reduce</span>      
+<span class="o">&gt;&gt;&gt;</span> <span class="n">reduce</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">),</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span> 
+<span class="mi">10</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">reduce</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">),</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span> 
+<span class="mi">24</span>
 </pre></div>
 </div>
 </div>
@@ -1876,7 +1902,11 @@ enumerate()函数用于将一个可遍历的数据对象(如列表、元组或�
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">返回一个合并后的列表</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;11&#39;</span><span class="p">,</span><span class="s1">&#39;22&#39;</span><span class="p">]</span>  <span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;aa&#39;</span><span class="p">,</span><span class="s1">&#39;bb&#39;</span><span class="p">]</span>  <span class="p">[(</span><span class="s1">&#39;11&#39;</span><span class="p">,</span> <span class="s1">&#39;aa&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;22&#39;</span><span class="p">,</span> <span class="s1">&#39;bb&#39;</span><span class="p">)]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;11&#39;</span><span class="p">,</span><span class="s1">&#39;22&#39;</span><span class="p">]</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;aa&#39;</span><span class="p">,</span><span class="s1">&#39;bb&#39;</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">t</span><span class="p">))</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="p">[(</span><span class="s1">&#39;11&#39;</span><span class="p">,</span> <span class="s1">&#39;aa&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;22&#39;</span><span class="p">,</span> <span class="s1">&#39;bb&#39;</span><span class="p">)]</span> 
 </pre></div>
 </div>
 </div>

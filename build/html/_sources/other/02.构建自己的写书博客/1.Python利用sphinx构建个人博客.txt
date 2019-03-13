@@ -102,5 +102,10 @@ __config.py文件是关键，此文件可以参考如下:__
 ![关联github和read the docs](../../_static/import_read1.png)
 ![关联github和read the docs](../../_static/import_read2.png)
 ![关联github和read the docs](../../_static/import_read3.png)
-    
+
+
+[sphinx构建个人博客相关链接](https://i4t.com/3587.html)
+
+
+[Sphinx入门](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)
     

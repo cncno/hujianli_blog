@@ -36,3 +36,54 @@ print(mysum(*(3, 4)))        #调用时拆解元祖作为位置参数
 print("拆解字典调用：")
 print(mysum(**{'a':3,'b':4}))   #调用时拆解字典作为关键字参数
 ```
+
+代码示例
+```python
+
+#*args元祖解包
+In [6]: def func(a,b,c,d):
+   ...:     print(a,b,c,d)
+   ...:
+
+In [7]: args = (1,2)
+
+In [8]: args +=(3,4)
+
+In [9]: func(*args)
+1 2 3 4
+
+
+
+#**args字典解包
+In [6]: def func(a,b,c,d):
+   ...:     print(a,b,c,d)
+   ...:
+
+In [10]: args = {'a':1,"b":2,"c":3}
+
+In [11]: args['d']=4
+
+In [12]: func(**args)
+1 2 3 4
+
+
+
+#*args和**args 任意参数合用
+In [3]:  def func(a,b,c,d):
+   ...:      print(a,b,c,d)
+   ...:
+   ...:
+
+In [4]: func(1,*(2,3),**{"d":4})
+1 2 3 4
+
+In [5]: func(*(1,2),**{"c":7,"d":8})
+1 2 7 8
+
+In [8]: func(1,*(2,),c=3,**{"d":4})
+1 2 3 4
+
+In [9]: func(1,c=10,*(2,),**{"d":4})
+1 2 10 4
+
+```

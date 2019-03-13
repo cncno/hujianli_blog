@@ -25,7 +25,13 @@ def f(x):
 f(3)     # 函数结果是False  3被filter抛弃
 f(5)     # 函数结果是True   5被加入filter最后的列表结果
 filter(f, range(2, 25))
-[5, 7, 11, 13, 17, 19, 23
+[5, 7, 11, 13, 17, 19, 23]
+
+In [13]: list(range(-5,5))
+Out[13]: [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
+
+In [14]: list(filter((lambda x:x>0),range(-5,5)))
+Out[14]: [1, 2, 3, 4]
 
 ```
 ### reduce()函数
@@ -46,6 +52,13 @@ def add(x,y):
     return x+y
 reduce(add, range(1, 11))              # 结果55  是1到10的和  x的值是上一次函数返回的结果，y是列表中循环的值
 reduce(lambda x,y:x+y, range(1,11))    # 等同上面两条  lambda来创建匿名函数[ lambda x,y:x+y ] ,后面跟可迭代的对
+
+
+>>> from functools import reduce      
+>>> reduce((lambda x, y: x + y), [1, 2, 3, 4]) 
+10 
+>>> reduce((lambda x, y: x * y), [1, 2, 3, 4]) 
+24
 
 ```
 
@@ -117,7 +130,11 @@ Out[15]: ['4', '3', '2', '1']
 ### zip(s,t)
     返回一个合并后的列表
 ```
-s = ['11','22']  t = ['aa','bb']  [('11', 'aa'), ('22', 'bb')]
+s = ['11','22']
+t = ['aa','bb']
+
+In [5]: list(zip(s,t))
+Out[5]: [('11', 'aa'), ('22', 'bb')] 
 ```
 ### cmp(x,y)
     比较两个对象,根据比较结果返回一个整数，如果x<y，则返回-1；如果x>y，则返回1,如果x==y则返回0
