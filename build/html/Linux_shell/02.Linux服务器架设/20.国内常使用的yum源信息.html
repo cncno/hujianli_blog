@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. Linux服务器架设 &mdash; Cloud_Linux_Road 1.0 documentation</title>
+  <title>2.12. 国内常使用的yum源信息 &mdash; Cloud_Linux_Road 1.0 documentation</title>
   
 
   
@@ -43,8 +43,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="next" title="2.1. RAID与LVM磁盘阵列" href="1.RAID与LVM磁盘阵列技术.html" />
-    <link rel="prev" title="1.22. 使用tar命令进行本地备份scripts" href="../01.常用较多命名查询/41.使用tar命令进行本地备份scripts.html" /> 
+    <link rel="next" title="3. 玩转shell脚本编程" href="../03.玩转shell脚本编程/index.html" />
+    <link rel="prev" title="2.11. Tomcat服务搭建配置" href="12.Tomcat服务搭建配置.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -270,7 +270,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../01.常用较多命名查询/41.使用tar命令进行本地备份scripts.html">1.22. 使用tar命令进行本地备份scripts</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2. Linux服务器架设</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2. Linux服务器架设</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="1.RAID与LVM磁盘阵列技术.html">2.1. RAID与LVM磁盘阵列</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="1.RAID与LVM磁盘阵列技术.html#raid">2.1.1. RAID 技术</a></li>
 </ul>
@@ -332,7 +332,7 @@
 <li class="toctree-l4"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id10">2.11.6. Tomcat反向代理集群</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="20.国内常使用的yum源信息.html">2.12. 国内常使用的yum源信息</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.12. 国内常使用的yum源信息</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../03.玩转shell脚本编程/index.html">3. 玩转shell脚本编程</a><ul>
@@ -1739,13 +1739,15 @@
         
           <li><a href="../index.html">Linux_shell</a> &raquo;</li>
         
-      <li>2. Linux服务器架设</li>
+          <li><a href="index.html">2. Linux服务器架设</a> &raquo;</li>
+        
+      <li>2.12. 国内常使用的yum源信息</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/Linux_shell/02.Linux服务器架设/index.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/Linux_shell/02.Linux服务器架设/20.国内常使用的yum源信息.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -1758,122 +1760,154 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="linux">
-<h1>2. Linux服务器架设<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="1.RAID与LVM磁盘阵列技术.html">2.1. RAID与LVM磁盘阵列</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="1.RAID与LVM磁盘阵列技术.html#raid">2.1.1. RAID 技术</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="1.RAID与LVM磁盘阵列技术.html#raid0">RAID0</a></li>
-<li class="toctree-l3"><a class="reference internal" href="1.RAID与LVM磁盘阵列技术.html#raid1">RAID1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="1.RAID与LVM磁盘阵列技术.html#raid5">RAID5</a></li>
-<li class="toctree-l3"><a class="reference internal" href="1.RAID与LVM磁盘阵列技术.html#raid10">RAID10</a></li>
-<li class="toctree-l3"><a class="reference internal" href="1.RAID与LVM磁盘阵列技术.html#mdadmraid-10-dev-md0">使用mdadm命令创建RAID 10，名称为“/dev/md0”。</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="2.NFS共享服务器搭建.html">2.2. NFS共享服务器搭建</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.NFS共享服务器搭建.html#nfs-centos7-6">2.2.1. 安装NFS服务（Centos7.6）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.NFS共享服务器搭建.html#id1">2.2.2. nfs搭建 方式二</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="3.Vsftpd服务器搭建.html">2.3. vsftpd服务安装配置</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.Vsftpd服务器搭建.html#id1">2.3.1. 匿名用户登录配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.Vsftpd服务器搭建.html#id2">2.3.2. 系统用户登录配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.Vsftpd服务器搭建.html#id3">2.3.3. Vsftpd虚拟用户实战</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="4.挂载硬盘mount命令.html">2.4. 挂载硬盘和分区</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="4.挂载硬盘mount命令.html#mount">2.4.1. mount命令</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.挂载硬盘mount命令.html#fdisk">2.4.2. fdisk命令</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.挂载硬盘mount命令.html#id2">2.4.3. 添加交换分区</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="5.部署磁盘阵列.html">2.5. 部署磁盘阵列</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="5.部署磁盘阵列.html#raid-10">2.5.1. 制作一个RAID 10磁盘阵列</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.部署磁盘阵列.html#raid-5">2.5.2. 磁盘阵列+备份盘 (RAID 5)</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="6.Apache服务搭建.html">2.6. Apache服务源码搭建</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="6.Apache服务搭建.html#id1">2.6.1. Apache 的特点</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.Apache服务搭建.html#id2">2.6.2. Apache 源码安装编译配置</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="7.使用iSCSI服务部署网络存储.html">2.7. 使用iSCSI服务部署网络存储</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="7.使用iSCSI服务部署网络存储.html#raid">2.7.1. 创建RAID磁盘阵列</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7.使用iSCSI服务部署网络存储.html#iscsi-target-initiator">2.7.2. iSCSI技术在工作形式上分为服务端（target）与客户端（initiator）。</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="8.远程登录Linux系统.html">2.8. 远程登录Linux系统</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="8.远程登录Linux系统.html#id1">2.8.1. 1.使用密钥认证登录</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="8.远程登录Linux系统.html#windowslinux">windows上使用密钥登录Linux系统</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="8.远程登录Linux系统.html#id3">2.8.2. 2.两台Linux之间互访</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="8.远程登录Linux系统.html#linuxa">Linux主机A</a></li>
-<li class="toctree-l3"><a class="reference internal" href="8.远程登录Linux系统.html#linuxb">Linux主机B</a></li>
-<li class="toctree-l3"><a class="reference internal" href="8.远程登录Linux系统.html#id4">实现免密码登录</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="9.Samba服务器的搭建.html">2.9. Samba服务器搭建</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="9.Samba服务器的搭建.html#id1">2.9.1. Samba的概念和功能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="9.Samba服务器的搭建.html#id2">2.9.2. Samba的安装与配置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="9.Samba服务器的搭建.html#id3">1.安装Samba</a></li>
-<li class="toctree-l3"><a class="reference internal" href="9.Samba服务器的搭建.html#id4">2.Samba服务的组成与使用</a></li>
-<li class="toctree-l3"><a class="reference internal" href="9.Samba服务器的搭建.html#smb-conf">3.核心配置文件smb.conf</a></li>
-<li class="toctree-l3"><a class="reference internal" href="9.Samba服务器的搭建.html#id5">4.建立共享目录</a></li>
-<li class="toctree-l3"><a class="reference internal" href="9.Samba服务器的搭建.html#smb">5.重启SMB服务</a></li>
-<li class="toctree-l3"><a class="reference internal" href="9.Samba服务器的搭建.html#id6">6.访问Samba服务器的共享文件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="9.Samba服务器的搭建.html#sambalinux">7将Samba服务器共享的目录挂载到一个Linux客户端，操作过程如下所示。</a></li>
-<li class="toctree-l3"><a class="reference internal" href="9.Samba服务器的搭建.html#id7">8.授权登录samba服务器</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="10.rsync数据同步.html">2.10. rsync数据同步</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="10.rsync数据同步.html#abrsync">2.10.1. A系统、B系统安装rsync安装包</a></li>
-<li class="toctree-l2"><a class="reference internal" href="10.rsync数据同步.html#arsync">2.10.2. A系统rsync服务器端配置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="10.rsync数据同步.html#id1">启动rsync服务并检查</a></li>
-<li class="toctree-l3"><a class="reference internal" href="10.rsync数据同步.html#id2">加入开机自启动</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="10.rsync数据同步.html#brsync">2.10.3. B系统rsync客户端</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="10.rsync数据同步.html#id3">举例</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="12.Tomcat服务搭建配置.html">2.11. Tomcat服务搭建配置</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id1">2.11.1. 安装tomcat</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="12.Tomcat服务搭建配置.html#jdk">安装JDK</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id2">2.11.2. 安装Tomcat</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id3">Tomcat目录介绍</a></li>
-<li class="toctree-l3"><a class="reference internal" href="12.Tomcat服务搭建配置.html#webapps">webapps目录介绍</a></li>
-<li class="toctree-l3"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id4">Tomcat的管理</a></li>
-<li class="toctree-l3"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id5">Tomcat管理功能使用</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id6">2.11.3. 配置tomcat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="12.Tomcat服务搭建配置.html#jpress">2.11.4. 部署开源站点（jpress）</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id7">第一个里程碑：安装配置数据库</a></li>
-<li class="toctree-l3"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id8">第二个里程碑：jpress站点上线</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id9">2.11.5. Tomcat多实例配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id10">2.11.6. Tomcat反向代理集群</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id11">负载均衡器说明</a></li>
-<li class="toctree-l3"><a class="reference internal" href="12.Tomcat服务搭建配置.html#id12">配置负载均衡器</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="20.国内常使用的yum源信息.html">2.12. 国内常使用的yum源信息</a></li>
-</ul>
+  <div class="section" id="yum">
+<h1>2.12. 国内常使用的yum源信息<a class="headerlink" href="#yum" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default"><div class="highlight"><pre><span></span>yum常用命令
+1.列出所有可更新的软件清单命令：yum check-update
+2.更新所有软件命令：yum update
+3.仅安装指定的软件命令：yum install &lt;package_name&gt;
+4.仅更新指定的软件命令：yum update &lt;package_name&gt;
+5.列出所有可安裝的软件清单命令：yum list
+6.删除软件包命令：yum remove &lt;package_name&gt;
+7.查找软件包 命令：yum search &lt;keyword&gt;
+8.清除缓存命令:
+yum clean packages: 清除缓存目录下的软件包
+yum clean headers: 清除缓存目录下的 headers
+yum clean oldheaders: 清除缓存目录下旧的 headers
+yum clean, yum clean all (= yum clean packages; yum clean oldheaders) :清除缓存目录下的软件包及旧的headers
+</pre></div>
+</div>
+<p><a class="reference external" href="http://mirrors.ustc.edu.cn/help/centos.html">yum源参考地址1</a></p>
+<p><a class="reference external" href="http://mirrors.163.com/.help/centos.html">yum源参考地址2</a></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># 站点版</span>
+（一）、企业站
+搜狐：http://mirrors.sohu.com/
+网易：http://mirrors.163.com/
+阿里云：http://mirrors.aliyun.com/
+腾讯：http://android-mirror.bugly.qq.com:8080/（仅针对APP开发的软件，限流，不推荐）
+淘宝：http://npm.taobao.org/
+
+
+（二）、教育站
+上海交通大学：http://ftp.sjtu.edu.cn/html/resources.xml（部分移动运营商出口状况不佳，无法访问）
+华中科技大学：http://mirror.hust.edu.cn/（当前已用容量估计：4.83T）
+清华大学：http://mirrors.tuna.tsinghua.edu.cn/（当前已用容量估计：9.8T）
+北京理工大学：http://mirror.bit.edu.cn/web/
+兰州大学：http://mirror.lzu.edu.cn/
+中国科技大学：http://mirrors.ustc.edu.cn/（当前已用容量估计：21.32T）
+大连东软信息学院：http://mirrors.neusoft.edu.cn/（当前已用容量估计：2.5T）
+东北大学：http://mirror.neu.edu.cn/
+大连理工大学：http://mirror.dlut.edu.cn/
+哈尔滨工业大学：http://run.hit.edu.cn/html/（部分联通运营商出口状况不佳，无法访问）
+北京交通大学：http://mirror.bjtu.edu.cn/cn/
+天津大学：http://mirror.tju.edu.cn（无法访问，ping超时）
+中国地质大学：http://mirrors.cug.edu.cn/（当前已用容量估计：2.3T）
+浙江大学：http://mirrors.zju.edu.cn/
+厦门大学：http://mirrors.xmu.edu.cn/
+中山大学：http://mirror.sysu.edu.cn/
+重庆大学：http://mirrors.cqu.edu.cn/（当前已用容量估计：3.93T）
+北京化工大学：http://ubuntu.buct.edu.cn/（Android SDK镜像仅供校内使用，当前已用容量估计：1.72T）
+南阳理工学院：http://mirror.nyist.edu.cn/
+中国科学院：http://www.opencas.org/mirrors/
+电子科技大学：http://ubuntu.uestc.edu.cn/（无法访问，ping超时）
+电子科技大学星辰工作室：http://mirrors.stuhome.net/（当前已用容量估计：1.08T）
+西北农林科技大学：http://mirrors.nwsuaf.edu.cn/（只做CentOS镜像，当前已用容量估计：140GB） 
+浙江大学：http://mirrors.zju.edu.cn/
+台湾淡江大学: http://ftp.tku.edu.tw/Linux/
+
+
+（三）、其他
+首都在线科技股份有限公司（英文名Capital Online Data Service）：http://mirrors.yun-idc.com/
+中国电信天翼云：http://mirrors.ctyun.cn/
+noc.im：http://mirrors.noc.im/（当前已用容量估计：3.74T）
+常州贝特康姆软件技术有限公司：http://centos.bitcomm.cn/（只做CentOS镜像，当前已用容量估计：140GB）
+公云PubYun（母公司为贝特康姆）：http://mirrors.pubyun.com/
+Linux运维派：http://mirrors.skyshe.cn/（使用阿里云服务器，界面使用浙江大学的模板，首页维护，内容可访问）
+中国互联网络信息中心：http://mirrors.cnnic.cn/（只做Apache镜像，当前已用容量估计：120GB）
+Fayea工作室：http://apache.fayea.com/（只做Apache镜像，当前已用容量估计：120GB）
+开源中国社区 http://mirrors.oss.org.cn/
+
+
+
+
+
+
+
+<span class="c1"># 软件版 </span>
+（一）、操作系统类
+ 1.Ubuntu
+
+阿里云：http://mirrors.aliyun.com/ubuntu-releases/
+网易：http://mirrors.163.com/ubuntu-releases/
+搜狐：http://mirrors.sohu.com/ubuntu-releases/（搜狐在12年之后似乎不同步了）
+首都在线科技股份有限公司：http://mirrors.yun-idc.com/ubuntu-releases/
+2.CentOS
+
+网易：http://mirrors.163.com/centos/
+搜狐：http://mirrors.sohu.com/centos/
+阿里云：http://mirrors.aliyun.com/centos/
+
+
+（二）、服务器类
+1.Apache
+
+中国互联网络信息中心：http://mirrors.cnnic.cn/apache/
+华中科技大学：http://mirrors.hust.edu.cn/apache/
+北京理工大学：http://mirror.bit.edu.cn/apache/
+TOMCAT全版本：https://archive.apache.org/dist/tomcat/
+
+2.MySQL
+
+北京理工大学：http://mirror.bit.edu.cn/mysql/Downloads/
+中国电信天翼云：http://mirrors.ctyun.cn/Mysql/
+搜狐镜像源：http://mirrors.sohu.com/mysql/
+3.PostgreSQL
+
+浙江大学：http://mirrors.zju.edu.cn/postgresql/
+4.MariaDB
+
+中国电信天翼云：http://mirrors.ctyun.cn/MariaDB/
+5.VideoLAN
+
+大连东软信息学院：http://mirrors.neusoft.edu.cn/videolan/
+中国科技大学：http://mirrors.ustc.edu.cn/videolan-ftp/
+6、php
+
+php全版本：  https://secure.php.net/releases/
+（三）、开发工具类
+1.Eclipse
+
+中国科技大学：http://mirrors.ustc.edu.cn/eclipse/
+中国科学院：http://mirrors.opencas.cn/eclipse/
+东北大学：http://ftp.neu.edu.cn/mirrors/eclipse/，http://mirror.neu.edu.cn/eclipse/
+2.Android SDK
+
+中国科学院：http://mirrors.opencas.ac.cn/android/repository/
+南洋理工学院：http://mirror.nyist.edu.cn/android/repository/
+中国科学院：http://mirrors.opencas.cn/android/repository/
+腾讯：http://android-mirror.bugly.qq.com:8080/android/repository/（限流，不推荐）
+大连东软信息学院：http://mirrors.neusoft.edu.cn/android/repository/（同步效果不如中科院的镜像，不推荐）
+3.Xcode
+
+腾讯：http://android-mirror.bugly.qq.com:8080/Xcode/（从7.2之后不再更新，建议直接从官网下载）
+（四）、容器
+lxc国内镜像源： https://mirrors.tuna.tsinghua.edu.cn/lxc-images/
+ 
+
+ 
+ 
+ 
+ 
+ 
+<span class="c1">#官方镜像列表状态地址</span>
+CentOS：http://mirror-status.centos.org/#cn
+Archlinux：https://www.archlinux.org/mirrors/status/
+Ubuntu：https://launchpad.net/ubuntu/+cdmirrors
+Debian：http://mirror.debian.org/status.html
+Fedora Linux/Fedora EPEL：https://admin.fedoraproject.org/mirrormanager/mirrors
+Apache：http://www.apache.org/mirrors/#cn
+Cygwin：https://www.cygwin.com/mirrors.html
+</pre></div>
 </div>
 </div>
 
@@ -1885,10 +1919,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="1.RAID与LVM磁盘阵列技术.html" class="btn btn-neutral float-right" title="2.1. RAID与LVM磁盘阵列" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../03.玩转shell脚本编程/index.html" class="btn btn-neutral float-right" title="3. 玩转shell脚本编程" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../01.常用较多命名查询/41.使用tar命令进行本地备份scripts.html" class="btn btn-neutral float-left" title="1.22. 使用tar命令进行本地备份scripts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="12.Tomcat服务搭建配置.html" class="btn btn-neutral float-left" title="2.11. Tomcat服务搭建配置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
