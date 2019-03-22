@@ -357,8 +357,9 @@
 <li class="toctree-l4"><a class="reference internal" href="03.运算符.html#id3">3.3.3. 1.2 算术运算符</a></li>
 <li class="toctree-l4"><a class="reference internal" href="03.运算符.html#id4">3.3.4. 1.3 布尔运算符</a></li>
 <li class="toctree-l4"><a class="reference internal" href="03.运算符.html#id5">3.3.5. 1.4 逻辑运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="03.运算符.html#id7">3.3.6. 1.5 文件测试运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="03.运算符.html#id8">3.3.7. 1.6 字符串测试</a></li>
+<li class="toctree-l4"><a class="reference internal" href="03.运算符.html#id6">3.3.6. Shell 中的中括号用法总结</a></li>
+<li class="toctree-l4"><a class="reference internal" href="03.运算符.html#id8">3.3.7. 1.5 文件测试运算符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="03.运算符.html#id9">3.3.8. 1.6 字符串测试</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="04.流程控制.html">3.4. 四、流程控制</a><ul>
@@ -392,6 +393,16 @@
 <li class="toctree-l4"><a class="reference internal" href="#id3">3.8.3. 语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id4">3.8.4. 使用举例</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#keepalive">3.8.5. 修改keepalive配置剔除后端服务器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">3.8.6. sed练习</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">3.8.7. 使用sed修改文件流的方式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">3.8.8. 查找和替换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">3.8.9. 字符转换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">3.8.10. 插入文本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id25">3.8.11. 读入文本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id26">3.8.12. 打印</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id29">3.8.13. 写文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id30">3.8.14. sed 脚本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id33">3.8.15. 高级替换</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="09.三剑客-awk.html">3.9. 九、三剑客之awk</a><ul>
@@ -411,7 +422,8 @@
 <li class="toctree-l3"><a class="reference internal" href="10.杂项.html">3.10. 十、shell杂项</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="10.杂项.html#id1">3.10.1. 一、输入输出</a></li>
 <li class="toctree-l4"><a class="reference internal" href="10.杂项.html#id2">3.10.2. 二、命令</a></li>
-<li class="toctree-l4"><a class="reference internal" href="10.杂项.html#id3">3.10.3. 三、实战</a></li>
+<li class="toctree-l4"><a class="reference internal" href="10.杂项.html#id5">3.10.3. 自动化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="10.杂项.html#id7">3.10.4. 三、实战</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="11.xagrs使用.html">3.11. xagrs使用</a><ul>
@@ -440,27 +452,27 @@
 <li class="toctree-l4"><a class="reference internal" href="12.收集的一些shell脚本.html#color-print">3.12.18. color_print例子</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="13.自动安装zabbix服务器脚本.html">3.13. 自动化安装zabbix服务器shell脚本</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="13.自动安装zabbix服务器脚本.html">3.13. 自动化安装zabbix</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="13.自动安装zabbix服务器脚本.html#install-zabbix-sh">3.13.1. install_zabbix.sh</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="14.自动化安装cacti脚本.html">3.14. 自动化安装cacti服务器脚本</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="14.自动化安装cacti脚本.html">3.14. 自动化安装cacti服务器</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="14.自动化安装cacti脚本.html#install-cacti-sh">3.14.1. install_cacti.sh</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="15.自动安装MongoDB脚本.html">3.15. 自动化安装MongoDB脚本</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="15.自动安装MongoDB脚本.html">3.15. 自动化安装MongoDB</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="15.自动安装MongoDB脚本.html#install-mongodb-sh">3.15.1. install_mongodb.sh</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="16.备份MongoDB脚本.html">3.16. 备份MongoDB脚本</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="16.备份MongoDB脚本.html">3.16. 备份MongoDB</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="16.备份MongoDB脚本.html#backup-mongodb-sh">3.16.1. backup_mongodb.sh</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="17.自动安装memcached脚本.html">3.17. 自动安装memcached脚本</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="17.自动安装memcached脚本.html">3.17. 自动安装memcached</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="17.自动安装memcached脚本.html#install-memcached-sh">3.17.1. install_memcached.sh</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="18.system检测脚本.html">3.18. 系统各项内容检测脚本</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="18.system检测脚本.html">3.18. 系统各项内容检测check_os</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="18.system检测脚本.html#check-system-sh">3.18.1. check_system.sh</a></li>
 </ul>
 </li>
@@ -476,6 +488,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/01.Redis数据库.html#id7">4.1.6. 集合操作</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/01.Redis数据库.html#id11">4.1.7. 设置redis的连接密码</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/01.Redis数据库.html#pythonredis">4.1.8. python操作redis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/02.Mysql入门到精通.html">4.2. mysql入门到精通</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/02.Mysql入门到精通.html#sql4">4.2.1. SQL包含以下4个部分</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/02.Mysql入门到精通.html#id1">4.2.2. 数据库基础操作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/02.Mysql入门到精通.html#id4">4.2.3. 数据库操作命令</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/02.Mysql入门到精通.html#id8">4.2.4. 数据库表操作</a></li>
 </ul>
 </li>
 </ul>
@@ -585,7 +604,16 @@
 <li class="toctree-l3"><a class="reference internal" href="../08.Linux构建高可用架构/11.MySQL读、写分离解决方案.html">8.11. MySQL读、写分离解决方案</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../09.Zabbix 3.0 从入门到精通/index.html">9. Zabbix3.0入门到精通</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../09.Zabbix 3.0 从入门到精通/index.html">9. Zabbix3.0入门到精通</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../09.Zabbix 3.0 从入门到精通/01.zabbix监控介绍.html">9.1. zabbix监控简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../09.Zabbix 3.0 从入门到精通/01.zabbix监控介绍.html#linux">9.1.1. 常见的Linux监控命令</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../09.Zabbix 3.0 从入门到精通/01.zabbix监控介绍.html#id1">9.1.2. 监控工具总览</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../09.Zabbix 3.0 从入门到精通/02.安装zabbix.html">9.2. 安装zabbix</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../09.Zabbix 3.0 从入门到精通/02.安装zabbix.html#id1">9.2.1. 安装方式选择</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -819,6 +847,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/06.字典数据结构.html#id1">1.6.1. 字典的内置方法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/06.字典数据结构.html#id3">1.6.2. 添加/修改/删除字典元素</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/06.字典数据结构.html#id5">1.6.3. 字典推导式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/06.字典数据结构.html#id6">1.6.4. 字典的重访嵌套</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Python/01.Python数据类型/07.集合数据类型.html">1.7. 集合 Set()</a><ul>
@@ -954,13 +983,14 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#evalexeccompile">4.1.5. eval、exec、compile函数</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#reversed">4.1.6. reversed()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#sorted">4.1.7. sorted()函数正向排列:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#zip-s-t">4.1.8. zip(s,t)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#cmp-x-y">4.1.9. cmp(x,y)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#round-x-n">4.1.10. round(x[,n])</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#dir-sys">4.1.11. dir(sys)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#abs">4.1.12. abs()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#id2">4.1.13. round(x[,n])</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#isinstance-object-int">4.1.14. isinstance(object,int)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#enumerate">4.1.8. enumerate()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#zip-s-t">4.1.9. zip(s,t)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#cmp-x-y">4.1.10. cmp(x,y)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#round-x-n">4.1.11. round(x[,n])</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#dir-sys">4.1.12. dir(sys)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#abs">4.1.13. abs()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#id2">4.1.14. round(x[,n])</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/04.内建函数/01.常用的内建函数.html#isinstance-object-int">4.1.15. isinstance(object,int)</a></li>
 </ul>
 </li>
 </ul>
@@ -1070,7 +1100,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/11.类的继承.html">7.11. 类的继承</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/11.类的继承.html#id2">7.11.1. 类继承的顺序</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/11.类的继承.html#id4">7.11.2. 类的多重继承，同时继承多个类的顺序</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/11.类的继承.html#python3">7.11.2. Python3 默认广度优先-新式类</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/11.类的继承.html#id4">7.11.3. 类的多重继承，同时继承多个类的顺序</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/12.方法的动态特性.html">7.12. 方法的动态特性</a><ul>
@@ -1104,7 +1135,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#id2">7.15.8. 运算符重载</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#id3">7.15.9. 其他一些魔法方法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#getattr-getattribute">7.15.10. __getattr__和__getattribute__的区别</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#getattr">7.15.11. __getattr__方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/15.一些魔法方法.html#setattr-getattr-getattribute-delattr">7.15.11. __setattr__、__getattr__、__getattribute__、__delattr__ 方法</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/16.类的反射，设置、删除、检测.html">7.16. 类的检测、判断、设置、删除、获取</a><ul>
@@ -1399,7 +1430,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/06.os(系统模块).html#os-path">14.6.6. os.path模块</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/07.sys(系统操作模块).html">14.7. sys系统操作模块</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/07.sys(系统操作模块).html">14.7. sys系统操作模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/07.sys(系统操作模块).html#id1">14.7.1. 举例</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/08.configparser模块.html">14.8. configparser模块</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/08.configparser模块.html#id1">14.8.1. 配置文件示例</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/08.configparser模块.html#python">14.8.2. 用python生成这样的一个配置文档</a></li>
@@ -1628,6 +1662,29 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Python/23.Python网络爬虫/案例：爬取酷狗TOP500的数据.html">19.11. 爬取酷狗TOP500的数据</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/23.Python网络爬虫/案例：爬取酷狗TOP500的数据.html#id1">19.11.1. 代码示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/24.前端技术/index.html">20. 前端技术</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/25.Python高手之路/index.html">21. Python高手之路</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/26.Python开发环境部署/index.html">22. Python开发环境部署</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/26.Python开发环境部署/01.Notpad++和Python远程开发.html">22.1. Notpad++和Python实现远程开发</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/26.Python开发环境部署/01.Notpad++和Python远程开发.html#python-3-6-2">22.1.1. 安装 Python 3.6.2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/26.Python开发环境部署/01.Notpad++和Python远程开发.html#mysql">22.1.2. 安装 MySQL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/26.Python开发环境部署/01.Notpad++和Python远程开发.html#tornado">22.1.3. 安装 Tornado</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/26.Python开发环境部署/01.Notpad++和Python远程开发.html#sqlalchemy">22.1.4. 安装 SQLAlchemy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/26.Python开发环境部署/01.Notpad++和Python远程开发.html#notepad">22.1.5. 配置 Notepad++</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/26.Python开发环境部署/01.Notpad++和Python远程开发.html#id1">22.1.6. 上传下载远端目录文件</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/26.Python开发环境部署/02.PyCharm+python云主机远程调试开发.html">22.2. PyCharm+python远程云主机调试开发</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/26.Python开发环境部署/02.PyCharm+python云主机远程调试开发.html#ssh">22.2.1. 开启SSH远程云主机</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/26.Python开发环境部署/02.PyCharm+python云主机远程调试开发.html#sftp">22.2.2. 开启SFTP远程上传、下载</a></li>
 </ul>
 </li>
 </ul>
@@ -1873,6 +1930,360 @@ sed = filename | sed &#39;N;s/^/      /; s/ *\(.\{6,\}\)\n/\1   /&#39;   # 对�
 <div class="highlight-default"><div class="highlight"><pre><span></span>    <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;/real_server.*10.0.1.158.*8888/,+8 s/^/#/&#39;</span> <span class="n">keepalived</span><span class="o">.</span><span class="n">conf</span>
     <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;/real_server.*10.0.1.158.*8888/,+8 s/^#//&#39;</span> <span class="n">keepalived</span><span class="o">.</span><span class="n">conf</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>3.8.6. sed练习<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>修改源文件本身则需要使用“-i”参数</p>
+</div>
+<div class="section" id="id6">
+<h2>3.8.7. 使用sed修改文件流的方式<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">使用</span><span class="o">-</span><span class="n">e</span> <span class="n">参数和分号连接多编辑命令</span>
+<span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># cat sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+
+
+<span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed -e &#39;s/this/That/g&#39; -e &#39;s/line/LINE/g&#39; sed.txt </span>
+<span class="n">That</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">1</span><span class="p">,</span><span class="n">That</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">LINE</span>
+<span class="n">That</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">LINE</span><span class="p">,</span><span class="n">Empty</span> <span class="n">LINE</span> <span class="n">followed</span>
+<span class="n">That</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">4</span> <span class="p">,</span><span class="n">That</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">LINE</span> 
+<span class="n">That</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">5</span> <span class="n">That</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">LINE</span>
+
+
+<span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;s/this/That/g;s/line/LINE/g&#39; sed.txt </span>
+<span class="n">That</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">1</span><span class="p">,</span><span class="n">That</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">LINE</span>
+<span class="n">That</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">LINE</span><span class="p">,</span><span class="n">Empty</span> <span class="n">LINE</span> <span class="n">followed</span>
+<span class="n">That</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">4</span> <span class="p">,</span><span class="n">That</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">LINE</span> 
+<span class="n">That</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">5</span> <span class="n">That</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">LINE</span>
+</pre></div>
+</div>
+<div class="section" id="id7">
+<h3>删除<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;1d&#39; sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sed2-txt">
+<h3>将删除后的内容重定向到sed2.txt中<a class="headerlink" href="#sed2-txt" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;1d&#39; sed.txt &gt; sed2.txt </span>
+<span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># cat sed2.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>直接删除文件中的第1行<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed -i &#39;1d&#39; sed.txt </span>
+<span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># cat sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>删除1-3行的内容<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># cat sed1.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+
+<span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;1,3d&#39; sed1.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>清空整个文件，1~最后一行<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;1,$d&#39; sed.txt </span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h3>删除最后1行的内容<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># cat sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+
+<span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;$d&#39; sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+</pre></div>
+</div>
+</div>
+<div class="section" id="empty">
+<h3>删除包含Empty的行<a class="headerlink" href="#empty" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;/Empty/d&#39; sed1.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3>删除空行<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;/^$/d&#39; sed.txt </span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h3>删除包含1以外的其它行<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;1!d&#39; sed1.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>3.8.8. 查找和替换<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="line-1">
+<h3>替换匹配到line的行，只替换匹配到的第1次<a class="headerlink" href="#line-1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;s/line/LINE/&#39; sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="line-2">
+<h3>替换匹配到line的行，只替换匹配到的第2次<a class="headerlink" href="#line-2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;s/line/LINE/2&#39; sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">LINE</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">LINE</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">LINE</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">LINE</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id15">
+<h3>所有匹配值的替换<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;s/line/LINE/g&#39; sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">LINE</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">LINE</span><span class="p">,</span><span class="n">Empty</span> <span class="n">LINE</span> <span class="n">followed</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">LINE</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">LINE</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="this">
+<h3>替换开头以this的行<a class="headerlink" href="#this" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;s/^this/that/&#39; sed.txt </span>
+<span class="n">that</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+<span class="n">that</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">that</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">that</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>3.8.9. 字符转换<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<p>使用y命令可进行字符转换，其作用为将一系列字符逐个地变换为另外一系列字符，</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;y/1245/ABCD/&#39; sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="n">A</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="n">B</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="n">C</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="n">D</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id17">
+<h2>3.8.10. 插入文本<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id18">
+<h3>在第2行后添加一行空行<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;2G&#39; sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="shui">
+<h3>若是一行里面有shui这个单词，那么在他后面会添加一个空行<a class="headerlink" href="#shui" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="s2">&quot;/shui/G&quot;</span> <span class="n">tmp</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id19">
+<h3>若是一行里面有shui这个单词，那么在他前后各添加一个空行<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="s2">&quot;/shui/{x;p;x;G}&quot;</span> <span class="n">tmp</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id20">
+<h3>若是一行里面有shui这个单词，那么在他前面添加一个空行<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="s2">&quot;/shui/{x;p;x;}&quot;</span> <span class="n">tmp</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id21">
+<h3>在第一行前面添加空行，想在第几行，号令中的1就改成几<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="s1">&#39;1{x;p;x;}&#39;</span> <span class="n">tmp</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id22">
+<h3>在第二行前插入文本<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;2 i Insert&#39; sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+<span class="n">Insert</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id23">
+<h3>在第二行后插入文本<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;2 a Insert&#39; sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">Insert</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id24">
+<h3>在匹配行的前面插入1行文本<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;/Second/i\Insert&#39; sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+<span class="n">Insert</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id25">
+<h2>3.8.11. 读入文本<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="etc-passwdsed-txt">
+<h3>将/etc/passwd的内容读入到sed.txt的空行之后<a class="headerlink" href="#etc-passwdsed-txt" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;/^$/r /etc/passwd&#39; sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+
+<span class="n">root</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="n">root</span><span class="p">:</span><span class="o">/</span><span class="n">root</span><span class="p">:</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+<span class="nb">bin</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="nb">bin</span><span class="p">:</span><span class="o">/</span><span class="nb">bin</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">daemon</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="n">daemon</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">adm</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="n">adm</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">adm</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">lp</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">7</span><span class="p">:</span><span class="n">lp</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">spool</span><span class="o">/</span><span class="n">lpd</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">sync</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="n">sync</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="p">:</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">sync</span>
+<span class="n">shutdown</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="n">shutdown</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">shutdown</span>
+<span class="n">halt</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">7</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="n">halt</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">halt</span>
+<span class="n">mail</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="n">mail</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">spool</span><span class="o">/</span><span class="n">mail</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">operator</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="n">operator</span><span class="p">:</span><span class="o">/</span><span class="n">root</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">games</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">100</span><span class="p">:</span><span class="n">games</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">games</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">ftp</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="n">FTP</span> <span class="n">User</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">ftp</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">nobody</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">99</span><span class="p">:</span><span class="mi">99</span><span class="p">:</span><span class="n">Nobody</span><span class="p">:</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">systemd</span><span class="o">-</span><span class="n">network</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">192</span><span class="p">:</span><span class="mi">192</span><span class="p">:</span><span class="n">systemd</span> <span class="n">Network</span> <span class="n">Management</span><span class="p">:</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">dbus</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">81</span><span class="p">:</span><span class="mi">81</span><span class="p">:</span><span class="n">System</span> <span class="n">message</span> <span class="n">bus</span><span class="p">:</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">polkitd</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">999</span><span class="p">:</span><span class="mi">998</span><span class="p">:</span><span class="n">User</span> <span class="k">for</span> <span class="n">polkitd</span><span class="p">:</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">libstoragemgmt</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">998</span><span class="p">:</span><span class="mi">996</span><span class="p">:</span><span class="n">daemon</span> <span class="n">account</span> <span class="k">for</span> <span class="n">libstoragemgmt</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">lsm</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">amandabackup</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="n">Amanda</span> <span class="n">user</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">amanda</span><span class="p">:</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+<span class="n">rpc</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">32</span><span class="p">:</span><span class="mi">32</span><span class="p">:</span><span class="n">Rpcbind</span> <span class="n">Daemon</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">rpcbind</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">abrt</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">173</span><span class="p">:</span><span class="mi">173</span><span class="p">::</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">abrt</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">rpcuser</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="n">RPC</span> <span class="n">Service</span> <span class="n">User</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">nfs</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">nfsnobody</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">65534</span><span class="p">:</span><span class="mi">65534</span><span class="p">:</span><span class="n">Anonymous</span> <span class="n">NFS</span> <span class="n">User</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">nfs</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">tss</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">59</span><span class="p">:</span><span class="mi">59</span><span class="p">:</span><span class="n">Account</span> <span class="n">used</span> <span class="n">by</span> <span class="n">the</span> <span class="n">trousers</span> <span class="n">package</span> <span class="n">to</span> <span class="n">sandbox</span> <span class="n">the</span> <span class="n">tcsd</span> <span class="n">daemon</span><span class="p">:</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">colord</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">997</span><span class="p">:</span><span class="mi">994</span><span class="p">:</span><span class="n">User</span> <span class="k">for</span> <span class="n">colord</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">colord</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">pcp</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">996</span><span class="p">:</span><span class="mi">993</span><span class="p">:</span><span class="n">Performance</span> <span class="n">Co</span><span class="o">-</span><span class="n">Pilot</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">pcp</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">sshd</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">74</span><span class="p">:</span><span class="mi">74</span><span class="p">:</span><span class="n">Privilege</span><span class="o">-</span><span class="n">separated</span> <span class="n">SSH</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">empty</span><span class="o">/</span><span class="n">sshd</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">postfix</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">89</span><span class="p">:</span><span class="mi">89</span><span class="p">::</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">spool</span><span class="o">/</span><span class="n">postfix</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">chrony</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">995</span><span class="p">:</span><span class="mi">992</span><span class="p">::</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">chrony</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">ntp</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">38</span><span class="p">::</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ntp</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">tcpdump</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">72</span><span class="p">:</span><span class="mi">72</span><span class="p">::</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">oprofile</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="n">Special</span> <span class="n">user</span> <span class="n">account</span> <span class="n">to</span> <span class="n">be</span> <span class="n">used</span> <span class="n">by</span> <span class="n">OProfile</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">oprofile</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">hujianli</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">1000</span><span class="p">:</span><span class="mi">1000</span><span class="p">:</span><span class="n">hujianli</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">hujianli</span><span class="p">:</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+<span class="n">nginx</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">994</span><span class="p">:</span><span class="mi">991</span><span class="p">:</span><span class="n">Nginx</span> <span class="n">web</span> <span class="n">server</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">nginx</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">mysql</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">1001</span><span class="p">:</span><span class="mi">1001</span><span class="p">::</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mysql</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">apache</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="n">Apache</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">httpd</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">ixdba</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">1002</span><span class="p">:</span><span class="mi">1002</span><span class="p">::</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">ixdba</span><span class="p">:</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+<span class="n">ixdba1</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">1003</span><span class="p">:</span><span class="mi">1003</span><span class="p">::</span><span class="o">/</span><span class="n">ixdba</span><span class="o">/</span><span class="n">ixdba1</span><span class="p">:</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+<span class="n">ixdba2</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">1004</span><span class="p">:</span><span class="mi">1004</span><span class="p">::</span><span class="o">/</span><span class="n">ixdba</span><span class="o">/</span><span class="n">ixdba2</span><span class="p">:</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nologin</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id26">
+<h2>3.8.12. 打印<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id27">
+<h3>打印第1行<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed -n &#39;1p&#39; sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id28">
+<h3>只打印匹配到的行<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed -n &#39;s/the/THE/p&#39; sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">THE</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id29">
+<h2>3.8.13. 写文件<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">## 将匹配打印到的内容输出到 output文件中</span>
+<span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed -n &#39;1,2 w output&#39; sed.txt </span>
+<span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># cat output </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id30">
+<h2>3.8.14. sed 脚本<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id31">
+<h3>编写一个sed脚本<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span>[root@localhost ~]# cat sed.rules 
+s/this/THAT/g
+/^$/d
+</pre></div>
+</div>
+</div>
+<div class="section" id="id32">
+<h3>加载sed脚本<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed -f sed.rules sed.txt </span>
+<span class="n">THAT</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">THAT</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+<span class="n">THAT</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+<span class="n">THAT</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">4</span> <span class="p">,</span><span class="n">THAT</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">line</span> 
+<span class="n">THAT</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">THAT</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id33">
+<h2>3.8.15. 高级替换<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id34">
+<h3>替换空白行后的一行的内容<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># sed &#39;/^$/{n;s/line/LINE/g}&#39; sed.txt </span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">First</span> <span class="n">line</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span><span class="n">the</span> <span class="n">Second</span> <span class="n">line</span><span class="p">,</span><span class="n">Empty</span> <span class="n">line</span> <span class="n">followed</span>
+
+<span class="n">this</span> <span class="ow">is</span> <span class="n">LINE</span> <span class="mi">4</span> <span class="p">,</span><span class="n">this</span> <span class="ow">is</span> <span class="n">Third</span> <span class="n">LINE</span> 
+<span class="n">this</span> <span class="ow">is</span> <span class="n">line</span> <span class="mi">5</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">fifth</span> <span class="n">line</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="http-shouce-jb51-net-shell">
+<h3>更多内容查看 http://shouce.jb51.net/shell/<a class="headerlink" href="#http-shouce-jb51-net-shell" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 </div>

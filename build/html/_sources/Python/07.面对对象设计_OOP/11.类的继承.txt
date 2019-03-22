@@ -4,6 +4,56 @@
 
     经典类:深度优先
     新式类:广度优先
+![](../../_static/class12.png)
+    
+### Python3 默认广度优先-新式类
+
+```python
+#!/usr/bin/env python
+# -*- coding:utf8 -*-
+class A:
+    attr = 1
+
+
+class B(A):
+    pass
+
+
+class C(A):
+    attr = 2
+
+
+class D(B, C):
+    pass
+
+
+if __name__ == '__main__':
+    x = D()
+    print(x.attr)       # 2
+    
+    
+#明确解决冲突
+class A:
+    attr = 1
+
+
+class B(A):
+    pass
+
+
+class C(A):
+    attr = 2
+
+
+class D(B, C):
+    attr = B.attr
+
+
+if __name__ == '__main__':
+    x = D()
+    print(x.attr)  #  1
+
+```
 
 #### 代码示例 1
 ```

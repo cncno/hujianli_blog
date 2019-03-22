@@ -399,6 +399,52 @@ fi
 done <$filename
 ```
 
+
+读取文件的2种方法
+```
+#!/bin/sh
+# @Author: huxiaojian
+# @Date:   2018-09-28 15:38:08
+# @Last Modified by:   huxiaojian
+# @Last Modified time: 2018-09-28 15:43:04
+
+# 读取文件方法1
+count=1
+cat test | while  read line ; do
+	echo "Line $count: $line"
+	count=$[ $count + 1 ]
+done
+echo "Finished processing the file"
+
+
+
+# 读取文件方法2
+[root@localhost ~]# cat while04.sh 
+#!/bin/bash 
+while read LINE do
+        NAME=`echo $LINE | awk '{print $1}'`
+        AGE=`echo $LINE | awk '{print $2}'`  
+        Sex=`echo $LINE | awk '{print $3}'`         
+ echo "My name is $NAME, I'm $AGE years old, I'm a $Sex" 
+ done < student_info.txt
+ 
+ 
+ 
+举例
+#!/bin/sh
+file=$1 
+if [ $# -lt 1 ]; then  
+	echo "Usage: $0 FILEPATH"   
+	exit 
+fi 
+while read -r f1 f2 f3 
+do   
+	echo "Field 1: $f1 ===> Field 2: $f2 ===> Field 3: $f3" 
+done < "$file"
+
+
+```
+
 ## 四、break 和 continue 语句
 
 break跳出循环

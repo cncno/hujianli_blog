@@ -121,3 +121,98 @@ grep -E -v "^$|^#" /etc/httpd/conf/httpd.conf
 ```
 $(mysql -uroot -p'passwd' -e "show databases;"|egrep -v 'Database|^test|mysql|performance_schema|information_schema')
 ```
+
+```bash
+
+# grep
+
+## 匹配到1的行
+[root@localhost ~]# grep "1" awk.txt 
+hujianli.wang        male    30   021-1111111
+jianli.hu            Female  25   021-222222
+jack.chen            Male    35   021-333333
+lily.gong           Female   20   021-4444444  shanghai
+
+## -i 不区分大小写的匹配
+[root@localhost ~]# grep -i "f" awk.txt 
+jianli.hu            Female  25   021-222222
+lily.gong           Female   20   021-4444444  shanghai
+
+## 匹配以hu开头的行
+[root@localhost ~]# grep "^hu" awk.txt 
+hujianli.wang        male    30   021-1111111
+
+
+#搜索以Good 结尾的行
+grep 'Good$' RegExp.txt
+
+#排除空行
+[root@localhost ~]# grep -v "^$" sed.txt 
+this is line 1,this is First line
+this is line 2,the Second line,Empty line followed
+this is line 4 ,this is Third line 
+this is line 5 this is fifth line
+
+#匹配空行的数量
+[root@localhost ~]# grep -c "^$" sed.txt 
+1
+
+## 搜索字符..匹配 
+[root@localhost ~]# grep 'g..d' test_grep.txt 
+good morning teacher 
+gold sunshine looks beautiful 
+golden time flies you fell 
+glad wrong word 
+gl0d wrong word 
+gl2d wrong word gl3d
+
+## ^取反匹配
+[root@localhost ~]# grep '[^Gg]ood' test_grep.txt 
+what a delicious food
+ wrong word gooood
+ 
+ [root@localhost ~]# grep '[Gg]..d' test_grep.txt 
+good morning teacher 
+gold sunshine looks beautiful 
+golden time flies you fell 
+glad wrong word 
+gl0d wrong word 
+gl2d wrong word gl3d
+
+
+[root@localhost ~]# grep '[Gg][lo].d' test_grep.txt 
+good morning teacher 
+gold sunshine looks beautiful 
+golden time flies you fell 
+glad wrong word 
+gl0d wrong word 
+gl2d wrong word gl3d
+
+
+## *来匹配
+[root@localhost ~]# grep go*d test_grep.txt 
+good morning teacher 
+ wrong word gooood
+ 
+ ## -
+ [root@localhost ~]# grep 'gl[0-9]d' test_grep.txt 
+gl0d wrong word 
+gl2d wrong word gl3d
+
+
+## 可以使用egrep, egrep支持正则匹配
+{
+[:alnum:]      文字数字字符 
+[:alpha:]      文字字符 
+[:digit:]      数字字符 
+[:graph:]      非空字符( 非空格、控制字符) 
+[:lower:]      小写字符 
+[:cntrl:]      控制字符 
+[:print:]      非空字符( 包括空格) 
+[:punct:]      标点符号 
+[:space:]      所有空白字符( 新行，空格，制表符) 
+[:upper:]      大写字符 
+[:xdigit:]     十六进制数字(0-9 ，a-f ，A-F) 
+ 搜索以大写字母开头的行
+}
+```
