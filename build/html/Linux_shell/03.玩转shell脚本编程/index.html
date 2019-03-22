@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="next" title="3.1. 一、基础知识" href="01.基础知识.html" />
-    <link rel="prev" title="2.11. Tomcat服务搭建配置" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html" /> 
+    <link rel="prev" title="2.12. 国内常使用的yum源信息" href="../02.Linux服务器架设/20.国内常使用的yum源信息.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -332,6 +332,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html#id10">2.11.6. Tomcat反向代理集群</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../02.Linux服务器架设/20.国内常使用的yum源信息.html">2.12. 国内常使用的yum源信息</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">3. 玩转shell脚本编程</a><ul>
@@ -374,7 +375,7 @@
 <li class="toctree-l3"><a class="reference internal" href="05.函数.html">3.5. 五、函数</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="05.函数.html#id2">3.5.1. 一、概念</a></li>
 <li class="toctree-l4"><a class="reference internal" href="05.函数.html#id3">3.5.2. 二、格式</a></li>
-<li class="toctree-l4"><a class="reference internal" href="05.函数.html#id4">3.5.3. 三、函数参数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05.函数.html#id5">3.5.3. 三、函数参数</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="06.正则表达式.html">3.6. 六、正则表达式</a><ul>
@@ -476,6 +477,10 @@
 <li class="toctree-l4"><a class="reference internal" href="18.system检测脚本.html#check-system-sh">3.18.1. check_system.sh</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="19. 安装tomcat脚本.html">3.19. 安装tomcat脚本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="20.install_zookeeper脚本.html">3.20. install_zookeeper脚本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="21.install_elasticserch脚本.html">3.21. install_elasticserch脚本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="22.自动Autoinstall_ELK_V1.3.html">3.22. 自动Autoinstall_ELK_V1.3脚本</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/index.html">4. 玩转数据库(mysql、Redis)</a><ul>
@@ -1835,8 +1840,11 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="05.函数.html">3.5. 五、函数</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="05.函数.html#id2">3.5.1. 一、概念</a></li>
-<li class="toctree-l2"><a class="reference internal" href="05.函数.html#id3">3.5.2. 二、格式</a></li>
-<li class="toctree-l2"><a class="reference internal" href="05.函数.html#id4">3.5.3. 三、函数参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.函数.html#id3">3.5.2. 二、格式</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05.函数.html#id4">基本的脚本函数</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05.函数.html#id5">3.5.3. 三、函数参数</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="06.正则表达式.html">3.6. 六、正则表达式</a><ul>
@@ -2023,6 +2031,10 @@
 <li class="toctree-l2"><a class="reference internal" href="18.system检测脚本.html#check-system-sh">3.18.1. check_system.sh</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="19. 安装tomcat脚本.html">3.19. 安装tomcat脚本</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20.install_zookeeper脚本.html">3.20. install_zookeeper脚本</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21.install_elasticserch脚本.html">3.21. install_elasticserch脚本</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22.自动Autoinstall_ELK_V1.3.html">3.22. 自动Autoinstall_ELK_V1.3脚本</a></li>
 </ul>
 </div>
 </div>
@@ -2038,7 +2050,7 @@
         <a href="01.基础知识.html" class="btn btn-neutral float-right" title="3.1. 一、基础知识" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html" class="btn btn-neutral float-left" title="2.11. Tomcat服务搭建配置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../02.Linux服务器架设/20.国内常使用的yum源信息.html" class="btn btn-neutral float-left" title="2.12. 国内常使用的yum源信息" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

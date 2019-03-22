@@ -26,3 +26,7 @@
     16.备份MongoDB脚本
     17.自动安装memcached脚本
     18.system检测脚本
+    19. 安装tomcat脚本
+    20.install_zookeeper脚本
+    21.install_elasticserch脚本
+    22.自动Autoinstall_ELK_V1.3

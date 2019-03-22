@@ -332,6 +332,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html#id10">2.11.6. Tomcat反向代理集群</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../02.Linux服务器架设/20.国内常使用的yum源信息.html">2.12. 国内常使用的yum源信息</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">3. 玩转shell脚本编程</a><ul class="current">
@@ -374,7 +375,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">3.5. 五、函数</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id2">3.5.1. 一、概念</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id3">3.5.2. 二、格式</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">3.5.3. 三、函数参数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">3.5.3. 三、函数参数</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="06.正则表达式.html">3.6. 六、正则表达式</a><ul>
@@ -476,6 +477,10 @@
 <li class="toctree-l4"><a class="reference internal" href="18.system检测脚本.html#check-system-sh">3.18.1. check_system.sh</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="19. 安装tomcat脚本.html">3.19. 安装tomcat脚本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="20.install_zookeeper脚本.html">3.20. install_zookeeper脚本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="21.install_elasticserch脚本.html">3.21. install_elasticserch脚本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="22.自动Autoinstall_ELK_V1.3.html">3.22. 自动Autoinstall_ELK_V1.3脚本</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/index.html">4. 玩转数据库(mysql、Redis)</a><ul>
@@ -1783,6 +1788,27 @@
 因而用函数返回值来返回函数执行结果是不合适的。如果要硬生生地return某个计算结果，比如一个字符串，往往会得到错误提示：“numeric argument required”。</li>
 <li>如果一定要让函数返回一个或多个值，可以定义全局变量，函数将计算结果赋给全局变量，然后脚本中其他地方通过访问全局变量，就可以获得那个函数“返回”的一个或多个执行结果了。</li>
 </ul>
+<div class="section" id="id4">
+<h3>基本的脚本函数<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1"># using a function in scripts</span>
+
+func1 <span class="o">()</span> <span class="o">{</span>
+        <span class="nb">echo</span> <span class="s2">&quot;This is an example of a function&quot;</span>
+<span class="o">}</span>
+
+<span class="nv">count</span><span class="o">=</span>1
+<span class="k">while</span> <span class="o">[</span> <span class="nv">$count</span> -le <span class="m">5</span> <span class="o">]</span>
+<span class="k">do</span>
+        func1
+        <span class="nv">count</span><span class="o">=</span>$<span class="o">[</span> <span class="nv">$count</span>+1 <span class="o">]</span>
+<span class="k">done</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;this is the end of the loop&quot;</span>
+func1
+<span class="nb">echo</span> <span class="s2">&quot;Now this is the end of the scripts&quot;</span>
+</pre></div>
+</div>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
 function output_data() {
 	DATA=$((1+1))
@@ -1810,8 +1836,9 @@ add_num
 </pre></div>
 </div>
 </div>
-<div class="section" id="id4">
-<h2>3.5.3. 三、函数参数<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id5">
+<h2>3.5.3. 三、函数参数<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>将函数写成无状态的，将数据当做参数进行传入</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
 funWithParam(){
