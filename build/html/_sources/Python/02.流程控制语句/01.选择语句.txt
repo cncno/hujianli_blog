@@ -131,3 +131,40 @@ else:
 minalue = a if a<=b else b
 
 ```
+
+### 断言 assert
+```
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+
+'''
+# 伪代码
+if not condition:
+    crash program
+'''
+
+#当不知道程序会在哪里出错，与其在运行时崩溃，不如在出现错误条件时就崩溃
+x=3
+assert x>0, "x is not zero or negative"
+assert x%2 == 0, "x is not an even number"
+
+'''
+使用assert断言时，要注意以下几点： 
+（1）assert断言用来声明某个条件是真的。 
+（2）如果你非常确信你使用的列表中至少有一个元素，想要检验这一点，并在它非真时引发一个错误，那么assert语句是应用在这种情形下的理想语句。 
+（3）assert语句失败时，会引发一个AssertionError。
+'''
+
+```
+
+### pass 占位符
+```python
+name="xiaoming"
+if name == "xiaoming":
+    print("{0} hello".format(name))
+elif name == "xiaozhang":
+    pass
+else:
+    print("do nothing")
+    
+```

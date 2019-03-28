@@ -106,6 +106,32 @@ print("这是一个__xx__的特殊变量: %s" % per.__input__)
 #这是一个约定束城
 
 
+
+
+class Student(object):
+    def __init__(self,name,score):
+        self.__name = name
+        self.__score = score
+
+    def info(self):
+        print("学生:{}； 分数{}".format(self.__name,self.__score))
+
+    def set_score(self,secore):
+        self.__score = secore
+
+    def get_score(self):
+        return self.__score
+
+if __name__ == '__main__':
+    hu = Student("hujianli","100")
+    hu.info()
+    print("修改前的分数{}".format(hu.get_score()))
+    hu.set_score(90)
+    print("修改后的分数{}".format(hu.get_score()))
+
+
+
+
 ```
 
 ### 私有属性的保护和设置

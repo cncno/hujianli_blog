@@ -19,6 +19,7 @@ string.isupper()                              # 字符串都是大写返回True
 string.islower()                              # 字符串都是小写返回True
 string.lower()                                # 转换字符串中所有大写为小写
 string.upper()                                # 转换字符串中所有小写为大写
+string.strip()                                       #用于移除字符串头尾指定的字符（默认为空格）
 string.lstrip()                               # 去掉string左边的空格
 string.rstrip()                               # 去掉string字符末尾的空格
 string.replace(str1,str2,num=string.count(str1))  # 把string中的str1替换成str2,如果num指定,则替换不超过num次
@@ -27,7 +28,7 @@ string.zfill(width)                           # 返回字符长度为width的字
 string.isdigit()                              # 只包含数字返回True
 string.split("分隔符")                        # 把string切片成一个列表
 ":".join(string.split())                      # 以:作为分隔符,将所有元素合并为一个新的字符
-
+string.swapcase()                                  #方法用于对字符串的大小写字母进行转换，将字符串中大写转换为小写、小写转换为大写。
 ```
 
 ### 字符串格式化
@@ -183,7 +184,48 @@ print(context1)
 %g	指数(e)或浮点数 (根据显示长度)
 %G	指数(E)或浮点数 (根据显示长度)
 
+
+
+
+print("hello,%s" % "world")
+print('小智今年 %s 岁了' % 18)
+
+print('小智今年 %s 岁了' % 19)
+print('小智今年 %d 岁了' % 20)
+
+print("圆周率PI 的值为 %.2f" % 3.14)
+
+# 出类似1.23%这样的结果
+print("小智的识别能力比去年提高了:%.2f" % 1.25+"%")
+
+print("小智的识别能力比去年提高了:%.2f%%" % 1.26 )
+# 输出百分号
+print("输出百分号:%s" % "%")
+
+
+# 字符串格式化元组
+print("今年是%s年，奥运会第%s，中国获得%d枚金牌" % ('2016', '10', 20))
+
+# 宽度和精度
+print("圆周率PI 的值为：%10f" % 3.1415926)
+print("保留2位小数，圆周率PI 的值为：%10.2f " % 3.1415926)
+print("字符串精度获取：%.5s" % ("hello world") )
+
+print ('从元组中获取字符串精度：%*.*s' % (10,5,'hello world'))
+print ('从元组中获取字符串精度：%.*s' % (5, 'hello world'))
+
+#符号、对齐和0填充
+print ('圆周率PI 的值为：%010.2f' % 3.141593)
+
+#减号（-）用来左对齐数值
+print ('圆周率PI 的值为：%10.2f' % 3.14)
+print ('圆周率PI 的值为：%-10.2f' % 3.14)
+
+# 加号（+）表示无论是正数还是负数都表示出符号
+print(('宽度前加加号：%+5d'%10)+'\n'+('宽度前加加号：%+5d'%-10))
+
 ```
+![](../../_static/string1.png)
 
 #### 示例
 ```python

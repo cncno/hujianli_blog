@@ -1,6 +1,5 @@
 # 默认值参数，位于所有形参的最后
 
-
     在调用和函数头部中，如果出现**arg形式的话，都必须出现在最后。
 
 #### 代码示例
@@ -20,6 +19,8 @@ def deam(obj=None):   #定义函数，并设置默认值,默认值参数最好�
     print(obj)
 
 deam()
+
+
 
 def hello(name='Python'):
     print('你好,{0}!'.format(name))

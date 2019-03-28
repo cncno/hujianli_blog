@@ -31,6 +31,7 @@ def fun_bmi(name,height,weight):
 
 fun_bmi("路人甲",weight=60,height=1.83)        #关键字参数
 print("".center(100,"="))
+
 fun_bmi("路人乙",1.49,61)
 
 ```
