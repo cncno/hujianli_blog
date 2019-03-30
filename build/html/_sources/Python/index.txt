@@ -19,6 +19,7 @@ Python自动化运维
     08.Python文件操作/index
     09.正则表达式/index
     10.Python中的包和模块/index
+    11.2 线程和进程/index
     11.Python网络编程/index
     12.Python操作数据库/index
     13.Python标准库/index

@@ -1,0 +1,24 @@
+# Docker获取镜像
+
+## docker pull 命令来从仓库获取所需要的镜像
+```bash
+docker pull ubuntu:12.04
+
+下载过程中，会输出获取镜像的每一层信息。
+该命令实际上相当于
+ $ sudo docker pull registry.hub.docker.com/ubuntu:12.04 命令，
+即从注册服务器 registry.hub.docker.com 中的 ubuntu 仓库来下载标记为 12.04 的镜像
+```
+
+
+从其它仓库下载时需要指定完整的仓库注册服务器地址。
+```
+docker pull registry.cn-beijing.aliyuncs.com/sensoro_ai/ubuntu
+```
+
+
+使用该镜像了，例如创建一个容器，让其中运行 bash 应用
+```
+[root@iZ2zeheluitjhvpjjymd2dZ ~]# docker run -t -i ubuntu:12.04 /bin/bash
+root@545b402afdb9:/# 
+```

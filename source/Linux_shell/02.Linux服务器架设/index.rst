@@ -19,3 +19,4 @@ Linux服务器架设
     10.rsync数据同步
     12.Tomcat服务搭建配置
     20.国内常使用的yum源信息
+    21.Centos7安装VNC，手动网络重装VPS
