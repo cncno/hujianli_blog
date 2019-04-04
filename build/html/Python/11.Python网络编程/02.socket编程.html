@@ -43,7 +43,7 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="next" title="13.4. socketserver编程" href="03.socketserver编程.html" />
+    <link rel="next" title="13.3. socketserver编程" href="03.socketserver编程.html" />
     <link rel="prev" title="13.1. TCP/IP协议" href="01.python网络编程基础.html" /> 
 </head>
 
@@ -627,6 +627,9 @@
 </li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Java/index.html">Java学习笔记</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../KVM_Study/index.html">KVM_Study</a><ul class="simple">
@@ -1343,7 +1346,22 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../11.2 线程和进程/index.html">12. Python 线程和进程</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../11.2 线程和进程/index.html">12. Python 进程和线程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../11.2 线程和进程/1.进程.html">12.1. 进程</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../11.2 线程和进程/1.进程.html#multiprocessing">12.1.1. multiprocessing模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../11.2 线程和进程/1.进程.html#join">12.1.2. join()方法的使用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../11.2 线程和进程/1.进程.html#process">12.1.3. Process子类创建进程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../11.2 线程和进程/1.进程.html#pool">12.1.4. 使用进程池Pool创建进程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../11.2 线程和进程/1.进程.html#id2">12.1.5. 多进程队列的使用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../11.2 线程和进程/1.进程.html#id3">12.1.6. 使用队列实现进程间通信</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../11.2 线程和进程/2.线程.html">12.2. 线程</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../11.2 线程和进程/2.线程.html#thread">12.2.1. Thread类来创建多线程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../11.2 线程和进程/2.线程.html#id2">12.2.2. Thread子类创建多线程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../11.2 线程和进程/2.线程.html#id5">12.2.3. 线程同步</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">13. Python 网络编程</a><ul class="current">
@@ -1356,31 +1374,30 @@
 </li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">13.2. socket编程</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#pythonsocket">13.2.1. Python中的socket通信逻辑如下图所示（图片来自网络）：</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">13.2.2. 具体的参数定义：</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#socket-socket">13.2.3. socket.socket()方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#socket-socket">13.2.2. socket.socket()方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">13.2.3. socket编程思路：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tcp">13.2.4. TCP编程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#udp">13.2.5. UDP编程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">13.2.6. socket模块创建多线程服务器</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">13.3. 注意事项：</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id3">13.3.1. socket编程思路：</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">13.3.2. 客户端:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tcp">13.3.3. TCP编程</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id11">13.3.4. socket模块创建多线程服务器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#udp">13.3.5. UDP编程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.socketserver编程.html">13.3. socketserver编程</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="03.socketserver编程.html#threadingtcpserver">13.3.1. 使用ThreadingTCPServer的要点:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="03.socketserver编程.html#id1">13.3.2. ThreadingTCPServer 示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="03.socketserver编程.html#id5">13.3.3. 服务器端的代码，核心要点</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="03.socketserver编程.html">13.4. socketserver编程</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="03.socketserver编程.html#threadingtcpserver">13.4.1. 使用ThreadingTCPServer的要点:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="03.socketserver编程.html#id1">13.4.2. ThreadingTCPServer 示例</a></li>
-<li class="toctree-l4"><a class="reference internal" href="03.socketserver编程.html#id5">13.4.3. 服务器端的代码，核心要点</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="04.python收发邮件学习.html">13.5. Python发送邮件</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#test">13.5.1. 发送一个简单的test邮件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#id2">13.5.2. 完整的发送邮件代码</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#html">13.5.3. 发送HTML的邮件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#id7">13.5.4. 发送带附件的邮件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#smtp">13.5.5. 加密SMTP邮件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#pop3">13.5.6. POP3下载查阅邮件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04.python收发邮件学习.html">13.4. Python发送邮件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#test">13.4.1. 发送一个简单的test邮件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#id2">13.4.2. 完整的发送邮件代码</a></li>
+<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#html">13.4.3. 发送HTML的邮件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#html2">13.4.4. 发送html邮件示例2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#id7">13.4.5. 发送带附件的邮件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#smtp">13.4.6. 加密SMTP邮件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#id12">13.4.7. Python 发送图片到邮件正文</a></li>
+<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#htmlplain">13.4.8. 同时支持HTML和Plain格式的邮件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#id13">13.4.9. 加密SMTP协议</a></li>
+<li class="toctree-l4"><a class="reference internal" href="04.python收发邮件学习.html#pop3">13.4.10. POP3下载查阅邮件</a></li>
 </ul>
 </li>
 </ul>
@@ -1825,25 +1842,26 @@
     直接socket.socket()，则全部使用默认值。
 </pre></div>
 </div>
-</div>
-<div class="section" id="id1">
-<h2>13.2.2. 具体的参数定义：<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span>socket类型	描述
-socket.AF_UNIX	只能够用于单一的Unix系统进程间通信
-socket.AF_INET	IPv4
-socket.AF_INET6	IPv6
-socket.SOCK_STREAM	流式socket , for TCP
-socket.SOCK_DGRAM	数据报式socket , for UDP
-socket.SOCK_RAW	原始套接字，普通的套接字无法处理ICMP、IGMP等网络报文，而SOCK_RAW可以；其次，SOCK_RAW也可以处理特殊的IPv4报文；此外，利用原始套接字，可以通过IP_HDRINCL套接字选项由用户构造IP头。
-socket.SOCK_SEQPACKET	可靠的连续数据包服务
-创建TCP Socket：	s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-创建UDP Socket：	s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+<ul class="simple">
+<li>具体的参数定义：</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span>    socket类型	                        描述
+    socket.AF_UNIX	            只能够用于单一的Unix系统进程间通信
+    socket.AF_INET	            IPv4
+    socket.AF_INET6	            IPv6
+    socket.SOCK_STREAM	            流式socket , for TCP
+    socket.SOCK_DGRAM	            数据报式socket , for UDP
+    socket.SOCK_RAW	            原始套接字，普通的套接字无法处理ICMP、IGMP等网络报文，而SOCK_RAW可以；其次，SOCK_RAW也可以处理特殊的IPv4报文；此外，利用原始套接字，可以通过IP_HDRINCL套接字选项由用户构造IP头。
+    socket.SOCK_SEQPACKET	    可靠的连续数据包服务
+    创建TCP Socket：	            s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    创建UDP Socket：	            s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+
+s = socket.socket()方法，我们可以获得一个socket对象s，也就是通常说的获取了一个“套接字”
 </pre></div>
 </div>
-<p>s = socket.socket()方法，我们可以获得一个socket对象s，也就是通常说的获取了一个“套接字”</p>
 </div>
 <div class="section" id="socket-socket">
-<h2>13.2.3. socket.socket()方法<a class="headerlink" href="#socket-socket" title="Permalink to this headline">¶</a></h2>
+<h2>13.2.2. socket.socket()方法<a class="headerlink" href="#socket-socket" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default"><div class="highlight"><pre><span></span>方法	描述
 服务器端方法
 s.bind()	绑定地址（host,port）到套接字，在AF_INET下,以元组（host,port）的形式表示地址。
@@ -1874,19 +1892,14 @@ s.setblocking(flag)	如果flag为0，则将套接字设为非阻塞模式，否�
 s.makefile()	创建一个与该套接字相关连的文件
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="id2">
-<h1>13.3. 注意事项：<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p><strong>注意事项：</strong></p>
 <ul class="simple">
 <li>Python3以后，socket传递的都是bytes类型的数据，字符串需要先转换一下，string.encode()即可；另一端接收到的bytes数据想转换成字符串，只要bytes.decode()一下就可以。</li>
 <li>在正常通信时，accept()和recv()方法都是阻塞的。所谓的阻塞，指的是程序会暂停在那，一直等到有数据过来。</li>
 </ul>
-<div class="section" id="id3">
-<h2>13.3.1. socket编程思路：<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="id4">
-<h2>13.3.2. 客户端:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>13.2.3. socket编程思路：<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Python的socket编程，通常可分为TCP和UDP编程两种</p>
 <p>TCP是带连接的可靠传输服务，每次通信都要握手，结束传输也要挥手，数据会被检验，是使用最广的通用模式；
@@ -1895,9 +1908,9 @@ UDP是不带连接的传输服务，简单粗暴，不加控制和检查的一�
 </ul>
 </div>
 <div class="section" id="tcp">
-<h2>13.3.3. TCP编程<a class="headerlink" href="#tcp" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id5">
-<h3>服务端<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<h2>13.2.4. TCP编程<a class="headerlink" href="#tcp" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>服务端<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default"><div class="highlight"><pre><span></span>创建套接字，绑定套接字到本地IP与端口：socket.socket(socket.AF_INET,socket.SOCK_STREAM) , s.bind()
 开始监听连接：s.listen()
 进入循环，不断接受客户端的连接请求：s.accept()
@@ -1913,8 +1926,8 @@ c.send()            #发送数据
 s.close()           #关闭套接字
 </pre></div>
 </div>
-<div class="section" id="id6">
-<h4>服务端 代码示例 1<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id3">
+<h4>服务端 代码示例 1<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># -*- coding:utf-8 -*-</span>
 <span class="kn">import</span> <span class="nn">socket</span>
@@ -1937,8 +1950,8 @@ s.close()           #关闭套接字
 </pre></div>
 </div>
 </div>
-<div class="section" id="id7">
-<h4>代码示例 2<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id4">
+<h4>代码示例 2<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># -*- coding:utf-8 -*-</span>
 
@@ -1962,8 +1975,8 @@ s.close()           #关闭套接字
 </div>
 </div>
 </div>
-<div class="section" id="id8">
-<h3>客户端<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>客户端<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default"><div class="highlight"><pre><span></span>创建套接字，连接服务器地址：socket.socket(socket.AF_INET,socket.SOCK_STREAM) , s.connect()
 连接后发送数据和接收数据：s.sendall(), s.recv()
 传输完毕后，关闭套接字：s.close()
@@ -1976,8 +1989,8 @@ s.close()           #关闭套接字
 </pre></div>
 </div>
 </div>
-<div class="section" id="id9">
-<h3>代码示例 1<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h3>代码示例 1<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
 <span class="n">HOST</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span>
 <span class="n">PROST</span> <span class="o">=</span><span class="mi">10888</span>
@@ -1994,8 +2007,8 @@ s.close()           #关闭套接字
 </pre></div>
 </div>
 </div>
-<div class="section" id="id10">
-<h3>客户端 代码示例 2<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h3>客户端 代码示例 2<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># -*- coding:utf-8 -*-</span>
 
@@ -2028,10 +2041,71 @@ s.close()           #关闭套接字
 </ul>
 </div>
 </div>
+<div class="section" id="udp">
+<h2>13.2.5. UDP编程<a class="headerlink" href="#udp" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h3>服务端<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1">#-*- coding:utf8 -*-</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">s = socket()        #建立套接字</span>
+<span class="sd">s.bind()            #绑定本机地址</span>
+<span class="sd">s.recvfrom()        #接收数据</span>
+<span class="sd">s.sendto()          #发送数据</span>
+<span class="sd">s.close()           #关闭套接字</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">10888</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span><span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span><span class="n">PORT</span><span class="p">))</span>
+<span class="n">data</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">while</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">data</span><span class="p">,</span><span class="n">address</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recvfrom</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">data</span><span class="o">==</span><span class="n">b</span><span class="s1">&#39;bye&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Received String:&quot;</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">sendto</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">address</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>客户端<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1">#-*- coding:utf8 -*-</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">s = socket()    # 建立套接字</span>
+<span class="sd">s.recvfrom()    #接收数据</span>
+<span class="sd">s.sendto()      #发送数据</span>
+<span class="sd">s.close()       #关闭套接字</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>
+<span class="n">PROT</span> <span class="o">=</span> <span class="mi">10888</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span><span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;你好！&quot;</span>
+<span class="k">while</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">sendto</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">),(</span><span class="n">HOST</span><span class="p">,</span><span class="n">PROT</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">data</span> <span class="o">==</span> <span class="s2">&quot;bye&quot;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">data</span><span class="p">,</span><span class="n">addr</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recvfrom</span><span class="p">(</span><span class="mi">512</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Receive from server:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;please input a info:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>13.2.6. socket模块创建多线程服务器<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id11">
-<h2>13.3.4. socket模块创建多线程服务器<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id12">
-<h3>代码示例<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<h3>代码示例<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># -*- coding:utf-8 -*-</span>
 
@@ -2078,67 +2152,6 @@ s.close()           #关闭套接字
 </ul>
 </div>
 </div>
-<div class="section" id="udp">
-<h2>13.3.5. UDP编程<a class="headerlink" href="#udp" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id13">
-<h3>服务端<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
-<span class="c1">#-*- coding:utf8 -*-</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">s = socket()        #建立套接字</span>
-<span class="sd">s.bind()            #绑定本机地址</span>
-<span class="sd">s.recvfrom()        #接收数据</span>
-<span class="sd">s.sendto()          #发送数据</span>
-<span class="sd">s.close()           #关闭套接字</span>
-<span class="sd">&#39;&#39;&#39;</span>
-
-<span class="kn">import</span> <span class="nn">socket</span>
-
-<span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="n">PORT</span> <span class="o">=</span> <span class="mi">10888</span>
-
-<span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span><span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)</span>
-<span class="n">s</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span><span class="n">PORT</span><span class="p">))</span>
-<span class="n">data</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="k">while</span> <span class="n">data</span><span class="p">:</span>
-    <span class="n">data</span><span class="p">,</span><span class="n">address</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recvfrom</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">data</span><span class="o">==</span><span class="n">b</span><span class="s1">&#39;bye&#39;</span><span class="p">:</span>
-        <span class="k">break</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Received String:&quot;</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
-    <span class="n">s</span><span class="o">.</span><span class="n">sendto</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">address</span><span class="p">)</span>
-<span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id14">
-<h3>客户端<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
-<span class="c1">#-*- coding:utf8 -*-</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">s = socket()    # 建立套接字</span>
-<span class="sd">s.recvfrom()    #接收数据</span>
-<span class="sd">s.sendto()      #发送数据</span>
-<span class="sd">s.close()       #关闭套接字</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="kn">import</span> <span class="nn">socket</span>
-
-<span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>
-<span class="n">PROT</span> <span class="o">=</span> <span class="mi">10888</span>
-
-<span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span><span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;你好！&quot;</span>
-<span class="k">while</span> <span class="n">data</span><span class="p">:</span>
-    <span class="n">s</span><span class="o">.</span><span class="n">sendto</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">),(</span><span class="n">HOST</span><span class="p">,</span><span class="n">PROT</span><span class="p">))</span>
-    <span class="k">if</span> <span class="n">data</span> <span class="o">==</span> <span class="s2">&quot;bye&quot;</span><span class="p">:</span>
-        <span class="k">break</span>
-    <span class="n">data</span><span class="p">,</span><span class="n">addr</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recvfrom</span><span class="p">(</span><span class="mi">512</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Receive from server:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;please input a info:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 
 
@@ -2149,7 +2162,7 @@ s.close()           #关闭套接字
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="03.socketserver编程.html" class="btn btn-neutral float-right" title="13.4. socketserver编程" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="03.socketserver编程.html" class="btn btn-neutral float-right" title="13.3. socketserver编程" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="01.python网络编程基础.html" class="btn btn-neutral float-left" title="13.1. TCP/IP协议" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -30,3 +30,4 @@
     20.install_zookeeper脚本
     21.install_elasticserch脚本
     22.自动Autoinstall_ELK_V1.3
+    23.install_vsftpd脚本

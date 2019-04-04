@@ -14,19 +14,21 @@
         type: 套接字类型，根据是面向连接的还是非连接分为SOCK_STREAM或SOCK_DGRAM，也就是TCP和UDP的区别。
         protocol: 一般不填默认为0。
         直接socket.socket()，则全部使用默认值。
-### 具体的参数定义：
-    socket类型	描述
-    socket.AF_UNIX	只能够用于单一的Unix系统进程间通信
-    socket.AF_INET	IPv4
-    socket.AF_INET6	IPv6
-    socket.SOCK_STREAM	流式socket , for TCP
-    socket.SOCK_DGRAM	数据报式socket , for UDP
-    socket.SOCK_RAW	原始套接字，普通的套接字无法处理ICMP、IGMP等网络报文，而SOCK_RAW可以；其次，SOCK_RAW也可以处理特殊的IPv4报文；此外，利用原始套接字，可以通过IP_HDRINCL套接字选项由用户构造IP头。
-    socket.SOCK_SEQPACKET	可靠的连续数据包服务
-    创建TCP Socket：	s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    创建UDP Socket：	s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+* 具体的参数定义：
+```
+    socket类型	                        描述
+    socket.AF_UNIX	            只能够用于单一的Unix系统进程间通信
+    socket.AF_INET	            IPv4
+    socket.AF_INET6	            IPv6
+    socket.SOCK_STREAM	            流式socket , for TCP
+    socket.SOCK_DGRAM	            数据报式socket , for UDP
+    socket.SOCK_RAW	            原始套接字，普通的套接字无法处理ICMP、IGMP等网络报文，而SOCK_RAW可以；其次，SOCK_RAW也可以处理特殊的IPv4报文；此外，利用原始套接字，可以通过IP_HDRINCL套接字选项由用户构造IP头。
+    socket.SOCK_SEQPACKET	    可靠的连续数据包服务
+    创建TCP Socket：	            s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    创建UDP Socket：	            s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 
 s = socket.socket()方法，我们可以获得一个socket对象s，也就是通常说的获取了一个“套接字”
+```
 
 ### socket.socket()方法
     方法	描述
@@ -57,8 +59,8 @@ s = socket.socket()方法，我们可以获得一个socket对象s，也就是通
     s.fileno()	返回套接字的文件描述符。
     s.setblocking(flag)	如果flag为0，则将套接字设为非阻塞模式，否则将套接字设为阻塞模式（默认值）。非阻塞模式下，如果调用recv()没有发现任何数据，或send()调用无法立即发送数据，那么将引起socket.error异常。
     s.makefile()	创建一个与该套接字相关连的文件
-
-# 注意事项：
+    
+__注意事项：__
 - Python3以后，socket传递的都是bytes类型的数据，字符串需要先转换一下，string.encode()即可；另一端接收到的bytes数据想转换成字符串，只要bytes.decode()一下就可以。
 - 在正常通信时，accept()和recv()方法都是阻塞的。所谓的阻塞，指的是程序会暂停在那，一直等到有数据过来。
 
@@ -66,9 +68,6 @@ s = socket.socket()方法，我们可以获得一个socket对象s，也就是通
 ### socket编程思路：
 
 
-
-
-### 客户端:
 
 * Python的socket编程，通常可分为TCP和UDP编程两种
 
@@ -200,52 +199,6 @@ s.close()       # 关闭连接
 
 - 这个过程中，一定要注意，收发是一一对应的，有发就要有收，并且recv()方法默认是阻塞的。
 
-### socket模块创建多线程服务器
-#### 代码示例
-```
-#!/usr/bin/env python
-# -*- coding:utf-8 -*-
-
-import socket
-import threading        # 导入线程模块
-
-
-def link_handler(link, client):
-    """
-    该函数为线程需要执行的函数，负责具体的服务器和客户端之间的通信工作
-    :param link: 当前线程处理的连接
-    :param client: 客户端ip和端口信息，一个二元元组
-    :return: None
-    """
-    print("服务器开始接收来自[%s:%s]的请求...." % (client[0], client[1]))
-    while True:     # 利用一个死循环，保持和客户端的通信状态
-        client_data = link.recv(1024).decode()
-        if client_data == "exit":
-            print("结束与[%s:%s]的通信..." % (client[0], client[1]))
-            break
-        print("来自[%s:%s]的客户端向你发来信息：%s" % (client[0], client[1], client_data))
-        link.sendall('服务器已经收到你的信息'.encode())
-    link.close()
-
-
-ip_port = ('127.0.0.1', 9999)
-sk = socket.socket()            # 创建套接字
-sk.bind(ip_port)                # 绑定服务地址
-sk.listen(5)                    # 监听连接请求
-
-print('启动socket服务，等待客户端连接...')
-
-while True:     # 一个死循环，不断的接受客户端发来的连接请求
-    conn, address = sk.accept()  # 等待连接，此处自动阻塞
-    # 每当有新的连接过来，自动创建一个新的线程，
-    # 并将连接对象和访问者的ip信息作为参数传递给线程的执行函数
-    t = threading.Thread(target=link_handler, args=(conn, address))
-    t.start()
-```
-
-客户端代码保持不变
-
-- 启动这个多线程服务器，然后多运行几个客户端，可以很明显地看到，服务器能够同时与多个客户端通信，基本达到我们的目的。
 
 ### UDP编程
 
@@ -302,3 +255,51 @@ while True:     # 一个死循环，不断的接受客户端发来的连接请�
         data = input("please input a info:\n")
     s.close()
 
+
+
+### socket模块创建多线程服务器
+#### 代码示例
+```
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+
+import socket
+import threading        # 导入线程模块
+
+
+def link_handler(link, client):
+    """
+    该函数为线程需要执行的函数，负责具体的服务器和客户端之间的通信工作
+    :param link: 当前线程处理的连接
+    :param client: 客户端ip和端口信息，一个二元元组
+    :return: None
+    """
+    print("服务器开始接收来自[%s:%s]的请求...." % (client[0], client[1]))
+    while True:     # 利用一个死循环，保持和客户端的通信状态
+        client_data = link.recv(1024).decode()
+        if client_data == "exit":
+            print("结束与[%s:%s]的通信..." % (client[0], client[1]))
+            break
+        print("来自[%s:%s]的客户端向你发来信息：%s" % (client[0], client[1], client_data))
+        link.sendall('服务器已经收到你的信息'.encode())
+    link.close()
+
+
+ip_port = ('127.0.0.1', 9999)
+sk = socket.socket()            # 创建套接字
+sk.bind(ip_port)                # 绑定服务地址
+sk.listen(5)                    # 监听连接请求
+
+print('启动socket服务，等待客户端连接...')
+
+while True:     # 一个死循环，不断的接受客户端发来的连接请求
+    conn, address = sk.accept()  # 等待连接，此处自动阻塞
+    # 每当有新的连接过来，自动创建一个新的线程，
+    # 并将连接对象和访问者的ip信息作为参数传递给线程的执行函数
+    t = threading.Thread(target=link_handler, args=(conn, address))
+    t.start()
+```
+
+客户端代码保持不变
+
+- 启动这个多线程服务器，然后多运行几个客户端，可以很明显地看到，服务器能够同时与多个客户端通信，基本达到我们的目的。

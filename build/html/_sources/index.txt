@@ -20,6 +20,7 @@
 
     aliyun/index
     Linux_shell/index
+    Java/index
     KVM_Study/index
     Docker/index
     Cloud/index

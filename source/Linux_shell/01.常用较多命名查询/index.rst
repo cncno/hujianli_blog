@@ -27,5 +27,7 @@
     18.运算符
     19.read
     20.wc命令
+    21.printf
     40.Linux初始化系统安全设置
     41.使用tar命令进行本地备份scripts
+    42.配置Yum软件仓库
