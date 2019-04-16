@@ -376,10 +376,10 @@
 <li class="toctree-l4"><a class="reference internal" href="24.使用图形配置网络服务nmtui.html#id1">2.20.1. 双网卡绑定</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="25.Centos7 openssh升级到7.9p1.html">2.21. centos7.2 离线升级openssh7.9</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="25.Centos7 openssh升级到7.9p1.html#id1">2.21.1. 准备工作，安装基础包</a></li>
-<li class="toctree-l4"><a class="reference internal" href="25.Centos7 openssh升级到7.9p1.html#openssl">2.21.2. 升级openssl</a></li>
-<li class="toctree-l4"><a class="reference internal" href="25.Centos7 openssh升级到7.9p1.html#openssh">2.21.3. 升级openssh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="25.Centos7中openssh升级到7.9p1.html">2.21. centos7.2 离线升级openssh7.9</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="25.Centos7中openssh升级到7.9p1.html#id1">2.21.1. 准备工作，安装基础包</a></li>
+<li class="toctree-l4"><a class="reference internal" href="25.Centos7中openssh升级到7.9p1.html#openssl">2.21.2. 升级openssl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="25.Centos7中openssh升级到7.9p1.html#openssh">2.21.3. 升级openssh</a></li>
 </ul>
 </li>
 </ul>
@@ -1061,7 +1061,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/05.元祖数据类型.html#id1">1.5.1. 元祖和列表类似，区别不可变</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/05.元祖数据类型.html#id3">1.5.2. 元祖</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/05.元祖数据类型.html#id4">1.5.3. 元祖一口气赋值(解包)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/05.元祖数据类型.html#id5">1.5.4. 列表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/01.Python数据类型/05.元祖数据类型.html#id5">1.5.4. 列表和元祖的区别</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Python/01.Python数据类型/06.字典数据结构.html">1.6. 字典  Dict</a><ul>
@@ -1308,7 +1308,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/04.实例属性是什么？.html">7.4. 实例属性是什么?</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/04.实例属性是什么？.html#id2">7.4.1. 代码示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/04.实例属性是什么？.html#id2">7.4.1. 类属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/04.实例属性是什么？.html#id3">7.4.2. 实例属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/04.实例属性是什么？.html#id4">7.4.3. 代码示例</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.html">7.5. 一个基础有方法和属性的类</a><ul>
@@ -1330,7 +1332,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.html">7.9. property装饰器，将方法转为属性,动态属性</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.html#id1">7.9.1. 访问方式和之前略有区别,用属性的方式访问</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.html#id5">7.9.2. 使用property函数调用私有属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.html#id3">7.9.2. &#64;property 实现只读属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.html#id6">7.9.3. 使用property函数调用私有属性</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Python/07.面对对象设计_OOP/10.方法的重写.html">7.10. 方法的重写</a><ul>
@@ -1529,6 +1532,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Python/10.Python中的包和模块/01.模块与包.html#python-package">11.1.2. 为了避免模块名冲突，Python又引入了按目录来组织模块的方法，称为包（Package）</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/10.Python中的包和模块/01.模块与包.html#id3">11.1.3. 包名通常为全部小写，避免使用下划线。</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/10.Python中的包和模块/01.模块与包.html#id4">11.1.4. 记忆方法参考下图：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/10.Python中的包和模块/01.模块与包.html#python">11.1.5. Python中自带电池</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Python/10.Python中的包和模块/02.包的讲解.html">11.2. 包的讲解</a><ul>
@@ -2183,15 +2187,15 @@
 <li class="toctree-l2"><a class="reference internal" href="24.使用图形配置网络服务nmtui.html#id1">2.20.1. 双网卡绑定</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="25.Centos7 openssh升级到7.9p1.html">2.21. centos7.2 离线升级openssh7.9</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="25.Centos7 openssh升级到7.9p1.html#id1">2.21.1. 准备工作，安装基础包</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="25.Centos7 openssh升级到7.9p1.html#id2">&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</a></li>
-<li class="toctree-l3"><a class="reference internal" href="25.Centos7 openssh升级到7.9p1.html#fq-gcc-c">FQ：安装gcc-c++报错</a></li>
-<li class="toctree-l3"><a class="reference internal" href="25.Centos7 openssh升级到7.9p1.html#id3">&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25.Centos7中openssh升级到7.9p1.html">2.21. centos7.2 离线升级openssh7.9</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="25.Centos7中openssh升级到7.9p1.html#id1">2.21.1. 准备工作，安装基础包</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="25.Centos7中openssh升级到7.9p1.html#id2">&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</a></li>
+<li class="toctree-l3"><a class="reference internal" href="25.Centos7中openssh升级到7.9p1.html#fq-gcc-c">FQ：安装gcc-c++报错</a></li>
+<li class="toctree-l3"><a class="reference internal" href="25.Centos7中openssh升级到7.9p1.html#id3">&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="25.Centos7 openssh升级到7.9p1.html#openssl">2.21.2. 升级openssl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="25.Centos7 openssh升级到7.9p1.html#openssh">2.21.3. 升级openssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="25.Centos7中openssh升级到7.9p1.html#openssl">2.21.2. 升级openssl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="25.Centos7中openssh升级到7.9p1.html#openssh">2.21.3. 升级openssh</a></li>
 </ul>
 </li>
 </ul>

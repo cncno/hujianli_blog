@@ -27,4 +27,4 @@ Linux服务器架设
     22.windows上搭建yum源站点
     23.1秒开启一个http共享服务
     24.使用图形配置网络服务nmtui
-    25.Centos7 openssh升级到7.9p1
+    25.Centos7中openssh升级到7.9p1

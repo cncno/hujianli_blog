@@ -1,736 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f0e547b-d940-4b6c-82e4-3fd052fc2651" name="默认的" comment="4/4_new_commit">
-      <change afterPath="$PROJECT_DIR$/source/DevOps_Study/index.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/01.Java基础/01.搭建Java环境.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/01.Java基础/02.第一个Java程序.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/01.Java基础/03.基本数据类型.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/01.Java基础/04.变量与常量.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/01.Java基础/05.运算符.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/01.Java基础/06.代码注释和编码规范.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/01.Java基础/index.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/02.流程控制/01.复合语句.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/02.流程控制/02.条件语句.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/02.流程控制/03.循环语句.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/02.流程控制/index.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/03.字符串/01.字符串.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/03.字符串/index.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/04.数组/01.一维数组的创建和使用.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/04.数组/02.二维数组的创建和使用.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/04.数组/03.数组的基本操作.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/04.数组/index.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/05.类与对象/01.对象.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/05.类与对象/02.静态变量、常量和方法（static关键字）.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Java/05.类与对象/index.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/22.dd.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/23.tar.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/24.su命令与sudo服务.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/43.Vim编辑器学习.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/13.autofs自动挂载服务.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/14.使用Squid部署代理缓存服务.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/22.windows上搭建yum源站点.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/23.1秒开启一个http共享服务.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/24.使用图形配置网络服务nmtui.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/25.Centos7 openssh升级到7.9p1.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/24.install_mysql5.7.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/04.玩转数据库（mysql、Redis）/03.Linux运维之Mysql必会知识.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/07.Zabbix监控企业实战/01.ZABBIX 4.0 LTS 部署.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/12.建立大型数据结构.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/13.python安装三方库方法.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Python/13.Python标准库/17.Stringw文本常量和模块.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/aliyun/ECS _Create_Web/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hujianli_blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hujianli_blog.iml" afterDir="false" />
+    <list default="true" id="6f0e547b-d940-4b6c-82e4-3fd052fc2651" name="默认的" comment="4/16_new_commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Cloud/01.华为云学习/01.华为云FusionCloud6.3.1实施.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Cloud/01.华为云学习/01.华为云FusionCloud6.3.1实施.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Cloud/01.华为云学习/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Cloud/01.华为云学习/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Cloud/02.openstack学习/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Cloud/02.openstack学习/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Cloud/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Cloud/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Docker/01.Docker学习/01.Docker是什么.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Docker/01.Docker学习/01.Docker是什么.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Docker/01.Docker学习/02.docker的安装.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Docker/01.Docker学习/02.docker的安装.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Docker/01.Docker学习/03.容器的基本操作.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Docker/01.Docker学习/03.容器的基本操作.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Docker/01.Docker学习/04.镜像的常用操作.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Docker/01.Docker学习/04.镜像的常用操作.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Docker/01.Docker学习/05.Dokcer网络.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Docker/01.Docker学习/05.Dokcer网络.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Docker/01.Docker学习/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Docker/01.Docker学习/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Docker/02.Docker经典示例/01.Docker安装.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Docker/02.Docker经典示例/01.Docker安装.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Docker/02.Docker经典示例/02.Docker获取镜像.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Docker/02.Docker经典示例/02.Docker获取镜像.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Docker/02.Docker经典示例/03.列出镜像.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Docker/02.Docker经典示例/03.列出镜像.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Docker/02.Docker经典示例/04.Docker 创建镜像.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Docker/02.Docker经典示例/04.Docker 创建镜像.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Docker/02.Docker经典示例/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Docker/02.Docker经典示例/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Docker/03.5分钟Docker学习/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Docker/03.5分钟Docker学习/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Docker/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Docker/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/KVM_Study/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/KVM_Study/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/01.find.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/01.find.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/02.正则表达式.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/02.正则表达式.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/03.lsof.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/03.lsof.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/04.xargs.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/04.xargs.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/05.scp.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/05.scp.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/06.wget.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/06.wget.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/07.curl.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/07.curl.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/08.cut.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/08.cut.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/09.ss.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/09.ss.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/10.date.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/10.date.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/11.nestat.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/11.nestat.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/12.eval.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/12.eval.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/13.ssh.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/13.ssh.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/14.nohup.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/14.nohup.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/15.grep.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/15.grep.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/16.route.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/16.route.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/17.exec.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/17.exec.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/18.运算符.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/18.运算符.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/19.read.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/19.read.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/20.wc命令.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/20.wc命令.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/40.Linux初始化系统安全设置.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/40.Linux初始化系统安全设置.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/41.使用tar命令进行本地备份scripts.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/41.使用tar命令进行本地备份scripts.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/01.常用较多命名查询/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/1.RAID与LVM磁盘阵列技术.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/1.RAID与LVM磁盘阵列技术.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/10.rsync数据同步.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/10.rsync数据同步.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/12.Tomcat服务搭建配置.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/12.Tomcat服务搭建配置.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/2.NFS共享服务器搭建.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/2.NFS共享服务器搭建.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/20.国内常使用的yum源信息.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/20.国内常使用的yum源信息.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/21.Centos7安装VNC，手动网络重装VPS.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/21.Centos7安装VNC，手动网络重装VPS.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/3.Vsftpd服务器搭建.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/3.Vsftpd服务器搭建.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/4.挂载硬盘mount命令.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/4.挂载硬盘mount命令.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/5.部署磁盘阵列.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/5.部署磁盘阵列.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/6.Apache服务搭建.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/6.Apache服务搭建.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/7.使用iSCSI服务部署网络存储.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/7.使用iSCSI服务部署网络存储.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/8.远程登录Linux系统.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/8.远程登录Linux系统.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/9.Samba服务器的搭建.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/9.Samba服务器的搭建.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/02.Linux服务器架设/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/01.基础知识.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/01.基础知识.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/02.字符串与数组.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/02.字符串与数组.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/03.运算符.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/03.运算符.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/04.流程控制.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/04.流程控制.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/05.函数.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/05.函数.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/06.正则表达式.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/06.正则表达式.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/07.三剑客之grep.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/07.三剑客之grep.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/08.三剑客之sed.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/08.三剑客之sed.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/09.三剑客-awk.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/09.三剑客-awk.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/10.杂项.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/10.杂项.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/11.xagrs使用.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/11.xagrs使用.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/12.收集的一些shell脚本.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/12.收集的一些shell脚本.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/13.自动安装zabbix服务器脚本.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/13.自动安装zabbix服务器脚本.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/14.自动化安装cacti脚本.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/14.自动化安装cacti脚本.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/15.自动安装MongoDB脚本.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/15.自动安装MongoDB脚本.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/16.备份MongoDB脚本.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/16.备份MongoDB脚本.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/17.自动安装memcached脚本.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/17.自动安装memcached脚本.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/18.system检测脚本.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/18.system检测脚本.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/19. 安装tomcat脚本.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/19. 安装tomcat脚本.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/20.install_zookeeper脚本.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/20.install_zookeeper脚本.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/21.install_elasticserch脚本.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/21.install_elasticserch脚本.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/22.自动Autoinstall_ELK_V1.3.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/22.自动Autoinstall_ELK_V1.3.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/03.玩转shell脚本编程/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/04.玩转数据库（mysql、Redis）/01.Redis数据库.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/04.玩转数据库（mysql、Redis）/01.Redis数据库.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/04.玩转数据库（mysql、Redis）/02.Mysql入门到精通.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/04.玩转数据库（mysql、Redis）/02.Mysql入门到精通.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/04.玩转数据库（mysql、Redis）/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/04.玩转数据库（mysql、Redis）/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/05.Nginx学习/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/05.Nginx学习/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/06.LAMP、LNMP学习/01.LAMP部署.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/06.LAMP、LNMP学习/01.LAMP部署.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/06.LAMP、LNMP学习/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/06.LAMP、LNMP学习/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/07.Zabbix监控企业实战/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/07.Zabbix监控企业实战/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/01.LVS负载均衡学习.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/01.LVS负载均衡学习.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/02.Nginx+keepalived 双机热备_主从.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/02.Nginx+keepalived 双机热备_主从.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/03.Nginx+keepalived双主架构.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/03.Nginx+keepalived双主架构.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/04.Redis+keepalived高可用集群实战.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/04.Redis+keepalived高可用集群实战.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/05.NFS+keepalived实现高可用共享.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/05.NFS+keepalived实现高可用共享.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/07.MySQL主主同步高可用架构.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/07.MySQL主主同步高可用架构.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/08.MySQL双主+keepalived高可用集群.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/08.MySQL双主+keepalived高可用集群.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/09.Haproxy+keepalived主从-主主高可用架构.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/09.Haproxy+keepalived主从-主主高可用架构.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/10.LVS+Keepalived主从_主主高可用集群.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/10.LVS+Keepalived主从_主主高可用集群.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/11.MySQL读、写分离解决方案.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/11.MySQL读、写分离解决方案.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/08.Linux构建高可用架构/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/09.Zabbix 3.0 从入门到精通/01.zabbix监控介绍.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/09.Zabbix 3.0 从入门到精通/01.zabbix监控介绍.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/09.Zabbix 3.0 从入门到精通/02.安装zabbix.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/09.Zabbix 3.0 从入门到精通/02.安装zabbix.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/09.Zabbix 3.0 从入门到精通/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/09.Zabbix 3.0 从入门到精通/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Linux_shell/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Linux_shell/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/01.华为设备数通玩转/02.HCNA实验举例.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/01.华为设备数通玩转/02.HCNA实验举例.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/01.华为设备数通玩转/03.华为路由器、交换机常用命令.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/01.华为设备数通玩转/03.华为路由器、交换机常用命令.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/01.华为设备数通玩转/04.小型园区组网场景.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/01.华为设备数通玩转/04.小型园区组网场景.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/01.华为设备数通玩转/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/01.华为设备数通玩转/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/02.华为USG防火墙玩转/01.华为防火墙玩转.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/02.华为USG防火墙玩转/01.华为防火墙玩转.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/02.华为USG防火墙玩转/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/02.华为USG防火墙玩转/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/03.思科设备数通复习/01.常用基本命令.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/03.思科设备数通复习/01.常用基本命令.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/03.思科设备数通复习/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/03.思科设备数通复习/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/04.H3C数通玩转/1.H3C设备升级版本补丁.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/04.H3C数通玩转/1.H3C设备升级版本补丁.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/04.H3C数通玩转/2.交换机配置堆叠.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/04.H3C数通玩转/2.交换机配置堆叠.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/04.H3C数通玩转/3.配置H3C交换机SSH.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/04.H3C数通玩转/3.配置H3C交换机SSH.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/04.H3C数通玩转/4.配置eth-trunk.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/04.H3C数通玩转/4.配置eth-trunk.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/04.H3C数通玩转/5.H3C 40G1分4 10G接口.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/04.H3C数通玩转/5.H3C 40G1分4 10G接口.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/04.H3C数通玩转/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/04.H3C数通玩转/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Network_route_switch/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Network_route_switch/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/01.字符编码处理.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/01.字符编码处理.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/02.代码注释.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/02.代码注释.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/03.字符串数据类型.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/03.字符串数据类型.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/04.列表数据类型.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/04.列表数据类型.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/05.元祖数据类型.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/05.元祖数据类型.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/06.字典数据结构.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/06.字典数据结构.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/07.集合数据类型.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/07.集合数据类型.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/08.数据类型转换.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/08.数据类型转换.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/09.关于深浅拷贝.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/09.关于深浅拷贝.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/10.列表实现堆和队列.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/10.列表实现堆和队列.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/11.内置常量与逻辑运算符、比较运算符.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/11.内置常量与逻辑运算符、比较运算符.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/01.Python数据类型/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/02.流程控制语句/01.选择语句.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/02.流程控制语句/01.选择语句.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/02.流程控制语句/02.for循环语句.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/02.流程控制语句/02.for循环语句.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/02.流程控制语句/03.while循环.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/02.流程控制语句/03.while循环.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/02.流程控制语句/04.switch语句的替代方案.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/02.流程控制语句/04.switch语句的替代方案.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/02.流程控制语句/05.实现一个简单购物车的代码.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/02.流程控制语句/05.实现一个简单购物车的代码.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/02.流程控制语句/06.手写一个三级菜单.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/02.流程控制语句/06.手写一个三级菜单.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/02.流程控制语句/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/02.流程控制语句/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/03.函数/01.定义一个函数.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/03.函数/01.定义一个函数.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/03.函数/02.位置参数.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/03.函数/02.位置参数.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/03.函数/03.定义关键字参数.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/03.函数/03.定义关键字参数.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/03.函数/04.默认值参数.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/03.函数/04.默认值参数.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/03.函数/05.可变参数.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/03.函数/05.可变参数.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/03.函数/06.函数的解包.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/03.函数/06.函数的解包.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/03.函数/07.函数调用时参数传递方法.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/03.函数/07.函数调用时参数传递方法.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/03.函数/08.函数的返回值.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/03.函数/08.函数的返回值.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/03.函数/09.变量的作用域.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/03.函数/09.变量的作用域.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/03.函数/10.匿名函数的用法.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/03.函数/10.匿名函数的用法.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/03.函数/11.匹配字符的函数.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/03.函数/11.匹配字符的函数.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/03.函数/12.列表作为默认参数的陷阱.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/03.函数/12.列表作为默认参数的陷阱.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/03.函数/13.一个求值的函数例子.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/03.函数/13.一个求值的函数例子.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/03.函数/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/03.函数/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/04.内建函数/01.常用的内建函数.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/04.内建函数/01.常用的内建函数.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/04.内建函数/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/04.内建函数/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/05.推导式/01.列表推导式.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/05.推导式/01.列表推导式.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/05.推导式/02.字典推导式.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/05.推导式/02.字典推导式.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/05.推导式/03.推导式进阶.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/05.推导式/03.推导式进阶.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/05.推导式/04.集合推导式.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/05.推导式/04.集合推导式.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/05.推导式/05.生成器推导式.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/05.推导式/05.生成器推导式.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/05.推导式/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/05.推导式/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/06.迭代器_生成器_装饰器/01.迭代器.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/06.迭代器_生成器_装饰器/01.迭代器.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/06.迭代器_生成器_装饰器/02.itertools模块中常用的工具函数.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/06.迭代器_生成器_装饰器/02.itertools模块中常用的工具函数.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/06.迭代器_生成器_装饰器/03.生成器.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/06.迭代器_生成器_装饰器/03.生成器.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/06.迭代器_生成器_装饰器/04.装饰器.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/06.迭代器_生成器_装饰器/04.装饰器.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/06.迭代器_生成器_装饰器/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/06.迭代器_生成器_装饰器/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/01.什么是面对对象设计.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/01.什么是面对对象设计.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/02.类的方法.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/02.类的方法.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/03.类中的__init__方法.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/03.类中的__init__方法.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/04.实例属性是什么？.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/04.实例属性是什么？.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/06.类中可调用自己方法和外部函数.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/06.类中可调用自己方法和外部函数.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/07.类属性和实例属性.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/07.类属性和实例属性.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/08.类方法、实例方法、静态方法.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/08.类方法、实例方法、静态方法.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/10.方法的重写.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/10.方法的重写.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/11.类的继承.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/11.类的继承.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/12.方法的动态特性.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/12.方法的动态特性.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/14.类的高级特性.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/14.类的高级特性.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/15.一些魔法方法.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/15.一些魔法方法.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/16.类的反射，设置、删除、检测.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/16.类的反射，设置、删除、检测.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/17.类属性描述符.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/17.类属性描述符.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/18.多态-鸭子类型.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/18.多态-鸭子类型.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/19.一个简单的类示例.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/19.一个简单的类示例.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/20.人开枪射击子弹_OOP.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/20.人开枪射击子弹_OOP.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/07.面对对象设计_OOP/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.1异常处理/1.异常处理.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.1异常处理/1.异常处理.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.1异常处理/2.断言操作（抛出异常）.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.1异常处理/2.断言操作（抛出异常）.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.1异常处理/3.自定义异常类.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.1异常处理/3.自定义异常类.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.1异常处理/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.1异常处理/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/01.open()函数介绍.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/01.open()函数介绍.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/02.读写文件.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/02.读写文件.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/03.使用with语句读写文件.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/03.使用with语句读写文件.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/04.高级文件操作.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/04.高级文件操作.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/05.目录操作.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/05.目录操作.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/06.目录迭代的两种方式.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/06.目录迭代的两种方式.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/07.批量文件重命名.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/07.批量文件重命名.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/08.读取文件向xls中写入姓名和考号.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/08.读取文件向xls中写入姓名和考号.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/09.获取当前的路径.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/09.获取当前的路径.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/10.StringIO和BytesIO用法.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/10.StringIO和BytesIO用法.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/09.正则表达式/01.正则表达式.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/09.正则表达式/01.正则表达式.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/09.正则表达式/02.匹配字符串示例.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/09.正则表达式/02.匹配字符串示例.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/09.正则表达式/03.替换字符串示例.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/09.正则表达式/03.替换字符串示例.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/09.正则表达式/04.分割字符串示例.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/09.正则表达式/04.分割字符串示例.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/09.正则表达式/05.初始化正则.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/09.正则表达式/05.初始化正则.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/09.正则表达式/06.正则表达式举例.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/09.正则表达式/06.正则表达式举例.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/09.正则表达式/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/09.正则表达式/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/10.Python中的包和模块/01.模块与包.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/10.Python中的包和模块/01.模块与包.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/10.Python中的包和模块/02.包的讲解.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/10.Python中的包和模块/02.包的讲解.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/10.Python中的包和模块/03.python中 __main__正确理解.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/10.Python中的包和模块/03.python中 __main__正确理解.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/10.Python中的包和模块/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/10.Python中的包和模块/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/11.Python网络编程/01.python网络编程基础.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/11.Python网络编程/01.python网络编程基础.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/11.Python网络编程/02.socket编程.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/11.Python网络编程/02.socket编程.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/11.Python网络编程/03.socketserver编程.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/11.Python网络编程/03.socketserver编程.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/11.Python网络编程/04.python收发邮件学习.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/11.Python网络编程/04.python收发邮件学习.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/11.Python网络编程/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/11.Python网络编程/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/01.Python操作mysql数据库.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/01.Python操作mysql数据库.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/02.Python操作SQLite数据库.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/02.Python操作SQLite数据库.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/03.Python封装mysql数据库.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/03.Python封装mysql数据库.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/04.mysql介绍和安装.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/04.mysql介绍和安装.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/05.数据库操作.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/05.数据库操作.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/06.数据库增删改查.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/06.数据库增删改查.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/01.csv模块文件读写.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/01.csv模块文件读写.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/02.json、pickle、shelve模块.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/02.json、pickle、shelve模块.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/03.shutil模块.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/03.shutil模块.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/04.time、datetime模块.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/04.time、datetime模块.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/05.randome模块.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/05.randome模块.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/06.os(系统模块).doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/06.os(系统模块).doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/07.sys(系统操作模块).doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/07.sys(系统操作模块).doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/08.configparser模块.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/08.configparser模块.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/09.hashlib模块.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/09.hashlib模块.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/10.re模块.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/10.re模块.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/11.logging模块.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/11.logging模块.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/12.zipfile、tarfile模块学习.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/12.zipfile、tarfile模块学习.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/13.subprocess模块.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/13.subprocess模块.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/14.collections模块.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/14.collections模块.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/15.Redis模块.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/15.Redis模块.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/13.Python标准库/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/14.Python三方库/01.psutil模块.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/14.Python三方库/01.psutil模块.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/14.Python三方库/02.paramiko（ssh秘钥执行命令).doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/14.Python三方库/02.paramiko（ssh秘钥执行命令).doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/14.Python三方库/03.IPy模块.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/14.Python三方库/03.IPy模块.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/14.Python三方库/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/14.Python三方库/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/20.自动化运维工具/01.Ansible入门与playbook实战.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/20.自动化运维工具/01.Ansible入门与playbook实战.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/20.自动化运维工具/02.Saltstack安装使用入门.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/20.自动化运维工具/02.Saltstack安装使用入门.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/20.自动化运维工具/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/20.自动化运维工具/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/21.Django学习/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/21.Django学习/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/22.Python进阶学习/01.数据结构和算法.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/22.Python进阶学习/01.数据结构和算法.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/22.Python进阶学习/02.字符串和文本.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/22.Python进阶学习/02.字符串和文本.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/22.Python进阶学习/03.迭代器与生成器.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/22.Python进阶学习/03.迭代器与生成器.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/22.Python进阶学习/04.上下文管理器.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/22.Python进阶学习/04.上下文管理器.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/22.Python进阶学习/05.解压多个可迭代对象进行赋值.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/22.Python进阶学习/05.解压多个可迭代对象进行赋值.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/22.Python进阶学习/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/22.Python进阶学习/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/01.基础语法复习.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/01.基础语法复习.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/02.爬虫原理和网页结构.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/02.爬虫原理和网页结构.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/03.我的第一个爬虫程序.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/03.我的第一个爬虫程序.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/04.正则表达式.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/04.正则表达式.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/05.re模块的常用方法.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/05.re模块的常用方法.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/06.三种爬虫模式性能对比.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/06.三种爬虫模式性能对比.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/案例：爬取小说.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/案例：爬取小说.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/案例：爬取糗事百科内容.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/案例：爬取糗事百科内容.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/案例：爬取豆瓣TOP250的书籍.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/案例：爬取豆瓣TOP250的书籍.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/案例：爬取起点中文网数据存到excel中.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/案例：爬取起点中文网数据存到excel中.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/案例：爬取酷狗TOP500的数据.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/23.Python网络爬虫/案例：爬取酷狗TOP500的数据.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/24.前端技术/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/24.前端技术/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/25.Python高手之路/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/25.Python高手之路/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/26.Python开发环境部署/01.Notpad++和Python远程开发.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/26.Python开发环境部署/01.Notpad++和Python远程开发.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/26.Python开发环境部署/02.PyCharm+python云主机远程调试开发.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/26.Python开发环境部署/02.PyCharm+python云主机远程调试开发.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/26.Python开发环境部署/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/26.Python开发环境部署/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/VMware_study/01.VMware学习/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/VMware_study/01.VMware学习/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/VMware_study/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/VMware_study/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ECS/01.aliyun安装命令行工具.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ECS/01.aliyun安装命令行工具.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ECS/02.安全组实践一.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ECS/02.安全组实践一.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ECS/03.Linux远程连接ESC实例.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ECS/03.Linux远程连接ESC实例.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ECS/04.迁云工具和P2V.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ECS/04.迁云工具和P2V.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ECS/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ECS/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/01.ECS_考点.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/01.ECS_考点.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/02.OSS_考点.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/02.OSS_考点.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/03.SLB_考点.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/03.SLB_考点.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/04.VPC_考点.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/04.VPC_考点.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/05.弹性伸缩-Auto_Scaling.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/05.弹性伸缩-Auto_Scaling.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/06.CDN_内容分发.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/06.CDN_内容分发.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/07.云盾云安全.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/07.云盾云安全.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/08.云计算小知识.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/08.云计算小知识.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/09.RDS云关系型数据库.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/09.RDS云关系型数据库.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/ali_ACP_test/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/aliyun/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/aliyun/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/environment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/environment.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/other/01.Git入门到熟练/1.Git基础操作.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/other/01.Git入门到熟练/1.Git基础操作.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/other/01.Git入门到熟练/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/other/01.Git入门到熟练/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/other/02.构建自己的写书博客/1.Python利用sphinx构建个人博客.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/other/02.构建自己的写书博客/1.Python利用sphinx构建个人博客.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/other/02.构建自己的写书博客/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/other/02.构建自己的写书博客/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/doctrees/other/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/other/index.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Cloud/01.华为云学习/01.华为云FusionCloud6.3.1实施.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Cloud/01.华为云学习/01.华为云FusionCloud6.3.1实施.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Cloud/01.华为云学习/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Cloud/01.华为云学习/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Cloud/02.openstack学习/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Cloud/02.openstack学习/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Cloud/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Cloud/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Docker/01.Docker学习/01.Docker是什么.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Docker/01.Docker学习/01.Docker是什么.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Docker/01.Docker学习/02.docker的安装.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Docker/01.Docker学习/02.docker的安装.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Docker/01.Docker学习/03.容器的基本操作.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Docker/01.Docker学习/03.容器的基本操作.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Docker/01.Docker学习/04.镜像的常用操作.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Docker/01.Docker学习/04.镜像的常用操作.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Docker/01.Docker学习/05.Dokcer网络.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Docker/01.Docker学习/05.Dokcer网络.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Docker/01.Docker学习/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Docker/01.Docker学习/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Docker/02.Docker经典示例/01.Docker安装.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Docker/02.Docker经典示例/01.Docker安装.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Docker/02.Docker经典示例/02.Docker获取镜像.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Docker/02.Docker经典示例/02.Docker获取镜像.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Docker/02.Docker经典示例/03.列出镜像.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Docker/02.Docker经典示例/03.列出镜像.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Docker/02.Docker经典示例/04.Docker 创建镜像.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Docker/02.Docker经典示例/04.Docker 创建镜像.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Docker/02.Docker经典示例/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Docker/02.Docker经典示例/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Docker/03.5分钟Docker学习/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Docker/03.5分钟Docker学习/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Docker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Docker/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/KVM_Study/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/KVM_Study/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/01.find.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/01.find.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/02.正则表达式.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/02.正则表达式.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/03.lsof.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/03.lsof.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/04.xargs.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/04.xargs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/05.scp.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/05.scp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/06.wget.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/06.wget.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/07.curl.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/07.curl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/08.cut.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/08.cut.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/09.ss.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/09.ss.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/10.date.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/10.date.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/11.nestat.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/11.nestat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/12.eval.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/12.eval.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/13.ssh.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/13.ssh.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/14.nohup.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/14.nohup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/15.grep.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/15.grep.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/16.route.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/16.route.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/17.exec.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/17.exec.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/18.运算符.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/18.运算符.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/19.read.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/19.read.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/20.wc命令.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/20.wc命令.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/40.Linux初始化系统安全设置.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/40.Linux初始化系统安全设置.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/41.使用tar命令进行本地备份scripts.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/41.使用tar命令进行本地备份scripts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/01.常用较多命名查询/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/1.RAID与LVM磁盘阵列技术.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/1.RAID与LVM磁盘阵列技术.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/10.rsync数据同步.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/10.rsync数据同步.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/12.Tomcat服务搭建配置.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/12.Tomcat服务搭建配置.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/2.NFS共享服务器搭建.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/2.NFS共享服务器搭建.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/20.国内常使用的yum源信息.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/20.国内常使用的yum源信息.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/21.Centos7安装VNC，手动网络重装VPS.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/21.Centos7安装VNC，手动网络重装VPS.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/3.Vsftpd服务器搭建.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/3.Vsftpd服务器搭建.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/4.挂载硬盘mount命令.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/4.挂载硬盘mount命令.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/5.部署磁盘阵列.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/5.部署磁盘阵列.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/6.Apache服务搭建.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/6.Apache服务搭建.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/7.使用iSCSI服务部署网络存储.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/7.使用iSCSI服务部署网络存储.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/8.远程登录Linux系统.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/8.远程登录Linux系统.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/9.Samba服务器的搭建.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/9.Samba服务器的搭建.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/02.Linux服务器架设/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/01.基础知识.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/01.基础知识.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/02.字符串与数组.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/02.字符串与数组.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/03.运算符.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/03.运算符.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/04.流程控制.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/04.流程控制.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/05.函数.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/05.函数.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/06.正则表达式.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/06.正则表达式.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/07.三剑客之grep.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/07.三剑客之grep.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/08.三剑客之sed.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/08.三剑客之sed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/09.三剑客-awk.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/09.三剑客-awk.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/10.杂项.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/10.杂项.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/11.xagrs使用.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/11.xagrs使用.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/12.收集的一些shell脚本.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/12.收集的一些shell脚本.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/13.自动安装zabbix服务器脚本.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/13.自动安装zabbix服务器脚本.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/14.自动化安装cacti脚本.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/14.自动化安装cacti脚本.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/15.自动安装MongoDB脚本.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/15.自动安装MongoDB脚本.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/16.备份MongoDB脚本.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/16.备份MongoDB脚本.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/17.自动安装memcached脚本.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/17.自动安装memcached脚本.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/18.system检测脚本.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/18.system检测脚本.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/19. 安装tomcat脚本.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/19. 安装tomcat脚本.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/20.install_zookeeper脚本.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/20.install_zookeeper脚本.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/21.install_elasticserch脚本.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/21.install_elasticserch脚本.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/22.自动Autoinstall_ELK_V1.3.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/22.自动Autoinstall_ELK_V1.3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/03.玩转shell脚本编程/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/04.玩转数据库（mysql、Redis）/01.Redis数据库.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/04.玩转数据库（mysql、Redis）/01.Redis数据库.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/04.玩转数据库（mysql、Redis）/02.Mysql入门到精通.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/04.玩转数据库（mysql、Redis）/02.Mysql入门到精通.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/04.玩转数据库（mysql、Redis）/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/04.玩转数据库（mysql、Redis）/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/05.Nginx学习/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/05.Nginx学习/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/06.LAMP、LNMP学习/01.LAMP部署.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/06.LAMP、LNMP学习/01.LAMP部署.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/06.LAMP、LNMP学习/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/06.LAMP、LNMP学习/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/07.Zabbix监控企业实战/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/07.Zabbix监控企业实战/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/01.LVS负载均衡学习.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/01.LVS负载均衡学习.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/02.Nginx+keepalived 双机热备_主从.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/02.Nginx+keepalived 双机热备_主从.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/03.Nginx+keepalived双主架构.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/03.Nginx+keepalived双主架构.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/04.Redis+keepalived高可用集群实战.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/04.Redis+keepalived高可用集群实战.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/05.NFS+keepalived实现高可用共享.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/05.NFS+keepalived实现高可用共享.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/07.MySQL主主同步高可用架构.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/07.MySQL主主同步高可用架构.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/08.MySQL双主+keepalived高可用集群.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/08.MySQL双主+keepalived高可用集群.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/09.Haproxy+keepalived主从-主主高可用架构.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/09.Haproxy+keepalived主从-主主高可用架构.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/10.LVS+Keepalived主从_主主高可用集群.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/10.LVS+Keepalived主从_主主高可用集群.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/11.MySQL读、写分离解决方案.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/11.MySQL读、写分离解决方案.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/08.Linux构建高可用架构/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/09.Zabbix 3.0 从入门到精通/01.zabbix监控介绍.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/09.Zabbix 3.0 从入门到精通/01.zabbix监控介绍.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/09.Zabbix 3.0 从入门到精通/02.安装zabbix.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/09.Zabbix 3.0 从入门到精通/02.安装zabbix.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/09.Zabbix 3.0 从入门到精通/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/09.Zabbix 3.0 从入门到精通/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Linux_shell/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Linux_shell/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/01.华为设备数通玩转/01.HCNA基础知识.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/01.华为设备数通玩转/02.HCNA实验举例.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/01.华为设备数通玩转/02.HCNA实验举例.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/01.华为设备数通玩转/03.华为路由器、交换机常用命令.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/01.华为设备数通玩转/03.华为路由器、交换机常用命令.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/01.华为设备数通玩转/04.小型园区组网场景.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/01.华为设备数通玩转/04.小型园区组网场景.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/01.华为设备数通玩转/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/01.华为设备数通玩转/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/02.华为USG防火墙玩转/01.华为防火墙玩转.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/02.华为USG防火墙玩转/01.华为防火墙玩转.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/02.华为USG防火墙玩转/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/02.华为USG防火墙玩转/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/03.思科设备数通复习/01.常用基本命令.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/03.思科设备数通复习/01.常用基本命令.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/03.思科设备数通复习/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/03.思科设备数通复习/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/04.H3C数通玩转/1.H3C设备升级版本补丁.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/04.H3C数通玩转/1.H3C设备升级版本补丁.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/04.H3C数通玩转/2.交换机配置堆叠.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/04.H3C数通玩转/2.交换机配置堆叠.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/04.H3C数通玩转/3.配置H3C交换机SSH.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/04.H3C数通玩转/3.配置H3C交换机SSH.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/04.H3C数通玩转/4.配置eth-trunk.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/04.H3C数通玩转/4.配置eth-trunk.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/04.H3C数通玩转/5.H3C 40G1分4 10G接口.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/04.H3C数通玩转/5.H3C 40G1分4 10G接口.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/04.H3C数通玩转/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/04.H3C数通玩转/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Network_route_switch/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Network_route_switch/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/01.字符编码处理.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/01.字符编码处理.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/02.代码注释.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/02.代码注释.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/03.字符串数据类型.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/03.字符串数据类型.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/04.列表数据类型.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/04.列表数据类型.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/05.元祖数据类型.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/05.元祖数据类型.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/06.字典数据结构.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/06.字典数据结构.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/07.集合数据类型.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/07.集合数据类型.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/08.数据类型转换.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/08.数据类型转换.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/09.关于深浅拷贝.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/09.关于深浅拷贝.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/10.列表实现堆和队列.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/10.列表实现堆和队列.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/11.内置常量与逻辑运算符、比较运算符.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/11.内置常量与逻辑运算符、比较运算符.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/01.Python数据类型/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/02.流程控制语句/01.选择语句.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/02.流程控制语句/01.选择语句.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/02.流程控制语句/02.for循环语句.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/02.流程控制语句/02.for循环语句.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/02.流程控制语句/03.while循环.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/02.流程控制语句/03.while循环.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/02.流程控制语句/04.switch语句的替代方案.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/02.流程控制语句/04.switch语句的替代方案.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/02.流程控制语句/05.实现一个简单购物车的代码.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/02.流程控制语句/05.实现一个简单购物车的代码.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/02.流程控制语句/06.手写一个三级菜单.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/02.流程控制语句/06.手写一个三级菜单.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/02.流程控制语句/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/02.流程控制语句/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/03.函数/01.定义一个函数.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/03.函数/01.定义一个函数.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/03.函数/02.位置参数.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/03.函数/02.位置参数.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/03.函数/03.定义关键字参数.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/03.函数/03.定义关键字参数.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/03.函数/04.默认值参数.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/03.函数/04.默认值参数.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/03.函数/05.可变参数.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/03.函数/05.可变参数.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/03.函数/06.函数的解包.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/03.函数/06.函数的解包.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/03.函数/07.函数调用时参数传递方法.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/03.函数/07.函数调用时参数传递方法.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/03.函数/08.函数的返回值.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/03.函数/08.函数的返回值.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/03.函数/09.变量的作用域.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/03.函数/09.变量的作用域.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/03.函数/10.匿名函数的用法.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/03.函数/10.匿名函数的用法.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/03.函数/11.匹配字符的函数.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/03.函数/11.匹配字符的函数.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/03.函数/12.列表作为默认参数的陷阱.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/03.函数/12.列表作为默认参数的陷阱.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/03.函数/13.一个求值的函数例子.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/03.函数/13.一个求值的函数例子.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/03.函数/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/03.函数/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/04.内建函数/01.常用的内建函数.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/04.内建函数/01.常用的内建函数.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/04.内建函数/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/04.内建函数/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/05.推导式/01.列表推导式.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/05.推导式/01.列表推导式.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/05.推导式/02.字典推导式.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/05.推导式/02.字典推导式.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/05.推导式/03.推导式进阶.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/05.推导式/03.推导式进阶.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/05.推导式/04.集合推导式.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/05.推导式/04.集合推导式.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/05.推导式/05.生成器推导式.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/05.推导式/05.生成器推导式.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/05.推导式/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/05.推导式/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/06.迭代器_生成器_装饰器/01.迭代器.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/06.迭代器_生成器_装饰器/01.迭代器.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/06.迭代器_生成器_装饰器/02.itertools模块中常用的工具函数.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/06.迭代器_生成器_装饰器/02.itertools模块中常用的工具函数.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/06.迭代器_生成器_装饰器/03.生成器.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/06.迭代器_生成器_装饰器/03.生成器.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/06.迭代器_生成器_装饰器/04.装饰器.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/06.迭代器_生成器_装饰器/04.装饰器.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/06.迭代器_生成器_装饰器/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/06.迭代器_生成器_装饰器/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/01.什么是面对对象设计.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/01.什么是面对对象设计.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/02.类的方法.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/02.类的方法.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/03.类中的__init__方法.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/03.类中的__init__方法.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/04.实例属性是什么？.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/04.实例属性是什么？.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/06.类中可调用自己方法和外部函数.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/06.类中可调用自己方法和外部函数.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/07.类属性和实例属性.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/07.类属性和实例属性.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/08.类方法、实例方法、静态方法.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/08.类方法、实例方法、静态方法.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/10.方法的重写.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/10.方法的重写.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/11.类的继承.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/11.类的继承.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/12.方法的动态特性.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/12.方法的动态特性.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/14.类的高级特性.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/14.类的高级特性.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/15.一些魔法方法.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/15.一些魔法方法.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/16.类的反射，设置、删除、检测.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/16.类的反射，设置、删除、检测.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/17.类属性描述符.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/17.类属性描述符.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/18.多态-鸭子类型.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/18.多态-鸭子类型.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/19.一个简单的类示例.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/19.一个简单的类示例.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/20.人开枪射击子弹_OOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/20.人开枪射击子弹_OOP.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/07.面对对象设计_OOP/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.1异常处理/1.异常处理.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.1异常处理/1.异常处理.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.1异常处理/2.断言操作（抛出异常）.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.1异常处理/2.断言操作（抛出异常）.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.1异常处理/3.自定义异常类.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.1异常处理/3.自定义异常类.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.1异常处理/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.1异常处理/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/01.open()函数介绍.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/01.open()函数介绍.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/02.读写文件.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/02.读写文件.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/03.使用with语句读写文件.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/03.使用with语句读写文件.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/04.高级文件操作.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/04.高级文件操作.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/05.目录操作.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/05.目录操作.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/06.目录迭代的两种方式.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/06.目录迭代的两种方式.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/07.批量文件重命名.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/07.批量文件重命名.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/08.读取文件向xls中写入姓名和考号.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/08.读取文件向xls中写入姓名和考号.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/09.获取当前的路径.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/09.获取当前的路径.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/10.StringIO和BytesIO用法.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/10.StringIO和BytesIO用法.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/09.正则表达式/01.正则表达式.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/09.正则表达式/01.正则表达式.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/09.正则表达式/02.匹配字符串示例.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/09.正则表达式/02.匹配字符串示例.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/09.正则表达式/03.替换字符串示例.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/09.正则表达式/03.替换字符串示例.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/09.正则表达式/04.分割字符串示例.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/09.正则表达式/04.分割字符串示例.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/09.正则表达式/05.初始化正则.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/09.正则表达式/05.初始化正则.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/09.正则表达式/06.正则表达式举例.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/09.正则表达式/06.正则表达式举例.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/09.正则表达式/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/09.正则表达式/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/10.Python中的包和模块/01.模块与包.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/10.Python中的包和模块/01.模块与包.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/10.Python中的包和模块/02.包的讲解.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/10.Python中的包和模块/02.包的讲解.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/10.Python中的包和模块/03.python中 __main__正确理解.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/10.Python中的包和模块/03.python中 __main__正确理解.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/10.Python中的包和模块/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/10.Python中的包和模块/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/11.Python网络编程/01.python网络编程基础.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/11.Python网络编程/01.python网络编程基础.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/11.Python网络编程/02.socket编程.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/11.Python网络编程/02.socket编程.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/11.Python网络编程/03.socketserver编程.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/11.Python网络编程/03.socketserver编程.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/11.Python网络编程/04.python收发邮件学习.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/11.Python网络编程/04.python收发邮件学习.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/11.Python网络编程/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/11.Python网络编程/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/01.Python操作mysql数据库.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/01.Python操作mysql数据库.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/02.Python操作SQLite数据库.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/02.Python操作SQLite数据库.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/03.Python封装mysql数据库.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/03.Python封装mysql数据库.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/04.mysql介绍和安装.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/04.mysql介绍和安装.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/05.数据库操作.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/05.数据库操作.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/06.数据库增删改查.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/06.数据库增删改查.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/01.csv模块文件读写.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/01.csv模块文件读写.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/02.json、pickle、shelve模块.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/02.json、pickle、shelve模块.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/03.shutil模块.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/03.shutil模块.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/04.time、datetime模块.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/04.time、datetime模块.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/05.randome模块.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/05.randome模块.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/06.os(系统模块).html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/06.os(系统模块).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/07.sys(系统操作模块).html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/07.sys(系统操作模块).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/08.configparser模块.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/08.configparser模块.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/09.hashlib模块.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/09.hashlib模块.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/10.re模块.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/10.re模块.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/11.logging模块.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/11.logging模块.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/12.zipfile、tarfile模块学习.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/12.zipfile、tarfile模块学习.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/13.subprocess模块.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/13.subprocess模块.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/14.collections模块.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/14.collections模块.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/15.Redis模块.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/15.Redis模块.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/13.Python标准库/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/13.Python标准库/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/14.Python三方库/01.psutil模块.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/14.Python三方库/01.psutil模块.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/14.Python三方库/02.paramiko（ssh秘钥执行命令).html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/14.Python三方库/02.paramiko（ssh秘钥执行命令).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/14.Python三方库/03.IPy模块.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/14.Python三方库/03.IPy模块.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/14.Python三方库/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/14.Python三方库/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/20.自动化运维工具/01.Ansible入门与playbook实战.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/20.自动化运维工具/01.Ansible入门与playbook实战.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/20.自动化运维工具/02.Saltstack安装使用入门.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/20.自动化运维工具/02.Saltstack安装使用入门.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/20.自动化运维工具/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/20.自动化运维工具/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/21.Django学习/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/21.Django学习/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/22.Python进阶学习/01.数据结构和算法.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/22.Python进阶学习/01.数据结构和算法.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/22.Python进阶学习/02.字符串和文本.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/22.Python进阶学习/02.字符串和文本.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/22.Python进阶学习/03.迭代器与生成器.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/22.Python进阶学习/03.迭代器与生成器.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/22.Python进阶学习/04.上下文管理器.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/22.Python进阶学习/04.上下文管理器.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/22.Python进阶学习/05.解压多个可迭代对象进行赋值.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/22.Python进阶学习/05.解压多个可迭代对象进行赋值.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/22.Python进阶学习/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/22.Python进阶学习/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/01.基础语法复习.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/01.基础语法复习.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/02.爬虫原理和网页结构.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/02.爬虫原理和网页结构.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/03.我的第一个爬虫程序.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/03.我的第一个爬虫程序.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/04.正则表达式.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/04.正则表达式.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/05.re模块的常用方法.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/05.re模块的常用方法.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/06.三种爬虫模式性能对比.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/06.三种爬虫模式性能对比.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/案例：爬取小说.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/案例：爬取小说.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/案例：爬取糗事百科内容.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/案例：爬取糗事百科内容.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/案例：爬取豆瓣TOP250的书籍.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/案例：爬取豆瓣TOP250的书籍.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/案例：爬取起点中文网数据存到excel中.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/案例：爬取起点中文网数据存到excel中.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/案例：爬取酷狗TOP500的数据.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/23.Python网络爬虫/案例：爬取酷狗TOP500的数据.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/24.前端技术/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/24.前端技术/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/25.Python高手之路/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/25.Python高手之路/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/26.Python开发环境部署/01.Notpad++和Python远程开发.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/26.Python开发环境部署/01.Notpad++和Python远程开发.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/26.Python开发环境部署/02.PyCharm+python云主机远程调试开发.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/26.Python开发环境部署/02.PyCharm+python云主机远程调试开发.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/26.Python开发环境部署/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/26.Python开发环境部署/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/Python/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/VMware_study/01.VMware学习/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/VMware_study/01.VMware学习/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/VMware_study/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/VMware_study/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/01.常用较多命名查询/15.grep.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/01.常用较多命名查询/15.grep.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/01.常用较多命名查询/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/01.常用较多命名查询/index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/6.Apache服务搭建.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/6.Apache服务搭建.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/7.使用iSCSI服务部署网络存储.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/7.使用iSCSI服务部署网络存储.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/8.远程登录Linux系统.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/8.远程登录Linux系统.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/04.流程控制.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/04.流程控制.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/08.三剑客之sed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/08.三剑客之sed.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/09.三剑客-awk.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/09.三剑客-awk.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/10.杂项.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/10.杂项.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/04.玩转数据库（mysql、Redis）/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/04.玩转数据库（mysql、Redis）/index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/07.Zabbix监控企业实战/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/07.Zabbix监控企业实战/index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/01.字符编码处理.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/01.字符编码处理.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/03.字符串数据类型.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/03.字符串数据类型.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/04.列表数据类型.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/04.列表数据类型.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/05.元祖数据类型.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/05.元祖数据类型.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/06.字典数据结构.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/06.字典数据结构.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/08.数据类型转换.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/08.数据类型转换.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/02.流程控制语句/01.选择语句.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/02.流程控制语句/01.选择语句.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/02.流程控制语句/02.for循环语句.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/02.流程控制语句/02.for循环语句.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/03.函数/09.变量的作用域.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/03.函数/09.变量的作用域.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/03.函数/10.匿名函数的用法.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/03.函数/10.匿名函数的用法.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/04.内建函数/01.常用的内建函数.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/04.内建函数/01.常用的内建函数.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/05.推导式/01.列表推导式.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/05.推导式/01.列表推导式.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/05.推导式/02.字典推导式.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/05.推导式/02.字典推导式.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/05.推导式/04.集合推导式.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/05.推导式/04.集合推导式.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/03.类中的__init__方法.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/03.类中的__init__方法.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/08.类方法、实例方法、静态方法.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/08.类方法、实例方法、静态方法.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/15.一些魔法方法.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/15.一些魔法方法.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/08.Python文件操作/02.读写文件.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/08.Python文件操作/02.读写文件.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/08.Python文件操作/04.高级文件操作.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/08.Python文件操作/04.高级文件操作.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/09.正则表达式/01.正则表达式.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/09.正则表达式/01.正则表达式.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/10.Python中的包和模块/01.模块与包.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/10.Python中的包和模块/01.模块与包.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/12.Python操作数据库/01.Python操作mysql数据库.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/12.Python操作数据库/01.Python操作mysql数据库.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/01.csv模块文件读写.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/01.csv模块文件读写.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/07.sys(系统操作模块).txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/07.sys(系统操作模块).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/08.configparser模块.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/08.configparser模块.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/aliyun/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/aliyun/index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ECS/01.aliyun安装命令行工具.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ECS/01.aliyun安装命令行工具.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ECS/02.安全组实践一.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ECS/02.安全组实践一.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ECS/03.Linux远程连接ESC实例.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ECS/03.Linux远程连接ESC实例.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ECS/04.迁云工具和P2V.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ECS/04.迁云工具和P2V.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ECS/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ECS/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/01.ECS_考点.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/01.ECS_考点.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/02.OSS_考点.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/02.OSS_考点.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/03.SLB_考点.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/03.SLB_考点.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/04.VPC_考点.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/04.VPC_考点.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/05.弹性伸缩-Auto_Scaling.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/05.弹性伸缩-Auto_Scaling.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/06.CDN_内容分发.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/06.CDN_内容分发.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/07.云盾云安全.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/07.云盾云安全.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/08.云计算小知识.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/08.云计算小知识.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/09.RDS云关系型数据库.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/09.RDS云关系型数据库.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ali_ACP_test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/aliyun/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/genindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/genindex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/objects.inv" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/objects.inv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/other/01.Git入门到熟练/1.Git基础操作.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/other/01.Git入门到熟练/1.Git基础操作.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/other/01.Git入门到熟练/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/other/01.Git入门到熟练/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/other/02.构建自己的写书博客/1.Python利用sphinx构建个人博客.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/other/02.构建自己的写书博客/1.Python利用sphinx构建个人博客.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/other/02.构建自己的写书博客/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/other/02.构建自己的写书博客/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/other/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/other/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/searchindex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Java/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Java/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/15.grep.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/15.grep.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/11.iptables与firewalld 防火墙.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/11.iptables与firewalld 防火墙.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/6.Apache服务搭建.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/6.Apache服务搭建.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/7.使用iSCSI服务部署网络存储.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/7.使用iSCSI服务部署网络存储.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/8.远程登录Linux系统.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/8.远程登录Linux系统.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/25.Centos7 openssh升级到7.9p1.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/25.Centos7openssh升级到7.9p1.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/04.流程控制.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/04.流程控制.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/08.三剑客之sed.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/08.三剑客之sed.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/09.三剑客-awk.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/09.三剑客-awk.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/10.杂项.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/10.杂项.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/04.玩转数据库（mysql、Redis）/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/04.玩转数据库（mysql、Redis）/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/07.Zabbix监控企业实战/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/07.Zabbix监控企业实战/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/01.字符编码处理.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/01.字符编码处理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/03.字符串数据类型.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/03.字符串数据类型.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/04.列表数据类型.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/04.列表数据类型.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/05.元祖数据类型.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/05.元祖数据类型.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/06.字典数据结构.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/06.字典数据结构.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/08.数据类型转换.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/08.数据类型转换.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/02.流程控制语句/01.选择语句.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/02.流程控制语句/01.选择语句.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/02.流程控制语句/02.for循环语句.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/02.流程控制语句/02.for循环语句.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/03.函数/09.变量的作用域.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/03.函数/09.变量的作用域.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/03.函数/10.匿名函数的用法.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/03.函数/10.匿名函数的用法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/04.内建函数/01.常用的内建函数.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/04.内建函数/01.常用的内建函数.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/05.推导式/01.列表推导式.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/05.推导式/01.列表推导式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/05.推导式/02.字典推导式.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/05.推导式/02.字典推导式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/05.推导式/04.集合推导式.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/05.推导式/04.集合推导式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/03.类中的__init__方法.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/03.类中的__init__方法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/04.实例属性是什么？.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/04.实例属性是什么？.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/08.类方法、实例方法、静态方法.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/08.类方法、实例方法、静态方法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/15.一些魔法方法.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/15.一些魔法方法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/08.Python文件操作/02.读写文件.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/08.Python文件操作/02.读写文件.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/08.Python文件操作/04.高级文件操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/08.Python文件操作/04.高级文件操作.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/09.正则表达式/01.正则表达式.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/09.正则表达式/01.正则表达式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/10.Python中的包和模块/01.模块与包.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/10.Python中的包和模块/01.模块与包.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/10.Python中的包和模块/02.包的讲解.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/10.Python中的包和模块/02.包的讲解.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/11.2 线程和进程/2.线程.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/11.2 线程和进程/2.线程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/12.Python操作数据库/01.Python操作mysql数据库.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/12.Python操作数据库/01.Python操作mysql数据库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/13.Python标准库/01.csv模块文件读写.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/13.Python标准库/01.csv模块文件读写.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/13.Python标准库/07.sys(系统操作模块).md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/13.Python标准库/07.sys(系统操作模块).md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/13.Python标准库/08.configparser模块.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/13.Python标准库/08.configparser模块.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/13.Python标准库/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/13.Python标准库/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/aliyun/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/aliyun/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/index.rst" afterDir="false" />
     </list>
     <ignored path="my_blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -845,16 +119,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/Python/10.Python中的包和模块/01.模块与包.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="729">
-                <caret line="53" column="39" lean-forward="true" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+              <first_editor relative-caret-position="477">
+                <caret line="44" column="3" lean-forward="true" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst">
+          <provider selected="true" editor-type-id="restructured-text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -955,7 +234,6 @@
         <option value="$PROJECT_DIR$/source/Java/05.类与对象/02.静态变量、常量和方法（static关键字）.md" />
         <option value="$PROJECT_DIR$/source/Java/05.类与对象/index.rst" />
         <option value="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/25.Centos7 openssh升级到7.9p1.md" />
-        <option value="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst" />
         <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/01.字符编码处理.md" />
         <option value="$PROJECT_DIR$/source/Python/05.推导式/01.列表推导式.md" />
         <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/05.元祖数据类型.md" />
@@ -966,6 +244,7 @@
         <option value="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.md" />
         <option value="$PROJECT_DIR$/source/Python/10.Python中的包和模块/02.包的讲解.md" />
         <option value="$PROJECT_DIR$/source/Python/10.Python中的包和模块/01.模块与包.md" />
+        <option value="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst" />
       </list>
     </option>
   </component>
@@ -999,14 +278,14 @@
               <item name="hujianli_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="hujian_blog" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="Linux_shell" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hujianli_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="hujian_blog" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
-              <item name="10.Python中的包和模块" type="462c0819:PsiDirectoryNode" />
+              <item name="Linux_shell" type="462c0819:PsiDirectoryNode" />
+              <item name="02.Linux服务器架设" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1470,7 +749,7 @@
       <workItem from="1555315211454" duration="3273000" />
       <workItem from="1555324815800" duration="745000" />
       <workItem from="1555329589808" duration="4515000" />
-      <workItem from="1555376835967" duration="3889000" />
+      <workItem from="1555376835967" duration="4192000" />
     </task>
     <task id="LOCAL-00001" summary="默认的">
       <created>1550051667171</created>
@@ -1640,11 +919,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554359460140</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="4/16_new_commit">
+      <created>1555380931527</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1555380931527</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="415319000" />
+    <option name="totallyTimeSpent" value="415622000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1725,7 +1011,8 @@
     <MESSAGE value="3/28_new_commit10:15" />
     <MESSAGE value="3/30_new_commit19:47" />
     <MESSAGE value="4/4_new_commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="4/4_new_commit" />
+    <MESSAGE value="4/16_new_commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="4/16_new_commit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/source/Linux_shell/08.Linux构建高可用架构/07.MySQL主主同步高可用架构.md">
@@ -1800,10 +1087,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/25.Centos7 openssh升级到7.9p1.md">
+    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/25.Centos7openssh升级到7.9p1.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="442">
@@ -2137,12 +1421,15 @@
     <entry file="file://$PROJECT_DIR$/source/Python/10.Python中的包和模块/01.模块与包.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="729">
-            <caret line="53" column="39" lean-forward="true" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+          <first_editor relative-caret-position="477">
+            <caret line="44" column="3" lean-forward="true" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
   </component>
 </project>
