@@ -28,6 +28,7 @@
     VMware_study/index
     other/index
     Python/index
+    DevOps_Study/index
 
 
 

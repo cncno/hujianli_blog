@@ -7,6 +7,49 @@
 3.局部作用局：某个函数内部范围
 ```
 
+## global 变量修改 局部->全局 
+``` 
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+Var_name = "hujianli_global"
+
+def change_and_print_global():
+    global Var_name
+    Var_name = "hujianli local_Var"
+    print("Inside change_and_print_global: ", Var_name)
+
+print(Var_name)
+change_and_print_global()
+print(Var_name)
+```
+输出结果：
+```
+hujianli_global
+Inside change_and_print_global:  hujianli local_Var
+hujianli local_Var
+``` 
+
+## local()和global()函数的使用
+``` 
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+Var1_name = "hujianli_Var1"
+def change_local():
+    Var1_name = "hujianli_local_Var1"
+    #打印局部命名空间的字典
+    print("locals:",locals())   
+
+print(Var1_name)
+
+#打印全局命名空间的字典
+change_local()
+print("global: ", globals())
+```
+
+locals():    #打印局部命名空间的字典
+globals()    #打印全局命名空间的字典
+
+
 #### 代码示例1
 ```
 #!/usr/bin/env python

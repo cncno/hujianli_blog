@@ -1,0 +1,67 @@
+# 一维数组的创建和使用
+## 创建一维数组
+![](../../_static/arry1.PNG)
+
+### 一维数组初始化
+![](../../_static/arry2.PNG)
+![](../../_static/array_legth.PNG)
+eg
+``` 
+
+
+public class Demo {
+	public static void main(String[] args) {
+//		定义三种array初始化方法
+		int a[]=new int[3];
+		a[0]=1;
+		a[1]=2;
+		a[2]=3;
+		
+		int b[]= new int[] {4,5,6,7};
+		int c[]= {8,9,7,6};
+		
+		System.out.println(a[1]);
+		System.out.println(b[1]);
+		System.out.println(c[1]);
+		System.out.println("a数组的长度为："+a.length);
+		System.out.println("b数组的长度为："+b.length);
+		System.out.println("c数组的长度为："+c.length);
+	}
+
+}
+
+# 数组的长度限制既可以是整数也可以是一个公式，
+例如 
+int a[]=new int[2+3];
+```
+![](../../_static/array4.PNG)
+
+- 小实验
+``` 
+
+public class array_test1 {
+	public static void main(String[] args) {
+		//定义数组，并进行初始化值，12个月的天数
+		int month[] = new int[] {31,28,31,30,31,30,31,31,30,31,31};
+//		遍历数组进行值的输出
+		for (int i = 0; i < month.length; i++) {
+			System.out.println(i+1+"月有"+month[i]+"天");
+		}
+	}
+
+}
+
+
+//输出结果
+1月有31天
+2月有28天
+3月有31天
+4月有30天
+5月有31天
+6月有30天
+7月有31天
+8月有31天
+9月有30天
+10月有31天
+11月有31天
+```

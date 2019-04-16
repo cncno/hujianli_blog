@@ -1,0 +1,162 @@
+# 字符串
+
+## String类
+
+### 声明字符串
+* 在Java语言中字符串必须包含在一对双引号（""）之内。例如：
+``` 
+"23.23" 、"ABCDEF"、"你好"
+```
+在Java中由双引号（“”）包围的都是字符串，不能作为其他数据类型来使用，如“1+2”的输出，
+结果不可能是3.
+
+声明字符串变量：
+``` 
+String str;
+```
++ String: 指定该变量为字符串类型
++ str：任意有效的标识符，表示字符串变量的名称
+
+eg：
+
+声明字符串变量s，实现代码如下：
+```
+String s; 
+```
+    声明字符串变量您必须经过初始化才能使用，否则编译器会报出：“变量未被初始化错误”。
+
+### 创建字符串
+
+Java语言中将字符串作为对象来管理，可以像创建其他类对象一样来创建字符串对象。
+String类的常用构造方法如下：
+    
+    （1）String[char a[]]
+用一个字符数组a创建String对象
+
+
+eg：用一个字符数组a创建String对象。
+``` 
+char a[]={"g","o","o","d"};
+String s=new String(a);
+```
+等价于
+``` 
+String s = new String("good")
+```
+
+
+    (2) String[char a[].int,offset,int length]
+提取字符数组a中的一部分创建一个字符串对象，参数offset表示开始截取字符串的位置，
+length表示截取字符串的长度。
+
+
+eg：提取字符数组a中的一部分创建一个字符串对象
+``` 
+char a[]={'s','t','u','d','e','n','t'};
+String s = new String(a,2,4);
+```
+等价于
+``` 
+String s = new String("uden");
+```
+
+(3) String(char[] value)
+该构造方法可分配一个新的String对象，使其表示字符数组参数中所有元素连接的结果。
+
+eg：创建字符数组，将数组中的所有元素连接成一个String对象
+    
+    char a[]={'s','t','u','d','e','n','t'};
+    String s = new String(a);
+ 
+等价于
+    
+    String s = new String('student');
+
+
+除了通过以上几种使用String类的构造方法来创建字符串变量外，还可以通过字符串常量的引用
+赋值给一个字符串变量
+
+    String str1,str2;
+    str1="We are students"
+    str2="We are students"
+
+此时str1和str2在内存中指向是同一个地址。
+
+## 连接字符串
+
+### 连接多个字符串
+eg:
+``` 
+public class Join {
+
+	public static void main(String[] args) {
+		String s1 = new String("hello");		//声明String对象s1
+		String s2 = new String("word");			//声明String对象s2
+		String s = s1 + " " + s2;			//将对象s1和s2连接后赋值给s
+		System.out.println(s);			//将s输出
+		
+	}
+
+}
+
+//输出信息
+hello word
+```
+
+Java中响了的字符串不能分开在两行中写，例如：
+    
+    System.out.println("I like
+        Java");
+这种写法是错误的，如果一个字符串太长，为了便于阅读，可以在书写的时候使用“+”。
+这样就可以将两个字符串串联起来，之后再加号处换行。
+        
+            System.out.println("I like" +
+        "Java");
+        
+        
+### 连接其他数据类型
+字符串也可同其他基本数据类型进行连接。如果将字符串同这些数据类型数据进行连接，会将
+这些数据直接转换成字符串。
+
+
+eg：
+``` 
+
+public class Link {
+
+	public static void main(String[] args) {
+		int booktime = 4;		//声明的int型变量booktime
+		float practice = 2.5f;	//声明的float型变量practice
+//		将字符串与整型，浮点型变量相连，并将结果输出
+		System.out.println("我每天花费" + booktime + "小时看书;"
+				+ practice + "小时上机练习");
+	}
+
+}
+
+//输出信息
+我每天花费4小时看书;2.5小时上机练习
+```
+本实例实现的是将字符串常量与整型变量booktime和浮点型变量practice相连后的结果输出。
+booktime和practice都不是字符串，当它们与字符串相连时会自动调用toString()方法，
+将其转换成字符串形式，然后参与连接。
+
+```
+只要“+”运算符的一个操作数是字符串，编译器就会将拧一个操作数转换成字符串形式，所以应谨慎地将
+其他数据类型与字符串相连，以免出现意想不到的结果。 
+```
+``` 
+System.out.println("我每天花费" + booktime + "小时看书;"
+				+ (booktime + practice) + "小时上机练习");
+```
+
+
+
+
+
+
+
+
+
+
+

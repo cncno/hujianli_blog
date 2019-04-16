@@ -105,18 +105,17 @@ re.search("<td>\w+?</td>",aa).group()
 
 
 ## 正则表达式匹配模式
-     方法	    描述	                     返回值
-    compile(pattern[, flags])	根据包含正则表达式的字符串创建模式对象	re对象
-    search(pattern, string[, flags])	在字符串中查找	第一个匹配到的对象或者None
-    match(pattern, string[, flags])	在字符串的开始处匹配模式	在字符串开头匹配到的对象或者None
-    split(pattern, string[, maxsplit=0,flags])	根据模式的匹配项来分割字符串	分割后的字符串列表
-    findall(pattern, string,flags)	列出字符串中模式的所有匹配项	所有匹配到的字符串列表
-    sub(pat,repl, string[,count=0,flags])	将字符串中所有的pat的匹配项用repl替换	完成替换后的新字符串
-    finditer(pattern, string,flags)	将所有匹配到的项生成一个迭代器	所有匹配到的字符串组合成的迭代器
-    subn(pat,repl, string[,count=0,flags])	在替换字符串后，同时报告替换的次数	完成替换后的新字符串及替换次数
-    escape（string）	将字符串中所有特殊正则表达式字符串转义	转义后的字符串
+     方法	                                描述	                                        返回值
+    compile(pattern[, flags])	根据包含正则表达式的字符串创建模式对象	                    re对象
+    search(pattern, string[, flags])	在字符串中查找	                             第一个匹配到的对象或者None
+    match(pattern, string[, flags])	在字符串的开始处匹配模式	                         在字符串开头匹配到的对象或者None
+    split(pattern, string[, maxsplit=0,flags])	根据模式的匹配项来分割字符串	         分割后的字符串列表
+    findall(pattern, string,flags)	列出字符串中模式的所有匹配项	                     所有匹配到的字符串列表
+    sub(pat,repl, string[,count=0,flags])	将字符串中所有的pat的匹配项用repl替换	 完成替换后的新字符串
+    finditer(pattern, string,flags)	将所有匹配到的项生成一个迭代器	                 所有匹配到的字符串组合成的迭代器
+    subn(pat,repl, string[,count=0,flags])	在替换字符串后，同时报告替换的次数	     完成替换后的新字符串及替换次数
+    escape（string）	将字符串中所有特殊正则表达式字符串转义	                     转义后的字符串
     purge(pattern)	清空正则表达式
-    template(pattern[,flags])	编译一个匹配模板	模式对象
-    fullmatch(pattern, string[, flags])	match方法的全字符串匹配版本	类似match的返回值
-
+    template(pattern[,flags])	编译一个匹配模板                                      模式对象
+    fullmatch(pattern, string[, flags])	match方法的全字符串匹配版本	                类似match的返回值
 ```

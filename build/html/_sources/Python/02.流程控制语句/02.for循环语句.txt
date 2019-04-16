@@ -1,4 +1,11 @@
 # for循环语句
+Python 语言内置了几种常用的迭代函数， 既方便又实用。
+
+    enumerate (seq ）        # 编号迭代
+    sorted (seq)            # 排序迭代
+    reversed (seq)          # 翻转迭代
+    zip(segl, seq2,......）       # 并行迭代
+
 
 
 ### 说明
@@ -9,6 +16,17 @@ for语句是python中的循环控制语句，可用来遍历某一对象，还�
     break 2     跳出2层循环
 ###### 建议
 不建议循环超过三层，层次太多，逻辑思路会凌乱
+
+eg
+``` 
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+print("今有一个数，在100以内，三三数之剩余2，五五数之剩余4，七七数之剩余3，请问这个数是什么？")
+for num in range(100):
+    if num %3==2 and num %5 ==4 and num%7 ==3:
+        print("这个数是："+ str(num))
+```
+
 
 ### 代码示例
 ```python

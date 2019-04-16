@@ -33,6 +33,9 @@
 
 #### 4.from module_a import *
 - 将对象内的所有内容全部导入。非常容易发生命名冲突，请慎用！
+- 当不同的模块中又相同变量名的变量时，尽量使用import而不是from，避免名字冲突。
+- 这将很难确认变量来自何处，当一个程序中又多个form xxx import *的时候
+
 ```
 from module_a import *
 
@@ -43,3 +46,9 @@ func()  # 从module导入的func被main的func覆盖了
 ### 记忆方法参考下图：
 ![package1](../../_static/package1.png)
 ![package2](../../_static/package2.png)
+
+
+### Python中自带电池
+
+#### 自带常用的标准库
+![](../../_static/Standard_library.PNG)

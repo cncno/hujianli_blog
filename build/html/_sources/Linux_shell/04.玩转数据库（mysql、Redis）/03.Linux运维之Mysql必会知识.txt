@@ -1,0 +1,137 @@
+# Linux运维之mysql必会知识
+
+## MySQL概述
+
+###MySQL  简介
+
+```
+MySQL 是最流行的开放源码 SQL 数据库管理系统，它是由 MySQLAB 公司开发、发布并支持
+的。它的插入式存储引擎可以让使用者根据实际应用使用不同的存储。
+```
+### MySQL  相关链接
+
+
+```
+
+MySQL 官方网站：http://www.mysql.com/
+MySQL 社区版本下载地址：http://www.mysql.com/downloads/mysql/
+MySQL 中文文档：http://dev.mysql.com/doc/refman/5.1/zh/index.html
+MySQL 实用文档：http://www.unixhot.com/pdf/mysql.pdf
+
+```
+
+## Mysql源码安装
+```
+一.环境准备
+环境：centos-7.3 一台
+软件版本：mysql-5.7.21
+说明：使用二进制包进行初始化操作，并不进行make等编译操作。
+```
+1.安装依赖
+```
+yum -y install autoconf libaio bison ncurses-devel
+```
+2.创建用户
+```
+groupadd mysql
+useradd -g mysql -s /sbin/nologin mysql
+```
+3.清理centos7 默认自带数据库
+```
+yum -y remove mariadb mariadb-server
+```
+二.部署
+1.下载包
+```
+wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.21-linux-glibc2.12-x86_64.tar.gz
+
+tar -xf mysql-5.7.21-linux-glibc2.12-x86_64.tar.gz
+
+移动过去，后面是存放路径
+mv mysql-5.7.21-linux-glibc2.12-x86_64 /usr/local/mysql
+mkdir /var/log/mysql
+mkdir /usr/local/mysql/data
+
+mysql即使root启动还是mysql用户运行的，所以要给权限
+chown -R mysql:mysql /usr/local/mysql
+chown -R mysql:mysql /var/log/mysql
+```
+2.进去删除所有行，添加新的
+
+可参考
+
+[my.cnf生成器](http://imysql.com/my-cnf-wizard.html)
+```
+vim /etc/my.cnf
+
+[client]
+port = 3306
+socket = /tmp/mysql.sock
+
+[mysqld]
+character_set_server=utf8
+init_connect='SET NAMES utf8'
+basedir=/usr/local/mysql
+datadir=/usr/local/mysql/data
+socket=/tmp/mysql.sock
+log-error=/var/log/mysql/mysqld.log
+pid-file=/usr/local/mysql/mysqld.pid
+```
+
+3.初始化
+```
+cd /usr/local/mysql/bin
+
+初始化数据库，没有反应则正确
+/usr/local/mysql/bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --lc_messages_dir=/usr/local/mysql/share --lc_messages=en_US
+```
+4.加入systemctl
+```
+vim /usr/lib/systemd/system/mysql.service
+
+[Unit]
+Description=mysql
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/mysql/support-files/mysql.server start
+ExecReload=/usr/local/mysql/support-files/mysql.server restart
+ExecStop=/usr/local/mysql/support-files/mysql.server stop
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+5.设置环境变量
+echo 'PATH=$PATH':/usr/local/mysql/bin >> /etc/profile
+source /etc/profile
+```
+
+6.启动
+```
+systemctl daemon-reload
+systemctl start mysql
+systemctl enable mysql
+```
+
+    #查看密码
+    cat /var/log/mysqld.log
+    最后一行：root@localhost: 这里就是初始密码
+    
+    #修改mysql的登录密码
+    service mysqld stop
+    
+    #使用 mysqld_safe 来启动mysql服务
+    [root@CentOS ~]# cd /usr/local/mysql/bin/
+    [root@CentOS bin]# ./mysqld_safe --skip-grant-tables &
+    
+    mysql -uroot -p 
+    修改MySQL密码方式：
+            use mysql;
+			首先执行：update user set authentication_string=password('admin#123') where user='root';	
+			然后执行：ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'admin#123';
+			
+			#mysql-8.0.11-winx64初次修改密码
+			ALTER USER root@localhost IDENTIFIED  BY '123456';
+
+

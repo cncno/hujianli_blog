@@ -13,7 +13,7 @@
 
 ### 像设置windos环境变量一样的设置sys.path
 
-    通过sys.path.append('路径')的方法为sys.path路径列表添加你想要的路径。
+    通过sys.path.append('路径')的方法为sys.path路径列表添加你想要的路径。添加临时的环境变量
 
 ```
 import sys
@@ -22,6 +22,8 @@ import os
 new_path = os.path.abspath('../')
 sys.path.append(new_path)
 ```
+
+![](../../_static/py_path.PNG)
 
 ### 模块的搜索顺序是这样的：
 - 当前执行脚本所在目录

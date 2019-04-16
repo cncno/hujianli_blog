@@ -38,7 +38,7 @@ with open('example.ini','w') as configfile:
 ```
 
 ### 读取
-
+![](../../_static/configparser.PNG)
 ```
 import configparser
 
@@ -61,6 +61,7 @@ print(items_list)
 ```
 
 ### 增删改查
+![](../../_static/configParser_write.PNG)
 ```
 import configparser
 

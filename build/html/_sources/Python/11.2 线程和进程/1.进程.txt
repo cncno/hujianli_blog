@@ -1,0 +1,342 @@
+# 进程
+
+### multiprocessing模块
+```
+multiprocessing模块是跨平台版本的多进程模块。Linux上支持os.fork()，windows上使用multiprocessing
+multiprocessing模块提供了一个Process类来代表一个进程对象
+```
+
+```python
+#!/usr/bin/env python
+# -*- coding:utf8 -*-
+'''
+创建子进程时，只需要传入一个执行函数和函数的参数，创建一个Process实例，用start()方法启动，这样创建进程比fork()还要简单。
+
+join()方法可以等待子进程结束后再继续往下运行，通常用于进程间的同步。
+
+'''
+
+
+from multiprocessing import Process
+import os
+
+
+# 子进程需要执行的代码
+def run_proce(name):
+    print("Run child process %s (%s)" % (name, os.getpid()))
+
+
+if __name__ == '__main__':
+    print("Parent process %s." % os.getpid())
+    p = Process(target=run_proce, args=("test",))
+    print("Child process will start.")
+    p.start()
+    p.join()
+    print("Child process end.")
+```
+
+
+
+
+```python
+import os
+import multiprocessing
+
+
+def foo(i):
+    # 同样的参数传递方法
+    print("这里是 ", multiprocessing.current_process().name)
+    print('模块名称:', __name__)
+    print('父进程 id:', os.getppid())  # 获取父进程id
+    print('当前子进程 id:', os.getpid())  # 获取自己的进程id
+    print('------------------------')
+
+
+if __name__ == '__main__':
+
+    for i in range(5):
+        p = multiprocessing.Process(target=foo, args=(i,))
+        p.start()
+```
+
+说明
+
+* 创建子进程时，只需要传入一个执行函数和函数的参数，创建一个Process实例，用start()方法启动，这样创建进程比fork()还要简单。
+
+* join()方法可以等待子进程结束后再继续往下运行，通常用于进程间的同步。
+
+
+### join()方法的使用
+```python
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+from multiprocessing import Process
+import time
+import os
+
+def child_1(n):
+    print("子进程({})开始执行，它的父进程是({})".format(os.getpid(),os.getppid()))
+    t_start = time.time()
+    time.sleep(n)
+    t_end = time.time()
+    print("子进程（{}）执行时间为%0.2f秒".format(os.getpid(), t_end-t_start))
+
+
+def child_2(n):
+    print("子进程({})开始执行，它的父进程是({})".format(os.getpid(), os.getppid()))
+    t_start = time.time()
+    time.sleep(n)
+    t_end = time.time()
+    print("子进程（{}）执行时间为%0.2f秒".format(os.getpid(), t_end - t_start))
+
+
+
+
+def main1():
+    print("主进程开始")
+    print("主进程的PID；{}".format(os.getpid()))
+    p1 = Process(target=child_1, args=(1,))
+    p2 = Process(target=child_2, args=(2,))
+    p1.start()
+    p2.start()
+    print("p1.is_alive={}".format(p1.is_alive()))
+    print("p2.is_alive={}".format(p2.is_alive()))
+    print("p1.name={}".format(p1.name))
+    print("p1.id={}".format(p1.pid))
+    print("p2.name={}".format(p2.name))
+    print("p2.id={}".format(p2.pid))
+    #使用join函数之后，主进程会等待子进程结束之后才继续往下执行
+    p1.join()
+    p2.join()
+    print("主进程结束..")
+
+
+if __name__ == '__main__':
+    main1()
+
+```
+
+### Process子类创建进程
+```python
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+
+from multiprocessing import Process
+import time
+import os
+
+class SubProcess(Process):
+    def __init__(self,interval,name=''):
+        super(SubProcess, self).__init__()
+        self.interval = interval
+        if name:
+            self.name = name
+    def run(self):
+        print("子进程({})开始执行，它的父进程是({})".format(os.getpid(), os.getppid()))
+        t_start = time.time()
+        time.sleep(self.interval)
+        t_end = time.time()
+        print("子进程（{}）执行时间为{:.2f}秒".format(os.getpid(), t_end - t_start))
+
+
+def main1():
+    print("主进程开始")
+    print("主进程的PID；{}".format(os.getpid()))
+    p1 = SubProcess(interval=1, name="mrsoft")
+    p2 = SubProcess(interval=2)
+    # 调用start()方法时会自动执行run()方法
+    p1.start()
+    p2.start()
+    print("p1.is_alive={}".format(p1.is_alive()))
+    print("p2.is_alive={}".format(p2.is_alive()))
+    print("p1.name={}".format(p1.name))
+    print("p1.id={}".format(p1.pid))
+    print("p2.name={}".format(p2.name))
+    print("p2.id={}".format(p2.pid))
+    #使用join函数之后，主进程会等待子进程结束之后才继续往下执行
+    p1.join()
+    p2.join()
+    print("主进程结束..")
+
+
+if __name__ == '__main__':
+    main1()
+
+```
+
+
+### 使用进程池Pool创建进程
+
+```python
+from multiprocessing import Pool
+import os
+import time
+
+
+def task(name):
+    print("子进程 ({})执行的任务是 ({})".format(os.getpid(),name))
+    time.sleep(1)
+
+if __name__ == '__main__':
+    print("父进程 ({})开始执行".format(os.getpid()))
+    p = Pool(4)
+    for i in range(10):
+        p.apply_async(task, args=(i,))
+
+    p.close()
+    p.join()
+    print("所有子进程结束.....")
+```
+
+### 多进程队列的使用
+* Queue模块可以用来进行线程间的通信，让各个线程之间共享数据。
+
+* Python的Queue模块提供了同步、线程安全的队列类，
+包括FIFO（先入先出）队列Queue、LIFO（后入先出）队列LifoQueue和优先级队列PriorityQueue。
+这些队列都实现了锁原语，能够在多线程中直接使用。可以使用队列实现线程间的同步。
+
+![](../../_static/queue.PNG)
+```python
+
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+'''
+
+Queue模块可以用来进行线程间的通信，让各个线程之间共享数据。
+Python的Queue模块提供了同步、线程安全的队列类，
+
+包括FIFO（先入先出）队列Queue、LIFO（后入先出）队列LifoQueue和优先级队列PriorityQueue。
+这些队列都实现了锁原语，能够在多线程中直接使用。可以使用队列实现线程间的同步。
+
+'''
+from multiprocessing import Queue
+
+if __name__ == '__main__':
+    q = Queue(3)    # 设置队列的大小
+    q.put("消息1")
+    q.put("消息2")
+    print("队列是否已满：{}".format(q.full()))
+    q.put("消息3")
+    print("队列是否已满：{}".format(q.full()))
+
+    # try:
+    #     q.put("消息4",block=True,timeout=1)     # 添加消息队列时候等待2s
+    # except:
+    #     print("消息队列已满，现有消息数量为{}".format(q.qsize()))
+    try:
+        q.put_nowait("消息4")     #添加消息队列不需要等待
+    except:
+        print("消息队列已满，现有消息数量为{}".format(q.qsize()))
+
+    if not q.empty():
+        print("从队列中取消息".center(100, "*"))
+        for i in range(q.qsize()):
+            print(q.get_nowait())
+
+    if not q.full():
+        q.put("消息4")
+        print(q.qsize())
+```
+
+### 使用队列实现进程间通信
+
+#### 代码示例1
+```python
+
+#!/usr/bin/env python
+# -*- coding:utf8 -*-
+
+from multiprocessing import Process, Queue
+
+
+def f(test):
+    test.put("22")
+
+
+if __name__ == '__main__':
+    q = Queue()  # 父进程
+    q.put("11")
+
+    p = Process(target=f, args=(q,))  # 子进程
+    p.start()
+    p.join()
+
+    print("取到： ", q.get_nowait())
+    print("取到： ", q.get_nowait())
+
+
+```
+#### 代码示例2
+```python
+
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+from multiprocessing import Process,Queue
+import os
+import time
+import random
+
+#写数据进程执行的代码
+def write(q):
+    print("Process to write :%s " % os.getpid())
+    for value in ['A','B','C']:
+        print("Put %s to queue..." % value)
+        q.put(value)
+        time.sleep(random.random())
+
+# 读数据执行的代码
+def read(q):
+    print("Process to read:%s" % os.getpid())
+    while True:
+        value = q.get(True)
+        print("Get %s from queue." % value)
+
+if __name__ == '__main__':
+    q = Queue()
+    pw = Process(target=write,args=(q,))
+    pr = Process(target=read, args=(q,))
+    pw.start()
+    pr.start()
+    pw.join()
+    pr.terminate()
+```
+
+
+#### 代码示例3
+```python
+
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+from multiprocessing import Process,Queue
+import time
+
+'''
+2个子进程在队列中进行写入和读取数据，实现进程之间的通信
+'''
+
+def write(q):
+    if not q.full():
+        for i in range(5):
+            message = "消息" + str(i)
+            q.put(message)
+            print("写入:{}".format(message))
+
+def read(q):
+    time.sleep(1)
+    while not q.empty():
+        print("读取:{}".format(q.get(True,2)))
+
+
+
+if __name__ == '__main__':
+    print("主进程开始".center(100,"*"))
+    q = Queue()
+    pw = Process(target=write, args=(q,))
+    pr = Process(target=read, args=(q,))
+    pw.start()
+    pr.start()
+    pw.join()
+    pr.join()
+    print("主进程结束".center(100,"*"))
+
+```

@@ -1,15 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f0e547b-d940-4b6c-82e4-3fd052fc2651" name="默认的" comment="3/30_new_commit19:47">
-      <change afterPath="$PROJECT_DIR$/source/Java/index.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/21.printf.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/42.配置Yum软件仓库.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/0.1RPM红帽软件包管理.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/11.iptables与firewalld 防火墙.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/23.install_vsftpd脚本.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Python/12.Python操作数据库/07.数据库模块化.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/Python/13.Python标准库/16.urlib模块.md" afterDir="false" />
+    <list default="true" id="6f0e547b-d940-4b6c-82e4-3fd052fc2651" name="默认的" comment="4/4_new_commit">
+      <change afterPath="$PROJECT_DIR$/source/DevOps_Study/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/01.Java基础/01.搭建Java环境.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/01.Java基础/02.第一个Java程序.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/01.Java基础/03.基本数据类型.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/01.Java基础/04.变量与常量.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/01.Java基础/05.运算符.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/01.Java基础/06.代码注释和编码规范.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/01.Java基础/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/02.流程控制/01.复合语句.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/02.流程控制/02.条件语句.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/02.流程控制/03.循环语句.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/02.流程控制/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/03.字符串/01.字符串.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/03.字符串/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/04.数组/01.一维数组的创建和使用.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/04.数组/02.二维数组的创建和使用.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/04.数组/03.数组的基本操作.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/04.数组/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/05.类与对象/01.对象.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/05.类与对象/02.静态变量、常量和方法（static关键字）.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Java/05.类与对象/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/22.dd.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/23.tar.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/24.su命令与sudo服务.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/43.Vim编辑器学习.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/13.autofs自动挂载服务.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/14.使用Squid部署代理缓存服务.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/22.windows上搭建yum源站点.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/23.1秒开启一个http共享服务.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/24.使用图形配置网络服务nmtui.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/25.Centos7 openssh升级到7.9p1.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/24.install_mysql5.7.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Linux_shell/04.玩转数据库（mysql、Redis）/03.Linux运维之Mysql必会知识.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Linux_shell/07.Zabbix监控企业实战/01.ZABBIX 4.0 LTS 部署.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/12.建立大型数据结构.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/13.python安装三方库方法.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/Python/13.Python标准库/17.Stringw文本常量和模块.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/aliyun/ECS _Create_Web/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hujianli_blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hujianli_blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/doctrees/Cloud/01.华为云学习/01.华为云FusionCloud6.3.1实施.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Cloud/01.华为云学习/01.华为云FusionCloud6.3.1实施.doctree" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/doctrees/Cloud/01.华为云学习/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Cloud/01.华为云学习/index.doctree" afterDir="false" />
@@ -578,21 +609,50 @@
       <change beforePath="$PROJECT_DIR$/build/html/Python/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/VMware_study/01.VMware学习/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/VMware_study/01.VMware学习/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/VMware_study/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/VMware_study/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/01.常用较多命名查询/15.grep.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/01.常用较多命名查询/15.grep.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/01.常用较多命名查询/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/01.常用较多命名查询/index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/3.Vsftpd服务器搭建.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/3.Vsftpd服务器搭建.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/6.Apache服务搭建.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/6.Apache服务搭建.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/7.使用iSCSI服务部署网络存储.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/7.使用iSCSI服务部署网络存储.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/8.远程登录Linux系统.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/8.远程登录Linux系统.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/02.Linux服务器架设/index.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/03.运算符.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/03.运算符.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/04.流程控制.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/04.流程控制.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/08.三剑客之sed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/08.三剑客之sed.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/09.三剑客-awk.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/09.三剑客-awk.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/10.杂项.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/10.杂项.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/03.玩转shell脚本编程/index.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/04.玩转数据库（mysql、Redis）/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/04.玩转数据库（mysql、Redis）/index.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/07.Zabbix监控企业实战/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/07.Zabbix监控企业实战/index.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/01.字符编码处理.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/01.字符编码处理.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/03.字符串数据类型.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/03.字符串数据类型.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/04.列表数据类型.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/04.列表数据类型.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/05.元祖数据类型.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/05.元祖数据类型.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/06.字典数据结构.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/06.字典数据结构.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/10.列表实现堆和队列.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/10.列表实现堆和队列.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/08.数据类型转换.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/08.数据类型转换.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/01.Python数据类型/index.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/02.流程控制语句/01.选择语句.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/02.流程控制语句/01.选择语句.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/02.流程控制语句/02.for循环语句.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/02.流程控制语句/02.for循环语句.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/03.函数/09.变量的作用域.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/03.函数/09.变量的作用域.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/03.函数/10.匿名函数的用法.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/03.函数/10.匿名函数的用法.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/04.内建函数/01.常用的内建函数.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/04.内建函数/01.常用的内建函数.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/05.推导式/01.列表推导式.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/05.推导式/01.列表推导式.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/05.推导式/02.字典推导式.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/05.推导式/02.字典推导式.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/05.推导式/04.集合推导式.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/05.推导式/04.集合推导式.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/03.类中的__init__方法.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/03.类中的__init__方法.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/08.类方法、实例方法、静态方法.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/08.类方法、实例方法、静态方法.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/15.一些魔法方法.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/07.面对对象设计_OOP/15.一些魔法方法.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/08.Python文件操作/02.读写文件.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/08.Python文件操作/02.读写文件.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/08.Python文件操作/04.高级文件操作.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/08.Python文件操作/04.高级文件操作.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/09.正则表达式/01.正则表达式.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/09.正则表达式/01.正则表达式.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/11.Python网络编程/02.socket编程.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/11.Python网络编程/02.socket编程.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/11.Python网络编程/04.python收发邮件学习.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/11.Python网络编程/04.python收发邮件学习.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/12.Python操作数据库/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/12.Python操作数据库/index.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/10.Python中的包和模块/01.模块与包.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/10.Python中的包和模块/01.模块与包.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/12.Python操作数据库/01.Python操作mysql数据库.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/12.Python操作数据库/01.Python操作mysql数据库.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/01.csv模块文件读写.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/01.csv模块文件读写.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/07.sys(系统操作模块).txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/07.sys(系统操作模块).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/08.configparser模块.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/08.configparser模块.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/13.Python标准库/index.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/aliyun/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/aliyun/index.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/_sources/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/index.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/aliyun/ECS/01.aliyun安装命令行工具.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ECS/01.aliyun安装命令行工具.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/aliyun/ECS/02.安全组实践一.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/aliyun/ECS/02.安全组实践一.html" afterDir="false" />
@@ -620,23 +680,56 @@
       <change beforePath="$PROJECT_DIR$/build/html/other/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/other/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/searchindex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Java/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Java/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/15.grep.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/15.grep.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/3.Vsftpd服务器搭建.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/3.Vsftpd服务器搭建.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/11.iptables与firewalld 防火墙.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/11.iptables与firewalld 防火墙.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/6.Apache服务搭建.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/6.Apache服务搭建.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/7.使用iSCSI服务部署网络存储.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/7.使用iSCSI服务部署网络存储.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/8.远程登录Linux系统.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/8.远程登录Linux系统.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/03.运算符.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/03.运算符.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/04.流程控制.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/04.流程控制.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/08.三剑客之sed.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/08.三剑客之sed.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/09.三剑客-awk.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/09.三剑客-awk.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/10.杂项.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/10.杂项.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Linux_shell/04.玩转数据库（mysql、Redis）/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/04.玩转数据库（mysql、Redis）/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Linux_shell/07.Zabbix监控企业实战/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/07.Zabbix监控企业实战/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/01.字符编码处理.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/01.字符编码处理.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/03.字符串数据类型.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/03.字符串数据类型.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/04.列表数据类型.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/04.列表数据类型.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/05.元祖数据类型.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/05.元祖数据类型.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/06.字典数据结构.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/06.字典数据结构.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/10.列表实现堆和队列.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/10.列表实现堆和队列.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/08.数据类型转换.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/08.数据类型转换.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/01.Python数据类型/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/01.Python数据类型/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/02.流程控制语句/01.选择语句.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/02.流程控制语句/01.选择语句.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/02.流程控制语句/02.for循环语句.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/02.流程控制语句/02.for循环语句.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/03.函数/09.变量的作用域.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/03.函数/09.变量的作用域.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/03.函数/10.匿名函数的用法.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/03.函数/10.匿名函数的用法.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Python/04.内建函数/01.常用的内建函数.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/04.内建函数/01.常用的内建函数.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/05.推导式/01.列表推导式.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/05.推导式/01.列表推导式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/05.推导式/02.字典推导式.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/05.推导式/02.字典推导式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/05.推导式/04.集合推导式.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/05.推导式/04.集合推导式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/03.类中的__init__方法.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/03.类中的__init__方法.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/04.实例属性是什么？.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/04.实例属性是什么？.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/05.一个基础有属性和方法的类.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/08.类方法、实例方法、静态方法.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/08.类方法、实例方法、静态方法.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/15.一些魔法方法.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/15.一些魔法方法.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/08.Python文件操作/02.读写文件.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/08.Python文件操作/02.读写文件.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/08.Python文件操作/04.高级文件操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/08.Python文件操作/04.高级文件操作.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Python/09.正则表达式/01.正则表达式.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/09.正则表达式/01.正则表达式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/11.2 线程和进程/1.进程.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/11.2 线程和进程/1.进程.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/10.Python中的包和模块/01.模块与包.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/10.Python中的包和模块/01.模块与包.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/10.Python中的包和模块/02.包的讲解.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/10.Python中的包和模块/02.包的讲解.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Python/11.2 线程和进程/2.线程.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/11.2 线程和进程/2.线程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/11.Python网络编程/02.socket编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/11.Python网络编程/02.socket编程.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/11.Python网络编程/04.python收发邮件学习.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/11.Python网络编程/04.python收发邮件学习.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Python/12.Python操作数据库/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/12.Python操作数据库/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/12.Python操作数据库/01.Python操作mysql数据库.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/12.Python操作数据库/01.Python操作mysql数据库.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/13.Python标准库/01.csv模块文件读写.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/13.Python标准库/01.csv模块文件读写.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/13.Python标准库/07.sys(系统操作模块).md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/13.Python标准库/07.sys(系统操作模块).md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/13.Python标准库/08.configparser模块.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/13.Python标准库/08.configparser模块.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/Python/13.Python标准库/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/13.Python标准库/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/aliyun/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/aliyun/index.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/index.rst" afterDir="false" />
     </list>
     <ignored path="my_blog.iws" />
@@ -685,7 +778,106 @@
     <favorites_list name="my_blog" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/03.类中的__init__方法.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-139" />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/04.实例属性是什么？.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="253">
+                <caret line="24" selection-start-line="24" selection-end-line="42" selection-end-column="51" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="252">
+                <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/07.类属性和实例属性.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-1932" />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/06.类中可调用自己方法和外部函数.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-681" />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="280">
+                <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/Python/10.Python中的包和模块/01.模块与包.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="729">
+                <caret line="53" column="39" lean-forward="true" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/Python/13.Python标准库/01.csv模块文件读写.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/Python/10.Python中的包和模块/03.python中 __main__正确理解.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -723,65 +915,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/source/Docker/02.Docker经典示例/03.列出镜像.md" />
-        <option value="$PROJECT_DIR$/source/Docker/02.Docker经典示例/04.Docker 创建镜像.md" />
-        <option value="$PROJECT_DIR$/source/Python/02.流程控制语句/02.for循环语句.md" />
-        <option value="$PROJECT_DIR$/source/Python/02.流程控制语句/01.选择语句.md" />
-        <option value="$PROJECT_DIR$/source/Python/03.函数/02.位置参数.md" />
-        <option value="$PROJECT_DIR$/source/Python/03.函数/04.默认值参数.md" />
-        <option value="$PROJECT_DIR$/source/Python/03.函数/14.变量作用域.py" />
-        <option value="$PROJECT_DIR$/source/Python/03.函数/14.变量作用域.md" />
-        <option value="$PROJECT_DIR$/source/Python/03.函数/15.函数的返回值.md" />
-        <option value="$PROJECT_DIR$/source/Python/03.函数/08.函数的返回值.md" />
-        <option value="$PROJECT_DIR$/source/Python/03.函数/01.定义一个函数.md" />
-        <option value="$PROJECT_DIR$/source/Python/03.函数/09.变量的作用域.md" />
-        <option value="$PROJECT_DIR$/source/Python/03.函数/index.rst" />
-        <option value="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.md" />
-        <option value="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/10.方法的重写.md" />
-        <option value="$PROJECT_DIR$/source/Python/08.1异常处理/3.自定义异常类.md" />
-        <option value="$PROJECT_DIR$/source/Docker/02.Docker经典示例/index.rst" />
-        <option value="$PROJECT_DIR$/source/other/01.Git入门到熟练/index.rst" />
-        <option value="$PROJECT_DIR$/source/other/01.Git入门到熟练/1.Git基础操作.md" />
-        <option value="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/21.Centos7安装VNC，手动网络重装VPS.md" />
-        <option value="$PROJECT_DIR$/source/Python/index.rst" />
-        <option value="$PROJECT_DIR$/source/Python/11.2 线程和进程/index.rst" />
-        <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/03.字符串数据类型.md" />
-        <option value="$PROJECT_DIR$/source/Java学习/index.rst" />
-        <option value="$PROJECT_DIR$/source/Java/index.rst" />
-        <option value="$PROJECT_DIR$/source/index.rst" />
-        <option value="$PROJECT_DIR$/source/Python/11.2 线程和进程/1.进程.md" />
-        <option value="$PROJECT_DIR$/source/Python/11.Python网络编程/02.socket编程.md" />
-        <option value="$PROJECT_DIR$/source/Python/13.Python标准库/16.urlib模块.md" />
-        <option value="$PROJECT_DIR$/source/Python/13.Python标准库/index.rst" />
-        <option value="$PROJECT_DIR$/source/Python/12.Python操作数据库/07.数据库模块化.py" />
-        <option value="$PROJECT_DIR$/source/Python/12.Python操作数据库/07.数据库模块化.md" />
-        <option value="$PROJECT_DIR$/source/Python/12.Python操作数据库/index.rst" />
-        <option value="$PROJECT_DIR$/source/Python/11.Python网络编程/04.python收发邮件学习.md" />
-        <option value="$PROJECT_DIR$/source/Python/04.内建函数/01.常用的内建函数.md" />
-        <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/04.列表数据类型.md" />
-        <option value="$PROJECT_DIR$/source/Python/09.正则表达式/01.正则表达式.md" />
+        <option value="$PROJECT_DIR$/source/Java/02.流程控制/03.循环语句.md" />
+        <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/08.数据类型转换.md" />
         <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/06.字典数据结构.md" />
-        <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/10.列表实现堆和队列.md" />
-        <option value="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/21.printf.md" />
-        <option value="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/0.1RPM红帽软件包管理.md" />
-        <option value="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/index.rst" />
-        <option value="$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/42.配置Yum软件仓库.md" />
-        <option value="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/11.iptables 与 firewalld 防火墙.md" />
-        <option value="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/03.运算符.md" />
-        <option value="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/22.install_vsftpd脚本.md" />
+        <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/12.建立大型数据结构.md" />
+        <option value="$PROJECT_DIR$/source/Python/05.推导式/02.字典推导式.md" />
+        <option value="$PROJECT_DIR$/source/Python/05.推导式/04.集合推导式.md" />
+        <option value="$PROJECT_DIR$/source/Java/02.流程控制/04.字符串.md" />
+        <option value="$PROJECT_DIR$/source/Java/02.流程控制/index.rst" />
+        <option value="$PROJECT_DIR$/source/Java/03.字符串/index.rst" />
+        <option value="$PROJECT_DIR$/source/Python/03.函数/09.变量的作用域.md" />
+        <option value="$PROJECT_DIR$/source/Python/13.Python标准库/01.csv模块文件读写.md" />
+        <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/03.字符串数据类型.md" />
+        <option value="$PROJECT_DIR$/source/Python/08.Python文件操作/04.高级文件操作.md" />
+        <option value="$PROJECT_DIR$/source/Linux_shell/07.Zabbix监控企业实战/index.rst" />
+        <option value="$PROJECT_DIR$/source/Linux_shell/07.Zabbix监控企业实战/01.ZABBIX 4.0 LTS 部署.md" />
+        <option value="$PROJECT_DIR$/source/Python/02.流程控制语句/01.选择语句.md" />
+        <option value="$PROJECT_DIR$/source/Java/03.字符串/01.字符串.md" />
+        <option value="$PROJECT_DIR$/source/Java/04.数组/01.一维数组.md" />
+        <option value="$PROJECT_DIR$/source/Java/04.数组/01.一维数组的创建和使用.md" />
+        <option value="$PROJECT_DIR$/source/Java/04.数组/index.rst" />
+        <option value="$PROJECT_DIR$/source/Java/04.数组/02.二维数组的创建和使用.md" />
+        <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/13.python安装三方库方法.md" />
+        <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/index.rst" />
+        <option value="$PROJECT_DIR$/source/Python/02.流程控制语句/02.for循环语句.md" />
+        <option value="$PROJECT_DIR$/source/Python/04.内建函数/01.常用的内建函数.md" />
+        <option value="$PROJECT_DIR$/source/Python/08.Python文件操作/02.读写文件.md" />
+        <option value="$PROJECT_DIR$/source/Python/12.Python操作数据库/01.Python操作mysql数据库.md" />
+        <option value="$PROJECT_DIR$/source/Python/07.1Python3面对对象增强/index.rst" />
+        <option value="$PROJECT_DIR$/source/Python/07.1Python3面对对象增强/01.Python对象.md" />
+        <option value="$PROJECT_DIR$/source/Java/04.数组/03.数组的基本操作.md" />
+        <option value="$PROJECT_DIR$/source/Java/index.rst" />
+        <option value="$PROJECT_DIR$/source/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.md" />
+        <option value="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/24.install_mysql5.7.md" />
         <option value="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/index.rst" />
+        <option value="$PROJECT_DIR$/source/Linux_shell/04.玩转数据库（mysql、Redis）/index.rst" />
+        <option value="$PROJECT_DIR$/source/Linux_shell/04.玩转数据库（mysql、Redis）/03.Linux运维之Mysql必会知识.md" />
+        <option value="$PROJECT_DIR$/source/Java/05.类与对象/01.对象.md" />
+        <option value="$PROJECT_DIR$/source/Java/05.类与对象/02.静态变量、常量和方法（static关键字）.md" />
+        <option value="$PROJECT_DIR$/source/Java/05.类与对象/index.rst" />
+        <option value="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/25.Centos7 openssh升级到7.9p1.md" />
         <option value="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst" />
-        <option value="$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/23.install_vsftpd脚本.md" />
-        <option value="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/3.Vsftpd服务器搭建.md" />
-        <option value="$PROJECT_DIR$/source/Python/11.2 线程和进程/2.线程.md" />
+        <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/01.字符编码处理.md" />
+        <option value="$PROJECT_DIR$/source/Python/05.推导式/01.列表推导式.md" />
+        <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/05.元祖数据类型.md" />
+        <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/04.列表数据类型.md" />
+        <option value="$PROJECT_DIR$/source/Python/03.函数/10.匿名函数的用法.md" />
+        <option value="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/04.实例属性是什么？.md" />
+        <option value="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.md" />
+        <option value="$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.md" />
+        <option value="$PROJECT_DIR$/source/Python/10.Python中的包和模块/02.包的讲解.md" />
+        <option value="$PROJECT_DIR$/source/Python/10.Python中的包和模块/01.模块与包.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="452" />
-    <option name="y" value="52" />
-    <option name="width" value="1728" />
-    <option name="height" value="1379" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="112" />
+    <option name="y" value="5" />
+    <option name="width" value="2065" />
+    <option name="height" value="1315" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -798,6 +990,24 @@
               <item name="hujianli_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="hujian_blog" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="hujianli_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hujian_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hujianli_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hujian_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hujianli_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hujian_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="10.Python中的包和模块" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -810,22 +1020,23 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Updates" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GitHub" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\hujian_blog\source\other\02.构建自己的写书博客" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\hujian_blog\source\Python\12.Python操作数据库" />
       <recent name="D:\hujian_blog\source\Python\23.Python网络爬虫" />
       <recent name="D:\hujian_blog\source\Python\22.Python进阶学习" />
       <recent name="D:\hujian_blog\source\Python\21.Django学习" />
       <recent name="D:\hujian_blog\source\Python\20.自动化运维工具" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\hujian_blog\source\Java\03.字符串" />
+      <recent name="D:\hujian_blog\source\other\02.构建自己的写书博客" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -840,7 +1051,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.bank">
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
       <method />
     </configuration>
@@ -943,7 +1154,51 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="Python.FlaskServer">
+    <configuration name="bank" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="hujianli_blog" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../1====编程语言（明日科技）视频/1--Python学习/实战任务答案-原版/Python从入门到项目实践——实战源码答案/实战源码/12/01" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../1====编程语言（明日科技）视频/1--Python学习/实战任务答案-原版/Python从入门到项目实践——实战源码答案/实战源码/12/01/bank.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="task1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="hujianli_blog" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../1====编程语言（明日科技）视频/1--Python学习/实战任务答案-更新版/06/01" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../1====编程语言（明日科技）视频/1--Python学习/实战任务答案-更新版/06/01/task1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer" factoryName="Flask server">
       <module name="hujianli_blog" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -1058,6 +1313,12 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.bank" />
+        <item itemvalue="Python.task1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -1176,7 +1437,40 @@
       <workItem from="1554261243556" duration="85000" />
       <workItem from="1554279111721" duration="1896000" />
       <workItem from="1554339535246" duration="265000" />
-      <workItem from="1554356824510" duration="1336000" />
+      <workItem from="1554356824510" duration="2072000" />
+      <workItem from="1554371172234" duration="1890000" />
+      <workItem from="1554444221094" duration="215000" />
+      <workItem from="1554445965432" duration="166000" />
+      <workItem from="1554447272734" duration="1364000" />
+      <workItem from="1554631395400" duration="288000" />
+      <workItem from="1554631814519" duration="1000000" />
+      <workItem from="1554692584946" duration="7485000" />
+      <workItem from="1554722064108" duration="3346000" />
+      <workItem from="1554732987382" duration="4760000" />
+      <workItem from="1554776701885" duration="18537000" />
+      <workItem from="1554812717836" duration="3773000" />
+      <workItem from="1554819769973" duration="17000" />
+      <workItem from="1554858588390" duration="4839000" />
+      <workItem from="1554865039290" duration="10446000" />
+      <workItem from="1554882050620" duration="21000" />
+      <workItem from="1554883340062" duration="1517000" />
+      <workItem from="1554944062153" duration="10061000" />
+      <workItem from="1554984047690" duration="7010000" />
+      <workItem from="1555028329514" duration="3518000" />
+      <workItem from="1555034141272" duration="6664000" />
+      <workItem from="1555044217634" duration="7395000" />
+      <workItem from="1555059366789" duration="8783000" />
+      <workItem from="1555121337594" duration="5789000" />
+      <workItem from="1555130736775" duration="22000" />
+      <workItem from="1555130860684" duration="5194000" />
+      <workItem from="1555140651844" duration="6640000" />
+      <workItem from="1555160713348" duration="2602000" />
+      <workItem from="1555213673412" duration="10323000" />
+      <workItem from="1555236577011" duration="5059000" />
+      <workItem from="1555315211454" duration="3273000" />
+      <workItem from="1555324815800" duration="745000" />
+      <workItem from="1555329589808" duration="4515000" />
+      <workItem from="1555376835967" duration="3889000" />
     </task>
     <task id="LOCAL-00001" summary="默认的">
       <created>1550051667171</created>
@@ -1339,11 +1633,18 @@
       <option name="project" value="LOCAL" />
       <updated>1553946489291</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="4/4_new_commit">
+      <created>1554359460140</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1554359460140</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263437000" />
+    <option name="totallyTimeSpent" value="415319000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1355,9 +1656,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1742" height="1126" extended-state="6" />
+    <frame x="90" y="4" width="1652" height="1052" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16152018" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17754078" />
       <window_info id="Structure" order="1" weight="0.20665084" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1422,233 +1724,11 @@
     <MESSAGE value="3/28_new_commit10:08" />
     <MESSAGE value="3/28_new_commit10:15" />
     <MESSAGE value="3/30_new_commit19:47" />
-    <option name="LAST_COMMIT_MESSAGE" value="3/30_new_commit19:47" />
+    <MESSAGE value="4/4_new_commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="4/4_new_commit" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/Docker/02.Docker经典示例/04.Docker 创建镜像.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2945">
-            <caret line="162" selection-start-line="162" selection-end-line="162" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Docker/03.5分钟Docker学习/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Docker/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/21.Centos7安装VNC，手动网络重装VPS.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="146">
-            <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/11.Python网络编程/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/KVM_Study/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Java/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/11.2 线程和进程/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/other/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Network_route_switch/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/11.Python网络编程/02.socket编程.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="729">
-            <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/11.Python网络编程/01.python网络编程基础.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="297">
-            <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/13.Python标准库/15.Redis模块.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="68">
-            <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/13.Python标准库/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/13.Python标准库/16.urlib模块.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-40">
-            <caret line="4" selection-start-line="4" selection-end-line="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/12.Python操作数据库/01.Python操作mysql数据库.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-5602" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/12.Python操作数据库/05.数据库操作.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-4239" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/12.Python操作数据库/03.Python封装mysql数据库.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="3564">
-            <caret line="181" lean-forward="true" selection-start-line="181" selection-end-line="181" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/12.Python操作数据库/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/12.Python操作数据库/07.数据库模块化.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/11.Python网络编程/04.python收发邮件学习.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="487">
-            <caret line="933" lean-forward="true" selection-start-line="933" selection-end-line="933" />
-            <folding>
-              <element signature="e#62#100#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/01.Python数据类型/03.字符串数据类型.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="5319">
-            <caret line="197" column="14" lean-forward="true" selection-start-line="197" selection-start-column="14" selection-end-line="197" selection-end-column="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/01.Python数据类型/04.列表数据类型.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="486">
-            <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/01.基础知识.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-6901" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/01.Python数据类型/10.列表实现堆和队列.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="81">
-            <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/01.Python数据类型/06.字典数据结构.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="243">
-            <caret line="9" selection-start-line="9" selection-end-line="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/09.正则表达式/01.正则表达式.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="162">
-            <caret line="6" selection-start-line="6" selection-end-line="6" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/04.内建函数/01.常用的内建函数.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="513">
-            <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/21.printf.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="702">
-            <caret line="54" column="3" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/01.find.md">
+    <entry file="file://$PROJECT_DIR$/source/Linux_shell/08.Linux构建高可用架构/07.MySQL主主同步高可用架构.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
@@ -1656,95 +1736,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/0.1RPM红帽软件包管理.md">
+    <entry file="file://$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/24.install_mysql5.7.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="270">
-            <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <first_editor relative-caret-position="28">
+            <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/index.rst">
+    <entry file="file://$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/index.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/03.lsof.md">
+    <entry file="file://$PROJECT_DIR$/source/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-893" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b45f94a4-e646-478e-bd25-01d340e22916/schema/derek/table/students">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/01.常用较多命名查询/42.配置Yum软件仓库.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="497">
-            <caret line="238" column="29" lean-forward="true" selection-start-line="238" selection-start-column="29" selection-end-line="238" selection-end-column="29" />
+          <first_editor relative-caret-position="683">
+            <caret line="134" column="62" lean-forward="true" selection-start-line="134" selection-start-column="12" selection-end-line="134" selection-end-column="62" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/5.部署磁盘阵列.md">
+    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/20.国内常使用的yum源信息.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-7333" />
+          <first_editor relative-caret-position="-1596" />
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/11.iptables与firewalld 防火墙.md">
+    <entry file="file://$PROJECT_DIR$/source/Linux_shell/04.玩转数据库（mysql、Redis）/02.Mysql入门到精通.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="592">
-            <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <first_editor relative-caret-position="5555">
+            <caret line="226" column="9" selection-start-line="226" selection-start-column="9" selection-end-line="226" selection-end-column="9" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/1.RAID与LVM磁盘阵列技术.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/source/Linux_shell/04.玩转数据库（mysql、Redis）/index.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/03.运算符.md">
+    <entry file="file://$PROJECT_DIR$/source/Linux_shell/04.玩转数据库（mysql、Redis）/03.Linux运维之Mysql必会知识.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="362">
-            <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
+          <first_editor relative-caret-position="557">
+            <caret line="64" column="15" lean-forward="true" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/21.install_elasticserch脚本.md">
+    <entry file="file://$PROJECT_DIR$/source/Java/05.类与对象/01.对象.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor>
-            <caret selection-end-column="24" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/23.install_vsftpd脚本.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="19" selection-start-column="19" selection-end-column="19" />
+          <first_editor relative-caret-position="2156">
+            <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
           </first_editor>
           <second_editor />
         </state>
@@ -1753,54 +1803,343 @@
     <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/index.rst">
+    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/25.Centos7 openssh升级到7.9p1.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="442">
+            <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Java/05.类与对象/index.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/3.Vsftpd服务器搭建.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="189">
-            <caret line="136" selection-start-line="136" selection-end-line="136" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../1====编程语言（明日科技）视频/642949 python从入门到项目实践/Python从入门到项目实践-实战源码答案/Python从入门到项目实践——实战源码答案/实战源码/16/02/dinner_party.py">
+    <entry file="file://$USER_HOME$/Desktop/install.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/11.2 线程和进程/1.进程.md">
+    <entry file="file://$PROJECT_DIR$/source/Python/01.Python数据类型/01.字符编码处理.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-675">
-            <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-            <folding>
-              <element signature="e#0#32#0" expanded="true" />
-            </folding>
+          <first_editor relative-caret-position="523">
+            <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/11.2 线程和进程/2.线程.md">
+    <entry file="file://$PROJECT_DIR$/source/Python/01.Python数据类型/02.代码注释.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="632">
-            <caret line="251" column="20" lean-forward="true" selection-start-line="251" selection-start-column="20" selection-end-line="251" selection-end-column="20" />
-            <folding>
-              <element signature="e#0#16#0" expanded="true" />
-              <element signature="e#117#151#0" expanded="true" />
-              <element signature="e#74#97#0" expanded="true" />
-            </folding>
+          <first_editor relative-caret-position="140">
+            <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/08.1异常处理/3.自定义异常类.md">
+    <entry file="file://$PROJECT_DIR$/source/Java/05.类与对象/02.静态变量、常量和方法（static关键字）.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="567">
+            <caret line="250" column="3" selection-start-line="250" selection-start-column="3" selection-end-line="250" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../1====编程语言（明日科技）视频/1--Python学习/实战任务答案-更新版/06/01/task1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../1====编程语言（明日科技）视频/1--Python学习/实战任务答案-更新版/06/03/task3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../1====编程语言（明日科技）视频/1--Python学习/实战任务答案-更新版/07/01/task1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/05.推导式/01.列表推导式.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="504">
+            <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/01.Python数据类型/05.元祖数据类型.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="2240">
+            <caret line="80" column="3" selection-start-line="80" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/01.Python数据类型/04.列表数据类型.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="448">
+            <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="36" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../1====编程语言（明日科技）视频/1--Python学习/实战任务答案-原版/Python从入门到项目实践——实战源码答案/实战源码/07/01/task1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/01.Python数据类型/03.字符串数据类型.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="537">
+            <caret line="281" selection-start-line="281" selection-end-line="281" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/03.函数/08.函数的返回值.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="421">
+            <caret line="51" column="8" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/03.函数/10.匿名函数的用法.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-181">
+            <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/03.函数/07.函数调用时参数传递方法.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-13" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/03.函数/12.列表作为默认参数的陷阱.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-153" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/03.函数/13.一个求值的函数例子.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/03.函数/01.定义一个函数.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/03.函数/02.位置参数.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/03.函数/03.定义关键字参数.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/03.函数/04.默认值参数.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../1====编程语言（明日科技）视频/1--Python学习/实战任务答案-原版/Python从入门到项目实践——实战源码答案/实战源码/11/01/code_word.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/04.内建函数/01.常用的内建函数.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="112">
+            <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../1====编程语言（明日科技）视频/1--Python学习/实战任务答案-原版/Python从入门到项目实践——实战源码答案/实战源码/11/02/exchange.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/03.函数/05.可变参数.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/01.什么是面对对象设计.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-503" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/02.类的方法.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/03.类中的__init__方法.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-139" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/04.实例属性是什么？.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="253">
+            <caret line="24" selection-start-line="24" selection-end-line="42" selection-end-column="51" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="252">
+            <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/07.类属性和实例属性.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1932" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/06.类中可调用自己方法和外部函数.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-681" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../1====编程语言（明日科技）视频/1--Python学习/实战任务答案-原版/Python从入门到项目实践——实战源码答案/实战源码/12/01/bank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="53" column="15" lean-forward="true" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="280">
+            <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../1====编程语言（明日科技）视频/1--Python学习/实战任务答案-原版/Python从入门到项目实践——实战源码答案/实战源码/12/02/cost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="13" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/10.Python中的包和模块/02.包的讲解.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="448">
+            <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/13.Python标准库/01.csv模块文件读写.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/10.Python中的包和模块/03.python中 __main__正确理解.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/10.Python中的包和模块/01.模块与包.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="729">
+            <caret line="53" column="39" lean-forward="true" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+          </first_editor>
           <second_editor />
         </state>
       </provider>

@@ -1,0 +1,78 @@
+# 对象
+``` 
+//定义一个类
+public class Book {
+	String name="西游记";
+//定义一个方法
+	public String getName() {
+		return name;
+	}
+		
+	public static void main(String[] args) {
+		Book b=new Book();
+		System.out.println(b.getName());
+		System.out.println(new Book().getName());
+	}
+	
+}
+
+
+/*输出
+西游记
+西游记
+
+*/
+```
+![](../../_static/java_class2.PNG)
+
+``` 
+
+public class TransferProperty {
+//成员变量
+	int i = 47;
+
+//	类方法
+	public void call() {
+		System.out.println("调用call方法");
+		for (int i = 0; i < 3; i++) {
+			System.out.print(i + " ");
+
+		}
+		System.out.println();
+	}
+	
+//	主方法
+	public static void main(String[] args) {
+//		创建2个类的实例，t1和t2
+		TransferProperty t1=new TransferProperty();
+		TransferProperty t2=new TransferProperty();
+		
+//		t2中i的属性，修改
+		t2.i=66;
+//		输出实例1中的属性和方法
+		System.out.println("第一次实例对象调用i的结果："+t1.i);
+		t1.call();
+//		输出实例2中的属性和方法
+		System.out.println("第二次实例对象调用i的结果："+t2.i);
+		t2.call();
+	}
+}
+
+
+/*
+
+输出结果
+第一次实例对象调用i的结果：47
+调用call方法
+0 1 2 
+第二次实例对象调用i的结果：66
+调用call方法
+0 1 2 
+
+ */
+
+```
+## 对象的销毁
+![](../../_static/class_delete.PNG)
+
+![](../../_static/class_delete2.PNG)

@@ -30,6 +30,33 @@ string.split("分隔符")                        # 把string切片成一个列�
 ":".join(string.split())                      # 以:作为分隔符,将所有元素合并为一个新的字符
 string.swapcase()                                  #方法用于对字符串的大小写字母进行转换，将字符串中大写转换为小写、小写转换为大写。
 ```
+### 字符串的拼接
+``` 
+bottles=99
+
+base=''
+
+base +="hujianli staduy python3.6 "
+
+base +=str(bottles)
+
+base
+'hujianli staduy python3.699'
+
+
+
+"hujianli" + " recover" + " 学习python3.6"
+'hujianli recover 学习python3.6'
+```
+
+
+### 使用\进行转义
+``` 
+speen = "today we honor our friend, the backslash :\\."
+
+print(speen)
+today we honor our friend, the backslash :\.
+```
 
 ### 字符串格式化
 ```python
@@ -258,5 +285,8 @@ Out[7]: 'my name is hu'
 In [8]: lang = "python"
 In [10]: print("I LOVE %(program)s" % {'program':lang})
 I LOVE python
+
+In [1]: '{0:!^20s}'.format('BIG SALE')
+Out[1]: '!!!!!!BIG SALE!!!!!!'
 
 ```

@@ -115,3 +115,15 @@ puttygen将保存的私钥进行登录即可
     root     pts/1        2019-02-22 19:24 (192.168.1.106)
     [root@localhost ~]# who am i
     root     pts/1        2019-02-22 19:24 (192.168.1.106)
+    
+### scp远程传输命令
+* 1.将本地文件上传到远程服务器
+
+
+       scp /root/readme.txt 192.168.10.20:/home
+       
+       
+* 2.把远程主机的文件下载到本地
+    
+    
+    scp 192.168.10.20:/etc/redhat-release /root

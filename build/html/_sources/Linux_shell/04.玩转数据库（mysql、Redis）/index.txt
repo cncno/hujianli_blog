@@ -9,3 +9,4 @@
 
     01.Redis数据库
     02.Mysql入门到精通
+    03.Linux运维之Mysql必会知识

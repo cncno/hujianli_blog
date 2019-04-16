@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.23. 使用tar命令进行本地备份scripts &mdash; Cloud_Linux_Road 1.0 documentation</title>
+  <title>1.26. 使用tar命令进行本地备份scripts &mdash; Cloud_Linux_Road 1.0 documentation</title>
   
 
   
@@ -43,8 +43,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="next" title="1.24. Yum的特点与基本用法" href="42.配置Yum软件仓库.html" />
-    <link rel="prev" title="1.22. Linux初始化系统安全设置" href="40.Linux初始化系统安全设置.html" /> 
+    <link rel="next" title="1.27. Yum的特点与基本用法" href="42.配置Yum软件仓库.html" />
+    <link rel="prev" title="1.25. Linux初始化系统安全设置" href="40.Linux初始化系统安全设置.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -156,6 +156,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../../aliyun/ali_ACP_test/09.RDS云关系型数据库.html">2.9. RDS云关系型数据库</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../aliyun/ECS _Create_Web/index.html">3. ECS服务器建站</a><ul class="simple">
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Linux_shell</a><ul class="current">
@@ -260,20 +263,27 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="20.wc命令.html">1.20. wc命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="21.printf.html">1.21. printf和echo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="40.Linux初始化系统安全设置.html">1.22. Linux初始化系统安全设置</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="40.Linux初始化系统安全设置.html#ping">1.22.1. 1.禁止系统响应任何从外部/内部来的ping请求</a></li>
-<li class="toctree-l4"><a class="reference internal" href="40.Linux初始化系统安全设置.html#shell">1.22.2. 2.限制Shell记录的历史命令条数</a></li>
-<li class="toctree-l4"><a class="reference internal" href="40.Linux初始化系统安全设置.html#id1">1.22.3. 3.删除系统默认的不必要用户和组</a></li>
-<li class="toctree-l4"><a class="reference internal" href="40.Linux初始化系统安全设置.html#selinux">1.22.4. 4.关闭SELinux</a></li>
-<li class="toctree-l4"><a class="reference internal" href="40.Linux初始化系统安全设置.html#tcp-wrappers">1.22.5. 5.设定tcp_wrappers防火墙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="22.dd.html">1.22. dd命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="23.tar.html">1.23. tar命令</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="23.tar.html#id1">1.23.1. 打包</a></li>
+<li class="toctree-l4"><a class="reference internal" href="23.tar.html#id2">1.23.2. 解包</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">1.23. 使用tar命令进行本地备份scripts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="42.配置Yum软件仓库.html">1.24. Yum的特点与基本用法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="42.配置Yum软件仓库.html#id1">1.25. 配置本地Yum软件仓库</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="42.配置Yum软件仓库.html#id2">1.25.1. 步骤1</a></li>
-<li class="toctree-l4"><a class="reference internal" href="42.配置Yum软件仓库.html#id3">1.25.2. 步骤2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="42.配置Yum软件仓库.html#centos7yum">1.25.3. Centos7部署本地局域网yum源</a></li>
+<li class="toctree-l3"><a class="reference internal" href="24.su命令与sudo服务.html">1.24. su命令与sudo服务</a></li>
+<li class="toctree-l3"><a class="reference internal" href="40.Linux初始化系统安全设置.html">1.25. Linux初始化系统安全设置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="40.Linux初始化系统安全设置.html#ping">1.25.1. 1.禁止系统响应任何从外部/内部来的ping请求</a></li>
+<li class="toctree-l4"><a class="reference internal" href="40.Linux初始化系统安全设置.html#shell">1.25.2. 2.限制Shell记录的历史命令条数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="40.Linux初始化系统安全设置.html#id1">1.25.3. 3.删除系统默认的不必要用户和组</a></li>
+<li class="toctree-l4"><a class="reference internal" href="40.Linux初始化系统安全设置.html#selinux">1.25.4. 4.关闭SELinux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="40.Linux初始化系统安全设置.html#tcp-wrappers">1.25.5. 5.设定tcp_wrappers防火墙</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.26. 使用tar命令进行本地备份scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="42.配置Yum软件仓库.html">1.27. Yum的特点与基本用法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="42.配置Yum软件仓库.html#id1">1.28. 配置本地Yum软件仓库</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="42.配置Yum软件仓库.html#id2">1.28.1. 步骤1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="42.配置Yum软件仓库.html#id3">1.28.2. 步骤2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="42.配置Yum软件仓库.html#centos7yum">1.28.3. Centos7部署本地局域网yum源</a></li>
 </ul>
 </li>
 </ul>
@@ -332,22 +342,27 @@
 <li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/10.rsync数据同步.html#brsync">2.11.3. B系统rsync客户端</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html">2.12. Tomcat服务搭建配置</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html#id1">2.12.1. 安装tomcat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html#id2">2.12.2. 安装Tomcat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html#id6">2.12.3. 配置tomcat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html#jpress">2.12.4. 部署开源站点（jpress）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html#id9">2.12.5. Tomcat多实例配置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html#id10">2.12.6. Tomcat反向代理集群</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02.Linux服务器架设/11.iptables与firewalld 防火墙.html">2.12. iptables 与 firewalld 防火墙</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/11.iptables与firewalld 防火墙.html#iptables">2.12.1. iptables中的常用参数</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../02.Linux服务器架设/20.国内常使用的yum源信息.html">2.13. 国内常使用的yum源信息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../02.Linux服务器架设/21.Centos7安装VNC，手动网络重装VPS.html">2.14. Centos7安装VNC，手动网络重装VPS</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/21.Centos7安装VNC，手动网络重装VPS.html#id1">2.14.1. 开始操作前准备</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/21.Centos7安装VNC，手动网络重装VPS.html#vnc">2.14.2. 安装VNC服务器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/21.Centos7安装VNC，手动网络重装VPS.html#vps">2.14.3. 手动网络重装VPS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html">2.13. Tomcat服务搭建配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html#id1">2.13.1. 安装tomcat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html#id2">2.13.2. 安装Tomcat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html#id6">2.13.3. 配置tomcat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html#jpress">2.13.4. 部署开源站点（jpress）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html#id9">2.13.5. Tomcat多实例配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/12.Tomcat服务搭建配置.html#id10">2.13.6. Tomcat反向代理集群</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../02.Linux服务器架设/20.国内常使用的yum源信息.html">2.14. 国内常使用的yum源信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02.Linux服务器架设/21.Centos7安装VNC，手动网络重装VPS.html">2.15. Centos7安装VNC，手动网络重装VPS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/21.Centos7安装VNC，手动网络重装VPS.html#id1">2.15.1. 开始操作前准备</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/21.Centos7安装VNC，手动网络重装VPS.html#vnc">2.15.2. 安装VNC服务器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../02.Linux服务器架设/21.Centos7安装VNC，手动网络重装VPS.html#vps">2.15.3. 手动网络重装VPS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../02.Linux服务器架设/22.windows上搭建yum源站点.html">2.16. windows上搭建yum源站点</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../03.玩转shell脚本编程/index.html">3. 玩转shell脚本编程</a><ul>
@@ -436,10 +451,12 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html">3.10. 十、shell杂项</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html#id1">3.10.1. 一、输入输出</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html#id2">3.10.2. 二、命令</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html#id5">3.10.3. 自动化</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html#id7">3.10.4. 三、实战</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html#cron">3.10.1. cron计划任务</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html#tee">3.10.2. tee</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html#id1">3.10.3. 一、输入输出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html#id2">3.10.4. 二、命令</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html#id6">3.10.5. 自动化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03.玩转shell脚本编程/10.杂项.html#id8">3.10.6. 三、实战</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/11.xagrs使用.html">3.11. xagrs使用</a><ul>
@@ -496,6 +513,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/20.install_zookeeper脚本.html">3.20. install_zookeeper脚本</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/21.install_elasticserch脚本.html">3.21. install_elasticserch脚本</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/22.自动Autoinstall_ELK_V1.3.html">3.22. 自动Autoinstall_ELK_V1.3脚本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03.玩转shell脚本编程/23.install_vsftpd脚本.html">3.23. install_vsftpd 脚本</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../04.玩转数据库（mysql、Redis）/index.html">4. 玩转数据库(mysql、Redis)</a><ul>
@@ -638,7 +656,42 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Java/index.html">Java学习笔记</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../../Java/index.html">Java学习笔记</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Java/01.Java基础/index.html">1. Java基础</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Java/01.Java基础/01.搭建Java环境.html">1.1. 搭建Java环境</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/01.搭建Java环境.html#id1">1.1.1. 配置环境变量</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Java/01.Java基础/02.第一个java程序.html">1.2. 第一个Java程序</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/02.第一个java程序.html#id1">1.2.1. Java主类结构</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/02.第一个java程序.html#id2">1.2.2. 包声明</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/02.第一个java程序.html#id3">1.2.3. 声明成员变量和局部变量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/02.第一个java程序.html#api">1.2.4. 导入API类库</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Java/01.Java基础/03.基本数据类型.html">1.3. 基本数据类型</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/03.基本数据类型.html#id2">1.3.1. 整数类型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/03.基本数据类型.html#id3">1.3.2. 浮点类型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/03.基本数据类型.html#id4">1.3.3. 字符类型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/03.基本数据类型.html#id5">1.3.4. 布尔类型</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Java/01.Java基础/04.变量与常量.html">1.4. 变量与常量</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/04.变量与常量.html#id2">1.4.1. 关键字</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/04.变量与常量.html#id3">1.4.2. 声明变量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/04.变量与常量.html#id4">1.4.3. 声明常量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/04.变量与常量.html#id5">1.4.4. 变量的有效范围</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Java/01.Java基础/05.运算符.html">1.5. 运算符</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/05.运算符.html#id2">1.5.1. 赋值运算符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/05.运算符.html#id3">1.5.2. 算术运算符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/05.运算符.html#id4">1.5.3. 自增和自减运算符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Java/01.Java基础/05.运算符.html#id5">1.5.4. 比较运算符</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../KVM_Study/index.html">KVM_Study</a><ul class="simple">
@@ -1371,7 +1424,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../../Python/11.2 线程和进程/2.线程.html">12.2. 线程</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/11.2 线程和进程/2.线程.html#thread">12.2.1. Thread类来创建多线程</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Python/11.2 线程和进程/2.线程.html#id2">12.2.2. Thread子类创建多线程</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Python/11.2 线程和进程/2.线程.html#id5">12.2.3. 线程同步</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.2 线程和进程/2.线程.html#id5">12.2.3. 什么是互斥锁</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.2 线程和进程/2.线程.html#id6">12.2.4. 线程同步</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Python/11.2 线程和进程/2.线程.html#id8">12.2.5. 使用队列实现线程间通信</a></li>
 </ul>
 </li>
 </ul>
@@ -1571,6 +1626,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Python/13.Python标准库/16.urlib模块.html#id1">15.16.1. 代码示例</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../Python/13.Python标准库/17.Stringw文本常量和模块.html">15.17. Stringw文本常量和模块</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Python/14.Python三方库/index.html">16. Python 三方库学习</a><ul>
@@ -1778,6 +1834,9 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../DevOps_Study/index.html">DevOps学习</a><ul class="simple">
+</ul>
+</li>
 </ul>
 
             
@@ -1827,7 +1886,7 @@
         
           <li><a href="index.html">1. 常用较多命名查询</a> &raquo;</li>
         
-      <li>1.23. 使用tar命令进行本地备份scripts</li>
+      <li>1.26. 使用tar命令进行本地备份scripts</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -1847,7 +1906,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="tarscripts">
-<h1>1.23. 使用tar命令进行本地备份scripts<a class="headerlink" href="#tarscripts" title="Permalink to this headline">¶</a></h1>
+<h1>1.26. 使用tar命令进行本地备份scripts<a class="headerlink" href="#tarscripts" title="Permalink to this headline">¶</a></h1>
 <p>##tar命令进行本地备份</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#!/bin/sh
 BAKDATE=&#39;date +%y%m%d&#39;
@@ -1898,10 +1957,10 @@ echo  &quot;delete  cws  ok!&quot;
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="42.配置Yum软件仓库.html" class="btn btn-neutral float-right" title="1.24. Yum的特点与基本用法" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="42.配置Yum软件仓库.html" class="btn btn-neutral float-right" title="1.27. Yum的特点与基本用法" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="40.Linux初始化系统安全设置.html" class="btn btn-neutral float-left" title="1.22. Linux初始化系统安全设置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="40.Linux初始化系统安全设置.html" class="btn btn-neutral float-left" title="1.25. Linux初始化系统安全设置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -1,5 +1,31 @@
 # 列表推导式
     快速生成列表，根据某个列表生成满足需要的列表
+    
+## 语法
+``` 
+# 基本语法
+[ expression  for item  in iterable  ]
+
+## 加上条件判断后的语法
+[ expression  for item  in iterable  if condition ]
+
+```
+```
+#!/usr/bin/env python
+# -*- coding:utf8 -*-
+# auther; 18793
+# Date：2019/4/15 18:00
+# filename: 列表推导式.py
+list1 = [100, 200, 355, 466, 766, 566, 888]
+list2 = [float(pice*0.5) for pice in list1]
+list3 = [pice for pice in list1 if pice >400]
+
+print("原价格为：{}".format(" ".join([str(i) for i in list1])))
+print("打完五折后的价格为：{}".format(" ".join([str(i) for i in list2])))
+print("价格中大于400的有:{}".format(" ".join(str(i) for i in list3)))
+
+```
+
 #### 代码示例1
 ```python
 import random   #导入生成随机数的模块
@@ -44,9 +70,29 @@ print(odd_list)
 ```
 
 #### 代码示例2
-```python
-#!/usr/bin/env python
-#-*- coding:utf8 -*-
+```
+In [61]: [x+y+z for x in "yY" for y in "eE" for z in "sS" ]
+Out[61]: ['yes', 'yeS', 'yEs', 'yES', 'Yes', 'YeS', 'YEs', 'YES']
+
+In [62]: [ x+y for x in "nN" for y in "oO" ]
+Out[62]: ['no', 'nO', 'No', 'NO']
+
+In [63]: [ (x,y) for x in range(1,4) for y in range(5,9) ]
+Out[63]:
+[(1, 5),
+ (1, 6),
+ (1, 7),
+ (1, 8),
+ (2, 5),
+ (2, 6),
+ (2, 7),
+ (2, 8),
+ (3, 5),
+ (3, 6),
+ (3, 7),
+ (3, 8)]
+ 
+
 print([ x+y for x in "yes" for y in "no" ])
 
 list2 = [(x, y) for x in range(5) if x % 2 == 0 for y in range(5) if y % 2 == 1]

@@ -1,0 +1,128 @@
+# 基本数据类型
+![](../../_static/java_type.PNG)
+
+## 整数类型
+![](../../_static/java_type2.PNG)
+* 整数变量的定义
+``` 
+int x;
+int x,y;
+int x=450, y=-462;
+```
+__定义以上4种类型的变量时，要注意变量的取值范围，超出相应范围就会出错__
+``` 
+对于long型值，若赋给的值大于int型的最大值或者小于int型的最小值，则需要在数字后加
+L或l，表示该数值为长整数，如：long num=21456733499L
+```
+
+``` 
+package Number;
+
+public class Number {
+//	创建类
+	public static void main(String[] args) {
+//		主方法
+//		声明byte并赋值类型
+		byte mybyte=124;
+//		声明short类型并赋值
+		short myshort=32564;
+//		声明int型并赋值
+		int myint=45784612;
+//		声明long并赋值
+		long mylong=46789451;
+//		将上面的所有变量相加后输出结构
+		long result= mybyte + myshort + myint + mylong;
+		System.out.println("结果为： " + result);
+		
+	}
+}
+
+//输出结果为：
+结果为： 92606751
+```
+
+## 浮点类型
+``` 
+浮点类型表示有小数部分的数字，Java语音中浮点类型分为单精度浮点类型（float）和双精度浮点
+类型（double），它们具有不同的取值范围。
+```
+![](../../_static/java_float.PNG)
+``` 
+默认情况下，小数都被看作double型，若使用float型小数，则需要在小数后面添加F或f
+可以使用后缀d或D来明确表明这是一个double类型数据，不加d不会出错，但声明float型变量时如果
+不加f，系统会认为变量时double类型而出错
+```
+* 定义浮点类型变量，实例代码如下：
+``` 
+float f1=13.23f;
+double d1=4562.12d;
+double d2=45678.1564;
+```
+
+
+## 字符类型
+* 1.char型
+```
+字符类型（char）用于存储单个字符，占用16位（两个字节）的内存空间。
+在定义字符型变量时，要以单引号表示，如‘s’表示一个字符，而"s"则表示一个字符串，
+虽然只有一个字符，但由于使用双引号，它仍然表示字符串，而不是字符。
+ ```
+ 
+ ``` 
+ package Number;
+
+public class Gess {
+//	定义方法
+	public static void main(String[] args) {
+//		主方法
+//		定义char型变量
+	char word = 'd',word2='@';  
+//	定义int型变量
+	int p = 23045,p2 = 45213;	
+	System.out.println("d 在unicode表中的顺序位置是： " + (int) word);
+	System.out.println("@ 在Unicode表中的顺序位置是: " + (int) word2);
+	System.out.println("unicode表中的第23045位是： " + (char)p);
+	System.out.println("unicode表中的第45231位是: " + (char)p2);
+
+	}
+}
+
+ ```
+ 
+ * 2.转义字符
+ ``` 
+ 转义字符是一种特殊的字符变量，它以反斜杠“\”开头，后跟一个或多个字符，
+ 转义字符具有特定的含义，不同于字符原有的意义，故称“转义”。
+ ```
+ ![](../../_static/java_char2.PNG)
+ ``` 
+package Number;
+
+public class Gess {
+//	定义方法
+	public static void main(String[] args) {
+//		主方法
+	//将转义字符‘\\’赋值给变量c1
+	char c1='\\';
+	//将转义字符‘\u2605’赋值给变量char1
+	char char1='\u2605';
+	System.out.println(c1);
+	System.out.println(char1);
+
+	}
+}
+
+ ```
+ 
+## 布尔类型
+```  
+布尔类型又称为逻辑类型，通过关键字boolean来定义布尔类型变量，只有true和false两个值，
+分别代表逻辑中的“真”和“假”。布尔值不能与整数类型进行转换，布尔类型通常被用在流程
+控制中作为判断条件
+```
+``` 
+boolean b;
+boolean b1,b2;
+//定义布尔型变量b，并赋值给初值true
+boolean b = true;
+```

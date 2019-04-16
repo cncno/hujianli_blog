@@ -28,3 +28,4 @@ diaoyong2 = INIT_class(5, 6)
 print(diaoyong2.mycalc())
 
 ```
+![](../../_static/class_init.PNG)

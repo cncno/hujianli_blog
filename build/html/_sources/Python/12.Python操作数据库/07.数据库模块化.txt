@@ -1,0 +1,141 @@
+# 数据库模块化
+### config/db.ini
+``` 
+[MySQL]
+host=localhost
+user=root
+password=admin#123
+port=3306
+schema=my_blog
+charset=UTF8
+
+```
+
+### common/named_tuples.py
+``` 
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+
+#定义必须的名称元祖
+import collections
+
+#用于MySQL的服务信息
+MySQL = collections.namedtuple('MySQL', ['host', 'user', 'password', 'port', 'charset', 'schema'])
+
+```
+
+### common/conf_utils.py
+``` 
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+from common.named_tuples import MySQL
+import configparser
+
+class ConfigReader:
+    #path为配置文件的完整路径，调用者传入
+    def __init__(self, path):
+        if path is None or len(path) < 1:
+            raise ValueError("The config ini file path required..")
+        else:
+            self.conf = configparser.ConfigParser()
+            self.conf.read(path, encoding="utf-8")
+
+    def get_mysql_info(self):
+        '''
+        获取mysql服务器信息，返回MySQL(host,user,password,port,charset,schema)
+        :return:
+        '''
+        host = self.conf.get('MySQL', 'host')
+        user = self.conf.get('MySQL', 'user')
+        pswd = self.conf.get('MySQL', 'password')
+        port = self.conf.get('MySQL', 'port')
+        charset = self.conf.get('MySQL', 'charset')
+        schema = self.conf.get('MySQL', 'schema')
+
+        return MySQL(host, user, pswd, int(port), charset, schema)
+
+
+# a = ConfigReader("../config/db.ini")
+# print(a.get_mysql_info())
+```
+
+### common/mysql_client.py
+``` 
+#!/usr/bin/env python
+# -*- coding:utf8 -*-
+
+# Mysql操作函数
+from common.conf_utils import ConfigReader
+import pymysql
+import datetime
+
+
+# MySQL获取数据库连接
+def connect_pool():
+    cr = ConfigReader("../config/db.ini")
+    conf = cr.get_mysql_info()
+    return pymysql.connections.Connection(host=conf.host,
+                                          port=conf.port,
+                                          password=conf.password,
+                                          database=conf.schema,
+                                          charset=conf.charset)
+
+def query_table(sql):
+    '''
+    MySQL统一数据查询方法
+    :param sql:
+    :return:
+    '''
+    print("MySQL clinet query start....")
+    start = datetime.datetime.now()
+    print(sql)
+    result = []
+    try:
+        conn = connect_pool()
+        cur = conn.cursor()
+        cur.execute(sql)
+        for row in cur.fetchall():
+            result.append([cell for cell in row])
+    except Exception as e:
+        print("Query from MySQL table failed . Case :{} \n".format(e))
+
+    finally:
+        if cur:
+            cur.close()
+        if conn:
+            conn.close()
+
+    records = len(result)
+    end = datetime.datetime.now()
+    print('Mysql client query completed in %s seconds. Records found: %s\n'% ((end - start).seconds, records))
+    return result
+
+
+
+def update_record(sql):
+    '''
+    MySQL 统一数据更新方法
+    :param sql:
+    :return:
+    '''
+    global cur
+    result = []
+    try:
+        conn = connect_pool()
+        cur = conn.cursor()
+        cur.execute(sql)
+    except Exception as e:
+        print("update MySQL table failed . Case: {} \n".format(e))
+    finally:
+        conn.commit()
+        if cur:
+            cur.close()
+        if conn:
+            conn.close()
+    return
+
+
+if __name__ == '__main__':
+    query_table("show tables;")
+
+```

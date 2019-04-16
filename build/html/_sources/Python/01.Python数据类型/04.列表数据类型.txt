@@ -14,9 +14,42 @@ list.pop(index=-1)               # 删除并返回指定位置的对象,默认�
 list.remove(obj)                 # 从列表中删除对象obj
 list.reverse()                   # 原地翻转列表
 list.sot(func=None,key=None,reverse=False)  # 以指定的方式排序列表中成员,如果func和key参数指定,则按照指定的方式比较各个元素,如果reverse标志被置为True,则列表以反序排列
+list.sort(reverse=True)          #降序
+```
+
+### del 
+``` 
+In [16]: maxnum=["hu","jianli","xiaojian","yes"]
+
+In [17]: maxnum[-1]
+Out[17]: 'yes'
+
+In [18]: del maxnum[-1]
+
+In [19]: maxnum
+Out[19]: ['hu', 'jianli', 'xiaojian']
+
+In [20]: del maxnum[2]
+
+In [21]: maxnum
+Out[21]: ['hu', 'jianli']
 
 ```
+
+### in
+``` 
+In [22]: maxnum=["hu","jianli","xiaojian","yes"]
+
+In [23]: "hu" in maxnum
+Out[23]: True
+
+In [24]: "hu1" in maxnum
+Out[24]: False
+```
+
 ![](../../_static/list1.PNG)
+
+
 
 #### 代码示例1
 ```
@@ -71,6 +104,8 @@ alst1.sort()
 print(alst1)
 
 ```
+## 列表的切片
+![](../../_static/qiepian.PNG)
 
 #### 代码示例2
 
@@ -106,6 +141,8 @@ for i in range(len(list)):
 	print(i,list[i])
 
 ```
+## 序列的内置操作
+![](../../_static/list_fangfa.PNG)
 
 ### 列表的高级特性
 

@@ -1,0 +1,300 @@
+# install_vsftpd 脚本
+```bash
+
+#!/usr/bin/env bash
+#usage:xxx
+#scripts_name:xxx.sh
+
+#VAR Set
+IP_INFO=$(/usr/sbin/ifconfig| grep inet|sed 1q|awk '{print $2}')
+Server=$(ps -ef| grep vsftpd | grep -v "grep"|wc -l)
+DATE=$(date +%F_%T)
+
+function Base_init {
+#close selinux
+echo "Close selinux......."
+setenforce 0 &>/dev/null
+sed -i "s/SELINUX=enforcing/SELINUX=disabled/" /etc/selinux/config
+systemctl stop firewalld.service
+systemctl disable firewalld.service
+}
+
+function unstall_vsftpd {
+    # unstall vsftpd
+    rpm -qa|grep vsftpd | xargs rpm -e --nodeps &> /dev/null
+    rm -rf /etc/vsftpd/*
+    echo "unstall vsftpd.................."
+    for (( VAR=0; VAR<=100; VAR++ )); do sleep 0.1;echo -n "#";done
+    echo
+}
+
+
+function install_vsftpd {
+
+#install vsftpd
+/usr/bin/yum -y install vsftpd*
+
+# config_file_fix
+CONF_FILE=`rpm -qc vsftpd|more| grep vsftpd.conf`
+echo "vsftpd conf file is ----------->  $CONF_FILE"
+echo "backup $CONF_FILE  --------> ${CONF_FILE}.bak"
+cp -rf $CONF_FILE{,.bak}
+
+if systemctl enable vsftpd.service &>/dev/null; then
+    echo "设置开机自动启动vsftpd服务..... OK"
+else
+    echo "设置开机自动启动vsftpd服务..... fail..."
+fi
+
+
+
+if systemctl start vsftpd.service &>/dev/null;then
+    if [ "$Server" -eq 1 ]; then
+        echo "启动vsftpd服务..... OK"
+    else
+        echo "启动vsftpd服务..... fail ..."
+    fi
+fi
+
+}
+
+
+function echo_color {
+    if [ $1 == "green" ]; then
+        echo -e "\033[32;40m$2\033[0m"
+    elif [ $1 == "red" ]; then
+        echo -e "\033[31;40m$2\033[0m"
+    fi
+}
+
+
+function conf_file_fix {
+    echo
+    echo "-------------------------------------------------------"
+    echo "开始配置config文件"
+    echo "-------------------------------------------------------"
+    echo
+}
+
+
+function Restart_ftp {
+echo "配置完毕，重启vsftpd服务....."
+systemctl restart vsftpd
+if test $? -eq 0; then
+    echo "vsftpd重启完毕..........."
+    echo "请访问:  ftp://${IP_INFO}"
+else
+    echo "vsftpd启动失败....."
+    exit 1
+fi
+}
+
+
+function Anonymous {
+local PUB_dir="/var/ftp"
+
+conf_file_fix
+echo "vsftp的匿名用户上传下载目录为: $PUB_dir"
+chown -R ftp /var/ftp/pub/
+chmod 755 /var/ftp/pub/
+
+cat >$CONF_FILE <<EOF
+anonymous_enable=YES
+anon_umask=022
+anon_mkdir_write_enable=YES
+anon_upload_enable=YES
+anon_other_write_enable=YES
+local_enable=YES
+write_enable=YES
+local_umask=022
+dirmessage_enable=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+xferlog_std_format=YES
+anon_upload_enable=YES
+anon_other_write_enable=YES
+listen=NO
+listen_ipv6=YES
+pam_service_name=vsftpd
+userlist_enable=YES
+tcp_wrappers=YES
+EOF
+Restart_ftp
+
+}
+
+
+function check_pass {
+echo_color green "请输入密码："
+read -s passwd
+if [ -n "$passwd" ]; then
+    echo_color "密码设置成功，密码为:$passwd"
+else
+    echo_color red "密码设置错误......"
+    check_pass
+fi
+
+}
+
+
+function add_user {
+Save_text="user.txt"
+
+while :; do
+    read -p "输入用户名：" name
+    if /usr/sbin/useradd $name &>/dev/null ; then
+        echo "创建用户 $name 成功..."
+        check_pass
+        echo "$passwd" | passwd --stdin $name
+        if [ "$?" -eq 0 ]; then
+            echo  -e "您创建的用户为 $name \t 密码为 $passwd"
+            echo -e "$name \t $passwd" >> $Save_text
+        fi
+        echo "是否退出,y退出，n继续？【y|n】"
+        read  -p "Please input ：" input
+            if [[ $input == "y" ]]; then
+                echo "用户名和密码保存在 $Save_text 文件中......"
+                break
+            fi
+    else
+        echo_color red "用户已经存在....."
+    fi
+done
+
+
+# chomod 777 dir
+cat $Save_text|while read line; do
+    user_info=$line|awk '{print $1}'
+    chmod -R 777 /home/$user_info
+done
+
+}
+
+
+function  System_user_config {
+touch /etc/vsftpd/chroot_list
+conf_file_fix
+
+cat > $CONF_FILE <<EOF
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022
+dirmessage_enable=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+xferlog_std_format=YES
+ascii_upload_enable=YES
+ascii_download_enable=YES
+chroot_local_user=YES
+chroot_list_enable=YES
+chroot_list_file=/etc/vsftpd/chroot_list
+listen=NO
+listen_ipv6=YES
+pam_service_name=vsftpd
+userlist_enable=YES
+tcp_wrappers=YES
+allow_writeable_chroot=YES
+EOF
+
+Restart_ftp
+
+}
+
+function System_user_memu {
+
+echo "请问是新增系统用户还是修改配置文件支持系统用户登录？"
+echo
+echo "1.新增系统用户"
+echo "2.修改配置文件支持系统用户用户名/密码登录"
+echo "3.重新安装vsftpd"
+echo
+read -p "输入choice：" choice
+
+case "$choice" in
+1)
+    add_user
+   ;;
+2)
+    System_user_config
+   ;;
+3)
+    unstall_vsftpd
+    install_vsftpd
+
+   ;;
+*)
+    echo_color " Input error, re-enter......"
+   ;;
+esac
+
+
+}
+
+function Virtual_user {
+:
+}
+
+
+
+
+
+function main {
+cat << EOF
+1.匿名用户登录设置
+2.系统用户登录配置
+3.虚拟用户登录配置
+4.卸载Vsftd
+5.退出exit
+EOF
+
+
+read -p "Please input you choice：" input
+case "$input" in
+1)
+    Anonymous
+   ;;
+2)
+    System_user_memu
+   ;;
+3)
+    echo_color red "此项待完善....."
+   ;;
+4)
+    unstall_vsftpd
+   ;;
+*)
+    echo_color " Input error, re-enter......"
+   ;;
+esac
+}
+
+
+function Init_choice {
+echo_color green "---------------------------------------------------------------------------------------"
+echo_color green "---------------------------------------------------------------------------------------"
+echo_color green "#################### Wellcom to vsftpd install memu #####################################"
+echo_color green "---------------------------------------------------------------------------------------"
+echo_color green "---------------------------------------------------------------------------------------"
+
+echo "是否重新安装Vsftpd.【y/n】"
+read -p "please input: " input
+
+if [[ $input == 'y' ]]; then
+    echo "开始安装vsftpd...."
+    Base_init
+    unstall_vsftpd
+    install_vsftpd
+    #进度条
+    for (( VAR=0; VAR<=100; VAR++ )); do sleep 0.1;echo -n "#";done
+    echo
+    main
+
+else
+    main
+
+fi
+}
+
+Init_choice
+```

@@ -23,3 +23,4 @@ Python 标准库学习
     14.collections模块
     15.Redis模块
     16.urlib模块
+    17.Stringw文本常量和模块

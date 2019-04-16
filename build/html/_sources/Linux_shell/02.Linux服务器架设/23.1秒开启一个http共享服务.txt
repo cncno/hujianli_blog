@@ -1,0 +1,6 @@
+# 1秒开启一个局域网共享服务
+
+```
+python -m http.server
+```
+![](../../_static/http_server.PNG)
