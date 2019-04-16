@@ -29,5 +29,5 @@ Python自动化运维
     22.Python进阶学习/index
     23.Python网络爬虫/index
     24.前端技术/index
-    25.Python高手之路/index
+    25.Python框架学习/index
     26.Python开发环境部署/index

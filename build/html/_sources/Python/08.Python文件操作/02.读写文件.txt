@@ -42,8 +42,8 @@ c = f.read(.strip()        # 读取为一个大字符串，并去掉最后一个
 fr i in c.split('\n'):     # 用换行符切割字符串得到列表循环每行
     print i
 f.close()
-
-
+```
+```
 #读文件 2
 f = file('/etc/passwd','r')
 while True:
@@ -55,12 +55,35 @@ while True:
     #x = [ x.split("/") for x in line.split(":") ]  # 先冒号分割,在/分割 打印x[6][1]
     print x[6],"\n",
 f.close()
-
+```
+```
 #读文件 3
 for i in open('b.txt'):   # 直接读取也可迭代,并有利于大文件读取,但不可反复读取
     print i
+```
+
 
 ```
+##一行一行的读取文件
+#!/usr/bin/env python
+#-*- coding:utf8 -*-
+# auther; 18793
+# Date：2019/4/16 10:35
+# filename: readlinefile.py
+print("\n","="*20,"Python来读取文件","="*20,"\n")
+
+with open("message.txt","r", encoding="utf-8") as file:
+    number =0
+    while True:
+        number +=1
+        line = file.readline()
+        if line == "":
+            break
+
+        print(number, "行内容是: ", line, end="\n")
+print("\n","="*20,"over","="*20,"\n")
+```
+
 ### 追加日志
 #### 代码示例
 ```

@@ -3,8 +3,31 @@
   <component name="ChangeListManager">
     <list default="true" id="6f0e547b-d940-4b6c-82e4-3fd052fc2651" name="默认的" comment="4/16_new_commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/25.Centos7 openssh升级到7.9p1.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/25.Centos7openssh升级到7.9p1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/02.读写文件.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/02.读写文件.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/06.目录迭代的两种方式.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/08.Python文件操作/06.目录迭代的两种方式.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/01.Python操作mysql数据库.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/12.Python操作数据库/01.Python操作mysql数据库.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/doctrees/Python/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/Python/index.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/doctrees/environment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/environment.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/doctrees/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/build/doctrees/index.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/02.读写文件.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/02.读写文件.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/06.目录迭代的两种方式.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/06.目录迭代的两种方式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/08.Python文件操作/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/01.Python操作mysql数据库.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/01.Python操作mysql数据库.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/12.Python操作数据库/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/Python/26.Python开发环境部署/01.Notpad++和Python远程开发.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/26.Python开发环境部署/01.Notpad++和Python远程开发.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/Python/26.Python开发环境部署/02.PyCharm+python云主机远程调试开发.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/26.Python开发环境部署/02.PyCharm+python云主机远程调试开发.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/Python/26.Python开发环境部署/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/26.Python开发环境部署/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/Python/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/Python/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/08.Python文件操作/02.读写文件.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/08.Python文件操作/02.读写文件.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/08.Python文件操作/06.目录迭代的两种方式.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/08.Python文件操作/06.目录迭代的两种方式.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/12.Python操作数据库/01.Python操作mysql数据库.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/12.Python操作数据库/01.Python操作mysql数据库.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/_sources/Python/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/_sources/Python/index.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/08.Python文件操作/02.读写文件.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/08.Python文件操作/02.读写文件.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/08.Python文件操作/06.目录迭代的两种方式.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/08.Python文件操作/06.目录迭代的两种方式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/12.Python操作数据库/01.Python操作mysql数据库.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/12.Python操作数据库/01.Python操作mysql数据库.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/25.Python高手之路/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/25.Python框架学习/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Python/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/source/Python/index.rst" afterDir="false" />
     </list>
     <ignored path="my_blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,77 +77,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/03.类中的__init__方法.md">
+        <entry file="file://$PROJECT_DIR$/source/Python/12.Python操作数据库/01.Python操作mysql数据库.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-139" />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/04.实例属性是什么？.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="253">
-                <caret line="24" selection-start-line="24" selection-end-line="42" selection-end-column="51" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/13.为属性添加限制，访问限制.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="252">
-                <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/07.类属性和实例属性.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-1932" />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/06.类中可调用自己方法和外部函数.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-681" />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/Python/07.面对对象设计_OOP/09.property装饰器，将方法转为属性,动态属性.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="280">
-                <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/Python/10.Python中的包和模块/01.模块与包.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="477">
-                <caret line="44" column="3" lean-forward="true" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+              <first_editor relative-caret-position="844">
+                <caret line="354" column="39" selection-start-line="354" selection-start-column="39" selection-end-line="354" selection-end-column="39" />
               </first_editor>
               <second_editor />
             </state>
@@ -132,28 +89,8 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst">
+        <entry file="file://$PROJECT_DIR$/source/Python/25.Python框架学习/index.rst">
           <provider selected="true" editor-type-id="restructured-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/Python/13.Python标准库/01.csv模块文件读写.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/Python/10.Python中的包和模块/03.python中 __main__正确理解.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -194,9 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/source/Java/02.流程控制/03.循环语句.md" />
-        <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/08.数据类型转换.md" />
-        <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/06.字典数据结构.md" />
         <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/12.建立大型数据结构.md" />
         <option value="$PROJECT_DIR$/source/Python/05.推导式/02.字典推导式.md" />
         <option value="$PROJECT_DIR$/source/Python/05.推导式/04.集合推导式.md" />
@@ -219,8 +153,6 @@
         <option value="$PROJECT_DIR$/source/Python/01.Python数据类型/index.rst" />
         <option value="$PROJECT_DIR$/source/Python/02.流程控制语句/02.for循环语句.md" />
         <option value="$PROJECT_DIR$/source/Python/04.内建函数/01.常用的内建函数.md" />
-        <option value="$PROJECT_DIR$/source/Python/08.Python文件操作/02.读写文件.md" />
-        <option value="$PROJECT_DIR$/source/Python/12.Python操作数据库/01.Python操作mysql数据库.md" />
         <option value="$PROJECT_DIR$/source/Python/07.1Python3面对对象增强/index.rst" />
         <option value="$PROJECT_DIR$/source/Python/07.1Python3面对对象增强/01.Python对象.md" />
         <option value="$PROJECT_DIR$/source/Java/04.数组/03.数组的基本操作.md" />
@@ -245,14 +177,19 @@
         <option value="$PROJECT_DIR$/source/Python/10.Python中的包和模块/02.包的讲解.md" />
         <option value="$PROJECT_DIR$/source/Python/10.Python中的包和模块/01.模块与包.md" />
         <option value="$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst" />
+        <option value="$PROJECT_DIR$/source/Python/08.Python文件操作/02.读写文件.md" />
+        <option value="$PROJECT_DIR$/source/Python/08.Python文件操作/06.目录迭代的两种方式.md" />
+        <option value="$PROJECT_DIR$/source/Python/12.Python操作数据库/01.Python操作mysql数据库.md" />
+        <option value="$PROJECT_DIR$/source/Python/index.rst" />
+        <option value="$PROJECT_DIR$/source/Python/25.Python框架学习/index.rst" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="112" />
-    <option name="y" value="5" />
+    <option name="x" value="72" />
+    <option name="y" value="42" />
     <option name="width" value="2065" />
-    <option name="height" value="1315" />
+    <option name="height" value="1354" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -278,14 +215,14 @@
               <item name="hujianli_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="hujian_blog" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="Linux_shell" type="462c0819:PsiDirectoryNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hujianli_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="hujian_blog" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="Linux_shell" type="462c0819:PsiDirectoryNode" />
-              <item name="02.Linux服务器架设" type="462c0819:PsiDirectoryNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="25.Python框架学习" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -749,7 +686,7 @@
       <workItem from="1555315211454" duration="3273000" />
       <workItem from="1555324815800" duration="745000" />
       <workItem from="1555329589808" duration="4515000" />
-      <workItem from="1555376835967" duration="4192000" />
+      <workItem from="1555376835967" duration="9396000" />
     </task>
     <task id="LOCAL-00001" summary="默认的">
       <created>1550051667171</created>
@@ -926,11 +863,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555380931527</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="4/16_new_commit">
+      <created>1555381183580</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1555381183580</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="415622000" />
+    <option name="totallyTimeSpent" value="420826000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -942,10 +886,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="90" y="4" width="1652" height="1052" extended-state="0" />
+    <frame x="58" y="34" width="1652" height="1083" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17754078" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16624843" />
       <window_info id="Structure" order="1" weight="0.20665084" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1015,104 +959,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="4/16_new_commit" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/08.Linux构建高可用架构/07.MySQL主主同步高可用架构.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/24.install_mysql5.7.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="28">
-            <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/03.玩转shell脚本编程/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/08.Linux构建高可用架构/06.MySQL 主从高可用架构.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="683">
-            <caret line="134" column="62" lean-forward="true" selection-start-line="134" selection-start-column="12" selection-end-line="134" selection-end-column="62" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/20.国内常使用的yum源信息.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1596" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/04.玩转数据库（mysql、Redis）/02.Mysql入门到精通.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="5555">
-            <caret line="226" column="9" selection-start-line="226" selection-start-column="9" selection-end-line="226" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/04.玩转数据库（mysql、Redis）/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/04.玩转数据库（mysql、Redis）/03.Linux运维之Mysql必会知识.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="557">
-            <caret line="64" column="15" lean-forward="true" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Java/05.类与对象/01.对象.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2156">
-            <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/25.Centos7openssh升级到7.9p1.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="442">
-            <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Java/05.类与对象/index.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/install.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/Python/01.Python数据类型/01.字符编码处理.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="523">
-            <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/Python/01.Python数据类型/02.代码注释.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1418,17 +1264,118 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../1====编程语言（明日科技）视频/1--Python学习/实战任务答案-原版/Python从入门到项目实践——实战源码答案/实战源码/13/01/ticketing_system.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/Python/10.Python中的包和模块/01.模块与包.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="477">
-            <caret line="44" column="3" lean-forward="true" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+            <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/Linux_shell/02.Linux服务器架设/index.rst">
+    <entry file="file://$PROJECT_DIR$/source/Python/08.Python文件操作/06.目录迭代的两种方式.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="704">
+            <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/08.Python文件操作/03.使用with语句读写文件.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-3790" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/08.Python文件操作/02.读写文件.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="309">
+            <caret line="70" column="22" lean-forward="true" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/08.Python文件操作/01.open()函数介绍.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/12.Python操作数据库/02.Python操作SQLite数据库.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/12.Python操作数据库/05.数据库操作.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-4378" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/12.Python操作数据库/03.Python封装mysql数据库.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/12.Python操作数据库/06.数据库增删改查.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-2604" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/index.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../1====编程语言（明日科技）视频/1--Python学习/实战任务答案-原版/Python从入门到项目实践——实战源码答案/实战源码/16/01/prize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/12.Python操作数据库/01.Python操作mysql数据库.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="844">
+            <caret line="354" column="39" selection-start-line="354" selection-start-column="39" selection-end-line="354" selection-end-column="39" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/Python/25.Python框架学习/index.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
   </component>
